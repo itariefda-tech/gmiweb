@@ -1,0 +1,1327 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portal Layanan Klien Mitra - PT Grup Mitra Indonesia (GMI)</title>
+  <meta name="description" content="Portal Terpadu Klien Mitra Korporasi PT Grup Mitra Indonesia (GMI). Pemantauan presensi personel real-time, patroli guard tour, e-billing, dan kepatuhan legal BPJS.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="/src/style.css">
+  <link rel="icon" type="image/png" href="/assets/images/logo/gmi-logo.png">
+</head>
+<body class="bg-slate-50 text-slate-900 antialiased selection:bg-red-600 selection:text-white">
+
+  <!-- ============================================================== -->
+  <!-- 1. DEDICATED CLIENT DASHBOARD HEADER BAR                       -->
+  <!-- ============================================================== -->
+  <header class="fixed top-0 left-0 right-0 z-50 px-4 sm:px-6 lg:px-8 pt-3 sm:pt-4 transition-all duration-300">
+    <div class="max-w-7xl mx-auto">
+      <nav class="nav-pill bg-white rounded-full py-3.5 sm:py-4 px-5 sm:px-8 min-h-[74px] sm:min-h-[82px] flex items-center justify-between border border-slate-100 shadow-xl shadow-slate-900/8" aria-label="Header Bar Dashboard Portal Klien">
+        
+        <!-- Left: Logo GMI & Portal Title -->
+        <div class="flex items-center gap-3 sm:gap-4 shrink-0">
+          <picture>
+            <source srcset="/assets/images/logo/gmi-logo.webp" type="image/webp">
+            <img src="/assets/images/logo/gmi-logo.png" alt="Grup Mitra Indonesia Logo" class="h-10 sm:h-12 w-auto object-contain" width="160" height="48">
+          </picture>
+          <span class="w-px h-7 bg-slate-200 hidden sm:inline-block"></span>
+          <div class="hidden sm:block">
+            <span class="text-xs font-bold uppercase tracking-wider text-slate-800 block leading-tight">
+              Portal Layanan Klien
+            </span>
+            <span class="text-[11px] text-slate-500 font-medium block">
+              Enterprise Client Workspace
+            </span>
+          </div>
+        </div>
+
+        <!-- Center: Enterprise Client Dashboard Ownership Display -->
+        <div class="flex items-center gap-2.5 sm:gap-3.5 px-3 sm:px-5 py-2 rounded-2xl bg-slate-50 border border-slate-200/90 shadow-2xs">
+          <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-[#061e43] text-white flex items-center justify-center font-extrabold text-xs sm:text-sm tracking-tight shadow-xs shrink-0">
+            ISAT
+          </div>
+          <div class="text-left leading-tight">
+            <div class="flex items-center gap-2">
+              <h2 class="text-xs sm:text-sm font-extrabold text-slate-900 truncate max-w-[170px] sm:max-w-none">
+                PT Indosat Ooredoo Hutchison Tbk
+              </h2>
+              <span class="hidden md:inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-50 text-emerald-700 border border-emerald-200 shrink-0">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span> Kontrak Aktif
+              </span>
+            </div>
+            <p class="text-[11px] text-slate-500 hidden sm:flex items-center gap-2 mt-0.5 font-mono">
+              <span>No: GMI/CTR/2024-ISAT/088</span>
+              <span class="text-slate-300">&bull;</span>
+              <span class="text-slate-600 font-sans">PIC: Bpk. Hendra Wijaya</span>
+            </p>
+          </div>
+        </div>
+
+        <!-- Right Side: Log Out Button -->
+        <div class="flex items-center gap-2.5 shrink-0">
+          <a href="index.html" class="btn-wiggle-hover inline-flex items-center gap-2 px-4 sm:px-6 py-2.5 sm:py-3 rounded-full bg-rose-50 hover:bg-[#c52227] text-rose-700 hover:text-white border border-rose-200/90 font-bold text-xs sm:text-sm shadow-xs hover:shadow-md transition-all duration-200" title="Keluar dari Portal Klien dan Kembali ke Beranda Utama">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+            </svg>
+            <span>Log Out</span>
+          </a>
+        </div>
+
+      </nav>
+    </div>
+  </header>
+
+  <!-- ============================================================== -->
+  <!-- 2. CLIENT IDENTITY & CONTRACT BANNER                           -->
+  <!-- ============================================================== -->
+  <main class="pt-32 sm:pt-36 lg:pt-40 pb-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Top Client Banner -->
+    <div class="relative overflow-hidden rounded-3xl bg-[#061e43] text-white p-6 sm:p-8 lg:p-10 shadow-xl border border-slate-800 mb-8">
+      <!-- Background subtle elements -->
+      <div class="absolute -right-20 -top-20 w-80 h-80 rounded-full bg-blue-600/10 blur-3xl pointer-events-none"></div>
+      <div class="absolute right-10 bottom-0 opacity-10 pointer-events-none">
+        <svg class="w-64 h-64 text-white" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 2L1 21h22L12 2zm0 3.99L19.53 19H4.47L12 5.99zM11 10h2v4h-2zm0 6h2v2h-2z"/>
+        </svg>
+      </div>
+
+      <div class="relative z-10 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
+        <div>
+          <!-- Tags / Status -->
+          <div class="flex flex-wrap items-center gap-2.5 mb-3">
+            <span class="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-red-600/90 text-white shadow-xs">
+              Portal Layanan Korporasi
+            </span>
+            <span class="px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 flex items-center gap-1.5">
+              <span class="w-2 h-2 rounded-full bg-emerald-400"></span> Status Kontrak: Aktif &amp; Terverifikasi
+            </span>
+            <span class="px-3 py-1 rounded-full text-xs font-medium bg-slate-800 text-slate-300 border border-slate-700 hidden sm:inline-flex items-center gap-1">
+              <svg class="w-3.5 h-3.5 text-blue-400" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 1.944A11.954 11.954 0 012.166 5C2.056 5.649 2 6.319 2 7c0 5.225 3.34 9.67 8 11.317C14.66 16.67 18 12.225 18 7c0-.682-.057-1.35-.166-2.001A11.954 11.954 0 0110 1.944zM11 14a1 1 0 11-2 0 1 1 0 012 0zm0-7a1 1 0 10-2 0v4a1 1 0 102 0V7z" clip-rule="evenodd" />
+              </svg>
+              Enkripsi Sesi TLS 1.3 / ISO 27001
+            </span>
+          </div>
+
+          <!-- Company Name & Contract Details -->
+          <h1 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-white mb-2">
+            PT Indosat Ooredoo Hutchison Tbk
+          </h1>
+          <p class="text-sm sm:text-base text-slate-300 max-w-2xl leading-relaxed">
+            Perjanjian Kerja Sama Jasa Pengamanan Terpadu, Manpower Outsourcing &amp; Fasilitas Gedung
+          </p>
+
+          <!-- Contract Meta Details -->
+          <div class="mt-4 pt-4 border-t border-slate-700/60 grid grid-cols-2 sm:grid-cols-4 gap-4 text-xs">
+            <div>
+              <p class="text-slate-400 font-medium">Nomor Kontrak:</p>
+              <p class="font-bold text-white font-mono mt-0.5">GMI/CTR/2024-ISAT/088</p>
+            </div>
+            <div>
+              <p class="text-slate-400 font-medium">Masa Berlaku:</p>
+              <p class="font-bold text-white mt-0.5">1 Jan 2024 - 31 Des 2027</p>
+            </div>
+            <div>
+              <p class="text-slate-400 font-medium">PIC Mitra Klien:</p>
+              <p class="font-bold text-white mt-0.5">Bpk. Hendra Wijaya</p>
+            </div>
+            <div>
+              <p class="text-slate-400 font-medium">Account Director GMI:</p>
+              <p class="font-bold text-white mt-0.5">Bpk. Rizky Pratama, S.E.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="flex flex-col sm:flex-row lg:flex-col gap-3 shrink-0 lg:w-56">
+          <button id="open-ticket-btn" type="button" class="w-full px-4 py-3 rounded-xl bg-[#c52227] hover:bg-[#a7181d] text-white font-bold text-xs sm:text-sm shadow-md transition-all flex items-center justify-center gap-2">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+            </svg>
+            Permintaan Personel
+          </button>
+          <a href="#compliance" onclick="switchMainTab('billing')" class="w-full px-4 py-3 rounded-xl bg-slate-800/90 hover:bg-slate-700 text-slate-200 border border-slate-700 font-semibold text-xs sm:text-sm transition-all flex items-center justify-center gap-2">
+            <svg class="w-4 h-4 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+            </svg>
+            Berkas BPJS &amp; Faktur
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============================================================== -->
+    <!-- 3. KPI METRIC SUMMARY CARDS                                    -->
+    <!-- ============================================================== -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 mb-8">
+      
+      <!-- KPI 1: Personel Bertugas -->
+      <div class="bg-white rounded-2xl p-5 border border-slate-200/80 shadow-xs hover:shadow-md transition-all">
+        <div class="flex items-center justify-between mb-3">
+          <span class="text-xs font-bold text-slate-600 uppercase tracking-wider">Personel Bertugas</span>
+          <div class="w-9 h-9 rounded-xl bg-blue-50 text-[#061e43] flex items-center justify-center">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+            </svg>
+          </div>
+        </div>
+        <div class="flex items-baseline gap-2">
+          <p class="text-3xl font-extrabold text-[#061e43]">48 <span class="text-base font-normal text-slate-600">/ 48</span></p>
+          <span class="text-xs font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-200">100% Roster</span>
+        </div>
+        <p class="text-xs text-slate-600 mt-2">
+          26 Security • 14 Cleaning • 8 Maintenance ME
+        </p>
+      </div>
+
+      <!-- KPI 2: Presensi Biometrik & GPS -->
+      <div class="bg-white rounded-2xl p-5 border border-slate-200/80 shadow-xs hover:shadow-md transition-all">
+        <div class="flex items-center justify-between mb-3">
+          <span class="text-xs font-bold text-slate-600 uppercase tracking-wider">Presensi Real-Time</span>
+          <div class="w-9 h-9 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+            </svg>
+          </div>
+        </div>
+        <div class="flex items-baseline gap-2">
+          <p class="text-3xl font-extrabold text-emerald-600">99.2%</p>
+          <span class="text-xs font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-200">Tepat Waktu</span>
+        </div>
+        <p class="text-xs text-slate-600 mt-2">
+          Geofence GPS radius 50m • Biometrik wajah aktif
+        </p>
+      </div>
+
+      <!-- KPI 3: Checkpoint Patroli Selesai -->
+      <div class="bg-white rounded-2xl p-5 border border-slate-200/80 shadow-xs hover:shadow-md transition-all">
+        <div class="flex items-center justify-between mb-3">
+          <span class="text-xs font-bold text-slate-600 uppercase tracking-wider">Patroli Guard Tour</span>
+          <div class="w-9 h-9 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v1m6 11h2m-6 0h-2v4m0-11v3m0 0h.01M12 12h4.01M16 20h4M4 12h4m12 0h.01M5 8h2a1 1 0 001-1V5a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1zm12 0h2a1 1 0 001-1V5a1 1 0 00-1-1h-2a1 1 0 00-1 1v2a1 1 0 001 1zM5 20h2a1 1 0 001-1v-2a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1z" />
+            </svg>
+          </div>
+        </div>
+        <div class="flex items-baseline gap-2">
+          <p class="text-3xl font-extrabold text-[#061e43]">142 <span class="text-base font-normal text-slate-600">/ 144</span></p>
+          <span class="text-xs font-bold text-blue-700 bg-blue-50 px-2 py-0.5 rounded-full border border-blue-200">98.6%</span>
+        </div>
+        <p class="text-xs text-slate-600 mt-2">
+          QR Scan Checkpoint Shift 1 &amp; 2 • Zero Insiden
+        </p>
+      </div>
+
+      <!-- KPI 4: Kepatuhan BPJS & Legalitas -->
+      <div class="bg-white rounded-2xl p-5 border border-slate-200/80 shadow-xs hover:shadow-md transition-all">
+        <div class="flex items-center justify-between mb-3">
+          <span class="text-xs font-bold text-slate-600 uppercase tracking-wider">Kepatuhan BPJS &amp; Pajak</span>
+          <div class="w-9 h-9 rounded-xl bg-purple-50 text-purple-600 flex items-center justify-center">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+            </svg>
+          </div>
+        </div>
+        <div class="flex items-baseline gap-2">
+          <p class="text-3xl font-extrabold text-purple-600">100%</p>
+          <span class="text-xs font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-200">Valid</span>
+        </div>
+        <p class="text-xs text-slate-600 mt-2">
+          BPJS TK &amp; Kesehatan lunas • Kepatuhan UMR Terjamin
+        </p>
+      </div>
+
+    </div>
+
+    <!-- ============================================================== -->
+    <!-- 4. MAIN INTERACTIVE TABS & SECTIONS                            -->
+    <!-- ============================================================== -->
+    <div class="bg-white rounded-3xl border border-slate-200/90 shadow-sm overflow-hidden mb-12">
+      
+      <!-- Tab Header Strip -->
+      <div class="p-4 sm:p-5 bg-slate-50 border-b border-slate-200 flex flex-wrap items-center justify-between gap-4">
+        
+        <!-- Tab Navigation Buttons -->
+        <div class="inline-flex flex-wrap p-1.5 bg-slate-200/70 rounded-2xl gap-1 text-xs sm:text-sm font-bold">
+          <button id="tab-btn-roster" type="button" onclick="switchMainTab('roster')" class="px-4 py-2 rounded-xl transition-all tab-btn bg-white text-[#061e43] shadow-xs">
+            Presensi &amp; Roster Personel
+          </button>
+          <button id="tab-btn-patrol" type="button" onclick="switchMainTab('patrol')" class="px-4 py-2 rounded-xl transition-all tab-btn text-slate-600 hover:text-slate-900">
+            Log Patroli Guard Tour
+          </button>
+          <button id="tab-btn-billing" type="button" onclick="switchMainTab('billing')" class="px-4 py-2 rounded-xl transition-all tab-btn text-slate-600 hover:text-slate-900">
+            E-Billing &amp; Kepatuhan BPJS
+          </button>
+          <button id="tab-btn-tickets" type="button" onclick="switchMainTab('tickets')" class="px-4 py-2 rounded-xl transition-all tab-btn text-slate-600 hover:text-slate-900">
+            Pengajuan Tiket Layanan
+          </button>
+          <button id="tab-btn-scorecard" type="button" onclick="switchMainTab('scorecard')" class="px-4 py-2 rounded-xl transition-all tab-btn text-slate-600 hover:text-slate-900">
+            Evaluasi KPI Bulanan
+          </button>
+        </div>
+
+        <!-- Sync Timestamp & Live Indicator -->
+        <div class="flex items-center gap-2 text-xs text-slate-500 font-medium">
+          <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-ping"></span>
+          <span>Tersinkronisasi Real-Time Command Center</span>
+        </div>
+
+      </div>
+
+      <!-- Tab Content Area -->
+      <div class="p-5 sm:p-7">
+
+        <!-- ========================================================== -->
+        <!-- TAB 1: PRESENSI & ROSTER PERSONEL                          -->
+        <!-- ========================================================== -->
+        <section id="panel-roster" class="tab-panel">
+          
+          <!-- Filters & Action Bar -->
+          <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
+            <div class="flex flex-wrap items-center gap-3">
+              <!-- Search Input -->
+              <div class="relative w-full sm:w-64">
+                <input id="search-personnel" type="text" placeholder="Cari nama / NIK personel..." class="w-full pl-9 pr-4 py-2 rounded-xl border border-slate-300 text-xs sm:text-sm focus:ring-2 focus:ring-[#061e43] focus:outline-none">
+                <svg class="w-4 h-4 text-slate-400 absolute left-3 top-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+              </div>
+
+              <!-- Location Filter -->
+              <select id="filter-location" class="px-3.5 py-2 rounded-xl border border-slate-300 text-xs sm:text-sm bg-white font-medium focus:ring-2 focus:ring-[#061e43] focus:outline-none">
+                <option value="all">Semua Lokasi Penempatan</option>
+                <option value="kppti">KPPTI Medan Merdeka Barat (Kantor Pusat)</option>
+                <option value="dc">Data Center Jatiluhur</option>
+                <option value="bsd">Hub Regional BSD Serpong</option>
+              </select>
+
+              <!-- Department Filter -->
+              <select id="filter-dept" class="px-3.5 py-2 rounded-xl border border-slate-300 text-xs sm:text-sm bg-white font-medium focus:ring-2 focus:ring-[#061e43] focus:outline-none">
+                <option value="all">Semua Divisi Layanan</option>
+                <option value="security">Security Operations</option>
+                <option value="cleaning">Facility &amp; Cleaning</option>
+                <option value="maintenance">Mekanik &amp; ME</option>
+              </select>
+            </div>
+
+            <!-- Export Button -->
+            <button id="export-roster-btn" type="button" class="px-4 py-2 rounded-xl border border-slate-300 hover:bg-slate-50 text-slate-700 text-xs sm:text-sm font-semibold flex items-center justify-center gap-2 transition-all">
+              <svg class="w-4 h-4 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+              Unduh Rekap Presensi (.XLSX)
+            </button>
+          </div>
+
+          <!-- Roster Table -->
+          <div class="overflow-x-auto rounded-2xl border border-slate-200">
+            <table class="w-full text-left text-xs sm:text-sm">
+              <thead class="bg-slate-100 text-slate-700 font-bold uppercase tracking-wider text-[11px] border-b border-slate-200">
+                <tr>
+                  <th class="py-3.5 px-4">Personel &amp; NIK</th>
+                  <th class="py-3.5 px-4">Jabatan &amp; Divisi</th>
+                  <th class="py-3.5 px-4">Titik Penempatan</th>
+                  <th class="py-3.5 px-4">Shift &amp; Jam Masuk</th>
+                  <th class="py-3.5 px-4">Status &amp; Verifikasi</th>
+                  <th class="py-3.5 px-4 text-center">Aksi</th>
+                </tr>
+              </thead>
+              <tbody id="roster-table-body" class="divide-y divide-slate-100 text-slate-800">
+                
+                <!-- Personel 1 -->
+                <tr class="hover:bg-slate-50/80 transition-colors" data-loc="kppti" data-dept="security">
+                  <td class="py-3.5 px-4">
+                    <div class="flex items-center gap-3">
+                      <div class="w-10 h-10 rounded-full bg-slate-900 text-white flex items-center justify-center font-bold text-xs uppercase shrink-0">
+                        AP
+                      </div>
+                      <div>
+                        <p class="font-bold text-slate-900">Agus Priyanto</p>
+                        <p class="text-[11px] text-slate-600 font-mono">NIK: GMI-SEC-2024-001</p>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="py-3.5 px-4">
+                    <p class="font-semibold text-slate-900">Komandan Regu (Danru)</p>
+                    <p class="text-xs text-blue-700 font-medium">Security Operations</p>
+                  </td>
+                  <td class="py-3.5 px-4">
+                    <p class="font-medium text-slate-800">KPPTI Medan Merdeka</p>
+                    <p class="text-[11px] text-slate-600">Lobby Utama &amp; Pos Komando</p>
+                  </td>
+                  <td class="py-3.5 px-4">
+                    <p class="font-semibold text-slate-900">Shift Pagi (07:00 - 15:00)</p>
+                    <p class="text-[11px] text-emerald-700 font-medium">Masuk: 06:42 WIB</p>
+                  </td>
+                  <td class="py-3.5 px-4">
+                    <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-bold bg-emerald-50 text-emerald-700 border border-emerald-200">
+                      <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Bertugas Aktif
+                    </span>
+                    <p class="text-[10px] text-slate-600 mt-0.5">Biometrik GPS: 8m dari Pos</p>
+                  </td>
+                  <td class="py-3.5 px-4 text-center">
+                    <button type="button" onclick="showPersonDetail('Agus Priyanto', 'Komandan Regu', 'Garda Pratama / SIO No. 8921/POLDA-METRO', 'Security Operations', 'GMI-SEC-2024-001')" class="px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-[#061e43] hover:text-white text-slate-700 font-semibold text-xs transition-all">
+                      Lihat KTA &amp; Sertifikat
+                    </button>
+                  </td>
+                </tr>
+
+                <!-- Personel 2 -->
+                <tr class="hover:bg-slate-50/80 transition-colors" data-loc="kppti" data-dept="security">
+                  <td class="py-3.5 px-4">
+                    <div class="flex items-center gap-3">
+                      <div class="w-10 h-10 rounded-full bg-[#061e43] text-white flex items-center justify-center font-bold text-xs uppercase shrink-0">
+                        BS
+                      </div>
+                      <div>
+                        <p class="font-bold text-slate-900">Budi Santoso</p>
+                        <p class="text-[11px] text-slate-600 font-mono">NIK: GMI-SEC-2024-042</p>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="py-3.5 px-4">
+                    <p class="font-semibold text-slate-900">Security Officer (Satpam)</p>
+                    <p class="text-xs text-blue-700 font-medium">Security Operations</p>
+                  </td>
+                  <td class="py-3.5 px-4">
+                    <p class="font-medium text-slate-800">KPPTI Medan Merdeka</p>
+                    <p class="text-[11px] text-slate-600">Main Gate Barrier &amp; Drop Zone</p>
+                  </td>
+                  <td class="py-3.5 px-4">
+                    <p class="font-semibold text-slate-900">Shift Pagi (07:00 - 15:00)</p>
+                    <p class="text-[11px] text-emerald-700 font-medium">Masuk: 06:48 WIB</p>
+                  </td>
+                  <td class="py-3.5 px-4">
+                    <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-bold bg-emerald-50 text-emerald-700 border border-emerald-200">
+                      <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Bertugas Aktif
+                    </span>
+                    <p class="text-[10px] text-slate-600 mt-0.5">Biometrik GPS: 14m dari Pos</p>
+                  </td>
+                  <td class="py-3.5 px-4 text-center">
+                    <button type="button" onclick="showPersonDetail('Budi Santoso', 'Security Officer', 'Garda Pratama POLDA Metro Jaya', 'Security Operations', 'GMI-SEC-2024-042')" class="px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-[#061e43] hover:text-white text-slate-700 font-semibold text-xs transition-all">
+                      Lihat KTA &amp; Sertifikat
+                    </button>
+                  </td>
+                </tr>
+
+                <!-- Personel 3 -->
+                <tr class="hover:bg-slate-50/80 transition-colors" data-loc="dc" data-dept="security">
+                  <td class="py-3.5 px-4">
+                    <div class="flex items-center gap-3">
+                      <div class="w-10 h-10 rounded-full bg-slate-800 text-white flex items-center justify-center font-bold text-xs uppercase shrink-0">
+                        RA
+                      </div>
+                      <div>
+                        <p class="font-bold text-slate-900">Rahmat Alamsyah</p>
+                        <p class="text-[11px] text-slate-600 font-mono">NIK: GMI-SEC-2024-015</p>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="py-3.5 px-4">
+                    <p class="font-semibold text-slate-900">Access Control &amp; CCTV Operator</p>
+                    <p class="text-xs text-blue-700 font-medium">Security Operations</p>
+                  </td>
+                  <td class="py-3.5 px-4">
+                    <p class="font-medium text-slate-800">Data Center Jatiluhur</p>
+                    <p class="text-[11px] text-slate-600">Ruang Kontrol NOC Tier-3</p>
+                  </td>
+                  <td class="py-3.5 px-4">
+                    <p class="font-semibold text-slate-900">Shift Pagi (07:00 - 15:00)</p>
+                    <p class="text-[11px] text-emerald-700 font-medium">Masuk: 06:35 WIB</p>
+                  </td>
+                  <td class="py-3.5 px-4">
+                    <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-bold bg-emerald-50 text-emerald-700 border border-emerald-200">
+                      <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Bertugas Aktif
+                    </span>
+                    <p class="text-[10px] text-slate-600 mt-0.5">Biometrik Face ID OK</p>
+                  </td>
+                  <td class="py-3.5 px-4 text-center">
+                    <button type="button" onclick="showPersonDetail('Rahmat Alamsyah', 'CCTV & NOC Security Specialist', 'Garda Pratama + Sertifikasi CCTV VMS', 'Security Operations', 'GMI-SEC-2024-015')" class="px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-[#061e43] hover:text-white text-slate-700 font-semibold text-xs transition-all">
+                      Lihat KTA &amp; Sertifikat
+                    </button>
+                  </td>
+                </tr>
+
+                <!-- Personel 4: Cleaning Service -->
+                <tr class="hover:bg-slate-50/80 transition-colors" data-loc="kppti" data-dept="cleaning">
+                  <td class="py-3.5 px-4">
+                    <div class="flex items-center gap-3">
+                      <div class="w-10 h-10 rounded-full bg-teal-800 text-white flex items-center justify-center font-bold text-xs uppercase shrink-0">
+                        SW
+                      </div>
+                      <div>
+                        <p class="font-bold text-slate-900">Sri Wahyuni</p>
+                        <p class="text-[11px] text-slate-600 font-mono">NIK: GMI-CLN-2024-008</p>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="py-3.5 px-4">
+                    <p class="font-semibold text-slate-900">Supervisor Housekeeping</p>
+                    <p class="text-xs text-teal-700 font-medium">Facility Services</p>
+                  </td>
+                  <td class="py-3.5 px-4">
+                    <p class="font-medium text-slate-800">KPPTI Medan Merdeka</p>
+                    <p class="text-[11px] text-slate-600">Area Direksi Lantai 7 &amp; 8</p>
+                  </td>
+                  <td class="py-3.5 px-4">
+                    <p class="font-semibold text-slate-900">Shift Pagi (06:00 - 14:00)</p>
+                    <p class="text-[11px] text-emerald-700 font-medium">Masuk: 05:50 WIB</p>
+                  </td>
+                  <td class="py-3.5 px-4">
+                    <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-bold bg-emerald-50 text-emerald-700 border border-emerald-200">
+                      <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Bertugas Aktif
+                    </span>
+                    <p class="text-[10px] text-slate-600 mt-0.5">Checklist Kebersihan: 100%</p>
+                  </td>
+                  <td class="py-3.5 px-4 text-center">
+                    <button type="button" onclick="showPersonDetail('Sri Wahyuni', 'Supervisor Housekeeping', 'BNSP Kompetensi Cleaning Service & Sanitasi', 'Facility Services', 'GMI-CLN-2024-008')" class="px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-[#061e43] hover:text-white text-slate-700 font-semibold text-xs transition-all">
+                      Lihat Sertifikat BNSP
+                    </button>
+                  </td>
+                </tr>
+
+                <!-- Personel 5: ME Technician -->
+                <tr class="hover:bg-slate-50/80 transition-colors" data-loc="dc" data-dept="maintenance">
+                  <td class="py-3.5 px-4">
+                    <div class="flex items-center gap-3">
+                      <div class="w-10 h-10 rounded-full bg-amber-800 text-white flex items-center justify-center font-bold text-xs uppercase shrink-0">
+                        DI
+                      </div>
+                      <div>
+                        <p class="font-bold text-slate-900">Dedi Irawan</p>
+                        <p class="text-[11px] text-slate-600 font-mono">NIK: GMI-TEC-2024-003</p>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="py-3.5 px-4">
+                    <p class="font-semibold text-slate-900">Teknisi Listrik &amp; HVAC Presisi</p>
+                    <p class="text-xs text-amber-700 font-medium">Mechanical Electrical</p>
+                  </td>
+                  <td class="py-3.5 px-4">
+                    <p class="font-medium text-slate-800">Data Center Jatiluhur</p>
+                    <p class="text-[11px] text-slate-600">Substation &amp; PAC Chiller Room</p>
+                  </td>
+                  <td class="py-3.5 px-4">
+                    <p class="font-semibold text-slate-900">Shift Pagi (07:00 - 15:00)</p>
+                    <p class="text-[11px] text-emerald-700 font-medium">Masuk: 06:40 WIB</p>
+                  </td>
+                  <td class="py-3.5 px-4">
+                    <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-bold bg-emerald-50 text-emerald-700 border border-emerald-200">
+                      <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Bertugas Aktif
+                    </span>
+                    <p class="text-[10px] text-slate-600 mt-0.5">Suhu PAC Terkalibrasi 20°C</p>
+                  </td>
+                  <td class="py-3.5 px-4 text-center">
+                    <button type="button" onclick="showPersonDetail('Dedi Irawan', 'Teknisi HVAC & Listrik', 'Sertifikat K3 Listrik Kemnaker RI', 'Mechanical Electrical', 'GMI-TEC-2024-003')" class="px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-[#061e43] hover:text-white text-slate-700 font-semibold text-xs transition-all">
+                      Lihat Sertifikat K3
+                    </button>
+                  </td>
+                </tr>
+
+                <!-- Personel 6: Security Hub BSD -->
+                <tr class="hover:bg-slate-50/80 transition-colors" data-loc="bsd" data-dept="security">
+                  <td class="py-3.5 px-4">
+                    <div class="flex items-center gap-3">
+                      <div class="w-10 h-10 rounded-full bg-slate-700 text-white flex items-center justify-center font-bold text-xs uppercase shrink-0">
+                        FH
+                      </div>
+                      <div>
+                        <p class="font-bold text-slate-900">Farhan Hidayat</p>
+                        <p class="text-[11px] text-slate-600 font-mono">NIK: GMI-SEC-2024-067</p>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="py-3.5 px-4">
+                    <p class="font-semibold text-slate-900">Security Patrol Officer</p>
+                    <p class="text-xs text-blue-700 font-medium">Security Operations</p>
+                  </td>
+                  <td class="py-3.5 px-4">
+                    <p class="font-medium text-slate-800">Hub Regional BSD Serpong</p>
+                    <p class="text-[11px] text-slate-600">Perimeter &amp; Loading Dock</p>
+                  </td>
+                  <td class="py-3.5 px-4">
+                    <p class="font-semibold text-slate-900">Shift Pagi (07:00 - 15:00)</p>
+                    <p class="text-[11px] text-emerald-700 font-medium">Masuk: 06:45 WIB</p>
+                  </td>
+                  <td class="py-3.5 px-4">
+                    <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-bold bg-emerald-50 text-emerald-700 border border-emerald-200">
+                      <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Bertugas Aktif
+                    </span>
+                    <p class="text-[10px] text-slate-600 mt-0.5">Patroli Putaran 2 Selesai</p>
+                  </td>
+                  <td class="py-3.5 px-4 text-center">
+                    <button type="button" onclick="showPersonDetail('Farhan Hidayat', 'Security Patrol Officer', 'Garda Pratama POLDA Banten', 'Security Operations', 'GMI-SEC-2024-067')" class="px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-[#061e43] hover:text-white text-slate-700 font-semibold text-xs transition-all">
+                      Lihat KTA &amp; Sertifikat
+                    </button>
+                  </td>
+                </tr>
+
+              </tbody>
+            </table>
+          </div>
+
+          <div class="mt-4 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-500">
+            <p>Menampilkan 6 dari 48 personel bertugas pada shift aktif.</p>
+            <div class="flex items-center gap-1">
+              <span class="px-3 py-1 rounded-md bg-[#061e43] text-white font-bold">1</span>
+              <span class="px-3 py-1 rounded-md bg-slate-100 text-slate-600 hover:bg-slate-200 cursor-pointer">2</span>
+              <span class="px-3 py-1 rounded-md bg-slate-100 text-slate-600 hover:bg-slate-200 cursor-pointer">3</span>
+            </div>
+          </div>
+
+        </section>
+
+        <!-- ========================================================== -->
+        <!-- TAB 2: LOG PATROLI GUARD TOUR (QR CHECKPOINTS)             -->
+        <!-- ========================================================== -->
+        <section id="panel-patrol" class="tab-panel hidden">
+          
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
+            <div>
+              <h2 class="text-base sm:text-lg font-bold text-slate-900">Rekam Jejak Patroli Digital (Guard Tour QR)</h2>
+              <p class="text-xs text-slate-500">Data titik inspeksi keamanan gedung terverifikasi real-time dengan koordinat GPS dan foto visual</p>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="px-3 py-1 rounded-full text-xs font-bold bg-emerald-50 text-emerald-700 border border-emerald-200 flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span> Patroli Berjalan Lancar
+              </span>
+            </div>
+          </div>
+
+          <!-- Patrol Checkpoints Timeline / Stream -->
+          <div class="space-y-3.5">
+            
+            <!-- Checkpoint 1 -->
+            <div class="p-4 rounded-2xl border border-slate-200 hover:border-slate-300 bg-slate-50/50 flex flex-col md:flex-row md:items-center justify-between gap-4 transition-all">
+              <div class="flex items-start gap-3.5">
+                <div class="w-10 h-10 rounded-xl bg-blue-100 text-[#061e43] flex items-center justify-center font-bold text-sm shrink-0 mt-0.5">
+                  #01
+                </div>
+                <div>
+                  <div class="flex flex-wrap items-center gap-2 mb-1">
+                    <p class="font-bold text-slate-900 text-sm">Main Gate &amp; Barrier Otomatis (KPPTI Merdeka)</p>
+                    <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-emerald-100 text-emerald-800">Scan Terverifikasi</span>
+                  </div>
+                  <p class="text-xs text-slate-600">Petugas: <strong>Budi Santoso (Satpam)</strong> • Koordinat: -6.175110, 106.827153 (Akurasi GPS: 5m)</p>
+                  <p class="text-xs text-slate-500 mt-1 italic">Catatan: Barrier gate beroperasi normal, kartu akses RFID lancar, nihil antrean kendaraan.</p>
+                </div>
+              </div>
+              <div class="flex items-center justify-between md:justify-end gap-3 shrink-0">
+                <span class="text-xs font-mono font-bold text-slate-700 bg-white px-3 py-1.5 rounded-lg border border-slate-200">
+                  15:20 WIB
+                </span>
+                <button type="button" onclick="showProofModal('Main Gate & Barrier Otomatis', '15:20 WIB', 'Budi Santoso', 'Kondisi steril, barrier gate lancar')" class="px-3 py-1.5 rounded-lg bg-[#061e43] text-white text-xs font-semibold hover:bg-slate-800 transition-all">
+                  Lihat Foto Bukti
+                </button>
+              </div>
+            </div>
+
+            <!-- Checkpoint 2 -->
+            <div class="p-4 rounded-2xl border border-slate-200 hover:border-slate-300 bg-slate-50/50 flex flex-col md:flex-row md:items-center justify-between gap-4 transition-all">
+              <div class="flex items-start gap-3.5">
+                <div class="w-10 h-10 rounded-xl bg-blue-100 text-[#061e43] flex items-center justify-center font-bold text-sm shrink-0 mt-0.5">
+                  #08
+                </div>
+                <div>
+                  <div class="flex flex-wrap items-center gap-2 mb-1">
+                    <p class="font-bold text-slate-900 text-sm">Server Hall DC Lantai 3 (Data Center Jatiluhur)</p>
+                    <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-emerald-100 text-emerald-800">Scan Terverifikasi</span>
+                  </div>
+                  <p class="text-xs text-slate-600">Petugas: <strong>Rahmat Alamsyah</strong> • Sensor Suhu: 19.8°C • Kelembaban: 48% RH</p>
+                  <p class="text-xs text-slate-500 mt-1 italic">Catatan: Kunci pintu ganda biometrik terkunci aman, sistem pemadam gas FM200 status Siaga Hijau.</p>
+                </div>
+              </div>
+              <div class="flex items-center justify-between md:justify-end gap-3 shrink-0">
+                <span class="text-xs font-mono font-bold text-slate-700 bg-white px-3 py-1.5 rounded-lg border border-slate-200">
+                  15:05 WIB
+                </span>
+                <button type="button" onclick="showProofModal('Server Hall DC Lantai 3', '15:05 WIB', 'Rahmat Alamsyah', 'Suhu 19.8°C normal, pintu magnetik terkunci aman')" class="px-3 py-1.5 rounded-lg bg-[#061e43] text-white text-xs font-semibold hover:bg-slate-800 transition-all">
+                  Lihat Foto Bukti
+                </button>
+              </div>
+            </div>
+
+            <!-- Checkpoint 3 -->
+            <div class="p-4 rounded-2xl border border-slate-200 hover:border-slate-300 bg-slate-50/50 flex flex-col md:flex-row md:items-center justify-between gap-4 transition-all">
+              <div class="flex items-start gap-3.5">
+                <div class="w-10 h-10 rounded-xl bg-blue-100 text-[#061e43] flex items-center justify-center font-bold text-sm shrink-0 mt-0.5">
+                  #14
+                </div>
+                <div>
+                  <div class="flex flex-wrap items-center gap-2 mb-1">
+                    <p class="font-bold text-slate-900 text-sm">Genset Emergency &amp; Pompa Hydrant (Basement 2)</p>
+                    <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-emerald-100 text-emerald-800">Scan Terverifikasi</span>
+                  </div>
+                  <p class="text-xs text-slate-600">Petugas: <strong>Dedi Irawan (Teknisi ME)</strong> • Level Solar: 92% • Tekanan Bar: 8.5 Bar</p>
+                  <p class="text-xs text-slate-500 mt-1 italic">Catatan: Panel ATS Otomatis Normal, Valve Jockey Pump Terbuka &amp; Tersegel Resmi.</p>
+                </div>
+              </div>
+              <div class="flex items-center justify-between md:justify-end gap-3 shrink-0">
+                <span class="text-xs font-mono font-bold text-slate-700 bg-white px-3 py-1.5 rounded-lg border border-slate-200">
+                  14:45 WIB
+                </span>
+                <button type="button" onclick="showProofModal('Genset & Pompa Hydrant', '14:45 WIB', 'Dedi Irawan', 'Tekanan 8.5 Bar normal, solar 92% aman')" class="px-3 py-1.5 rounded-lg bg-[#061e43] text-white text-xs font-semibold hover:bg-slate-800 transition-all">
+                  Lihat Foto Bukti
+                </button>
+              </div>
+            </div>
+
+            <!-- Checkpoint 4 -->
+            <div class="p-4 rounded-2xl border border-slate-200 hover:border-slate-300 bg-slate-50/50 flex flex-col md:flex-row md:items-center justify-between gap-4 transition-all">
+              <div class="flex items-start gap-3.5">
+                <div class="w-10 h-10 rounded-xl bg-blue-100 text-[#061e43] flex items-center justify-center font-bold text-sm shrink-0 mt-0.5">
+                  #22
+                </div>
+                <div>
+                  <div class="flex flex-wrap items-center gap-2 mb-1">
+                    <p class="font-bold text-slate-900 text-sm">Perimeter Pagar Luar &amp; Pos Jaga Timur (Hub BSD)</p>
+                    <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-emerald-100 text-emerald-800">Scan Terverifikasi</span>
+                  </div>
+                  <p class="text-xs text-slate-600">Petugas: <strong>Farhan Hidayat</strong> • Perimeter Pagar Sensor Inframerah Aktif</p>
+                  <p class="text-xs text-slate-500 mt-1 italic">Catatan: Pagar kawat berduri kondisi baik, sorot lampu PJU menyala sempurna.</p>
+                </div>
+              </div>
+              <div class="flex items-center justify-between md:justify-end gap-3 shrink-0">
+                <span class="text-xs font-mono font-bold text-slate-700 bg-white px-3 py-1.5 rounded-lg border border-slate-200">
+                  14:15 WIB
+                </span>
+                <button type="button" onclick="showProofModal('Perimeter Pagar Luar Hub BSD', '14:15 WIB', 'Farhan Hidayat', 'Pagar keliling aman, lampu sorot berfungsi normal')" class="px-3 py-1.5 rounded-lg bg-[#061e43] text-white text-xs font-semibold hover:bg-slate-800 transition-all">
+                  Lihat Foto Bukti
+                </button>
+              </div>
+            </div>
+
+          </div>
+
+        </section>
+
+        <!-- ========================================================== -->
+        <!-- TAB 3: E-BILLING, FAKTUR PAJAK & KEPATUHAN LEGAL (BPJS)     -->
+        <!-- ========================================================== -->
+        <section id="panel-billing" class="tab-panel hidden">
+          
+          <div class="mb-6">
+            <h2 class="text-base sm:text-lg font-bold text-slate-900">E-Billing, Faktur Pajak &amp; Jaminan Kepatuhan BPJS</h2>
+            <p class="text-xs text-slate-500">Transparansi kepatuhan hukum ketenagakerjaan, bukti setor premi BPJS seluruh tenaga kerja, dan arsip penagihan resmi</p>
+          </div>
+
+          <!-- Kepatuhan Banner -->
+          <div class="bg-emerald-50 border border-emerald-200 rounded-2xl p-5 mb-6 flex flex-col md:flex-row md:items-center justify-between gap-4">
+            <div class="flex items-start gap-3.5">
+              <div class="w-10 h-10 rounded-full bg-emerald-600 text-white flex items-center justify-center shrink-0">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+              <div>
+                <p class="font-bold text-emerald-950 text-sm">Status Kepatuhan Ketenagakerjaan: 100% Audit-Ready</p>
+                <p class="text-xs text-emerald-800 mt-0.5 leading-relaxed">
+                  Seluruh 48 personel yang ditugaskan pada kontrak PT Indosat Ooredoo Hutchison Tbk terdaftar aktif dalam program BPJS Ketenagakerjaan (JKK, JKM, JHT, JP) &amp; BPJS Kesehatan dengan gaji sesuai/melampaui ketetapan UMP/UMK tahun berjalan.
+                </p>
+              </div>
+            </div>
+            <button type="button" onclick="alert('Mengunduh Bundle Arsip Kepatuhan Legal & Bukti Setor BPJS (ZIP/PDF)...')" class="px-4 py-2.5 rounded-xl bg-emerald-700 hover:bg-emerald-800 text-white text-xs font-bold shrink-0 transition-all shadow-xs flex items-center gap-1.5">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+              </svg>
+              Unduh Paket Bukti BPJS (.ZIP)
+            </button>
+          </div>
+
+          <!-- Invoices Table -->
+          <div class="overflow-x-auto rounded-2xl border border-slate-200 mb-6">
+            <table class="w-full text-left text-xs sm:text-sm">
+              <thead class="bg-slate-100 text-slate-700 font-bold uppercase tracking-wider text-[11px] border-b border-slate-200">
+                <tr>
+                  <th class="py-3.5 px-4">No. Invoice &amp; Periode</th>
+                  <th class="py-3.5 px-4">Deskripsi Layanan</th>
+                  <th class="py-3.5 px-4">Nominal Tagihan</th>
+                  <th class="py-3.5 px-4">Faktur Pajak (PPh 23 / PPN)</th>
+                  <th class="py-3.5 px-4">Status Pembayaran</th>
+                  <th class="py-3.5 px-4 text-center">Dokumen</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-100 text-slate-800">
+                
+                <!-- Invoice 1 -->
+                <tr class="hover:bg-slate-50/80 transition-colors">
+                  <td class="py-3.5 px-4">
+                    <p class="font-bold text-slate-900 font-mono">INV/GMI-ISAT/2026/10</p>
+                    <p class="text-[11px] text-slate-500">Periode: Oktober 2026</p>
+                  </td>
+                  <td class="py-3.5 px-4">
+                    <p class="font-semibold text-slate-900">Jasa Outsourcing &amp; Security Full-Service</p>
+                    <p class="text-xs text-slate-500">48 Personel (KPPTI, Jatiluhur, BSD)</p>
+                  </td>
+                  <td class="py-3.5 px-4">
+                    <p class="font-bold text-slate-900">Rp 312.450.000,-</p>
+                    <p class="text-[10px] text-slate-400">Termasuk Manpower Management Fee</p>
+                  </td>
+                  <td class="py-3.5 px-4">
+                    <p class="font-mono text-xs font-semibold text-blue-700">010.004-26.89201923</p>
+                    <span class="inline-block text-[10px] text-emerald-700 font-semibold">e-Faktur Terbit Valid</span>
+                  </td>
+                  <td class="py-3.5 px-4">
+                    <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-bold bg-emerald-50 text-emerald-700 border border-emerald-200">
+                      &check; Lunas Terverifikasi
+                    </span>
+                  </td>
+                  <td class="py-3.5 px-4 text-center">
+                    <button type="button" onclick="alert('Mengunduh e-Faktur Pajak dan Bukti Pembayaran Resmi PDF...')" class="px-3 py-1.5 rounded-lg border border-slate-300 hover:bg-slate-100 text-slate-700 font-semibold text-xs transition-all">
+                      Unduh PDF
+                    </button>
+                  </td>
+                </tr>
+
+                <!-- Invoice 2 -->
+                <tr class="hover:bg-slate-50/80 transition-colors">
+                  <td class="py-3.5 px-4">
+                    <p class="font-bold text-slate-900 font-mono">INV/GMI-ISAT/2026/09</p>
+                    <p class="text-[11px] text-slate-500">Periode: September 2026</p>
+                  </td>
+                  <td class="py-3.5 px-4">
+                    <p class="font-semibold text-slate-900">Jasa Outsourcing &amp; Security Full-Service</p>
+                    <p class="text-xs text-slate-500">48 Personel (KPPTI, Jatiluhur, BSD)</p>
+                  </td>
+                  <td class="py-3.5 px-4">
+                    <p class="font-bold text-slate-900">Rp 312.450.000,-</p>
+                    <p class="text-[10px] text-slate-400">Termasuk Manpower Management Fee</p>
+                  </td>
+                  <td class="py-3.5 px-4">
+                    <p class="font-mono text-xs font-semibold text-blue-700">010.004-26.78104812</p>
+                    <span class="inline-block text-[10px] text-emerald-700 font-semibold">e-Faktur Terbit Valid</span>
+                  </td>
+                  <td class="py-3.5 px-4">
+                    <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-bold bg-emerald-50 text-emerald-700 border border-emerald-200">
+                      &check; Lunas Terverifikasi
+                    </span>
+                  </td>
+                  <td class="py-3.5 px-4 text-center">
+                    <button type="button" onclick="alert('Mengunduh e-Faktur Pajak dan Bukti Pembayaran Resmi PDF...')" class="px-3 py-1.5 rounded-lg border border-slate-300 hover:bg-slate-100 text-slate-700 font-semibold text-xs transition-all">
+                      Unduh PDF
+                    </button>
+                  </td>
+                </tr>
+
+                <!-- Invoice 3 -->
+                <tr class="hover:bg-slate-50/80 transition-colors">
+                  <td class="py-3.5 px-4">
+                    <p class="font-bold text-slate-900 font-mono">INV/GMI-ISAT/2026/08</p>
+                    <p class="text-[11px] text-slate-500">Periode: Agustus 2026</p>
+                  </td>
+                  <td class="py-3.5 px-4">
+                    <p class="font-semibold text-slate-900">Jasa Outsourcing &amp; Security + Tambahan Event RUPS</p>
+                    <p class="text-xs text-slate-500">48 Reguler + 8 Satpam Event Khusus</p>
+                  </td>
+                  <td class="py-3.5 px-4">
+                    <p class="font-bold text-slate-900">Rp 328.950.000,-</p>
+                    <p class="text-[10px] text-slate-400">Termasuk Tambahan Pengamanan VIP</p>
+                  </td>
+                  <td class="py-3.5 px-4">
+                    <p class="font-mono text-xs font-semibold text-blue-700">010.004-26.65491024</p>
+                    <span class="inline-block text-[10px] text-emerald-700 font-semibold">e-Faktur Terbit Valid</span>
+                  </td>
+                  <td class="py-3.5 px-4">
+                    <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-bold bg-emerald-50 text-emerald-700 border border-emerald-200">
+                      &check; Lunas Terverifikasi
+                    </span>
+                  </td>
+                  <td class="py-3.5 px-4 text-center">
+                    <button type="button" onclick="alert('Mengunduh e-Faktur Pajak dan Bukti Pembayaran Resmi PDF...')" class="px-3 py-1.5 rounded-lg border border-slate-300 hover:bg-slate-100 text-slate-700 font-semibold text-xs transition-all">
+                      Unduh PDF
+                    </button>
+                  </td>
+                </tr>
+
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Compliance Checklist Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="p-4 rounded-xl border border-slate-200 bg-slate-50">
+              <p class="text-xs font-bold text-slate-900 flex items-center gap-1.5">
+                <svg class="w-4 h-4 text-emerald-600" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                BPJS Ketenagakerjaan
+              </p>
+              <p class="text-xs text-slate-600 mt-1">NPP: 19028374823 (Status: Lunas 48 Personel)</p>
+            </div>
+            <div class="p-4 rounded-xl border border-slate-200 bg-slate-50">
+              <p class="text-xs font-bold text-slate-900 flex items-center gap-1.5">
+                <svg class="w-4 h-4 text-emerald-600" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                BPJS Kesehatan Badan Usaha
+              </p>
+              <p class="text-xs text-slate-600 mt-1">Virtual Account Mandiri (Status: Nihil Tunggakan)</p>
+            </div>
+            <div class="p-4 rounded-xl border border-slate-200 bg-slate-50">
+              <p class="text-xs font-bold text-slate-900 flex items-center gap-1.5">
+                <svg class="w-4 h-4 text-emerald-600" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                Kepatuhan Upah UMP/UMK
+              </p>
+              <p class="text-xs text-slate-600 mt-1">Surat Pernyataan Direksi Resmi Berlaku</p>
+            </div>
+          </div>
+
+        </section>
+
+        <!-- ========================================================== -->
+        <!-- TAB 4: PENGAJUAN TIKET LAYANAN & TAMBAHAN PERSONEL         -->
+        <!-- ========================================================== -->
+        <section id="panel-tickets" class="tab-panel hidden">
+          
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            
+            <!-- Left: Form Permintaan Tambahan Personel -->
+            <div class="lg:col-span-1 bg-slate-50 rounded-2xl p-6 border border-slate-200">
+              <h3 class="text-base font-bold text-slate-900 mb-1">Buat Tiket Layanan Baru</h3>
+              <p class="text-xs text-slate-500 mb-5 leading-relaxed">Pengajuan personel tambahan, pengawalan VIP, atau perbaikan fasilitas khusus.</p>
+
+              <form id="service-ticket-form" class="space-y-4">
+                <div>
+                  <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">Jenis Kebutuhan *</label>
+                  <select id="ticket-type" required class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-xs sm:text-sm bg-white focus:ring-2 focus:ring-[#061e43] focus:outline-none">
+                    <option value="Security Tambahan Event">Security Tambahan (Acara Khusus / Exhibition)</option>
+                    <option value="Pengawalan VIP / Direksi">Pengawalan VIP &amp; Executive Escort</option>
+                    <option value="Pergantian Shift Darurat">Pergantian Shift Darurat / Backup</option>
+                    <option value="Deep Cleaning Pasca Renovasi">Deep Cleaning &amp; Sanitasi Gedung</option>
+                    <option value="Maintenance Teknisi ME">Maintenance Teknisi ME Darurat</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">Lokasi Penempatan *</label>
+                  <select id="ticket-location" required class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-xs sm:text-sm bg-white focus:ring-2 focus:ring-[#061e43] focus:outline-none">
+                    <option value="KPPTI Kantor Pusat Medan Merdeka">KPPTI Kantor Pusat Medan Merdeka</option>
+                    <option value="Data Center Jatiluhur">Data Center Jatiluhur</option>
+                    <option value="Hub Regional BSD Serpong">Hub Regional BSD Serpong</option>
+                    <option value="Warehouse & Logistik Cikarang">Warehouse &amp; Logistik Cikarang</option>
+                  </select>
+                </div>
+
+                <div class="grid grid-cols-2 gap-3">
+                  <div>
+                    <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">Jumlah Orang *</label>
+                    <input id="ticket-count" type="number" min="1" max="50" value="2" required class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-xs sm:text-sm bg-white focus:ring-2 focus:ring-[#061e43] focus:outline-none">
+                  </div>
+                  <div>
+                    <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">Tanggal Butuh *</label>
+                    <input id="ticket-date" type="date" required class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-xs sm:text-sm bg-white focus:ring-2 focus:ring-[#061e43] focus:outline-none">
+                  </div>
+                </div>
+
+                <div>
+                  <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">Catatan / Detail Instruksi *</label>
+                  <textarea id="ticket-notes" rows="3" placeholder="Sebutkan detail instruksi khusus, dress code, atau perlakuan khusus..." required class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-xs sm:text-sm bg-white focus:ring-2 focus:ring-[#061e43] focus:outline-none"></textarea>
+                </div>
+
+                <button type="submit" class="w-full py-3 rounded-xl bg-[#061e43] hover:bg-[#0a2f68] text-white font-bold text-xs sm:text-sm transition-all shadow-md flex items-center justify-center gap-2">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+                  </svg>
+                  Kirim Pengajuan Layanan
+                </button>
+              </form>
+            </div>
+
+            <!-- Right: Active Tickets Queue -->
+            <div class="lg:col-span-2">
+              <div class="flex items-center justify-between mb-4">
+                <div>
+                  <h3 class="text-base font-bold text-slate-900">Riwayat Pengajuan Tiket Layanan</h3>
+                  <p class="text-xs text-slate-500">Status respons SLA Command Center GMI (&lt; 2 Jam Respons Operasional)</p>
+                </div>
+                <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-slate-100 text-slate-700">
+                  Total 3 Tiket
+                </span>
+              </div>
+
+              <div id="ticket-list" class="space-y-3.5">
+                
+                <!-- Ticket 1 -->
+                <div class="p-4 rounded-2xl border border-slate-200 bg-white hover:shadow-xs transition-all">
+                  <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2">
+                    <div class="flex items-center gap-2">
+                      <span class="font-mono text-xs font-bold text-[#061e43] bg-blue-50 px-2 py-0.5 rounded border border-blue-200">#TKT-2026-104</span>
+                      <h4 class="font-bold text-slate-900 text-sm">Tambahan 4 Personel Security untuk RUPS Luar Biasa</h4>
+                    </div>
+                    <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-bold bg-amber-50 text-amber-800 border border-amber-200">
+                      <span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span> Disetujui - Personel Ditugaskan
+                    </span>
+                  </div>
+                  <p class="text-xs text-slate-600 leading-relaxed">
+                    Lokasi: KPPTI Medan Merdeka • Waktu Pelaksanaan: 18 November 2026 • PIC Koordinator: Danru Agus Priyanto.
+                  </p>
+                  <div class="mt-3 pt-2.5 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-400">
+                    <span>Diajukan oleh: Bpk. Hendra Wijaya (12 Nov 2026)</span>
+                    <span class="text-emerald-700 font-medium">SLA Respon: 18 Menit (Terpenuhi)</span>
+                  </div>
+                </div>
+
+                <!-- Ticket 2 -->
+                <div class="p-4 rounded-2xl border border-slate-200 bg-white hover:shadow-xs transition-all">
+                  <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2">
+                    <div class="flex items-center gap-2">
+                      <span class="font-mono text-xs font-bold text-[#061e43] bg-blue-50 px-2 py-0.5 rounded border border-blue-200">#TKT-2026-098</span>
+                      <h4 class="font-bold text-slate-900 text-sm">Pergantian Filter Chiller Presisi PAC-2 Data Center</h4>
+                    </div>
+                    <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-bold bg-emerald-50 text-emerald-800 border border-emerald-200">
+                      &check; Pekerjaan Selesai (Closed)
+                    </span>
+                  </div>
+                  <p class="text-xs text-slate-600 leading-relaxed">
+                    Lokasi: Data Center Jatiluhur • Waktu: 5 November 2026 • Petugas: Dedi Irawan (Teknisi ME). Filter HEPA telah diganti baru.
+                  </p>
+                  <div class="mt-3 pt-2.5 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-400">
+                    <span>Diajukan oleh: Tim Operasional NOC (4 Nov 2026)</span>
+                    <span class="text-emerald-700 font-medium">Laporan BAP Terverifikasi</span>
+                  </div>
+                </div>
+
+                <!-- Ticket 3 -->
+                <div class="p-4 rounded-2xl border border-slate-200 bg-white hover:shadow-xs transition-all">
+                  <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2">
+                    <div class="flex items-center gap-2">
+                      <span class="font-mono text-xs font-bold text-[#061e43] bg-blue-50 px-2 py-0.5 rounded border border-blue-200">#TKT-2026-091</span>
+                      <h4 class="font-bold text-slate-900 text-sm">Sanitasi &amp; Deep Cleaning Karpet Lantai 8 Kantor Direksi</h4>
+                    </div>
+                    <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-bold bg-emerald-50 text-emerald-800 border border-emerald-200">
+                      &check; Pekerjaan Selesai (Closed)
+                    </span>
+                  </div>
+                  <p class="text-xs text-slate-600 leading-relaxed">
+                    Lokasi: KPPTI Medan Merdeka • Waktu: 28 Oktober 2026 • Eksekusi Tim Cleaning Service GMI (Sri Wahyuni dkk).
+                  </p>
+                  <div class="mt-3 pt-2.5 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-400">
+                    <span>Diajukan oleh: General Affairs Indosat (27 Okt 2026)</span>
+                    <span class="text-emerald-700 font-medium">BAP Ditandatangani GA</span>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+
+        </section>
+
+        <!-- ========================================================== -->
+        <!-- TAB 5: EVALUASI KPI & LAPORAN BULANAN                      -->
+        <!-- ========================================================== -->
+        <section id="panel-scorecard" class="tab-panel hidden">
+          
+          <div class="mb-6">
+            <h2 class="text-base sm:text-lg font-bold text-slate-900">Scorecard Kinerja &amp; Evaluasi SLA Bulanan</h2>
+            <p class="text-xs text-slate-500">Pencapaian parameter Service Level Agreement (SLA) berdasarkan kontrak PT Indosat Ooredoo Hutchison Tbk</p>
+          </div>
+
+          <!-- Scorecard Progress Bars -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+            
+            <div class="p-5 rounded-2xl border border-slate-200 bg-slate-50 space-y-4">
+              <div>
+                <div class="flex justify-between text-xs font-bold mb-1">
+                  <span class="text-slate-800">Pemenuhan Kuota Manpower (Fulfillment Rate)</span>
+                  <span class="text-[#061e43]">100% (Target: &ge;98%)</span>
+                </div>
+                <div class="w-full h-3 bg-slate-200 rounded-full overflow-hidden">
+                  <div class="h-full bg-[#061e43] rounded-full" style="width: 100%"></div>
+                </div>
+                <p class="text-[11px] text-slate-500 mt-1">48 dari 48 posisi selalu terisi tanpa kekosongan shift.</p>
+              </div>
+
+              <div>
+                <div class="flex justify-between text-xs font-bold mb-1">
+                  <span class="text-slate-800">Tingkat Kedisiplinan &amp; Ketepatan Waktu Presensi</span>
+                  <span class="text-emerald-700">99.2% (Target: &ge;95%)</span>
+                </div>
+                <div class="w-full h-3 bg-slate-200 rounded-full overflow-hidden">
+                  <div class="h-full bg-emerald-600 rounded-full" style="width: 99.2%"></div>
+                </div>
+                <p class="text-[11px] text-slate-500 mt-1">Tercatat melalui aplikasi biometrik wajah geofence.</p>
+              </div>
+
+              <div>
+                <div class="flex justify-between text-xs font-bold mb-1">
+                  <span class="text-slate-800">Kepatuhan Rute Patroli Guard Tour</span>
+                  <span class="text-blue-700">98.6% (Target: &ge;95%)</span>
+                </div>
+                <div class="w-full h-3 bg-slate-200 rounded-full overflow-hidden">
+                  <div class="h-full bg-blue-600 rounded-full" style="width: 98.6%"></div>
+                </div>
+                <p class="text-[11px] text-slate-500 mt-1">142 dari 144 checkpoint terscan tepat interval waktu.</p>
+              </div>
+            </div>
+
+            <div class="p-5 rounded-2xl border border-slate-200 bg-slate-50 space-y-4">
+              <div>
+                <div class="flex justify-between text-xs font-bold mb-1">
+                  <span class="text-slate-800">Ketepatan Waktu Respon Darurat (Emergency SLA)</span>
+                  <span class="text-emerald-700">100% (&lt; 5 Menit di Lokasi)</span>
+                </div>
+                <div class="w-full h-3 bg-slate-200 rounded-full overflow-hidden">
+                  <div class="h-full bg-emerald-600 rounded-full" style="width: 100%"></div>
+                </div>
+                <p class="text-[11px] text-slate-500 mt-1">Regu pengamanan siaga 24 jam dengan radio terkoordinasi.</p>
+              </div>
+
+              <div>
+                <div class="flex justify-between text-xs font-bold mb-1">
+                  <span class="text-slate-800">Indeks Kepuasan Layanan Mitra (CSAT Score)</span>
+                  <span class="text-purple-700">4.92 / 5.00 (Sangat Baik)</span>
+                </div>
+                <div class="w-full h-3 bg-slate-200 rounded-full overflow-hidden">
+                  <div class="h-full bg-purple-600 rounded-full" style="width: 98.4%"></div>
+                </div>
+                <p class="text-[11px] text-slate-500 mt-1">Survei berkala dari Divisi General Affairs &amp; Building Indosat.</p>
+              </div>
+
+              <div>
+                <div class="flex justify-between text-xs font-bold mb-1">
+                  <span class="text-slate-800">K3 &amp; Zero Incident Track Record</span>
+                  <span class="text-emerald-700">100% Zero Accident</span>
+                </div>
+                <div class="w-full h-3 bg-slate-200 rounded-full overflow-hidden">
+                  <div class="h-full bg-emerald-600 rounded-full" style="width: 100%"></div>
+                </div>
+                <p class="text-[11px] text-slate-500 mt-1">Sertifikasi SMK3 &amp; ISO 45001:2018 terimplementasi penuh.</p>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Download Full Report Button -->
+          <div class="text-center pt-2">
+            <button type="button" onclick="alert('Mengunduh Laporan Eksekutif SLA & KPI Periode Berjalan (PDF)...')" class="px-6 py-3 rounded-xl bg-[#061e43] hover:bg-[#0a2f68] text-white font-bold text-xs sm:text-sm shadow-md transition-all inline-flex items-center gap-2">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+              Unduh Laporan Eksekutif SLA Lengkap (PDF)
+            </button>
+          </div>
+
+        </section>
+
+      </div>
+    </div>
+
+    <!-- ============================================================== -->
+    <!-- 5. 24/7 COMMAND CENTER & SUPPORT STRIP                         -->
+    <!-- ============================================================== -->
+    <div class="rounded-3xl bg-slate-900 text-white p-6 sm:p-8 flex flex-col md:flex-row md:items-center justify-between gap-6 border border-slate-800 shadow-xl">
+      <div class="space-y-1">
+        <div class="flex items-center gap-2 text-red-500 font-bold text-xs uppercase tracking-wider">
+          <span class="w-2 h-2 rounded-full bg-red-500 animate-ping"></span>
+          24/7 Operations Command Center GMI
+        </div>
+        <h3 class="text-lg sm:text-xl font-bold text-white">Butuh Dukungan Operasional Cepat?</h3>
+        <p class="text-xs sm:text-sm text-slate-400">Tim pengawas lapangan dan dispatcher ruang kendali kami siaga melayani koordinasi keamanan 24 jam sehari.</p>
+      </div>
+
+      <div class="flex flex-wrap items-center gap-3 shrink-0">
+        <a href="tel:0215384100" class="px-5 py-2.5 rounded-full bg-white text-slate-900 hover:bg-slate-100 font-bold text-xs sm:text-sm transition-all flex items-center gap-2 shadow-xs">
+          <svg class="w-4 h-4 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+          </svg>
+          (021) 538-4100
+        </a>
+        <a href="https://wa.me/6281198765432" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 rounded-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs sm:text-sm transition-all flex items-center gap-2 shadow-xs">
+          WhatsApp Emergency
+        </a>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ============================================================== -->
+  <!-- 6. FOOTER                                                      -->
+  <!-- ============================================================== -->
+  <footer class="bg-[#022f66] text-white pt-12 pb-8 border-t border-[#043b80]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-blue-900/60 text-xs text-slate-300">
+        <div class="flex items-center gap-3">
+          <picture>
+            <source srcset="/assets/images/logo/gmi-logo-footer.svg" type="image/svg+xml">
+            <source srcset="/assets/images/logo/gmi-logo-footer.webp" type="image/webp">
+            <img src="/assets/images/logo/gmi-logo-footer.png" alt="GMI" class="h-7 w-auto object-contain">
+          </picture>
+          <span>&copy; 2026 PT Grup Mitra Indonesia. Seluruh Hak Cipta Dilindungi Undang-Undang.</span>
+        </div>
+        <div class="flex items-center gap-6">
+          <a href="index.html" class="text-rose-400 hover:text-white font-semibold transition-colors flex items-center gap-1.5">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"/></svg>
+            Log Out (Kembali ke Beranda Utama)
+          </a>
+        </div>
+      </div>
+      <p class="text-[11px] text-slate-500 text-center pt-6">
+        Keamanan Akses Klien Dilindungi Enkripsi TLS 1.3 Berstandar Industri ISO 27001 Sistem Manajemen Keamanan Informasi.
+      </p>
+    </div>
+  </footer>
+
+  <!-- ============================================================== -->
+  <!-- 7. SECURITY & ACCESS AUTHENTICATION MODAL                      -->
+  <!-- ============================================================== -->
+  <dialog id="security-auth-modal" aria-labelledby="auth-modal-title" class="fixed inset-0 m-auto p-0 max-w-md w-[calc(100%-2rem)] rounded-3xl bg-white shadow-2xl border border-slate-200 backdrop:bg-slate-950/80 backdrop:backdrop-blur-sm z-50 overflow-hidden">
+    <div class="p-6 sm:p-7">
+      
+      <div class="flex items-center justify-between mb-5">
+        <div class="flex items-center gap-2.5">
+          <div class="w-8 h-8 rounded-full bg-[#061e43] text-white flex items-center justify-center font-bold text-sm">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+            </svg>
+          </div>
+          <div>
+            <h3 id="auth-modal-title" class="text-base font-bold text-slate-900">Autentikasi Akses Mitra</h3>
+            <p class="text-xs text-slate-500">Sistem Keamanan Terpadu GMI</p>
+          </div>
+        </div>
+        <button id="close-auth-modal-btn" type="button" class="p-1 rounded-full text-slate-400 hover:text-slate-700 hover:bg-slate-100">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
+      <div class="p-3.5 bg-blue-50 border border-blue-200 rounded-2xl mb-4 text-xs text-blue-900 leading-relaxed">
+        <p class="font-bold">Akses Terlindungi:</p>
+        <p class="mt-0.5">Sesi Anda sedang dalam mode terkunci. Masukkan kredensial resmi mitra perusahaan Anda untuk memperbarui sesi portal.</p>
+      </div>
+
+      <form id="portal-login-form" class="space-y-4">
+        <div>
+          <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">ID Klien / Email Perusahaan *</label>
+          <input id="portal-client-id" type="text" value="indosat@gmi.co.id" required class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-xs sm:text-sm font-semibold bg-white focus:ring-2 focus:ring-[#061e43] focus:outline-none">
+        </div>
+        <div>
+          <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">Kode Akses Keamanan *</label>
+          <input id="portal-password" type="password" value="mitra2026" required class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-xs sm:text-sm font-semibold bg-white focus:ring-2 focus:ring-[#061e43] focus:outline-none">
+        </div>
+
+        <div id="auth-error-msg" class="hidden p-3 bg-red-50 border border-red-200 rounded-xl text-xs text-red-700 font-semibold">
+          Kredensial tidak valid. Silakan periksa kembali email atau kode akses Anda.
+        </div>
+
+        <button type="submit" class="w-full py-3 rounded-xl bg-[#061e43] hover:bg-[#0a2f68] text-white font-bold text-xs sm:text-sm transition-all shadow-md">
+          Buka Kunci Akses Portal
+        </button>
+      </form>
+
+      <div class="mt-4 pt-3 border-t border-slate-100 text-center">
+        <p class="text-[11px] text-slate-400">
+          Pusat Bantuan IT GMI: (021) 538-4100 Ext. 102
+        </p>
+      </div>
+
+    </div>
+  </dialog>
+
+  <!-- ============================================================== -->
+  <!-- 8. PERSONNEL CREDENTIAL MODAL                                  -->
+  <!-- ============================================================== -->
+  <dialog id="person-detail-modal" aria-labelledby="person-modal-title" class="fixed inset-0 m-auto p-0 max-w-md w-[calc(100%-2rem)] rounded-3xl bg-white shadow-2xl border border-slate-200 backdrop:bg-slate-950/80 backdrop:backdrop-blur-sm z-50 overflow-hidden">
+    <div class="p-6">
+      <div class="flex items-center justify-between pb-3 border-b border-slate-100 mb-4">
+        <h3 id="person-modal-title" class="text-base font-bold text-slate-900">Verifikasi Berkas Personel</h3>
+        <button id="close-person-modal-btn" type="button" class="p-1 rounded-full text-slate-400 hover:text-slate-700 hover:bg-slate-100">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+      
+      <div class="text-center py-2">
+        <div class="w-16 h-16 rounded-full bg-[#061e43] text-white flex items-center justify-center font-bold text-xl uppercase mx-auto mb-3 shadow-md">
+          <span id="modal-person-initials">AP</span>
+        </div>
+        <h4 id="modal-person-name" class="font-extrabold text-slate-900 text-lg">Agus Priyanto</h4>
+        <p id="modal-person-pos" class="text-xs font-semibold text-blue-700">Komandan Regu</p>
+        <p id="modal-person-nik" class="text-xs font-mono text-slate-500 mt-0.5">NIK: GMI-SEC-2024-001</p>
+      </div>
+
+      <div class="mt-4 p-4 rounded-2xl bg-slate-50 border border-slate-200 text-xs space-y-2">
+        <div class="flex justify-between">
+          <span class="text-slate-500 font-medium">Sertifikasi Resmi:</span>
+          <span id="modal-person-cert" class="font-bold text-slate-800 text-right">Garda Pratama POLDA</span>
+        </div>
+        <div class="flex justify-between">
+          <span class="text-slate-500 font-medium">Status KTA Satpam:</span>
+          <span class="font-bold text-emerald-700">Aktif &amp; Terdaftar</span>
+        </div>
+        <div class="flex justify-between">
+          <span class="text-slate-500 font-medium">SKCK Kepolisian:</span>
+          <span class="font-bold text-emerald-700">Terverifikasi Bersih</span>
+        </div>
+        <div class="flex justify-between">
+          <span class="text-slate-500 font-medium">Tes Bebas Narkoba:</span>
+          <span class="font-bold text-emerald-700">Negatif (Terbaru 2026)</span>
+        </div>
+        <div class="flex justify-between">
+          <span class="text-slate-500 font-medium">Kepesertaan BPJS:</span>
+          <span class="font-bold text-emerald-700">Aktif Terdaftar</span>
+        </div>
+      </div>
+
+      <div class="mt-5">
+        <button type="button" onclick="document.getElementById('person-detail-modal').close()" class="w-full py-2.5 rounded-xl bg-slate-900 text-white font-bold text-xs hover:bg-slate-800 transition-all">
+          Tutup Detail Personel
+        </button>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- ============================================================== -->
+  <!-- 9. PATROL PROOF MODAL                                          -->
+  <!-- ============================================================== -->
+  <dialog id="patrol-proof-modal" aria-labelledby="proof-modal-title" class="fixed inset-0 m-auto p-0 max-w-md w-[calc(100%-2rem)] rounded-3xl bg-white shadow-2xl border border-slate-200 backdrop:bg-slate-950/80 backdrop:backdrop-blur-sm z-50 overflow-hidden">
+    <div class="p-6">
+      <div class="flex items-center justify-between pb-3 border-b border-slate-100 mb-4">
+        <h3 id="proof-modal-title" class="text-base font-bold text-slate-900">Bukti Dokumentasi Patroli</h3>
+        <button id="close-proof-modal-btn" type="button" class="p-1 rounded-full text-slate-400 hover:text-slate-700 hover:bg-slate-100">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
+      <div class="rounded-2xl overflow-hidden bg-slate-900 text-white p-6 text-center mb-4 flex flex-col items-center justify-center min-h-[160px] relative border border-slate-800">
+        <div class="w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center mb-2">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" />
+          </svg>
+        </div>
+        <p class="font-bold text-white text-sm" id="proof-point-title">Titik Inspeksi</p>
+        <p class="text-xs text-slate-400 mt-0.5" id="proof-timestamp">Waktu Scan</p>
+        <span class="mt-2 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/40">
+          Watermark Hash Terverifikasi SHA-256
+        </span>
+      </div>
+
+      <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200 text-xs text-slate-700 leading-relaxed mb-4">
+        <p class="font-bold text-slate-900 mb-0.5">Petugas: <span id="proof-officer" class="font-semibold text-blue-700"></span></p>
+        <p id="proof-note" class="italic text-slate-600"></p>
+      </div>
+
+      <button type="button" onclick="document.getElementById('patrol-proof-modal').close()" class="w-full py-2.5 rounded-xl bg-slate-900 text-white font-bold text-xs hover:bg-slate-800 transition-all">
+        Tutup
+      </button>
+    </div>
+  </dialog>
+
+  <!-- Interactive Scripts -->
+  <script type="module" src="/src/portal.js"></script>
+</body>
+</html>
