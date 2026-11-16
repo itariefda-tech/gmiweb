@@ -133,60 +133,15 @@
   animation-play-state: paused;
 }
 
-/* Sequential Alternating Color Wave (Grayscale to Full Color & Back) */
-@keyframes client-color-bloom {
-  0%, 100% {
-    filter: grayscale(100%) opacity(0.38);
-    transform: scale(0.96);
-  }
-  20%, 35% {
-    filter: grayscale(0%) opacity(1) drop-shadow(0 4px 10px rgba(6, 30, 67, 0.15));
-    transform: scale(1.08);
-  }
-  50% {
-    filter: grayscale(100%) opacity(0.38);
-    transform: scale(0.96);
-  }
-}
-
-.client-logo-pulse {
-  animation: client-color-bloom 7s cubic-bezier(0.4, 0, 0.2, 1) infinite;
-  transition: filter 0.4s ease, transform 0.4s ease;
-  will-change: filter, transform;
-}
-
-/* Staggered Delays for Sequential Color Bloom */
-.delay-0 { animation-delay: 0s; }
-.delay-1 { animation-delay: 1.0s; }
-.delay-2 { animation-delay: 2.0s; }
-.delay-3 { animation-delay: 3.0s; }
-.delay-4 { animation-delay: 4.0s; }
-.delay-5 { animation-delay: 5.0s; }
-.delay-6 { animation-delay: 6.0s; }
-
-.delay-r0 { animation-delay: 0.5s; }
-.delay-r1 { animation-delay: 1.5s; }
-.delay-r2 { animation-delay: 2.5s; }
-.delay-r3 { animation-delay: 3.5s; }
-.delay-r4 { animation-delay: 4.5s; }
-.delay-r5 { animation-delay: 5.5s; }
-.delay-r6 { animation-delay: 6.5s; }
-
-/* Interactive Hover Boost */
-.client-logo-card:hover .client-logo-pulse {
-  filter: grayscale(0%) opacity(1) drop-shadow(0 6px 16px rgba(6, 30, 67, 0.20)) !important;
-  transform: scale(1.12) !important;
-  animation-play-state: paused !important;
-}
-
+/* Client Logos - Always full color, no grayscale, no shimmer, no mouseover decorations */
 .client-logo-card {
-  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
 }
 
-.client-logo-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 25px -5px rgba(6, 30, 67, 0.12), 0 4px 6px -2px rgba(6, 30, 67, 0.05);
-  border-color: #cbd5e1;
+.client-logo-card img {
+  filter: none !important;
+  opacity: 1 !important;
+  transform: none !important;
 }
 
 /* Cards & Hover Effects */
