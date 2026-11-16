@@ -93,10 +93,21 @@
 .cta-gradient {
   background: linear-gradient(
     90deg, 
-    rgba(6, 30, 67, 0.95) 0%, 
-    rgba(6, 30, 67, 0.80) 50%, 
-    rgba(6, 30, 67, 0.50) 100%
+    rgba(4, 22, 52, 0.96) 0%, 
+    rgba(6, 30, 67, 0.88) 50%, 
+    rgba(6, 30, 67, 0.72) 100%
   );
+}
+
+@media (max-width: 1024px) {
+  .cta-gradient {
+    background: linear-gradient(
+      180deg, 
+      rgba(4, 22, 52, 0.97) 0%, 
+      rgba(6, 30, 67, 0.92) 50%, 
+      rgba(4, 22, 52, 0.97) 100%
+    );
+  }
 }
 
 /* Certifications Blue Section Gradient */
