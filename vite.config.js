@@ -17,6 +17,8 @@ export default defineConfig({
         main: resolve(import.meta.dirname, 'index.html'),
         tentang: resolve(import.meta.dirname, 'tentang-kami.html'),
         layanan: resolve(import.meta.dirname, 'layanan-kami.html'),
+        investigasi: resolve(import.meta.dirname, 'investigasi.html'),
+        investigation: resolve(import.meta.dirname, 'investigation-service.html'),
         karir: resolve(import.meta.dirname, 'karir.html'),
         portal: resolve(import.meta.dirname, 'portal-klien.html'),
       },
