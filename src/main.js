@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initModals();
   initContactForms();
   initSmoothScroll();
+  initScrollAnimations();
 });
 
 // 0. Hero Background Slideshow (3 Slides 1 Frekuensi - Smooth Sliding)
@@ -488,4 +489,24 @@ function initSmoothScroll() {
       }
     });
   });
+}
+
+// 8. Scroll Animations: Career CTA Card Fade In from Right
+function initScrollAnimations() {
+  const animatedCards = document.querySelectorAll('.card-fade-in-right');
+  if (!animatedCards.length) return;
+
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        obs.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.15,
+    rootMargin: '0px 0px -40px 0px'
+  });
+
+  animatedCards.forEach(el => observer.observe(el));
 }
