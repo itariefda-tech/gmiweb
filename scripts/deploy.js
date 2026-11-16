@@ -8,11 +8,11 @@ console.log('🗜️  2. Creating archive dist.tar.gz...');
 execSync('tar -czf dist.tar.gz -C dist .', { stdio: 'inherit' });
 
 console.log('🚀 3. Uploading to VPS (ssh ovh)...');
-execSync('scp dist.tar.gz ovh:/var/www/gmi.feira.my.id/', { stdio: 'inherit' });
+execSync('scp dist.tar.gz ovh:/var/www/gmiweb/', { stdio: 'inherit' });
 
-console.log('📂 4. Extracting on VPS (/var/www/gmi.feira.my.id/)...');
+console.log('📂 4. Extracting on VPS (/var/www/gmiweb/)...');
 execSync(
-  'ssh ovh "tar -xzf /var/www/gmi.feira.my.id/dist.tar.gz -C /var/www/gmi.feira.my.id/ && rm /var/www/gmi.feira.my.id/dist.tar.gz"',
+  'ssh ovh "tar -xzf /var/www/gmiweb/dist.tar.gz -C /var/www/gmiweb/ && rm /var/www/gmiweb/dist.tar.gz"',
   { stdio: 'inherit' }
 );
 
