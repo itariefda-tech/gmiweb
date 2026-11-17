@@ -16,7 +16,9 @@ function initHeroSlider() {
   if (!slider) return;
 
   const slides = slider.querySelectorAll('.hero-slide');
-  const dots = slider.querySelectorAll('.hero-slide-indicator');
+  const dots = slider.querySelectorAll('.hero-slide-indicator').length > 0
+    ? slider.querySelectorAll('.hero-slide-indicator')
+    : document.querySelectorAll('.hero-slide-indicator');
   if (slides.length < 2) return;
 
   let currentIndex = 0;
