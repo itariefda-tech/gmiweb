@@ -171,36 +171,21 @@
     <!-- 2. HERO SECTION: SECURITY SERVICES                           -->
     <!-- ============================================================ -->
     <section class="relative min-h-[580px] sm:min-h-[640px] lg:min-h-[680px] flex items-center pt-28 sm:pt-32 pb-16 sm:pb-20 overflow-hidden bg-[#041634]">
-      <!-- Background Visuals -->
+      <!-- Background Visuals: Full-width banner photo with dark navy gradient overlay -->
       <div class="absolute inset-0 z-0">
-        <!-- Right Image Container (Two Security Guards) -->
-        <div class="absolute top-0 right-0 bottom-0 w-full lg:w-[56%] h-full z-0 overflow-hidden">
-          <picture class="w-full h-full block">
-            <source srcset="/assets/images/services/security-v2/hero-guards@2x.webp" type="image/webp">
-            <img src="/assets/images/services/security-v2/hero-guards@2x.jpg" alt="Security Services PT Grup Mitra Indonesia - Pengamanan Profesional" class="w-full h-full object-cover object-center" width="1280" height="720" fetchpriority="high" loading="eager">
-          </picture>
-          <!-- Gradient for seamless mobile readability -->
-          <div class="absolute inset-0 bg-gradient-to-t from-[#041634] via-[#041634]/70 to-transparent lg:hidden"></div>
-          <div class="hidden lg:block absolute inset-0 bg-gradient-to-r from-[#041634] via-transparent to-transparent opacity-60"></div>
-        </div>
-
-        <!-- Left Navy Polygon Banner (Desktop & Mobile) -->
-        <div class="absolute inset-0 z-[1] pointer-events-none">
-          <!-- Mobile overlay -->
-          <div class="lg:hidden absolute inset-0 bg-gradient-to-r from-[#041634]/98 via-[#061e43]/95 to-[#061e43]/85"></div>
-          <!-- Desktop Angular Cut Navy Shape -->
-          <div class="hidden lg:block absolute top-0 left-0 bottom-0 w-[58%] bg-gradient-to-r from-[#041634] via-[#061e43] to-[#08224d]" style="clip-path: polygon(0 0, 100% 0, 84% 100%, 0 100%);"></div>
-          <!-- Desktop Diagonal Red Accent Stripe -->
-          <div class="hidden lg:block absolute top-0 left-[48%] bottom-0 w-5 bg-[#c52227] shadow-xl" style="clip-path: polygon(100% 0, 100% 0, 0 100%, 0 100%); transform: skewX(-12deg);"></div>
-        </div>
+        <picture class="w-full h-full block">
+          <source srcset="/assets/images/services/security-hero-banner.webp" type="image/webp">
+          <img src="/assets/images/services/security-hero-banner.jpg" alt="Security Services PT Grup Mitra Indonesia - Pengamanan Profesional" class="w-full h-full object-cover object-right md:object-center" width="1983" height="793" fetchpriority="high" loading="eager">
+        </picture>
+        <div class="absolute inset-0 bg-gradient-to-t from-[#041634] via-[#041634]/85 to-[#041634]/60 lg:bg-gradient-to-r lg:from-[#041634]/98 lg:via-[#061e43]/90 lg:to-[#0a2757]/60"></div>
       </div>
 
       <!-- Hero Content -->
       <div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full text-white">
         <div class="max-w-xl lg:max-w-2xl">
-          <!-- Overline Label: MANAJEMEN SUPPORT -->
-          <div class="flex items-center gap-2 text-xs sm:text-sm font-bold tracking-widest text-slate-300 uppercase mb-3 sm:mb-4">
-            <span class="w-6 h-0.5 bg-[#c52227]"></span>
+          <!-- Overline Label: MANAJEMEN SUPPORT with 4x thicker red shape -->
+          <div class="flex items-center gap-2.5 text-xs sm:text-sm font-bold tracking-widest text-slate-300 uppercase mb-3 sm:mb-4">
+            <span class="w-8 h-2 rounded-full bg-[#c52227] shrink-0"></span>
             <span>MANAJEMEN SUPPORT</span>
           </div>
 
@@ -244,8 +229,8 @@
             <div class="relative group">
               <div class="overflow-hidden rounded-3xl border border-slate-100 shadow-xl shadow-slate-900/8 bg-slate-100">
                 <picture class="w-full h-full block">
-                  <source srcset="/assets/images/services/security-v2/sec1-team@2x.webp" type="image/webp">
-                  <img src="/assets/images/services/security-v2/sec1-team@2x.jpg" alt="Layanan Keamanan Profesional dan Terpercaya GMI" class="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105" width="408" height="272" loading="lazy">
+                  <source srcset="/assets/images/services/security-v2/sec1-team-hd.webp" type="image/webp">
+                  <img src="/assets/images/services/security-v2/sec1-team-hd.jpg" alt="Layanan Keamanan Profesional dan Terpercaya GMI" class="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105" width="1476" height="1065" loading="lazy">
                 </picture>
               </div>
             </div>
@@ -634,47 +619,44 @@
     <!-- ============================================================ -->
     <!-- 6. SECTION: CTA BANNER                                       -->
     <!-- ============================================================ -->
-    <section class="py-12 sm:py-16 bg-slate-50/60">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <div class="rounded-3xl overflow-hidden shadow-2xl relative grid grid-cols-1 lg:grid-cols-12 items-center bg-[#061e43]">
-          
-          <!-- Left Column: Photo of Instructor Briefing Squad -->
-          <div class="lg:col-span-5 relative h-64 lg:h-full min-h-[280px] overflow-hidden">
-            <picture class="w-full h-full block">
-              <source srcset="/assets/images/services/security-v2/cta-briefing@2x.webp" type="image/webp">
-              <img src="/assets/images/services/security-v2/cta-briefing@2x.jpg" alt="Konsultasi Sistem Keamanan PT Grup Mitra Indonesia" class="w-full h-full object-cover object-center" width="470" height="190" loading="lazy">
-            </picture>
-            <div class="absolute inset-0 bg-gradient-to-t from-[#061e43] via-transparent to-transparent lg:hidden"></div>
+    <section class="relative py-20 sm:py-28 lg:py-32 overflow-hidden flex items-center min-h-[380px] sm:min-h-[440px]">
+      <!-- Background Image with WebP & JPG -->
+      <div class="absolute inset-0 z-0">
+        <picture class="w-full h-full block">
+          <source srcset="/assets/images/services/security-cta-banner.webp" type="image/webp">
+          <img src="/assets/images/services/security-cta-banner.jpg" alt="Konsultasi Sistem Keamanan PT Grup Mitra Indonesia" class="w-full h-full object-cover object-center" width="2400" height="669" loading="lazy">
+        </picture>
+        <div class="absolute inset-0 bg-gradient-to-t from-[#022f66]/95 via-[#022f66]/85 to-[#022f66]/65 md:bg-gradient-to-r md:from-[#022f66]/95 md:via-[#022f66]/85 md:to-[#022f66]/40"></div>
+      </div>
+
+      <div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-white w-full">
+        <div class="max-w-2xl lg:max-w-3xl text-left">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold tracking-wider uppercase bg-white/10 text-white/95 border border-white/15 backdrop-blur-md mb-5 shadow-xs">
+            <span class="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
+            <span>Konsultasi Keamanan Terpadu</span>
           </div>
 
-          <!-- Red Diagonal Slash Accent (Desktop) -->
-          <div class="hidden lg:block absolute left-[39%] top-0 bottom-0 w-8 bg-[#c52227] -skew-x-12 z-10 shadow-xl"></div>
+          <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-tight mb-4">
+            Bangun Sistem Keamanan yang<br class="hidden sm:inline"> Tepat untuk Kebutuhan Anda
+          </h2>
 
-          <!-- Right Column: Content & Buttons -->
-          <div class="lg:col-span-7 p-8 sm:p-12 lg:p-14 text-white relative z-10">
-            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white leading-tight mb-4">
-              Bangun Sistem Keamanan yang<br class="hidden sm:inline"> Tepat untuk Kebutuhan Anda
-            </h2>
-            <p class="text-blue-100 text-sm sm:text-base leading-relaxed mb-8 max-w-xl">
-              Konsultasikan kebutuhan keamanan di lingkungan operasional perusahaan Anda bersama tim GMI.
-            </p>
-            <div class="flex flex-wrap items-center gap-4">
-              <button type="button" data-open-consultation class="inline-flex items-center gap-2 px-7 py-3.5 text-sm sm:text-base font-bold text-white bg-[#c52227] hover:bg-[#a7181d] rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group">
-                <span>Hubungi Kami</span>
-                <svg class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                </svg>
-              </button>
+          <p class="text-blue-100 text-sm sm:text-base md:text-lg leading-relaxed mb-8 max-w-xl font-normal">
+            Konsultasikan kebutuhan keamanan di lingkungan operasional perusahaan Anda bersama tim GMI.
+          </p>
 
-              <button type="button" data-open-consultation class="inline-flex items-center gap-2 px-6 py-3.5 text-sm sm:text-base font-semibold text-white/90 hover:text-white bg-white/10 hover:bg-white/20 rounded-full border border-white/20 transition-all">
-                <span>Konsultasikan Kebutuhan</span>
-              </button>
-            </div>
+          <div class="flex flex-wrap items-center gap-4">
+            <button type="button" data-open-consultation class="inline-flex items-center gap-3 px-8 py-4 text-base font-bold text-white bg-[#c52227] hover:bg-[#a7181d] rounded-full shadow-xl hover:shadow-2xl transition-all duration-200 group">
+              <span>Hubungi Kami</span>
+              <svg class="w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </button>
+
+            <button type="button" data-open-consultation class="inline-flex items-center gap-2.5 px-7 py-4 text-base font-semibold text-white bg-white/10 hover:bg-white/20 rounded-full border border-white/20 transition-all">
+              <span>Konsultasikan Kebutuhan</span>
+            </button>
           </div>
-
         </div>
-
       </div>
     </section>
 
@@ -692,8 +674,7 @@
         <div class="space-y-4">
           <a href="index.html" class="inline-block mb-1">
             <picture>
-              <source srcset="/assets/images/logo/gmi-logo-footer.svg" type="image/svg+xml">
-              <source srcset="/assets/images/logo/gmi-logo-footer.webp" type="image/webp">
+            <source srcset="/assets/images/logo/gmi-logo-footer.webp" type="image/webp">
               <img src="/assets/images/logo/gmi-logo-footer.png" alt="Grup Mitra Indonesia Footer Logo" class="h-20 w-auto object-contain" width="280" height="80" loading="lazy">
             </picture>
           </a>
