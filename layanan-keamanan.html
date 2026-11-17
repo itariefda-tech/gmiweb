@@ -30,7 +30,7 @@
         <a href="index.html#beranda" class="flex items-center gap-2 shrink-0 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-600 rounded-lg">
           <picture>
             <source srcset="/assets/images/logo/gmi-logo.webp" type="image/webp">
-            <img src="/assets/images/logo/gmi-logo.png" alt="Grup Mitra Indonesia Logo" class="h-10 sm:h-12 w-auto object-contain transition-transform group-hover:scale-105" width="160" height="48" loading="eager">
+            <img src="/assets/images/logo/gmi-logo.png" alt="Grup Mitra Indonesia Logo" class="h-11 sm:h-[53px] w-auto object-contain transition-transform group-hover:scale-105" width="176" height="53" loading="eager">
           </picture>
         </a>
 
@@ -323,230 +323,320 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           
           <!-- Pilar 1: Pengadaan Man Power -->
-          <div class="bg-white rounded-3xl p-8 border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-red-200 transition-all duration-300 flex flex-col justify-between group">
-            <div>
-              <div class="w-14 h-14 rounded-2xl bg-blue-50 text-[#061e43] flex items-center justify-center mb-6 group-hover:bg-[#061e43] group-hover:text-white transition-colors shadow-xs">
-                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
-                </svg>
+          <div class="rounded-3xl overflow-hidden border border-slate-700/40 shadow-lg hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group bg-[#061e43]">
+            <!-- Top 50%: Asset Image Background -->
+            <div class="relative h-56 sm:h-60 w-full overflow-hidden shrink-0">
+              <img src="/assets/images/services/pilar-manpower.jpg" alt="Pilar 01 - Pengadaan Man Power Satpam GMI" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+              <div class="absolute inset-0 bg-gradient-to-t from-[#061e43] via-[#061e43]/20 to-black/25"></div>
+              
+              <!-- Floating Icon & Badge -->
+              <div class="absolute top-4 left-4 right-4 flex items-center justify-between">
+                <div class="w-11 h-11 rounded-2xl bg-[#061e43]/85 backdrop-blur-md text-white border border-white/20 flex items-center justify-center shadow-lg group-hover:bg-[#c52227] transition-colors">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+                  </svg>
+                </div>
+                <span class="px-3 py-1 rounded-full text-[11px] font-extrabold uppercase tracking-wider bg-[#c52227] text-white shadow-md border border-red-400/40">
+                  Pilar 01
+                </span>
               </div>
-              <span class="text-xs font-extrabold uppercase tracking-wider text-[#c52227] block mb-1">Pilar 01</span>
-              <h3 class="text-xl font-extrabold text-slate-900 mb-3 group-hover:text-[#c52227] transition-colors">
-                Pengadaan Man Power
-              </h3>
-              <p class="text-sm text-slate-600 leading-relaxed mb-6">
-                Pengamanan menggunakan jasa tenaga profesional berseragam dengan keterampilan khusus dan kualifikasi resmi kepolisian.
-              </p>
-              <ul class="space-y-2 text-xs text-slate-600 border-t border-slate-100 pt-4 mb-6">
-                <li class="flex items-center gap-2">
-                  <span class="w-1.5 h-1.5 rounded-full bg-red-500"></span>
-                  Kualifikasi Gada Pratama, Madya, &amp; Utama
-                </li>
-                <li class="flex items-center gap-2">
-                  <span class="w-1.5 h-1.5 rounded-full bg-red-500"></span>
-                  Etika Service Excellence &amp; Komunikasi Prima
-                </li>
-                <li class="flex items-center gap-2">
-                  <span class="w-1.5 h-1.5 rounded-full bg-red-500"></span>
-                  Penegakan SOP Akses Kontrol &amp; Buku Tamu
-                </li>
-              </ul>
             </div>
-            <div>
-              <button type="button" data-open-consultation class="inline-flex items-center gap-2 text-xs font-bold text-[#c52227] hover:text-[#a7181d] group/link">
-                <span>Konsultasikan Kebutuhan</span>
-                <span class="transition-transform group-hover/link:translate-x-1">&rarr;</span>
-              </button>
+
+            <!-- Bottom 50%: Warna Biru Tema GMI (#061e43) -->
+            <div class="p-6 sm:p-7 flex flex-col justify-between flex-1 bg-[#061e43] text-white">
+              <div>
+                <h3 class="text-xl font-extrabold text-white mb-2.5 group-hover:text-red-400 transition-colors">
+                  Pengadaan Man Power
+                </h3>
+                <p class="text-xs sm:text-sm text-slate-300 leading-relaxed mb-5">
+                  Pengamanan menggunakan jasa tenaga profesional berseragam dengan keterampilan khusus dan kualifikasi resmi kepolisian.
+                </p>
+                <ul class="space-y-2.5 text-xs text-slate-200 border-t border-white/10 pt-4 mb-6">
+                  <li class="flex items-center gap-2.5">
+                    <span class="w-1.5 h-1.5 rounded-full bg-red-400 shrink-0"></span>
+                    <span>Kualifikasi Gada Pratama, Madya, &amp; Utama</span>
+                  </li>
+                  <li class="flex items-center gap-2.5">
+                    <span class="w-1.5 h-1.5 rounded-full bg-red-400 shrink-0"></span>
+                    <span>Etika Service Excellence &amp; Komunikasi Prima</span>
+                  </li>
+                  <li class="flex items-center gap-2.5">
+                    <span class="w-1.5 h-1.5 rounded-full bg-red-400 shrink-0"></span>
+                    <span>Penegakan SOP Akses Kontrol &amp; Buku Tamu</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="pt-3 border-t border-white/10">
+                <button type="button" data-open-consultation class="inline-flex items-center gap-2 text-xs font-bold text-red-400 hover:text-red-300 group/link transition-colors">
+                  <span>Konsultasikan Kebutuhan</span>
+                  <span class="transition-transform group-hover/link:translate-x-1">&rarr;</span>
+                </button>
+              </div>
             </div>
           </div>
 
           <!-- Pilar 2: Pengadaan Peralatan -->
-          <div class="bg-white rounded-3xl p-8 border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-red-200 transition-all duration-300 flex flex-col justify-between group">
-            <div>
-              <div class="w-14 h-14 rounded-2xl bg-red-50 text-[#c52227] flex items-center justify-center mb-6 group-hover:bg-[#c52227] group-hover:text-white transition-colors shadow-xs">
-                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"/>
-                </svg>
+          <div class="rounded-3xl overflow-hidden border border-slate-700/40 shadow-lg hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group bg-[#061e43]">
+            <!-- Top 50%: Asset Image Background -->
+            <div class="relative h-56 sm:h-60 w-full overflow-hidden shrink-0">
+              <img src="/assets/images/services/pilar-peralatan.jpg" alt="Pilar 02 - Pengadaan Peralatan Keamanan Modern" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+              <div class="absolute inset-0 bg-gradient-to-t from-[#061e43] via-[#061e43]/20 to-black/25"></div>
+              
+              <!-- Floating Icon & Badge -->
+              <div class="absolute top-4 left-4 right-4 flex items-center justify-between">
+                <div class="w-11 h-11 rounded-2xl bg-[#061e43]/85 backdrop-blur-md text-white border border-white/20 flex items-center justify-center shadow-lg group-hover:bg-[#c52227] transition-colors">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"/>
+                  </svg>
+                </div>
+                <span class="px-3 py-1 rounded-full text-[11px] font-extrabold uppercase tracking-wider bg-[#c52227] text-white shadow-md border border-red-400/40">
+                  Pilar 02
+                </span>
               </div>
-              <span class="text-xs font-extrabold uppercase tracking-wider text-[#c52227] block mb-1">Pilar 02</span>
-              <h3 class="text-xl font-extrabold text-slate-900 mb-3 group-hover:text-[#c52227] transition-colors">
-                Pengadaan Peralatan
-              </h3>
-              <p class="text-sm text-slate-600 leading-relaxed mb-6">
-                Penyediaan peralatan keamanan modern dan terkini untuk menunjang kecepatan deteksi dan presisi patroli lapangan.
-              </p>
-              <ul class="space-y-2 text-xs text-slate-600 border-t border-slate-100 pt-4 mb-6">
-                <li class="flex items-center gap-2">
-                  <span class="w-1.5 h-1.5 rounded-full bg-red-500"></span>
-                  Handheld Metal Detector &amp; Inspection Mirror
-                </li>
-                <li class="flex items-center gap-2">
-                  <span class="w-1.5 h-1.5 rounded-full bg-red-500"></span>
-                  Radio Komunikasi (HT) Taktis Multi-Channel
-                </li>
-                <li class="flex items-center gap-2">
-                  <span class="w-1.5 h-1.5 rounded-full bg-red-500"></span>
-                  Guard Tour Patrol Monitoring Berbasis Barcode/RFID
-                </li>
-              </ul>
             </div>
-            <div>
-              <button type="button" data-open-consultation class="inline-flex items-center gap-2 text-xs font-bold text-[#c52227] hover:text-[#a7181d] group/link">
-                <span>Konsultasikan Kebutuhan</span>
-                <span class="transition-transform group-hover/link:translate-x-1">&rarr;</span>
-              </button>
+
+            <!-- Bottom 50%: Warna Biru Tema GMI (#061e43) -->
+            <div class="p-6 sm:p-7 flex flex-col justify-between flex-1 bg-[#061e43] text-white">
+              <div>
+                <h3 class="text-xl font-extrabold text-white mb-2.5 group-hover:text-red-400 transition-colors">
+                  Pengadaan Peralatan
+                </h3>
+                <p class="text-xs sm:text-sm text-slate-300 leading-relaxed mb-5">
+                  Penyediaan peralatan keamanan modern dan terkini untuk menunjang kecepatan deteksi dan presisi patroli lapangan.
+                </p>
+                <ul class="space-y-2.5 text-xs text-slate-200 border-t border-white/10 pt-4 mb-6">
+                  <li class="flex items-center gap-2.5">
+                    <span class="w-1.5 h-1.5 rounded-full bg-red-400 shrink-0"></span>
+                    <span>Handheld Metal Detector &amp; Inspection Mirror</span>
+                  </li>
+                  <li class="flex items-center gap-2.5">
+                    <span class="w-1.5 h-1.5 rounded-full bg-red-400 shrink-0"></span>
+                    <span>Radio Komunikasi (HT) Taktis Multi-Channel</span>
+                  </li>
+                  <li class="flex items-center gap-2.5">
+                    <span class="w-1.5 h-1.5 rounded-full bg-red-400 shrink-0"></span>
+                    <span>Guard Tour Patrol Monitoring Berbasis Barcode/RFID</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="pt-3 border-t border-white/10">
+                <button type="button" data-open-consultation class="inline-flex items-center gap-2 text-xs font-bold text-red-400 hover:text-red-300 group/link transition-colors">
+                  <span>Konsultasikan Kebutuhan</span>
+                  <span class="transition-transform group-hover/link:translate-x-1">&rarr;</span>
+                </button>
+              </div>
             </div>
           </div>
 
           <!-- Pilar 3: Pengadaan Pelatihan -->
-          <div class="bg-white rounded-3xl p-8 border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-red-200 transition-all duration-300 flex flex-col justify-between group">
-            <div>
-              <div class="w-14 h-14 rounded-2xl bg-blue-50 text-[#061e43] flex items-center justify-center mb-6 group-hover:bg-[#061e43] group-hover:text-white transition-colors shadow-xs">
-                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
-                </svg>
+          <div class="rounded-3xl overflow-hidden border border-slate-700/40 shadow-lg hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group bg-[#061e43]">
+            <!-- Top 50%: Asset Image Background -->
+            <div class="relative h-56 sm:h-60 w-full overflow-hidden shrink-0">
+              <img src="/assets/images/services/pilar-pelatihan.jpg" alt="Pilar 03 - Pengadaan Pelatihan & Diklat Satpam" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+              <div class="absolute inset-0 bg-gradient-to-t from-[#061e43] via-[#061e43]/20 to-black/25"></div>
+              
+              <!-- Floating Icon & Badge -->
+              <div class="absolute top-4 left-4 right-4 flex items-center justify-between">
+                <div class="w-11 h-11 rounded-2xl bg-[#061e43]/85 backdrop-blur-md text-white border border-white/20 flex items-center justify-center shadow-lg group-hover:bg-[#c52227] transition-colors">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                  </svg>
+                </div>
+                <span class="px-3 py-1 rounded-full text-[11px] font-extrabold uppercase tracking-wider bg-[#c52227] text-white shadow-md border border-red-400/40">
+                  Pilar 03
+                </span>
               </div>
-              <span class="text-xs font-extrabold uppercase tracking-wider text-[#c52227] block mb-1">Pilar 03</span>
-              <h3 class="text-xl font-extrabold text-slate-900 mb-3 group-hover:text-[#c52227] transition-colors">
-                Pengadaan Pelatihan
-              </h3>
-              <p class="text-sm text-slate-600 leading-relaxed mb-6">
-                Persiapan pelatihan tenaga kerja baru dan pembinaan berkala oleh tim instruktur profesional bersertifikasi kepolisian.
-              </p>
-              <ul class="space-y-2 text-xs text-slate-600 border-t border-slate-100 pt-4 mb-6">
-                <li class="flex items-center gap-2">
-                  <span class="w-1.5 h-1.5 rounded-full bg-red-500"></span>
-                  Refreshment Training &amp; Drill Kesiapsiagaan
-                </li>
-                <li class="flex items-center gap-2">
-                  <span class="w-1.5 h-1.5 rounded-full bg-red-500"></span>
-                  Simulasi Tanggap Darurat &amp; Evakuasi Kebakaran
-                </li>
-                <li class="flex items-center gap-2">
-                  <span class="w-1.5 h-1.5 rounded-full bg-red-500"></span>
-                  Pelatihan Bela Diri Taktis &amp; Negosiasi Konflik
-                </li>
-              </ul>
             </div>
-            <div>
-              <button type="button" data-open-consultation class="inline-flex items-center gap-2 text-xs font-bold text-[#c52227] hover:text-[#a7181d] group/link">
-                <span>Konsultasikan Kebutuhan</span>
-                <span class="transition-transform group-hover/link:translate-x-1">&rarr;</span>
-              </button>
+
+            <!-- Bottom 50%: Warna Biru Tema GMI (#061e43) -->
+            <div class="p-6 sm:p-7 flex flex-col justify-between flex-1 bg-[#061e43] text-white">
+              <div>
+                <h3 class="text-xl font-extrabold text-white mb-2.5 group-hover:text-red-400 transition-colors">
+                  Pengadaan Pelatihan
+                </h3>
+                <p class="text-xs sm:text-sm text-slate-300 leading-relaxed mb-5">
+                  Persiapan pelatihan tenaga kerja baru dan pembinaan berkala oleh tim instruktur profesional bersertifikasi kepolisian.
+                </p>
+                <ul class="space-y-2.5 text-xs text-slate-200 border-t border-white/10 pt-4 mb-6">
+                  <li class="flex items-center gap-2.5">
+                    <span class="w-1.5 h-1.5 rounded-full bg-red-400 shrink-0"></span>
+                    <span>Refreshment Training &amp; Drill Kesiapsiagaan</span>
+                  </li>
+                  <li class="flex items-center gap-2.5">
+                    <span class="w-1.5 h-1.5 rounded-full bg-red-400 shrink-0"></span>
+                    <span>Simulasi Tanggap Darurat &amp; Evakuasi Kebakaran</span>
+                  </li>
+                  <li class="flex items-center gap-2.5">
+                    <span class="w-1.5 h-1.5 rounded-full bg-red-400 shrink-0"></span>
+                    <span>Pelatihan Bela Diri Taktis &amp; Negosiasi Konflik</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="pt-3 border-t border-white/10">
+                <button type="button" data-open-consultation class="inline-flex items-center gap-2 text-xs font-bold text-red-400 hover:text-red-300 group/link transition-colors">
+                  <span>Konsultasikan Kebutuhan</span>
+                  <span class="transition-transform group-hover/link:translate-x-1">&rarr;</span>
+                </button>
+              </div>
             </div>
           </div>
 
           <!-- Pilar 4: Kawal Angkut & VVIP -->
-          <div class="bg-white rounded-3xl p-8 border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-red-200 transition-all duration-300 flex flex-col justify-between group">
-            <div>
-              <div class="w-14 h-14 rounded-2xl bg-red-50 text-[#c52227] flex items-center justify-center mb-6 group-hover:bg-[#c52227] group-hover:text-white transition-colors shadow-xs">
-                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/>
-                </svg>
+          <div class="rounded-3xl overflow-hidden border border-slate-700/40 shadow-lg hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group bg-[#061e43]">
+            <!-- Top 50%: Asset Image Background -->
+            <div class="relative h-56 sm:h-60 w-full overflow-hidden shrink-0">
+              <img src="/assets/images/services/pilar-vvip.jpg" alt="Pilar 04 - Kawal Angkut & VVIP Protection" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+              <div class="absolute inset-0 bg-gradient-to-t from-[#061e43] via-[#061e43]/20 to-black/25"></div>
+              
+              <!-- Floating Icon & Badge -->
+              <div class="absolute top-4 left-4 right-4 flex items-center justify-between">
+                <div class="w-11 h-11 rounded-2xl bg-[#061e43]/85 backdrop-blur-md text-white border border-white/20 flex items-center justify-center shadow-lg group-hover:bg-[#c52227] transition-colors">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/>
+                  </svg>
+                </div>
+                <span class="px-3 py-1 rounded-full text-[11px] font-extrabold uppercase tracking-wider bg-[#c52227] text-white shadow-md border border-red-400/40">
+                  Pilar 04
+                </span>
               </div>
-              <span class="text-xs font-extrabold uppercase tracking-wider text-[#c52227] block mb-1">Pilar 04</span>
-              <h3 class="text-xl font-extrabold text-slate-900 mb-3 group-hover:text-[#c52227] transition-colors">
-                Kawal Angkut &amp; VVIP
-              </h3>
-              <p class="text-sm text-slate-600 leading-relaxed mb-6">
-                Pengamanan logistik berharga dan proteksi personal VVIP oleh petugas profesional, berlisensi, terampil, dan berpengalaman.
-              </p>
-              <ul class="space-y-2 text-xs text-slate-600 border-t border-slate-100 pt-4 mb-6">
-                <li class="flex items-center gap-2">
-                  <span class="w-1.5 h-1.5 rounded-full bg-red-500"></span>
-                  Pengawalan Kargo &amp; Aset Bernilai Tinggi
-                </li>
-                <li class="flex items-center gap-2">
-                  <span class="w-1.5 h-1.5 rounded-full bg-red-500"></span>
-                  Close Protection Officer (Pengawalan Eksekutif)
-                </li>
-                <li class="flex items-center gap-2">
-                  <span class="w-1.5 h-1.5 rounded-full bg-red-500"></span>
-                  Mitigasi Rute Perjalanan &amp; Armada Taktis
-                </li>
-              </ul>
             </div>
-            <div>
-              <button type="button" data-open-consultation class="inline-flex items-center gap-2 text-xs font-bold text-[#c52227] hover:text-[#a7181d] group/link">
-                <span>Konsultasikan Kebutuhan</span>
-                <span class="transition-transform group-hover/link:translate-x-1">&rarr;</span>
-              </button>
+
+            <!-- Bottom 50%: Warna Biru Tema GMI (#061e43) -->
+            <div class="p-6 sm:p-7 flex flex-col justify-between flex-1 bg-[#061e43] text-white">
+              <div>
+                <h3 class="text-xl font-extrabold text-white mb-2.5 group-hover:text-red-400 transition-colors">
+                  Kawal Angkut &amp; VVIP
+                </h3>
+                <p class="text-xs sm:text-sm text-slate-300 leading-relaxed mb-5">
+                  Pengamanan logistik berharga dan proteksi personal VVIP oleh petugas profesional, berlisensi, terampil, dan berpengalaman.
+                </p>
+                <ul class="space-y-2.5 text-xs text-slate-200 border-t border-white/10 pt-4 mb-6">
+                  <li class="flex items-center gap-2.5">
+                    <span class="w-1.5 h-1.5 rounded-full bg-red-400 shrink-0"></span>
+                    <span>Pengawalan Kargo &amp; Aset Bernilai Tinggi</span>
+                  </li>
+                  <li class="flex items-center gap-2.5">
+                    <span class="w-1.5 h-1.5 rounded-full bg-red-400 shrink-0"></span>
+                    <span>Close Protection Officer (Pengawalan Eksekutif)</span>
+                  </li>
+                  <li class="flex items-center gap-2.5">
+                    <span class="w-1.5 h-1.5 rounded-full bg-red-400 shrink-0"></span>
+                    <span>Mitigasi Rute Perjalanan &amp; Armada Taktis</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="pt-3 border-t border-white/10">
+                <button type="button" data-open-consultation class="inline-flex items-center gap-2 text-xs font-bold text-red-400 hover:text-red-300 group/link transition-colors">
+                  <span>Konsultasikan Kebutuhan</span>
+                  <span class="transition-transform group-hover/link:translate-x-1">&rarr;</span>
+                </button>
+              </div>
             </div>
           </div>
 
-          <!-- Pilar 5: Pengadaan K9 -->
-          <div class="bg-white rounded-3xl p-8 border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-red-200 transition-all duration-300 flex flex-col justify-between group">
-            <div>
-              <div class="w-14 h-14 rounded-2xl bg-blue-50 text-[#061e43] flex items-center justify-center mb-6 group-hover:bg-[#061e43] group-hover:text-white transition-colors shadow-xs">
-                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
-                </svg>
+          <!-- Pilar 5: Pengadaan K9 (Guard Dog) -->
+          <div class="rounded-3xl overflow-hidden border border-slate-700/40 shadow-lg hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group bg-[#061e43]">
+            <!-- Top 50%: Asset Image Background -->
+            <div class="relative h-56 sm:h-60 w-full overflow-hidden shrink-0">
+              <img src="/assets/images/services/pilar-k9.jpg" alt="Pilar 05 - Pengadaan K9 Guard Dog & Pawang Bersertifikat" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+              <div class="absolute inset-0 bg-gradient-to-t from-[#061e43] via-[#061e43]/20 to-black/25"></div>
+              
+              <!-- Floating Icon & Badge -->
+              <div class="absolute top-4 left-4 right-4 flex items-center justify-between">
+                <div class="w-11 h-11 rounded-2xl bg-[#061e43]/85 backdrop-blur-md text-white border border-white/20 flex items-center justify-center shadow-lg group-hover:bg-[#c52227] transition-colors">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                  </svg>
+                </div>
+                <span class="px-3 py-1 rounded-full text-[11px] font-extrabold uppercase tracking-wider bg-[#c52227] text-white shadow-md border border-red-400/40">
+                  Pilar 05
+                </span>
               </div>
-              <span class="text-xs font-extrabold uppercase tracking-wider text-[#c52227] block mb-1">Pilar 05</span>
-              <h3 class="text-xl font-extrabold text-slate-900 mb-3 group-hover:text-[#c52227] transition-colors">
-                Pengadaan K9 (Guard Dog)
-              </h3>
-              <p class="text-sm text-slate-600 leading-relaxed mb-6">
-                Layanan penyediaan penjagaan keamanan oleh satwa guard dog yang terlatih, tangkas, sehat, dan didampingi pawang bersertifikat.
-              </p>
-              <ul class="space-y-2 text-xs text-slate-600 border-t border-slate-100 pt-4 mb-6">
-                <li class="flex items-center gap-2">
-                  <span class="w-1.5 h-1.5 rounded-full bg-red-500"></span>
-                  Patroli Perimeter Kawasan Industri &amp; Pergudangan
-                </li>
-                <li class="flex items-center gap-2">
-                  <span class="w-1.5 h-1.5 rounded-full bg-red-500"></span>
-                  Deteksi Bahan Peledak &amp; Narkotika (Sterilisasi)
-                </li>
-                <li class="flex items-center gap-2">
-                  <span class="w-1.5 h-1.5 rounded-full bg-red-500"></span>
-                  Pencegahan Intrusi Area Luas 24 Jam
-                </li>
-              </ul>
             </div>
-            <div>
-              <button type="button" data-open-consultation class="inline-flex items-center gap-2 text-xs font-bold text-[#c52227] hover:text-[#a7181d] group/link">
-                <span>Konsultasikan Kebutuhan</span>
-                <span class="transition-transform group-hover/link:translate-x-1">&rarr;</span>
-              </button>
+
+            <!-- Bottom 50%: Warna Biru Tema GMI (#061e43) -->
+            <div class="p-6 sm:p-7 flex flex-col justify-between flex-1 bg-[#061e43] text-white">
+              <div>
+                <h3 class="text-xl font-extrabold text-white mb-2.5 group-hover:text-red-400 transition-colors">
+                  Pengadaan K9 (Guard Dog)
+                </h3>
+                <p class="text-xs sm:text-sm text-slate-300 leading-relaxed mb-5">
+                  Layanan penyediaan penjagaan keamanan oleh satwa guard dog yang terlatih, tangkas, sehat, dan didampingi pawang bersertifikat.
+                </p>
+                <ul class="space-y-2.5 text-xs text-slate-200 border-t border-white/10 pt-4 mb-6">
+                  <li class="flex items-center gap-2.5">
+                    <span class="w-1.5 h-1.5 rounded-full bg-red-400 shrink-0"></span>
+                    <span>Patroli Perimeter Kawasan Industri &amp; Pergudangan</span>
+                  </li>
+                  <li class="flex items-center gap-2.5">
+                    <span class="w-1.5 h-1.5 rounded-full bg-red-400 shrink-0"></span>
+                    <span>Deteksi Bahan Peledak &amp; Narkotika (Sterilisasi)</span>
+                  </li>
+                  <li class="flex items-center gap-2.5">
+                    <span class="w-1.5 h-1.5 rounded-full bg-red-400 shrink-0"></span>
+                    <span>Pencegahan Intrusi Area Luas 24 Jam</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="pt-3 border-t border-white/10">
+                <button type="button" data-open-consultation class="inline-flex items-center gap-2 text-xs font-bold text-red-400 hover:text-red-300 group/link transition-colors">
+                  <span>Konsultasikan Kebutuhan</span>
+                  <span class="transition-transform group-hover/link:translate-x-1">&rarr;</span>
+                </button>
+              </div>
             </div>
           </div>
 
           <!-- Pilar 6: Konsultan Keamanan & Penyelidikan -->
-          <div class="bg-white rounded-3xl p-8 border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-red-200 transition-all duration-300 flex flex-col justify-between group">
-            <div>
-              <div class="w-14 h-14 rounded-2xl bg-red-50 text-[#c52227] flex items-center justify-center mb-6 group-hover:bg-[#c52227] group-hover:text-white transition-colors shadow-xs">
-                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
-                </svg>
+          <div class="rounded-3xl overflow-hidden border border-slate-700/40 shadow-lg hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group bg-[#061e43]">
+            <!-- Top 50%: Asset Image Background -->
+            <div class="relative h-56 sm:h-60 w-full overflow-hidden shrink-0">
+              <img src="/assets/images/services/pilar-konsultan.jpg" alt="Pilar 06 - Konsultan Keamanan & Command Center Audit" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+              <div class="absolute inset-0 bg-gradient-to-t from-[#061e43] via-[#061e43]/20 to-black/25"></div>
+              
+              <!-- Floating Icon & Badge -->
+              <div class="absolute top-4 left-4 right-4 flex items-center justify-between">
+                <div class="w-11 h-11 rounded-2xl bg-[#061e43]/85 backdrop-blur-md text-white border border-white/20 flex items-center justify-center shadow-lg group-hover:bg-[#c52227] transition-colors">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                  </svg>
+                </div>
+                <span class="px-3 py-1 rounded-full text-[11px] font-extrabold uppercase tracking-wider bg-[#c52227] text-white shadow-md border border-red-400/40">
+                  Pilar 06
+                </span>
               </div>
-              <span class="text-xs font-extrabold uppercase tracking-wider text-[#c52227] block mb-1">Pilar 06</span>
-              <h3 class="text-xl font-extrabold text-slate-900 mb-3 group-hover:text-[#c52227] transition-colors">
-                Konsultan Keamanan &amp; Penyelidikan
-              </h3>
-              <p class="text-sm text-slate-600 leading-relaxed mb-6">
-                Layanan manajerial strategis untuk memastikan stabilitas, produktivitas, dan keamanan perusahaan melalui SOP, desain Command Center, dan evaluasi audit sistem.
-              </p>
-              <ul class="space-y-2 text-xs text-slate-600 border-t border-slate-100 pt-4 mb-6">
-                <li class="flex items-center gap-2">
-                  <span class="w-1.5 h-1.5 rounded-full bg-red-500"></span>
-                  Security Risk Assessment &amp; Threat Analysis
-                </li>
-                <li class="flex items-center gap-2">
-                  <span class="w-1.5 h-1.5 rounded-full bg-red-500"></span>
-                  Perancangan Integrated Command Center
-                </li>
-                <li class="flex items-center gap-2">
-                  <span class="w-1.5 h-1.5 rounded-full bg-red-500"></span>
-                  Penyusunan SOP Pengamanan Terpadu
-                </li>
-              </ul>
             </div>
-            <div>
-              <button type="button" data-open-consultation class="inline-flex items-center gap-2 text-xs font-bold text-[#c52227] hover:text-[#a7181d] group/link">
-                <span>Konsultasikan Kebutuhan</span>
-                <span class="transition-transform group-hover/link:translate-x-1">&rarr;</span>
-              </button>
+
+            <!-- Bottom 50%: Warna Biru Tema GMI (#061e43) -->
+            <div class="p-6 sm:p-7 flex flex-col justify-between flex-1 bg-[#061e43] text-white">
+              <div>
+                <h3 class="text-xl font-extrabold text-white mb-2.5 group-hover:text-red-400 transition-colors">
+                  Konsultan Keamanan &amp; Penyelidikan
+                </h3>
+                <p class="text-xs sm:text-sm text-slate-300 leading-relaxed mb-5">
+                  Layanan manajerial strategis untuk memastikan stabilitas, produktivitas, dan keamanan perusahaan melalui SOP, desain Command Center, dan evaluasi audit sistem.
+                </p>
+                <ul class="space-y-2.5 text-xs text-slate-200 border-t border-white/10 pt-4 mb-6">
+                  <li class="flex items-center gap-2.5">
+                    <span class="w-1.5 h-1.5 rounded-full bg-red-400 shrink-0"></span>
+                    <span>Security Risk Assessment &amp; Threat Analysis</span>
+                  </li>
+                  <li class="flex items-center gap-2.5">
+                    <span class="w-1.5 h-1.5 rounded-full bg-red-400 shrink-0"></span>
+                    <span>Perancangan Integrated Command Center</span>
+                  </li>
+                  <li class="flex items-center gap-2.5">
+                    <span class="w-1.5 h-1.5 rounded-full bg-red-400 shrink-0"></span>
+                    <span>Penyusunan SOP Pengamanan Terpadu</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="pt-3 border-t border-white/10">
+                <button type="button" data-open-consultation class="inline-flex items-center gap-2 text-xs font-bold text-red-400 hover:text-red-300 group/link transition-colors">
+                  <span>Konsultasikan Kebutuhan</span>
+                  <span class="transition-transform group-hover/link:translate-x-1">&rarr;</span>
+                </button>
+              </div>
             </div>
           </div>
 
@@ -708,38 +798,21 @@
             <picture>
               <source srcset="/assets/images/logo/gmi-logo-footer.svg" type="image/svg+xml">
               <source srcset="/assets/images/logo/gmi-logo-footer.webp" type="image/webp">
-              <img src="/assets/images/logo/gmi-logo-footer.png" alt="Grup Mitra Indonesia Footer Logo" class="h-10 w-auto object-contain" width="140" height="40" loading="lazy">
+              <img src="/assets/images/logo/gmi-logo-footer.png" alt="Grup Mitra Indonesia Footer Logo" class="h-20 w-auto object-contain" width="280" height="80" loading="lazy">
             </picture>
           </a>
           <p class="text-sm text-slate-300 leading-relaxed font-normal mb-5">
             GMI adalah mitra layanan profesional yang berkomitmen menyediakan solusi terintegrasi untuk mendukung kebutuhan operasional, keamanan, konsultasi, dan investigasi perusahaan.
           </p>
-          
-          <!-- Social Media Official Links -->
-          <div class="mb-5">
-            <span class="text-[11px] font-bold uppercase tracking-wider text-slate-400 block mb-2.5">Media Sosial Resmi</span>
-            <div class="flex items-center gap-2.5">
-              <!-- LinkedIn -->
-              <a href="https://www.linkedin.com/company/pt-group-mitra-indonesia-gmi/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn PT Group Mitra Indonesia" title="LinkedIn: PT Group Mitra Indonesia (GMI)" class="w-9 h-9 rounded-xl bg-white/10 hover:bg-[#0a66c2] text-slate-300 hover:text-white border border-white/10 hover:border-[#0a66c2] flex items-center justify-center transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg shadow-black/20 group">
-                <svg class="w-4 h-4 fill-current transition-transform group-hover:scale-110" viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
-                </svg>
-              </a>
 
-              <!-- Facebook -->
-              <a href="https://web.facebook.com/profile.php?id=61553487144217&_rdc=1&_rdr#" target="_blank" rel="noopener noreferrer" aria-label="Facebook Group Mitra Indonesia" title="Facebook: Group Mitra Indonesia" class="w-9 h-9 rounded-xl bg-white/10 hover:bg-[#1877f2] text-slate-300 hover:text-white border border-white/10 hover:border-[#1877f2] flex items-center justify-center transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg shadow-black/20 group">
-                <svg class="w-4 h-4 fill-current transition-transform group-hover:scale-110" viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-                </svg>
-              </a>
-
-              <!-- Instagram -->
-              <a href="https://www.instagram.com/groupmitraindonesia/" target="_blank" rel="noopener noreferrer" aria-label="Instagram Group Mitra Indonesia" title="Instagram: @groupmitraindonesia" class="w-9 h-9 rounded-xl bg-white/10 hover:bg-gradient-to-tr hover:from-[#f09433] hover:via-[#dc2743] hover:to-[#bc1888] text-slate-300 hover:text-white border border-white/10 hover:border-pink-500 flex items-center justify-center transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg shadow-black/20 group">
-                <svg class="w-4 h-4 fill-current transition-transform group-hover:scale-110" viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-                </svg>
-              </a>
-            </div>
+          <!-- Social / Cert Mini Badges -->
+          <div class="flex items-center gap-2 text-xs text-slate-400 pt-1">
+            <span class="inline-flex items-center gap-1 bg-white/10 px-2.5 py-1 rounded-md">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> ISO 9001:2015
+            </span>
+            <span class="inline-flex items-center gap-1 bg-white/10 px-2.5 py-1 rounded-md">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> ISO 45001:2018
+            </span>
           </div>
 
           <div class="text-xs text-slate-400 space-y-1">
@@ -787,6 +860,33 @@
               Email: <a href="mailto:bdv1@groupmitraindonesia.co.id" class="hover:text-white transition-colors">bdv1@groupmitraindonesia.co.id</a>
             </p>
           </address>
+
+          <!-- Media Sosial Resmi -->
+          <div class="mt-6 pt-5 border-t border-white/10">
+            <span class="text-[11px] font-bold uppercase tracking-wider text-slate-400 block mb-2.5">Media Sosial Resmi</span>
+            <div class="flex items-center gap-2.5">
+              <!-- LinkedIn -->
+              <a href="https://www.linkedin.com/company/pt-group-mitra-indonesia-gmi/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn PT Group Mitra Indonesia" title="LinkedIn: PT Group Mitra Indonesia (GMI)" class="w-9 h-9 rounded-xl bg-white/10 hover:bg-[#0a66c2] text-slate-300 hover:text-white border border-white/10 hover:border-[#0a66c2] flex items-center justify-center transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg shadow-black/20 group">
+                <svg class="w-4 h-4 fill-current transition-transform group-hover:scale-110" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+                </svg>
+              </a>
+
+              <!-- Facebook -->
+              <a href="https://web.facebook.com/profile.php?id=61553487144217&_rdc=1&_rdr#" target="_blank" rel="noopener noreferrer" aria-label="Facebook Group Mitra Indonesia" title="Facebook: Group Mitra Indonesia" class="w-9 h-9 rounded-xl bg-white/10 hover:bg-[#1877f2] text-slate-300 hover:text-white border border-white/10 hover:border-[#1877f2] flex items-center justify-center transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg shadow-black/20 group">
+                <svg class="w-4 h-4 fill-current transition-transform group-hover:scale-110" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                </svg>
+              </a>
+
+              <!-- Instagram -->
+              <a href="https://www.instagram.com/groupmitraindonesia/" target="_blank" rel="noopener noreferrer" aria-label="Instagram Group Mitra Indonesia" title="Instagram: @groupmitraindonesia" class="w-9 h-9 rounded-xl bg-white/10 hover:bg-gradient-to-tr hover:from-[#f09433] hover:via-[#dc2743] hover:to-[#bc1888] text-slate-300 hover:text-white border border-white/10 hover:border-pink-500 flex items-center justify-center transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg shadow-black/20 group">
+                <svg class="w-4 h-4 fill-current transition-transform group-hover:scale-110" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
         </div>
 
       </div>

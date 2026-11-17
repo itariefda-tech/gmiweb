@@ -145,7 +145,7 @@ function initVacancySelector() {
   });
 }
 
-// 4. Multi-Step Form Logic (5 Steps)
+// 4. Multi-Step Form Logic (8 Steps Sesuai HRIS)
 function initApplicationForm() {
   const form = document.getElementById('gmi-application-form');
   const steps = document.querySelectorAll('.form-step-pane');
@@ -154,6 +154,7 @@ function initApplicationForm() {
   const prevBtn = document.getElementById('form-prev-btn');
   const nextBtn = document.getElementById('form-next-btn');
   const submitBtn = document.getElementById('form-submit-btn');
+  const stepCounter = document.getElementById('form-step-counter');
   const successState = document.getElementById('apply-success-state');
   const formBody = document.getElementById('apply-form-body');
   const formSection = document.getElementById('apply-form-section');
@@ -190,6 +191,10 @@ function initApplicationForm() {
     if (progressBar) {
       const pct = ((currentStep + 1) / totalSteps) * 100;
       progressBar.style.width = `${pct}%`;
+    }
+
+    if (stepCounter) {
+      stepCounter.textContent = `Bagian ${currentStep + 1} dari ${totalSteps}`;
     }
 
     if (prevBtn) {
@@ -244,8 +249,9 @@ function initApplicationForm() {
 
   document.querySelectorAll('input[type="file"]').forEach(fileInput => {
     fileInput.addEventListener('change', () => {
-      const label = fileInput.closest('.upload-drop-zone')?.querySelector('.file-name-label');
-      if (label && fileInput.files.length > 0) {
+      const dropZone = fileInput.closest('.upload-drop-zone') || fileInput.closest('.upload-card');
+      const label = dropZone?.querySelector('.file-name-label') || dropZone?.querySelector('[data-file-name]');
+      if (label && fileInput.files && fileInput.files.length > 0) {
         label.textContent = fileInput.files[0].name;
         label.classList.add('text-emerald-600', 'font-semibold');
       }
@@ -273,6 +279,35 @@ function initApplicationForm() {
       if (appNumberDisplay) {
         appNumberDisplay.textContent = appNumber;
       }
+
+      // Add to mock candidates for Admin HR workspace
+      const fullName = form?.querySelector('[name="full_name"]')?.value?.trim() || 'Kandidat Baru';
+      const pos = form?.querySelector('[name="position"]')?.value || 'Security Operations (Satpam / Anggota)';
+      const loc = form?.querySelector('[name="preferred_location"]')?.value || 'Tangerang & Serpong';
+      const edu = form?.querySelector('[name="last_education"]')?.value || 'SMA / SMK / Sederajat';
+      const cert = form?.querySelector('[name="security_certificate_level"]')?.value || 'Gada Pratama';
+      const phone = form?.querySelector('[name="whatsapp"]')?.value || form?.querySelector('[name="phone"]')?.value || '08123456789';
+      const email = form?.querySelector('[name="email"]')?.value || 'kandidat@email.com';
+
+      mockCandidates.unshift({
+        id: Date.now(),
+        name: fullName,
+        appNo: appNumber,
+        position: pos,
+        location: loc,
+        education: edu,
+        cert: cert.replace('_', ' '),
+        exp: 'Baru Melamar',
+        submitted: 'Baru saja',
+        status: 'SUBMITTED',
+        phone: phone,
+        email: email
+      });
+
+      if (typeof window.refreshAdminTable === 'function') {
+        window.refreshAdminTable();
+      }
+
       formSection?.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }, 800);
   });
@@ -455,6 +490,7 @@ function initAdminDashboard() {
 
   searchInput?.addEventListener('input', filterData);
   statusFilter?.addEventListener('change', filterData);
+  window.refreshAdminTable = () => filterData();
 
   window.viewCandidate = function(id) {
     const item = mockCandidates.find(c => c.id === id);
