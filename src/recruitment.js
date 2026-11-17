@@ -14,43 +14,60 @@ let isAdminAuthenticated = false;
 
 // 1. Switcher between Public Portal & Administrator HR
 function initModeSwitcher() {
-  const publicBtn = document.getElementById('mode-public-btn');
   const adminBtn = document.getElementById('mode-admin-btn');
+  const publicBtns = document.querySelectorAll('#mode-public-btn, [data-action="return-public"]');
   const publicView = document.getElementById('recruitment-public-view');
   const adminView = document.getElementById('recruitment-admin-view');
   const adminAuthModal = document.getElementById('admin-auth-modal');
 
-  if (!publicBtn || !adminBtn || !publicView || !adminView) return;
+  if (!publicView || !adminView) return;
 
-  publicBtn.addEventListener('click', () => {
-    publicBtn.classList.add('bg-[#061e43]', 'text-white', 'shadow-md');
-    publicBtn.classList.remove('text-slate-600', 'hover:bg-slate-100');
-    adminBtn.classList.remove('bg-[#061e43]', 'text-white', 'shadow-md');
-    adminBtn.classList.add('text-slate-600', 'hover:bg-slate-100');
-
+  function switchToPublic() {
     publicView.classList.remove('hidden');
     adminView.classList.add('hidden');
     window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  publicBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      switchToPublic();
+    });
   });
 
-  adminBtn.addEventListener('click', () => {
-    if (!isAdminAuthenticated) {
-      // Require Authentication
-      if (adminAuthModal) {
-        adminAuthModal.showModal();
+  if (adminBtn) {
+    adminBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      if (!isAdminAuthenticated) {
+        // Require Authentication
+        if (adminAuthModal) {
+          adminAuthModal.showModal();
+        }
+      } else {
+        showAdminWorkspace();
       }
-    } else {
-      showAdminWorkspace();
-    }
-  });
+    });
+  }
 
   // Logout button in Admin Dashboard
   const adminLogoutBtn = document.getElementById('admin-logout-btn');
   if (adminLogoutBtn) {
     adminLogoutBtn.addEventListener('click', () => {
       isAdminAuthenticated = false;
-      publicBtn.click();
+      switchToPublic();
     });
+  }
+
+  // Auto-trigger if query string has ?mode=admin
+  const urlParams = new URLSearchParams(window.location.search);
+  if (urlParams.get('mode') === 'admin') {
+    if (!isAdminAuthenticated) {
+      if (adminAuthModal) {
+        adminAuthModal.showModal();
+      }
+    } else {
+      showAdminWorkspace();
+    }
   }
 }
 
@@ -101,17 +118,10 @@ function initAdminSecurityAuth() {
 }
 
 function showAdminWorkspace() {
-  const publicBtn = document.getElementById('mode-public-btn');
-  const adminBtn = document.getElementById('mode-admin-btn');
   const publicView = document.getElementById('recruitment-public-view');
   const adminView = document.getElementById('recruitment-admin-view');
 
-  if (!publicBtn || !adminBtn || !publicView || !adminView) return;
-
-  adminBtn.classList.add('bg-[#061e43]', 'text-white', 'shadow-md');
-  adminBtn.classList.remove('text-slate-600', 'hover:bg-slate-100');
-  publicBtn.classList.remove('bg-[#061e43]', 'text-white', 'shadow-md');
-  publicBtn.classList.add('text-slate-600', 'hover:bg-slate-100');
+  if (!publicView || !adminView) return;
 
   adminView.classList.remove('hidden');
   publicView.classList.add('hidden');
