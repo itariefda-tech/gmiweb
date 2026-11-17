@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Klien Kami & Portofolio Mitra - PT Grup Mitra Indonesia (GMI)</title>
+  <meta name="description" content="Portofolio klien dan mitra perusahaan PT Grup Mitra Indonesia (GMI) sejak 2009 dari berbagai sektor: telekomunikasi, transportasi publik, industri manufaktur, properti, dan logistik.">
+  
+  <!-- Preconnect & Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="/src/style.css">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/assets/images/logo/gmi-logo.png">
+</head>
+<body class="bg-slate-50 text-slate-900 antialiased selection:bg-red-600 selection:text-white">
+
+  <!-- ============================================================== -->
+  <!-- 1. FLOATING NAVIGATION BAR (Desktop & Mobile)                  -->
+  <!-- ============================================================== -->
+  <header class="fixed top-0 left-0 right-0 z-50 px-4 sm:px-6 lg:px-8 pt-3 sm:pt-4 transition-all duration-300">
+    <div class="max-w-6xl mx-auto">
+      <nav class="nav-pill bg-white rounded-full py-4 sm:py-5 px-5 sm:px-8 min-h-[74px] sm:min-h-[82px] flex items-center justify-between border border-slate-100 shadow-xl shadow-slate-900/8" aria-label="Navigasi Utama">
+        
+        <!-- Logo -->
+        <a href="index.html#beranda" class="flex items-center gap-2 shrink-0 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-600 rounded-lg">
+          <picture>
+            <source srcset="/assets/images/logo/Logo-GMI01.webp" type="image/webp">
+            <img src="/assets/images/logo/Logo-GMI01.png" alt="Grup Mitra Indonesia Logo" class="h-11 sm:h-[53px] w-auto object-contain transition-transform group-hover:scale-105" width="176" height="53" loading="eager">
+          </picture>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <div class="hidden md:flex items-center gap-7 lg:gap-9 text-[15px] sm:text-base font-semibold text-slate-700">
+          <a href="index.html" class="nav-link-cool text-slate-700 font-semibold">Beranda</a>
+          <a href="tentang-kami.html" class="nav-link-cool text-slate-700 font-semibold">Tentang Kami</a>
+          
+          <!-- Dropdown Layanan Kami -->
+          <div class="relative group py-1">
+            <button type="button" class="nav-link-cool text-slate-700 font-semibold flex items-center gap-1.5 focus:outline-none cursor-pointer" aria-expanded="false" aria-haspopup="true">
+              <span>Layanan Kami</span>
+              <svg class="w-3.5 h-3.5 text-slate-400 transition-transform duration-200 group-hover:rotate-180 group-focus-within:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            
+            <!-- Dropdown Card -->
+            <div class="absolute top-full left-1/2 -translate-x-1/2 pt-2 opacity-0 translate-y-2 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto group-focus-within:opacity-100 group-focus-within:translate-y-0 group-focus-within:pointer-events-auto transition-all duration-200 z-50">
+              <div class="w-64 bg-white rounded-2xl shadow-xl shadow-slate-900/10 border border-slate-100 p-2 overflow-hidden ring-1 ring-slate-900/5">
+                <a href="layanan-kami.html" class="block px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-700 hover:text-[#c52227] hover:bg-slate-50 transition-colors">
+                  Manpower Outsourcing
+                </a>
+                <a href="layanan-keamanan.html" class="block px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-700 hover:text-[#c52227] hover:bg-slate-50 transition-colors">
+                  Layanan Keamanan
+                </a>
+                <a href="investigasi.html" class="block px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-700 hover:text-[#c52227] hover:bg-slate-50 transition-colors">
+                  Investigation Service
+                </a>
+                <a href="audit-pemulihan-piutang.html" class="block px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-700 hover:text-[#c52227] hover:bg-slate-50 transition-colors">
+                  Audit &amp; Pemulihan Piutang
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dropdown Portofolio (Active on Klien Kami) -->
+          <div class="relative group py-1">
+            <button type="button" class="nav-link-cool text-[#061e43] font-bold flex items-center gap-1.5 focus:outline-none cursor-pointer" aria-current="page" aria-expanded="false" aria-haspopup="true">
+              <span>Portofolio</span>
+              <svg class="w-3.5 h-3.5 text-slate-400 transition-transform duration-200 group-hover:rotate-180 group-focus-within:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            
+            <!-- Dropdown Card -->
+            <div class="absolute top-full left-1/2 -translate-x-1/2 pt-2 opacity-0 translate-y-2 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto group-focus-within:opacity-100 group-focus-within:translate-y-0 group-focus-within:pointer-events-auto transition-all duration-200 z-50">
+              <div class="w-56 bg-white rounded-2xl shadow-xl shadow-slate-900/10 border border-slate-100 p-2 overflow-hidden ring-1 ring-slate-900/5">
+                <a href="galeri.html" class="block px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-700 hover:text-[#c52227] hover:bg-slate-50 transition-colors">
+                  Galeri
+                </a>
+                <a href="klien.html" class="block px-4 py-2.5 rounded-xl text-sm font-bold text-[#c52227] bg-red-50/70 transition-colors">
+                  Klien Kami
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dropdown Karir -->
+          <div class="relative group py-1">
+            <button type="button" class="nav-link-cool text-slate-700 font-semibold flex items-center gap-1.5 focus:outline-none cursor-pointer" aria-expanded="false" aria-haspopup="true">
+              <span>Karir</span>
+              <svg class="w-3.5 h-3.5 text-slate-400 transition-transform duration-200 group-hover:rotate-180 group-focus-within:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            
+            <!-- Dropdown Card -->
+            <div class="absolute top-full left-1/2 -translate-x-1/2 pt-2 opacity-0 translate-y-2 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto group-focus-within:opacity-100 group-focus-within:translate-y-0 group-focus-within:pointer-events-auto transition-all duration-200 z-50">
+              <div class="w-56 bg-white rounded-2xl shadow-xl shadow-slate-900/10 border border-slate-100 p-2 overflow-hidden ring-1 ring-slate-900/5">
+                <a href="karir.html" class="block px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-700 hover:text-[#c52227] hover:bg-slate-50 transition-colors">
+                  Portal Pelamar
+                </a>
+                <a href="#" class="block px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-400 hover:text-slate-600 hover:bg-slate-50 transition-colors flex items-center justify-between" title="Portal Pelatihan (Segera Hadir)">
+                  <span>Portal Pelatihan</span>
+                  <span class="text-[10px] uppercase font-bold tracking-wider px-1.5 py-0.5 rounded bg-slate-100 text-slate-500 border border-slate-200">Demo</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <a href="#" class="nav-link-cool text-slate-700 font-semibold" title="Blog GMI (Segera Hadir)">Blog</a>
+        </div>
+
+        <!-- Right Side: Hubungi Kami Button & Mobile Hamburger -->
+        <div class="flex items-center gap-3">
+          <button type="button" data-open-consultation class="btn-wiggle-hover hidden sm:inline-flex items-center justify-center px-6 sm:px-7 py-2.5 sm:py-3 text-sm sm:text-[15px] font-bold text-white bg-[#c52227] hover:bg-[#a7181d] rounded-full shadow-md hover:shadow-lg transition-all duration-200 cursor-pointer">
+            Hubungi kami
+          </button>
+
+          <!-- Mobile Hamburger Toggle -->
+          <button id="drawer-open-btn" type="button" aria-label="Buka Menu Navigasi" aria-expanded="false" aria-controls="mobile-drawer" class="md:hidden inline-flex items-center justify-center p-2.5 rounded-full text-slate-700 hover:text-red-600 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-red-600 cursor-pointer">
+            <svg class="w-6 h-6 sm:w-7 sm:h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ============================================================== -->
+  <!-- MOBILE NAVIGATION DRAWER (Dialog per Modern Web Guidance)       -->
+  <!-- ============================================================== -->
+  <dialog id="mobile-drawer" aria-label="Menu Navigasi Mobile" class="fixed inset-0 m-0 p-0 w-full h-full max-w-none max-h-none bg-transparent backdrop:bg-slate-950/60 backdrop:backdrop-blur-sm z-50">
+    <div class="fixed inset-y-0 right-0 w-full max-w-xs sm:max-w-sm bg-white shadow-2xl flex flex-col p-6 overflow-y-auto">
+      <div class="flex items-center justify-between pb-4 border-b border-slate-100">
+        <picture>
+          <source srcset="/assets/images/logo/Logo-GMI01.webp" type="image/webp">
+          <img src="/assets/images/logo/Logo-GMI01.png" alt="GMI Logo" class="h-8 w-auto" width="120" height="34">
+        </picture>
+        <button id="drawer-close-btn" type="button" aria-label="Tutup Menu" class="p-2 rounded-full text-slate-500 hover:text-slate-800 hover:bg-slate-100 cursor-pointer">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Drawer Nav Links -->
+      <nav class="flex flex-col gap-1.5 py-4 text-base font-semibold text-slate-800" aria-label="Navigasi Mobile">
+        <a href="index.html" class="drawer-nav-link px-3 py-2.5 rounded-lg hover:bg-slate-50 hover:text-red-600">Beranda</a>
+        <a href="tentang-kami.html" class="drawer-nav-link px-3 py-2.5 rounded-lg hover:bg-slate-50 hover:text-red-600">Tentang Kami</a>
+        
+        <!-- Layanan Kami Mobile Group -->
+        <div class="py-1 px-1">
+          <span class="px-2 text-[11px] font-bold uppercase tracking-wider text-slate-400 block mb-1">Layanan Kami</span>
+          <div class="space-y-0.5 pl-1">
+            <a href="layanan-kami.html" class="drawer-nav-link block px-2.5 py-2 rounded-lg hover:bg-slate-50 hover:text-red-600 text-slate-700 text-sm font-medium">
+              Manpower Outsourcing
+            </a>
+            <a href="layanan-keamanan.html" class="drawer-nav-link block px-2.5 py-2 rounded-lg hover:bg-slate-50 hover:text-red-600 text-slate-700 text-sm font-medium">
+              Layanan Keamanan
+            </a>
+            <a href="investigasi.html" class="drawer-nav-link block px-2.5 py-2 rounded-lg hover:bg-slate-50 hover:text-red-600 text-slate-700 text-sm font-medium">
+              Investigation Service
+            </a>
+            <a href="audit-pemulihan-piutang.html" class="drawer-nav-link block px-2.5 py-2 rounded-lg hover:bg-slate-50 hover:text-red-600 text-slate-700 text-sm font-medium">
+              Audit &amp; Pemulihan Piutang
+            </a>
+          </div>
+        </div>
+
+        <!-- Portofolio Mobile Group (Active on Klien Kami) -->
+        <div class="py-1 px-1">
+          <span class="px-2 text-[11px] font-bold uppercase tracking-wider text-red-600 block mb-1">Portofolio</span>
+          <div class="space-y-0.5 pl-1">
+            <a href="galeri.html" class="drawer-nav-link block px-2.5 py-2 rounded-lg hover:bg-slate-50 hover:text-red-600 text-slate-700 text-sm font-medium">
+              Galeri
+            </a>
+            <a href="klien.html" class="drawer-nav-link block px-2.5 py-2 rounded-lg bg-red-50 text-red-600 text-sm font-bold" aria-current="page">
+              Klien Kami
+            </a>
+          </div>
+        </div>
+
+        <!-- Karir Mobile Group -->
+        <div class="py-1 px-1">
+          <span class="px-2 text-[11px] font-bold uppercase tracking-wider text-slate-400 block mb-1">Karir</span>
+          <div class="space-y-0.5 pl-1">
+            <a href="karir.html" class="drawer-nav-link block px-2.5 py-2 rounded-lg hover:bg-slate-50 hover:text-red-600 text-slate-700 text-sm font-medium">
+              Portal Pelamar
+            </a>
+            <a href="#" class="drawer-nav-link block px-2.5 py-2 rounded-lg hover:bg-slate-50 text-slate-400 hover:text-slate-600 text-sm font-medium flex items-center justify-between" title="Portal Pelatihan (Segera Hadir)">
+              <span>Portal Pelatihan</span>
+              <span class="text-[10px] uppercase font-bold tracking-wider px-1.5 py-0.5 rounded bg-slate-100 text-slate-500 border border-slate-200">Demo</span>
+            </a>
+          </div>
+        </div>
+
+        <a href="#" class="drawer-nav-link px-3 py-2.5 rounded-lg hover:bg-slate-50 hover:text-red-600 text-slate-700">Blog</a>
+        <a href="index.html#klien-kami" class="drawer-nav-link px-3 py-2.5 rounded-lg hover:bg-slate-50 hover:text-red-600">Klien Kami</a>
+      </nav>
+
+      <!-- Bottom Consultation in Mobile Menu -->
+      <div class="mt-auto pt-6 border-t border-slate-100 flex flex-col gap-3">
+        <button type="button" data-open-consultation class="w-full mt-2 py-3 px-4 text-center font-bold text-white bg-[#c52227] hover:bg-[#a7181d] rounded-xl shadow-md transition-all cursor-pointer">
+          Hubungi Kami
+        </button>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- ============================================================== -->
+  <!-- MAIN CONTENT AREA                                              -->
+  <!-- ============================================================== -->
+  <main class="pt-32 sm:pt-36 lg:pt-40 pb-0">
+    
+    <!-- 1. Hero Section -->
+    <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mb-12 sm:mb-16">
+      <div class="relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#021838] via-[#061e43] to-[#0a2f6c] text-white p-8 sm:p-12 lg:p-16 shadow-2xl border border-slate-700/50">
+        <!-- Top Accent Light Line -->
+        <div class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-[#c52227] via-red-500 to-amber-400"></div>
+
+        <!-- Ambient Glows -->
+        <div class="absolute -right-20 -top-20 w-96 h-96 rounded-full bg-blue-500/15 blur-3xl pointer-events-none"></div>
+        <div class="absolute -left-20 -bottom-20 w-96 h-96 rounded-full bg-red-600/15 blur-3xl pointer-events-none"></div>
+
+        <div class="relative z-10 max-w-3xl">
+          <!-- Breadcrumb -->
+          <nav class="flex items-center gap-2 text-xs text-slate-300 font-medium mb-5" aria-label="Breadcrumb">
+            <a href="index.html" class="hover:text-white transition-colors">Beranda</a>
+            <span class="text-slate-500">/</span>
+            <span class="text-slate-400">Portofolio</span>
+            <span class="text-slate-500">/</span>
+            <span class="text-red-400 font-semibold" aria-current="page">Klien Kami</span>
+          </nav>
+
+          <!-- Pulsing Badge -->
+          <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-white/10 text-white border border-white/20 backdrop-blur-md mb-6 shadow-xs">
+            <span class="flex h-2 w-2 relative">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-400"></span>
+            </span>
+            <span>Kemitraan Korporasi Terpercaya Sejak 2009</span>
+          </div>
+
+          <h1 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight leading-snug mb-4">
+            Dipercaya Oleh Berbagai <span class="text-transparent bg-clip-text bg-gradient-to-r from-white via-slate-100 to-red-400">Perusahaan Terkemuka</span> Nasional &amp; Global
+          </h1>
+          <p class="text-base sm:text-lg text-slate-200 font-normal leading-relaxed mb-8 max-w-2xl">
+            Sejak tahun 2009, PT Grup Mitra Indonesia telah menjadi mitra strategis bagi BUMN, konglomerasi industri, transportasi publik, sektor manufaktur, perbankan, dan properti komersial di seluruh wilayah Indonesia.
+          </p>
+
+          <!-- 4 Quick Stats -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-8 border-t border-white/15">
+            <div>
+              <div class="text-2xl sm:text-3xl font-extrabold text-white">100+</div>
+              <div class="text-xs text-slate-300 mt-1">Klien Korporasi</div>
+            </div>
+            <div>
+              <div class="text-2xl sm:text-3xl font-extrabold text-white">15+</div>
+              <div class="text-xs text-slate-300 mt-1">Tahun Pengalaman</div>
+            </div>
+            <div>
+              <div class="text-2xl sm:text-3xl font-extrabold text-white">98%</div>
+              <div class="text-xs text-slate-300 mt-1">Tingkat Retensi Kontrak</div>
+            </div>
+            <div>
+              <div class="text-2xl sm:text-3xl font-extrabold text-white">35+</div>
+              <div class="text-xs text-slate-300 mt-1">Kota &amp; Kawasan Industri</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Client Logos Showcase Grid (Col 4) -->
+    <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mb-24">
+      <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+        <p class="text-xs sm:text-sm font-bold tracking-widest text-[#c52227] uppercase mb-3">
+          DAFTAR KLIEN KAMI
+        </p>
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#061e43] tracking-tight mb-4">
+          Portofolio Kemitraan Strategis Lintas Sektor
+        </h2>
+        <p class="text-sm sm:text-base text-slate-600 leading-relaxed">
+          Berikut adalah beberapa perusahaan terkemuka yang telah mempercayakan pengamanan fasilitas, alih daya tenaga kerja, dan operasional bisnisnya kepada GMI.
+        </p>
+      </div>
+
+      <!-- 4 Columns Grid (Responsive: 2 cols on mobile, 3 on tablet, 4 on desktop) -->
+      <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
+        
+        <!-- Client 1: Indosat Ooredoo Hutchison -->
+        <div class="bg-white rounded-2xl p-6 sm:p-7 border border-slate-200/90 shadow-2xs hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 flex flex-col items-center justify-between text-center group min-h-[190px] sm:min-h-[210px]">
+          <div class="flex-1 flex items-center justify-center w-full py-2">
+            <picture class="flex items-center justify-center">
+              <source srcset="/assets/images/clients/indosat-ooredoo.webp" type="image/webp">
+              <img src="/assets/images/clients/indosat-ooredoo.png" alt="PT Indosat Ooredoo Hutchison Tbk" class="max-h-12 sm:max-h-14 w-auto object-contain transition-transform duration-300 group-hover:scale-105" loading="lazy">
+            </picture>
+          </div>
+          <div class="w-full pt-3 border-t border-slate-100">
+            <h3 class="font-extrabold text-xs sm:text-sm text-slate-800 line-clamp-1">PT Indosat Ooredoo Hutchison</h3>
+            <span class="inline-block mt-1 text-[10px] font-bold uppercase tracking-wider text-red-600 bg-red-50 px-2.5 py-0.5 rounded-full">
+              Telekomunikasi
+            </span>
+          </div>
+        </div>
+
+        <!-- Client 2: MRT Jakarta -->
+        <div class="bg-white rounded-2xl p-6 sm:p-7 border border-slate-200/90 shadow-2xs hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 flex flex-col items-center justify-between text-center group min-h-[190px] sm:min-h-[210px]">
+          <div class="flex-1 flex items-center justify-center w-full py-2">
+            <picture class="flex items-center justify-center">
+              <source srcset="/assets/images/clients/mrt-jakarta.webp" type="image/webp">
+              <img src="/assets/images/clients/mrt-jakarta.png" alt="PT MRT Jakarta (Perseroda)" class="max-h-12 sm:max-h-14 w-auto object-contain transition-transform duration-300 group-hover:scale-105" loading="lazy">
+            </picture>
+          </div>
+          <div class="w-full pt-3 border-t border-slate-100">
+            <h3 class="font-extrabold text-xs sm:text-sm text-slate-800 line-clamp-1">PT MRT Jakarta (Perseroda)</h3>
+            <span class="inline-block mt-1 text-[10px] font-bold uppercase tracking-wider text-blue-600 bg-blue-50 px-2.5 py-0.5 rounded-full">
+              Transportasi Publik
+            </span>
+          </div>
+        </div>
+
+        <!-- Client 3: Jakarta Propertindo (Jakpro) -->
+        <div class="bg-white rounded-2xl p-6 sm:p-7 border border-slate-200/90 shadow-2xs hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 flex flex-col items-center justify-between text-center group min-h-[190px] sm:min-h-[210px]">
+          <div class="flex-1 flex items-center justify-center w-full py-2">
+            <picture class="flex items-center justify-center">
+              <source srcset="/assets/images/clients/jakpro.webp" type="image/webp">
+              <img src="/assets/images/clients/jakpro.jpg" alt="PT Jakarta Propertindo (Jakpro)" class="max-h-11 sm:max-h-13 w-auto object-contain transition-transform duration-300 group-hover:scale-105" loading="lazy">
+            </picture>
+          </div>
+          <div class="w-full pt-3 border-t border-slate-100">
+            <h3 class="font-extrabold text-xs sm:text-sm text-slate-800 line-clamp-1">PT Jakarta Propertindo</h3>
+            <span class="inline-block mt-1 text-[10px] font-bold uppercase tracking-wider text-emerald-600 bg-emerald-50 px-2.5 py-0.5 rounded-full">
+              BUMN &amp; Properti
+            </span>
+          </div>
+        </div>
+
+        <!-- Client 4: Bumimulia Indah Utama -->
+        <div class="bg-white rounded-2xl p-6 sm:p-7 border border-slate-200/90 shadow-2xs hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 flex flex-col items-center justify-between text-center group min-h-[190px] sm:min-h-[210px]">
+          <div class="flex-1 flex items-center justify-center w-full py-2">
+            <picture class="flex items-center justify-center">
+              <source srcset="/assets/images/clients/bumimulia.webp" type="image/webp">
+              <img src="/assets/images/clients/bumimulia.jpg" alt="PT Bumimulia Indah Utama" class="max-h-12 sm:max-h-14 w-auto object-contain transition-transform duration-300 group-hover:scale-105" loading="lazy">
+            </picture>
+          </div>
+          <div class="w-full pt-3 border-t border-slate-100">
+            <h3 class="font-extrabold text-xs sm:text-sm text-slate-800 line-clamp-1">PT Bumimulia Indah Utama</h3>
+            <span class="inline-block mt-1 text-[10px] font-bold uppercase tracking-wider text-purple-600 bg-purple-50 px-2.5 py-0.5 rounded-full">
+              Manufaktur Plastik
+            </span>
+          </div>
+        </div>
+
+        <!-- Client 5: Argo Pantes -->
+        <div class="bg-white rounded-2xl p-6 sm:p-7 border border-slate-200/90 shadow-2xs hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 flex flex-col items-center justify-between text-center group min-h-[190px] sm:min-h-[210px]">
+          <div class="flex-1 flex items-center justify-center w-full py-2">
+            <picture class="flex items-center justify-center">
+              <source srcset="/assets/images/clients/argo-pantes.webp" type="image/webp">
+              <img src="/assets/images/clients/argo-pantes.png" alt="PT Argo Pantes Tbk" class="max-h-12 sm:max-h-14 w-auto object-contain transition-transform duration-300 group-hover:scale-105" loading="lazy">
+            </picture>
+          </div>
+          <div class="w-full pt-3 border-t border-slate-100">
+            <h3 class="font-extrabold text-xs sm:text-sm text-slate-800 line-clamp-1">PT Argo Pantes Tbk</h3>
+            <span class="inline-block mt-1 text-[10px] font-bold uppercase tracking-wider text-amber-600 bg-amber-50 px-2.5 py-0.5 rounded-full">
+              Tekstil Industri
+            </span>
+          </div>
+        </div>
+
+        <!-- Client 6: ABM Investama -->
+        <div class="bg-white rounded-2xl p-6 sm:p-7 border border-slate-200/90 shadow-2xs hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 flex flex-col items-center justify-between text-center group min-h-[190px] sm:min-h-[210px]">
+          <div class="flex-1 flex items-center justify-center w-full py-2">
+            <picture class="flex items-center justify-center">
+              <source srcset="/assets/images/clients/abm.webp" type="image/webp">
+              <img src="/assets/images/clients/abm.jpg" alt="PT ABM Investama Tbk" class="max-h-12 sm:max-h-14 w-auto object-contain transition-transform duration-300 group-hover:scale-105" loading="lazy">
+            </picture>
+          </div>
+          <div class="w-full pt-3 border-t border-slate-100">
+            <h3 class="font-extrabold text-xs sm:text-sm text-slate-800 line-clamp-1">PT ABM Investama Tbk</h3>
+            <span class="inline-block mt-1 text-[10px] font-bold uppercase tracking-wider text-teal-600 bg-teal-50 px-2.5 py-0.5 rounded-full">
+              Energi &amp; Logistik
+            </span>
+          </div>
+        </div>
+
+        <!-- Client 7: Kuehne + Nagel -->
+        <div class="bg-white rounded-2xl p-6 sm:p-7 border border-slate-200/90 shadow-2xs hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 flex flex-col items-center justify-between text-center group min-h-[190px] sm:min-h-[210px]">
+          <div class="flex-1 flex items-center justify-center w-full py-2">
+            <picture class="flex items-center justify-center">
+              <source srcset="/assets/images/clients/kuehne-nagel.webp" type="image/webp">
+              <img src="/assets/images/clients/kuehne-nagel.jpg" alt="Kuehne + Nagel Logistics" class="max-h-11 sm:max-h-13 w-auto object-contain transition-transform duration-300 group-hover:scale-105" loading="lazy">
+            </picture>
+          </div>
+          <div class="w-full pt-3 border-t border-slate-100">
+            <h3 class="font-extrabold text-xs sm:text-sm text-slate-800 line-clamp-1">Kuehne + Nagel Logistics</h3>
+            <span class="inline-block mt-1 text-[10px] font-bold uppercase tracking-wider text-sky-600 bg-sky-50 px-2.5 py-0.5 rounded-full">
+              Rantai Pasok Global
+            </span>
+          </div>
+        </div>
+
+        <!-- Client 8: Cakra Steel -->
+        <div class="bg-white rounded-2xl p-6 sm:p-7 border border-slate-200/90 shadow-2xs hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 flex flex-col items-center justify-between text-center group min-h-[190px] sm:min-h-[210px]">
+          <div class="flex-1 flex items-center justify-center w-full py-2">
+            <picture class="flex items-center justify-center">
+              <source srcset="/assets/images/clients/cakra-steel.webp" type="image/webp">
+              <img src="/assets/images/clients/cakra-steel.png" alt="CS Cakra Steel" class="max-h-12 sm:max-h-14 w-auto object-contain transition-transform duration-300 group-hover:scale-105" loading="lazy">
+            </picture>
+          </div>
+          <div class="w-full pt-3 border-t border-slate-100">
+            <h3 class="font-extrabold text-xs sm:text-sm text-slate-800 line-clamp-1">CS Cakra Steel</h3>
+            <span class="inline-block mt-1 text-[10px] font-bold uppercase tracking-wider text-slate-700 bg-slate-100 px-2.5 py-0.5 rounded-full">
+              Industri Baja
+            </span>
+          </div>
+        </div>
+
+        <!-- Client 9: Bottega Artisan -->
+        <div class="bg-white rounded-2xl p-6 sm:p-7 border border-slate-200/90 shadow-2xs hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 flex flex-col items-center justify-between text-center group min-h-[190px] sm:min-h-[210px]">
+          <div class="flex-1 flex items-center justify-center w-full py-2">
+            <picture class="flex items-center justify-center">
+              <source srcset="/assets/images/clients/bottega-artisan.webp" type="image/webp">
+              <img src="/assets/images/clients/bottega-artisan.png" alt="Bottega Artisan" class="max-h-12 sm:max-h-14 w-auto object-contain transition-transform duration-300 group-hover:scale-105" loading="lazy">
+            </picture>
+          </div>
+          <div class="w-full pt-3 border-t border-slate-100">
+            <h3 class="font-extrabold text-xs sm:text-sm text-slate-800 line-clamp-1">Bottega Artisan</h3>
+            <span class="inline-block mt-1 text-[10px] font-bold uppercase tracking-wider text-rose-600 bg-rose-50 px-2.5 py-0.5 rounded-full">
+              Komersial &amp; Interior
+            </span>
+          </div>
+        </div>
+
+        <!-- Client 10: Alam Lestari -->
+        <div class="bg-white rounded-2xl p-6 sm:p-7 border border-slate-200/90 shadow-2xs hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 flex flex-col items-center justify-between text-center group min-h-[190px] sm:min-h-[210px]">
+          <div class="flex-1 flex items-center justify-center w-full py-2">
+            <picture class="flex items-center justify-center">
+              <source srcset="/assets/images/clients/alam-lestari.webp" type="image/webp">
+              <img src="/assets/images/clients/alam-lestari.jpg" alt="PT Alam Lestari Indonesia" class="max-h-12 sm:max-h-14 w-auto object-contain transition-transform duration-300 group-hover:scale-105" loading="lazy">
+            </picture>
+          </div>
+          <div class="w-full pt-3 border-t border-slate-100">
+            <h3 class="font-extrabold text-xs sm:text-sm text-slate-800 line-clamp-1">PT Alam Lestari Indonesia</h3>
+            <span class="inline-block mt-1 text-[10px] font-bold uppercase tracking-wider text-emerald-600 bg-emerald-50 px-2.5 py-0.5 rounded-full">
+              Agroindustri
+            </span>
+          </div>
+        </div>
+
+        <!-- Client 11: Bahana Mega Prestasi -->
+        <div class="bg-white rounded-2xl p-6 sm:p-7 border border-slate-200/90 shadow-2xs hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 flex flex-col items-center justify-between text-center group min-h-[190px] sm:min-h-[210px]">
+          <div class="flex-1 flex items-center justify-center w-full py-2">
+            <picture class="flex items-center justify-center">
+              <source srcset="/assets/images/clients/bahana-mega-prestasi.webp" type="image/webp">
+              <img src="/assets/images/clients/bahana-mega-prestasi.jpg" alt="PT New Bahana Mega Prestasi" class="max-h-12 sm:max-h-14 w-auto object-contain transition-transform duration-300 group-hover:scale-105" loading="lazy">
+            </picture>
+          </div>
+          <div class="w-full pt-3 border-t border-slate-100">
+            <h3 class="font-extrabold text-xs sm:text-sm text-slate-800 line-clamp-1">PT New Bahana Mega Prestasi</h3>
+            <span class="inline-block mt-1 text-[10px] font-bold uppercase tracking-wider text-indigo-600 bg-indigo-50 px-2.5 py-0.5 rounded-full">
+              Manufaktur Komersial
+            </span>
+          </div>
+        </div>
+
+        <!-- Client 12: Izzara Apartment -->
+        <div class="bg-white rounded-2xl p-6 sm:p-7 border border-slate-200/90 shadow-2xs hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 flex flex-col items-center justify-between text-center group min-h-[190px] sm:min-h-[210px]">
+          <div class="flex-1 flex items-center justify-center w-full py-2">
+            <picture class="flex items-center justify-center">
+              <source srcset="/assets/images/clients/izzara.webp" type="image/webp">
+              <img src="/assets/images/clients/izzara.png" alt="Izzara Executive Apartment" class="max-h-11 sm:max-h-13 w-auto object-contain transition-transform duration-300 group-hover:scale-105" loading="lazy">
+            </picture>
+          </div>
+          <div class="w-full pt-3 border-t border-slate-100">
+            <h3 class="font-extrabold text-xs sm:text-sm text-slate-800 line-clamp-1">Izzara Executive Apartment</h3>
+            <span class="inline-block mt-1 text-[10px] font-bold uppercase tracking-wider text-amber-700 bg-amber-50 px-2.5 py-0.5 rounded-full">
+              Residensial Mewah
+            </span>
+          </div>
+        </div>
+
+        <!-- Client 13: KTM Indonesia -->
+        <div class="bg-white rounded-2xl p-6 sm:p-7 border border-slate-200/90 shadow-2xs hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 flex flex-col items-center justify-between text-center group min-h-[190px] sm:min-h-[210px]">
+          <div class="flex-1 flex items-center justify-center w-full py-2">
+            <picture class="flex items-center justify-center">
+              <source srcset="/assets/images/clients/ktm.webp" type="image/webp">
+              <img src="/assets/images/clients/ktm.jpg" alt="KTM Indonesia" class="max-h-11 sm:max-h-13 w-auto object-contain transition-transform duration-300 group-hover:scale-105" loading="lazy">
+            </picture>
+          </div>
+          <div class="w-full pt-3 border-t border-slate-100">
+            <h3 class="font-extrabold text-xs sm:text-sm text-slate-800 line-clamp-1">KTM Indonesia</h3>
+            <span class="inline-block mt-1 text-[10px] font-bold uppercase tracking-wider text-orange-600 bg-orange-50 px-2.5 py-0.5 rounded-full">
+              Otomotif Global
+            </span>
+          </div>
+        </div>
+
+        <!-- Client 14: Sektor Pergudangan & Logistik Modern -->
+        <div class="bg-white rounded-2xl p-6 sm:p-7 border border-slate-200/90 shadow-2xs hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 flex flex-col items-center justify-between text-center group min-h-[190px] sm:min-h-[210px]">
+          <div class="flex-1 flex items-center justify-center w-full py-2">
+            <picture class="flex items-center justify-center">
+              <source srcset="/assets/images/services/env-pergudangan.webp" type="image/webp">
+              <img src="/assets/images/services/env-pergudangan.webp" alt="Kawasan Logistik Cikarang" class="max-h-12 sm:max-h-14 w-auto object-contain rounded-lg transition-transform duration-300 group-hover:scale-105" loading="lazy">
+            </picture>
+          </div>
+          <div class="w-full pt-3 border-t border-slate-100">
+            <h3 class="font-extrabold text-xs sm:text-sm text-slate-800 line-clamp-1">Kawasan Logistik Cikarang</h3>
+            <span class="inline-block mt-1 text-[10px] font-bold uppercase tracking-wider text-cyan-600 bg-cyan-50 px-2.5 py-0.5 rounded-full">
+              Pergudangan Industri
+            </span>
+          </div>
+        </div>
+
+        <!-- Client 15: Sentra Perkantoran & Finansial -->
+        <div class="bg-white rounded-2xl p-6 sm:p-7 border border-slate-200/90 shadow-2xs hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 flex flex-col items-center justify-between text-center group min-h-[190px] sm:min-h-[210px]">
+          <div class="flex-1 flex items-center justify-center w-full py-2">
+            <picture class="flex items-center justify-center">
+              <source srcset="/assets/images/services/env-perkantoran.webp" type="image/webp">
+              <img src="/assets/images/services/env-perkantoran.webp" alt="Kawasan Perkantoran Segitiga Emas" class="max-h-12 sm:max-h-14 w-auto object-contain rounded-lg transition-transform duration-300 group-hover:scale-105" loading="lazy">
+            </picture>
+          </div>
+          <div class="w-full pt-3 border-t border-slate-100">
+            <h3 class="font-extrabold text-xs sm:text-sm text-slate-800 line-clamp-1">Sentra Finansial Sudirman</h3>
+            <span class="inline-block mt-1 text-[10px] font-bold uppercase tracking-wider text-slate-600 bg-slate-100 px-2.5 py-0.5 rounded-full">
+              Gedung Perkantoran
+            </span>
+          </div>
+        </div>
+
+        <!-- Client 16: Jaringan Komersial & Retail Modern -->
+        <div class="bg-white rounded-2xl p-6 sm:p-7 border border-slate-200/90 shadow-2xs hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 flex flex-col items-center justify-between text-center group min-h-[190px] sm:min-h-[210px]">
+          <div class="flex-1 flex items-center justify-center w-full py-2">
+            <picture class="flex items-center justify-center">
+              <source srcset="/assets/images/services/env-retail.webp" type="image/webp">
+              <img src="/assets/images/services/env-retail.webp" alt="Jaringan Retail Nasional" class="max-h-12 sm:max-h-14 w-auto object-contain rounded-lg transition-transform duration-300 group-hover:scale-105" loading="lazy">
+            </picture>
+          </div>
+          <div class="w-full pt-3 border-t border-slate-100">
+            <h3 class="font-extrabold text-xs sm:text-sm text-slate-800 line-clamp-1">Jaringan Retail Nasional</h3>
+            <span class="inline-block mt-1 text-[10px] font-bold uppercase tracking-wider text-rose-600 bg-rose-50 px-2.5 py-0.5 rounded-full">
+              Pusat Perbelanjaan
+            </span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================== -->
+    <!-- 3. SECTION: PORTAL CLIENT (Pre-Footer CTA Banner Style)         -->
+    <!-- ============================================================== -->
+    <section class="relative py-20 sm:py-28 lg:py-32 overflow-hidden flex items-center min-h-[420px] sm:min-h-[460px]">
+      <!-- Background Skyline Asset Image -->
+      <div class="absolute inset-0 z-0">
+        <picture class="w-full h-full block">
+          <source srcset="/assets/images/cta/cta-skyline.webp" type="image/webp">
+          <img src="/assets/images/cta/cta-skyline.jpg" alt="Portal Client Layanan Terintegrasi PT Grup Mitra Indonesia" class="w-full h-full object-cover object-center" width="1920" height="800" loading="lazy">
+        </picture>
+        <div class="absolute inset-0 bg-gradient-to-t from-[#021838]/95 via-[#061e43]/90 to-[#061e43]/70 md:bg-gradient-to-r md:from-[#021838]/95 md:via-[#061e43]/85 md:to-transparent"></div>
+      </div>
+
+      <div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-white w-full">
+        <div class="max-w-2xl lg:max-w-3xl text-left">
+          
+          <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-white/10 text-emerald-300 border border-white/20 backdrop-blur-md mb-6 shadow-xs">
+            <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+            <span>Enterprise Gateway &bull; Sistem Terpadu Mitra</span>
+          </div>
+
+          <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight mb-5">
+            Portal Client Terintegrasi GMI
+          </h2>
+          
+          <p class="text-sm sm:text-base lg:text-lg text-slate-200 leading-relaxed mb-8 max-w-2xl font-normal">
+            Platform pemantauan operasional 24/7 bagi seluruh mitra resmi. Akses laporan presensi personel, patroli keamanan digital (guard tour), pengajuan tiket operasional, serta transparansi penagihan invoice dalam satu dasbor terpadu.
+          </p>
+
+          <div class="flex flex-wrap items-center gap-4">
+            <!-- Button membuka modal form portal client -->
+            <button type="button" data-open-portal="client" class="btn-wiggle-hover inline-flex items-center gap-3 px-8 py-4 text-base font-bold text-white bg-[#c52227] hover:bg-[#a7181d] rounded-full shadow-xl hover:shadow-2xl transition-all duration-200 cursor-pointer group">
+              <span>Masuk ke Portal Client</span>
+              <svg class="w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+              </svg>
+            </button>
+
+            <!-- Button Live View Dashboard Mitra -->
+            <a href="portal-klien.html" class="inline-flex items-center gap-2 px-7 py-4 text-base font-semibold text-white/90 hover:text-white bg-white/10 hover:bg-white/20 backdrop-blur-md rounded-full border border-white/20 transition-all">
+              <span>Buka Live Dashboard</span>
+              <span>&rarr;</span>
+            </a>
+          </div>
+
+          <div class="pt-6 mt-8 border-t border-white/15 flex flex-wrap items-center gap-6 text-xs text-slate-300">
+            <div class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              <span>Presensi Personel Real-Time</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              <span>Guard Tour GPS Tracking</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              <span>Billing &amp; Invoice Digital</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================== -->
+  <!-- 4. FOOTER                                                      -->
+  <!-- ============================================================== -->
+  <footer class="bg-[#022f66] text-white pt-16 pb-12 border-t border-[#043b80]">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12 pb-14 border-b border-slate-700/60">
+        
+        <!-- Col 1: Brand & Desc -->
+        <div class="space-y-4">
+          <a href="index.html" class="inline-block mb-1">
+            <picture>
+              <source srcset="/assets/images/logo/gmi-logo-footer.webp" type="image/webp">
+              <img src="/assets/images/logo/gmi-logo-footer.png" alt="Grup Mitra Indonesia Footer Logo" class="h-20 w-auto object-contain" width="280" height="80" loading="lazy">
+            </picture>
+          </a>
+          <p class="text-sm text-slate-300 leading-relaxed font-normal mb-5">
+            Solusi keamanan terpadu, penyedia tenaga kerja profesional, investigasi korporasi, dan pemulihan piutang bisnis di seluruh Indonesia.
+          </p>
+          <div class="pt-2 text-xs text-slate-300 space-y-1">
+            <p><strong>Operasional:</strong> 24 Jam Non-Stop</p>
+            <p><strong>Izin Mabes Polri:</strong> No. SI/4508/X/2021</p>
+          </div>
+        </div>
+
+        <!-- Col 2: Layanan Kami -->
+        <div>
+          <h3 class="text-sm font-bold uppercase tracking-wider text-white mb-5 pb-2 border-b border-white/15">
+            Layanan Kami
+          </h3>
+          <ul class="space-y-2.5 text-sm text-slate-300">
+            <li><a href="layanan-kami.html" class="hover:text-red-400 transition-colors">Manpower Outsourcing</a></li>
+            <li><a href="layanan-keamanan.html" class="hover:text-red-400 transition-colors">Layanan Keamanan</a></li>
+            <li><a href="investigasi.html" class="hover:text-red-400 transition-colors">Investigation Service</a></li>
+            <li><a href="audit-pemulihan-piutang.html" class="hover:text-red-400 transition-colors">Audit &amp; Pemulihan Piutang</a></li>
+            <li><a href="galeri.html" class="hover:text-red-400 transition-colors">Galeri Dokumentasi</a></li>
+            <li><a href="klien.html" class="hover:text-red-400 transition-colors">Klien Kami</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Navigasi & Karir -->
+        <div>
+          <h3 class="text-sm font-bold uppercase tracking-wider text-white mb-5 pb-2 border-b border-white/15">
+            Perusahaan
+          </h3>
+          <ul class="space-y-2.5 text-sm text-slate-300">
+            <li><a href="tentang-kami.html" class="hover:text-red-400 transition-colors">Tentang Kami</a></li>
+            <li><a href="karir.html" class="hover:text-red-400 transition-colors">Karir &amp; Rekrutmen</a></li>
+            <li><a href="/portal-klien.html" class="hover:text-red-400 transition-colors">Portal Klien Mitra</a></li>
+            <li><button type="button" data-open-consultation class="text-left hover:text-red-400 transition-colors cursor-pointer">Hubungi Kami</button></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Kontak & Kantor -->
+        <div>
+          <h3 class="text-sm font-bold uppercase tracking-wider text-white mb-5 pb-2 border-b border-white/15">
+            Kantor Pusat
+          </h3>
+          <address class="not-italic text-sm text-slate-300 space-y-3 leading-relaxed">
+            <p><strong>PT Grup Mitra Indonesia</strong><br>
+            Ruko Thematic Blok N No. 51, Gading Serpong, Curug Sangereng, Tangerang, Banten 15810</p>
+            <p class="pt-1">
+              <strong>Telepon / WA:</strong><br>
+              <a href="tel:+62811140059" class="hover:text-white transition-colors">0811 140 059</a>
+            </p>
+            <p>
+              <strong>Email Resmi:</strong><br>
+              <a href="mailto:info@groupmitraindonesia.co.id" class="hover:text-white transition-colors">info@groupmitraindonesia.co.id</a>
+            </p>
+          </address>
+        </div>
+
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
+        <p>&copy; 2026 PT Grup Mitra Indonesia. Seluruh hak cipta dilindungi.</p>
+        <div class="flex items-center gap-6">
+          <a href="#" class="hover:text-slate-200 transition-colors">Kebijakan Privasi</a>
+          <a href="#" class="hover:text-slate-200 transition-colors">Syarat &amp; Ketentuan</a>
+          <button type="button" data-open-portal="client" class="text-slate-300 hover:text-white underline underline-offset-4 cursor-pointer">
+            Portal Klien
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ============================================================== -->
+  <!-- 5. CONSULTATION & PORTAL MODALS                                -->
+  <!-- ============================================================== -->
+  <dialog id="consultation-modal" aria-labelledby="consultation-title" class="fixed inset-0 m-auto p-0 max-w-lg w-[calc(100%-2rem)] rounded-3xl bg-white shadow-2xl border border-slate-200 backdrop:bg-slate-950/70 backdrop:backdrop-blur-sm z-50 overflow-hidden">
+    <div class="flex flex-col max-h-[90vh]">
+      <div class="p-6 bg-slate-50 border-b border-slate-100 flex items-center justify-between">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-wider text-red-600 block mb-0.5">Konsultasi Operasional</span>
+          <h3 id="consultation-title" class="text-xl sm:text-2xl font-extrabold text-[#061e43]">Diskusikan Kebutuhan Bisnis Anda</h3>
+        </div>
+        <button type="button" data-close-modal aria-label="Tutup Form Konsultasi" class="p-2 rounded-full text-slate-400 hover:text-slate-700 hover:bg-slate-200/60 transition-colors cursor-pointer">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+
+      <div id="consultation-form-body" class="p-6 sm:p-7 overflow-y-auto">
+        <form id="consultation-form" class="space-y-4">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label for="consult-name" class="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-1.5">Nama Lengkap *</label>
+              <input type="text" id="consult-name" name="name" required placeholder="Contoh: Budi Santoso" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-red-600 text-sm">
+            </div>
+            <div>
+              <label for="consult-company" class="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-1.5">Perusahaan / Instansi *</label>
+              <input type="text" id="consult-company" name="company" required placeholder="Contoh: PT Sumber Makmur" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-red-600 text-sm">
+            </div>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label for="consult-email" class="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-1.5">Email Bisnis *</label>
+              <input type="email" id="consult-email" name="email" required placeholder="budi@perusahaan.co.id" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-red-600 text-sm">
+            </div>
+            <div>
+              <label for="consult-phone" class="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-1.5">Nomor WhatsApp / Telp *</label>
+              <input type="tel" id="consult-phone" name="phone" required placeholder="081234567890" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-red-600 text-sm">
+            </div>
+          </div>
+          <div>
+            <label for="consultation-service-select" class="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-1.5">Layanan yang Dibutuhkan *</label>
+            <select id="consultation-service-select" name="service" required class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-red-600 text-sm bg-white">
+              <option value="" disabled selected>Pilih salah satu layanan...</option>
+              <option value="manpower">Manpower Outsourcing (Penyedia Tenaga Kerja)</option>
+              <option value="security">Security Services (Pengamanan Terintegrasi)</option>
+              <option value="investigation">Corporate Investigation (Audit &amp; Investigasi)</option>
+              <option value="litigation">Litigation Support (Dukungan Litigasi Legal)</option>
+              <option value="all">Konsultasi Terpadu Seluruh Layanan</option>
+            </select>
+          </div>
+          <div>
+            <label for="consult-notes" class="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-1.5">Rincian Kebutuhan / Lokasi / Personel</label>
+            <textarea id="consult-notes" name="notes" rows="3" placeholder="Jelaskan kebutuhan operasional perusahaan Anda..." class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-red-600 text-sm"></textarea>
+          </div>
+          <div class="pt-2">
+            <button type="submit" class="w-full py-3 px-6 rounded-full bg-[#c52227] hover:bg-[#a7181d] text-white font-bold text-sm shadow-md hover:shadow-lg transition-all flex items-center justify-center cursor-pointer">
+              Kirim Permintaan Konsultasi
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <div id="consultation-success" class="hidden p-8 sm:p-10 text-center flex-col items-center justify-center space-y-4">
+        <div class="w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto mb-2">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+        </div>
+        <h3 class="text-2xl font-bold text-[#061e43]">Permintaan Berhasil Terkirim!</h3>
+        <p class="text-sm text-slate-600 max-w-sm mx-auto leading-relaxed">
+          Terima kasih telah mempercayakan kebutuhan Anda kepada Grup Mitra Indonesia. Tim konsultan operasional kami akan segera menghubungi Anda.
+        </p>
+        <div class="pt-4">
+          <button id="consultation-success-close" type="button" class="px-6 py-2.5 rounded-full bg-[#061e43] text-white text-sm font-bold hover:bg-[#0b2f6d] transition-all cursor-pointer">
+            Selesai
+          </button>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Portal Modal (Opens with data-open-portal="client") -->
+  <dialog id="portal-modal" aria-labelledby="portal-modal-title" class="fixed inset-0 m-auto p-0 max-w-lg w-[calc(100%-2rem)] rounded-3xl bg-white shadow-2xl border border-slate-200 backdrop:bg-slate-950/70 backdrop:backdrop-blur-sm z-50 overflow-hidden">
+    <div class="flex flex-col max-h-[90vh]">
+      <div class="p-5 sm:p-6 bg-slate-900 text-white flex items-center justify-between shrink-0">
+        <div class="flex items-center gap-2.5">
+          <div class="w-3 h-3 rounded-full bg-emerald-400 animate-pulse"></div>
+          <div>
+            <h3 id="portal-modal-title" class="text-base font-bold text-white">GMI Portal &amp; Backend Gateway</h3>
+            <p class="text-xs text-slate-400">Database &amp; Management Architecture</p>
+          </div>
+        </div>
+        <button type="button" data-close-modal aria-label="Tutup Portal" class="p-1.5 rounded-full text-slate-400 hover:text-white hover:bg-slate-800 cursor-pointer">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+
+      <div class="p-3 bg-slate-100 border-b border-slate-200 shrink-0">
+        <div class="grid grid-cols-2 p-1 bg-slate-200/80 rounded-xl text-xs font-bold">
+          <button id="portal-tab-client-btn" type="button" onclick="switchPortalTab('client')" class="py-2 rounded-lg bg-white text-slate-900 shadow-xs transition-all cursor-pointer">
+            Portal Client
+          </button>
+          <button id="portal-tab-admin-btn" type="button" onclick="switchPortalTab('admin')" class="py-2 rounded-lg text-slate-500 hover:text-slate-900 transition-all cursor-pointer">
+            Dashboard Admin
+          </button>
+        </div>
+      </div>
+
+      <div class="p-6 overflow-y-auto">
+        <div id="portal-view-client" class="space-y-4">
+          <div class="bg-blue-50/80 border border-blue-200/70 rounded-2xl p-4 text-xs text-blue-900 leading-relaxed">
+            <strong class="font-bold">Akses Portal Klien GMI:</strong><br>
+            Portal terintegrasi database untuk mitra memantau presensi personel harian, laporan patroli keamanan (guard tour), pengajuan tiket operasional, dan invoice penagihan.
+          </div>
+          <a href="/portal-klien.html" class="w-full py-3 px-4 rounded-xl bg-[#061e43] text-white font-bold text-sm hover:bg-[#0b2f6d] transition-all flex items-center justify-center gap-2 shadow-md">
+            <span>Buka Portal Klien (Live View)</span>
+            <span>&rarr;</span>
+          </a>
+          <div class="relative flex py-1 items-center">
+            <div class="flex-grow border-t border-slate-200"></div>
+            <span class="flex-shrink mx-3 text-slate-400 text-[11px] uppercase tracking-wider font-semibold">Atau Masuk dengan Akun</span>
+            <div class="flex-grow border-t border-slate-200"></div>
+          </div>
+          <form onsubmit="event.preventDefault(); window.location.href='/portal-klien.html';" class="space-y-3.5">
+            <div>
+              <label class="block text-xs font-bold text-slate-700 mb-1">ID Klien / Email Perusahaan</label>
+              <input type="text" value="indosat@gmi.co.id" placeholder="client@perusahaan.co.id" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-blue-600 focus:outline-none">
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-slate-700 mb-1">Password</label>
+              <input type="password" value="mitra2026" placeholder="••••••••" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-blue-600 focus:outline-none">
+            </div>
+            <button type="submit" class="w-full py-2.5 rounded-xl bg-slate-900 text-white font-bold text-sm hover:bg-slate-800 transition-all cursor-pointer">
+              Masuk ke Portal Klien
+            </button>
+          </form>
+        </div>
+
+        <div id="portal-view-admin" class="hidden space-y-4">
+          <div class="bg-amber-50 border border-amber-200/80 rounded-2xl p-4 text-xs text-amber-950 leading-relaxed">
+            <strong class="font-bold">Dashboard Admin HR &amp; Rekrutmen:</strong><br>
+            Pusat kendali internal untuk manajemen database 5.000+ personel, penetapan shift &amp; penempatan di 100+ lokasi.
+          </div>
+          <a href="/karir.html?mode=admin" class="w-full py-3 px-4 rounded-xl bg-[#c52227] text-white font-bold text-sm hover:bg-[#a7181d] transition-all flex items-center justify-center gap-2 shadow-md">
+            <span>Buka Dashboard Admin HR</span>
+            <span>&rarr;</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="p-4 bg-slate-50 border-t border-slate-100 flex justify-end shrink-0">
+        <button type="button" data-close-modal class="px-5 py-2 text-xs font-semibold text-slate-600 hover:text-slate-900 transition-colors cursor-pointer">
+          Tutup
+        </button>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- ============================================================== -->
+  <!-- 6. FLOATING WHATSAPP CTA WIDGET                                -->
+  <!-- ============================================================== -->
+  <aside aria-label="Kontak Langsung WhatsApp" class="fixed bottom-5 right-5 sm:bottom-6 sm:right-6 z-40">
+    <a href="https://wa.me/62811140059?text=Halo%20GMI,%20saya%20tertarik%20bekerjasama%20dan%20ingin%20berkonsultasi%20layanan." 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       aria-label="Hubungi kami via WhatsApp"
+       title="Hubungi kami via WhatsApp"
+       class="group relative flex items-center justify-center w-13 h-13 sm:w-14 sm:h-14 bg-[#25D366] hover:bg-[#20ba59] text-white rounded-full shadow-lg hover:shadow-2xl shadow-emerald-950/20 hover:shadow-emerald-500/35 transition-all duration-300 transform hover:-translate-y-1 hover:scale-105 active:scale-95 focus:outline-none focus:ring-4 focus:ring-emerald-400/50">
+      <svg class="w-7 h-7 fill-current transition-transform duration-300 group-hover:scale-110" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2zm.01 1.67c4.54 0 8.24 3.7 8.24 8.24 0 2.2-.86 4.28-2.42 5.84-1.56 1.56-3.64 2.42-5.83 2.42-1.44 0-2.85-.37-4.1-1.09l-.29-.17-3.12.82.83-3.04-.19-.31c-.8-1.28-1.22-2.77-1.22-4.47 0-4.54 3.7-8.24 8.25-8.24zm4.56 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.4-.13-.57.13-.17.25-.65.81-.8 1-.15.19-.3.21-.55.08-.25-.13-1.06-.39-2.02-1.25-.75-.67-1.26-1.5-1.4-1.75-.15-.25-.02-.39.11-.51.11-.11.25-.3.38-.45.13-.15.17-.25.25-.42.08-.17.04-.32-.02-.45-.06-.13-.57-1.37-.78-1.88-.2-.49-.4-.43-.57-.44h-.49c-.17 0-.44.06-.67.32-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.77 2.7 4.29 3.79.6.26 1.07.41 1.43.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18-.06-.1-.23-.17-.48-.29z"/>
+      </svg>
+      <span class="absolute top-0.5 right-0.5 flex h-3 w-3">
+        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-80"></span>
+        <span class="relative inline-flex rounded-full h-3 w-3 bg-emerald-100 border-2 border-[#25D366]"></span>
+      </span>
+    </a>
+  </aside>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

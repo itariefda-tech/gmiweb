@@ -1,0 +1,1169 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galeri Dokumentasi & Kegiatan Operasional - PT Grup Mitra Indonesia (GMI)</title>
+  <meta name="description" content="Dokumentasi resmi kegiatan operasional, pelatihan K3, simulasi tanggap darurat, pengamanan satpam, serta kegiatan korporasi PT Grup Mitra Indonesia (GMI).">
+  
+  <!-- Preconnect & Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="/src/style.css">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/assets/images/logo/gmi-logo.png">
+</head>
+<body class="bg-slate-50 text-slate-900 antialiased selection:bg-red-600 selection:text-white">
+
+  <!-- ============================================================== -->
+  <!-- 1. FLOATING NAVIGATION BAR (Desktop & Mobile)                  -->
+  <!-- ============================================================== -->
+  <header class="fixed top-0 left-0 right-0 z-50 px-4 sm:px-6 lg:px-8 pt-3 sm:pt-4 transition-all duration-300">
+    <div class="max-w-6xl mx-auto">
+      <nav class="nav-pill bg-white rounded-full py-4 sm:py-5 px-5 sm:px-8 min-h-[74px] sm:min-h-[82px] flex items-center justify-between border border-slate-100 shadow-xl shadow-slate-900/8" aria-label="Navigasi Utama">
+        
+        <!-- Logo -->
+        <a href="index.html#beranda" class="flex items-center gap-2 shrink-0 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-600 rounded-lg">
+          <picture>
+            <source srcset="/assets/images/logo/Logo-GMI01.webp" type="image/webp">
+            <img src="/assets/images/logo/Logo-GMI01.png" alt="Grup Mitra Indonesia Logo" class="h-11 sm:h-[53px] w-auto object-contain transition-transform group-hover:scale-105" width="176" height="53" loading="eager">
+          </picture>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <div class="hidden md:flex items-center gap-7 lg:gap-9 text-[15px] sm:text-base font-semibold text-slate-700">
+          <a href="index.html" class="nav-link-cool text-slate-700 font-semibold">Beranda</a>
+          <a href="tentang-kami.html" class="nav-link-cool text-slate-700 font-semibold">Tentang Kami</a>
+          
+          <!-- Dropdown Layanan Kami -->
+          <div class="relative group py-1">
+            <button type="button" class="nav-link-cool text-slate-700 font-semibold flex items-center gap-1.5 focus:outline-none cursor-pointer" aria-expanded="false" aria-haspopup="true">
+              <span>Layanan Kami</span>
+              <svg class="w-3.5 h-3.5 text-slate-400 transition-transform duration-200 group-hover:rotate-180 group-focus-within:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            
+            <!-- Dropdown Card -->
+            <div class="absolute top-full left-1/2 -translate-x-1/2 pt-2 opacity-0 translate-y-2 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto group-focus-within:opacity-100 group-focus-within:translate-y-0 group-focus-within:pointer-events-auto transition-all duration-200 z-50">
+              <div class="w-64 bg-white rounded-2xl shadow-xl shadow-slate-900/10 border border-slate-100 p-2 overflow-hidden ring-1 ring-slate-900/5">
+                <a href="layanan-kami.html" class="block px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-700 hover:text-[#c52227] hover:bg-slate-50 transition-colors">
+                  Manpower Outsourcing
+                </a>
+                <a href="layanan-keamanan.html" class="block px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-700 hover:text-[#c52227] hover:bg-slate-50 transition-colors">
+                  Layanan Keamanan
+                </a>
+                <a href="investigasi.html" class="block px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-700 hover:text-[#c52227] hover:bg-slate-50 transition-colors">
+                  Investigation Service
+                </a>
+                <a href="audit-pemulihan-piutang.html" class="block px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-700 hover:text-[#c52227] hover:bg-slate-50 transition-colors">
+                  Audit &amp; Pemulihan Piutang
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dropdown Portofolio (Active on Galeri) -->
+          <div class="relative group py-1">
+            <button type="button" class="nav-link-cool text-[#061e43] font-bold flex items-center gap-1.5 focus:outline-none cursor-pointer" aria-current="page" aria-expanded="false" aria-haspopup="true">
+              <span>Portofolio</span>
+              <svg class="w-3.5 h-3.5 text-slate-400 transition-transform duration-200 group-hover:rotate-180 group-focus-within:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            
+            <!-- Dropdown Card -->
+            <div class="absolute top-full left-1/2 -translate-x-1/2 pt-2 opacity-0 translate-y-2 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto group-focus-within:opacity-100 group-focus-within:translate-y-0 group-focus-within:pointer-events-auto transition-all duration-200 z-50">
+              <div class="w-56 bg-white rounded-2xl shadow-xl shadow-slate-900/10 border border-slate-100 p-2 overflow-hidden ring-1 ring-slate-900/5">
+                <a href="galeri.html" class="block px-4 py-2.5 rounded-xl text-sm font-bold text-[#c52227] bg-red-50/70 transition-colors">
+                  Galeri
+                </a>
+                <a href="klien.html" class="block px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-700 hover:text-[#c52227] hover:bg-slate-50 transition-colors">
+                  Klien Kami
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dropdown Karir -->
+          <div class="relative group py-1">
+            <button type="button" class="nav-link-cool text-slate-700 font-semibold flex items-center gap-1.5 focus:outline-none cursor-pointer" aria-expanded="false" aria-haspopup="true">
+              <span>Karir</span>
+              <svg class="w-3.5 h-3.5 text-slate-400 transition-transform duration-200 group-hover:rotate-180 group-focus-within:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            
+            <!-- Dropdown Card -->
+            <div class="absolute top-full left-1/2 -translate-x-1/2 pt-2 opacity-0 translate-y-2 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto group-focus-within:opacity-100 group-focus-within:translate-y-0 group-focus-within:pointer-events-auto transition-all duration-200 z-50">
+              <div class="w-56 bg-white rounded-2xl shadow-xl shadow-slate-900/10 border border-slate-100 p-2 overflow-hidden ring-1 ring-slate-900/5">
+                <a href="karir.html" class="block px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-700 hover:text-[#c52227] hover:bg-slate-50 transition-colors">
+                  Portal Pelamar
+                </a>
+                <a href="#" class="block px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-400 hover:text-slate-600 hover:bg-slate-50 transition-colors flex items-center justify-between" title="Portal Pelatihan (Segera Hadir)">
+                  <span>Portal Pelatihan</span>
+                  <span class="text-[10px] uppercase font-bold tracking-wider px-1.5 py-0.5 rounded bg-slate-100 text-slate-500 border border-slate-200">Demo</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <a href="#" class="nav-link-cool text-slate-700 font-semibold" title="Blog GMI (Segera Hadir)">Blog</a>
+        </div>
+
+        <!-- Right Side: Hubungi Kami Button & Mobile Hamburger -->
+        <div class="flex items-center gap-3">
+          <button type="button" data-open-consultation class="btn-wiggle-hover hidden sm:inline-flex items-center justify-center px-6 sm:px-7 py-2.5 sm:py-3 text-sm sm:text-[15px] font-bold text-white bg-[#c52227] hover:bg-[#a7181d] rounded-full shadow-md hover:shadow-lg transition-all duration-200 cursor-pointer">
+            Hubungi kami
+          </button>
+
+          <!-- Mobile Hamburger Toggle -->
+          <button id="drawer-open-btn" type="button" aria-label="Buka Menu Navigasi" aria-expanded="false" aria-controls="mobile-drawer" class="md:hidden inline-flex items-center justify-center p-2.5 rounded-full text-slate-700 hover:text-red-600 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-red-600 cursor-pointer">
+            <svg class="w-6 h-6 sm:w-7 sm:h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ============================================================== -->
+  <!-- MOBILE NAVIGATION DRAWER (Dialog per Modern Web Guidance)       -->
+  <!-- ============================================================== -->
+  <dialog id="mobile-drawer" aria-label="Menu Navigasi Mobile" class="fixed inset-0 m-0 p-0 w-full h-full max-w-none max-h-none bg-transparent backdrop:bg-slate-950/60 backdrop:backdrop-blur-sm z-50">
+    <div class="fixed inset-y-0 right-0 w-full max-w-xs sm:max-w-sm bg-white shadow-2xl flex flex-col p-6 overflow-y-auto">
+      <!-- Drawer Header -->
+      <div class="flex items-center justify-between pb-4 border-b border-slate-100">
+        <picture>
+          <source srcset="/assets/images/logo/Logo-GMI01.webp" type="image/webp">
+          <img src="/assets/images/logo/Logo-GMI01.png" alt="GMI Logo" class="h-8 w-auto" width="120" height="34">
+        </picture>
+        <button id="drawer-close-btn" type="button" aria-label="Tutup Menu" class="p-2 rounded-full text-slate-500 hover:text-slate-800 hover:bg-slate-100 cursor-pointer">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Drawer Nav Links -->
+      <nav class="flex flex-col gap-1.5 py-4 text-base font-semibold text-slate-800" aria-label="Navigasi Mobile">
+        <a href="index.html" class="drawer-nav-link px-3 py-2.5 rounded-lg hover:bg-slate-50 hover:text-red-600">Beranda</a>
+        <a href="tentang-kami.html" class="drawer-nav-link px-3 py-2.5 rounded-lg hover:bg-slate-50 hover:text-red-600">Tentang Kami</a>
+        
+        <!-- Layanan Kami Mobile Group -->
+        <div class="py-1 px-1">
+          <span class="px-2 text-[11px] font-bold uppercase tracking-wider text-slate-400 block mb-1">Layanan Kami</span>
+          <div class="space-y-0.5 pl-1">
+            <a href="layanan-kami.html" class="drawer-nav-link block px-2.5 py-2 rounded-lg hover:bg-slate-50 hover:text-red-600 text-slate-700 text-sm font-medium">
+              Manpower Outsourcing
+            </a>
+            <a href="layanan-keamanan.html" class="drawer-nav-link block px-2.5 py-2 rounded-lg hover:bg-slate-50 hover:text-red-600 text-slate-700 text-sm font-medium">
+              Layanan Keamanan
+            </a>
+            <a href="investigasi.html" class="drawer-nav-link block px-2.5 py-2 rounded-lg hover:bg-slate-50 hover:text-red-600 text-slate-700 text-sm font-medium">
+              Investigation Service
+            </a>
+            <a href="audit-pemulihan-piutang.html" class="drawer-nav-link block px-2.5 py-2 rounded-lg hover:bg-slate-50 hover:text-red-600 text-slate-700 text-sm font-medium">
+              Audit &amp; Pemulihan Piutang
+            </a>
+          </div>
+        </div>
+
+        <!-- Portofolio Mobile Group (Active on Galeri) -->
+        <div class="py-1 px-1">
+          <span class="px-2 text-[11px] font-bold uppercase tracking-wider text-red-600 block mb-1">Portofolio</span>
+          <div class="space-y-0.5 pl-1">
+            <a href="galeri.html" class="drawer-nav-link block px-2.5 py-2 rounded-lg bg-red-50 text-red-600 text-sm font-bold" aria-current="page">
+              Galeri
+            </a>
+            <a href="klien.html" class="drawer-nav-link block px-2.5 py-2 rounded-lg hover:bg-slate-50 hover:text-red-600 text-slate-700 text-sm font-medium">
+              Klien Kami
+            </a>
+          </div>
+        </div>
+
+        <!-- Karir Mobile Group -->
+        <div class="py-1 px-1">
+          <span class="px-2 text-[11px] font-bold uppercase tracking-wider text-slate-400 block mb-1">Karir</span>
+          <div class="space-y-0.5 pl-1">
+            <a href="karir.html" class="drawer-nav-link block px-2.5 py-2 rounded-lg hover:bg-slate-50 hover:text-red-600 text-slate-700 text-sm font-medium">
+              Portal Pelamar
+            </a>
+            <a href="#" class="drawer-nav-link block px-2.5 py-2 rounded-lg hover:bg-slate-50 text-slate-400 hover:text-slate-600 text-sm font-medium flex items-center justify-between" title="Portal Pelatihan (Segera Hadir)">
+              <span>Portal Pelatihan</span>
+              <span class="text-[10px] uppercase font-bold tracking-wider px-1.5 py-0.5 rounded bg-slate-100 text-slate-500 border border-slate-200">Demo</span>
+            </a>
+          </div>
+        </div>
+
+        <a href="#" class="drawer-nav-link px-3 py-2.5 rounded-lg hover:bg-slate-50 hover:text-red-600 text-slate-700">Blog</a>
+        <a href="index.html#klien-kami" class="drawer-nav-link px-3 py-2.5 rounded-lg hover:bg-slate-50 hover:text-red-600">Klien Kami</a>
+      </nav>
+
+      <!-- Bottom Consultation in Mobile Menu -->
+      <div class="mt-auto pt-6 border-t border-slate-100 flex flex-col gap-3">
+        <button type="button" data-open-consultation class="w-full mt-2 py-3 px-4 text-center font-bold text-white bg-[#c52227] hover:bg-[#a7181d] rounded-xl shadow-md transition-all cursor-pointer">
+          Hubungi Kami
+        </button>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- ============================================================== -->
+  <!-- MAIN CONTENT AREA                                              -->
+  <!-- ============================================================== -->
+  <main class="pt-32 sm:pt-36 lg:pt-40 pb-16">
+    
+    <!-- 1. Hero Section -->
+    <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mb-12 sm:mb-16">
+      <div class="relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#021838] via-[#061e43] to-[#0a2f6c] text-white p-8 sm:p-12 lg:p-16 shadow-2xl border border-slate-700/50">
+        <!-- Top Accent Light Line -->
+        <div class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-[#c52227] via-red-500 to-amber-400"></div>
+
+        <!-- Ambient Glows -->
+        <div class="absolute -right-20 -top-20 w-96 h-96 rounded-full bg-blue-500/15 blur-3xl pointer-events-none"></div>
+        <div class="absolute -left-20 -bottom-20 w-96 h-96 rounded-full bg-red-600/15 blur-3xl pointer-events-none"></div>
+
+        <div class="relative z-10 max-w-3xl">
+          <!-- Breadcrumb -->
+          <nav class="flex items-center gap-2 text-xs text-slate-300 font-medium mb-5" aria-label="Breadcrumb">
+            <a href="index.html" class="hover:text-white transition-colors">Beranda</a>
+            <span class="text-slate-500">/</span>
+            <span class="text-slate-400">Portofolio</span>
+            <span class="text-slate-500">/</span>
+            <span class="text-red-400 font-semibold" aria-current="page">Galeri</span>
+          </nav>
+
+          <!-- Pulsing Badge -->
+          <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider bg-white/10 text-white border border-white/20 backdrop-blur-md mb-6 shadow-xs">
+            <span class="flex h-2 w-2 relative">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
+            </span>
+            <span>Dokumentasi Resmi &amp; Rekam Jejak Lapangan GMI</span>
+          </div>
+
+          <h1 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight leading-snug mb-4">
+            Galeri Dokumentasi &amp; <span class="text-transparent bg-clip-text bg-gradient-to-r from-white via-slate-100 to-red-400">Dedikasi Operasional</span> GMI
+          </h1>
+          <p class="text-base sm:text-lg text-slate-200 font-normal leading-relaxed mb-8 max-w-2xl">
+            Rekam jejak visual dedikasi 5.000+ personel profesional PT Grup Mitra Indonesia dalam pelatihan intensif K3, pengamanan perimeter, simulasi penyelamatan darurat, pemeliharaan fasilitas, dan kebersamaan korporasi.
+          </p>
+
+          <div class="flex flex-wrap items-center gap-4">
+            <a href="#koleksi-galeri" class="px-7 py-3.5 rounded-xl text-sm font-bold bg-[#c52227] hover:bg-[#a7181d] text-white shadow-lg shadow-red-600/30 transition-all transform hover:-translate-y-0.5 flex items-center gap-2">
+              <span>Jelajahi Dokumentasi</span>
+              <span>&darr;</span>
+            </a>
+            <button type="button" data-open-consultation class="px-7 py-3.5 rounded-xl text-sm font-semibold bg-white/10 hover:bg-white/20 text-white border border-white/20 backdrop-blur-sm transition-all transform hover:-translate-y-0.5 flex items-center gap-2 cursor-pointer">
+              <span>Diskusikan Kebutuhan</span>
+              <span>&rarr;</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Gallery Filter & Cards Section -->
+    <section id="koleksi-galeri" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mb-20 scroll-mt-28">
+      
+      <!-- Section Title & Filter Tabs -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10 pb-6 border-b border-slate-200">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-widest text-[#c52227] block mb-1">PORTOFOLIO KEGIATAN</span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-[#061e43]">Aktivitas &amp; Pembinaan Terstandarisasi</h2>
+          <p class="text-xs sm:text-sm text-slate-500 mt-1 max-w-xl">
+            Seluruh aktivitas dijalankan mengacu pada standardisasi manajemen mutu ISO 9001:2015 dan K3 ISO 45001:2018.
+          </p>
+        </div>
+
+        <!-- Filter Buttons (Interactive via Vanilla JS) -->
+        <div class="flex flex-wrap items-center gap-2" id="gallery-filters" role="tablist">
+          <button type="button" data-filter="all" class="gallery-filter-btn px-4 py-2 rounded-full text-xs sm:text-sm font-bold bg-[#061e43] text-white shadow-xs transition-all cursor-pointer">
+            Semua
+          </button>
+          <button type="button" data-filter="k3" class="gallery-filter-btn px-4 py-2 rounded-full text-xs sm:text-sm font-semibold bg-white text-slate-600 hover:bg-slate-100 border border-slate-200 transition-all cursor-pointer">
+            Pelatihan &amp; K3
+          </button>
+          <button type="button" data-filter="security" class="gallery-filter-btn px-4 py-2 rounded-full text-xs sm:text-sm font-semibold bg-white text-slate-600 hover:bg-slate-100 border border-slate-200 transition-all cursor-pointer">
+            Operasional Satpam
+          </button>
+          <button type="button" data-filter="manpower" class="gallery-filter-btn px-4 py-2 rounded-full text-xs sm:text-sm font-semibold bg-white text-slate-600 hover:bg-slate-100 border border-slate-200 transition-all cursor-pointer">
+            Manpower &amp; Teknis
+          </button>
+          <button type="button" data-filter="corporate" class="gallery-filter-btn px-4 py-2 rounded-full text-xs sm:text-sm font-semibold bg-white text-slate-600 hover:bg-slate-100 border border-slate-200 transition-all cursor-pointer">
+            Internal &amp; Budaya
+          </button>
+        </div>
+      </div>
+
+      <!-- Gallery Grid (12 Detailed Cards with Lightbox Support) -->
+      <div id="gallery-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        
+        <!-- Item 1: Pelatihan K3 & APAR -->
+        <article class="gallery-card group bg-white rounded-2xl overflow-hidden border border-slate-200/90 shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col" data-category="k3">
+          <div class="relative aspect-16/10 w-full overflow-hidden bg-slate-900 cursor-pointer" onclick="openLightbox(this)" 
+               data-img="/assets/images/services/security-v2/card-security-training.webp"
+               data-title="Simulasi Pemadaman Kebakaran & Penggunaan APAR"
+               data-category="Pelatihan & K3"
+               data-desc="Simulasi lapangan penanganan kebakaran dini, teknik evakuasi gedung, dan pengoperasian alat pemadam api ringan (APAR) secara presisi bagi personel satpam dan pengelola fasilitas.">
+            <picture class="w-full h-full block">
+              <source srcset="/assets/images/services/security-v2/card-security-training.webp" type="image/webp">
+              <img src="/assets/images/services/security-v2/card-security-training.jpg" alt="Simulasi Pemadaman Kebakaran & APAR GMI" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
+            </picture>
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+              <span class="text-xs font-semibold text-white bg-red-600/90 px-3 py-1 rounded-full backdrop-blur-xs flex items-center gap-1.5">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/></svg>
+                Perbesar Foto
+              </span>
+            </div>
+            <span class="absolute top-3 left-3 bg-red-600 text-white text-[11px] font-bold px-3 py-1 rounded-full shadow-xs uppercase tracking-wider">
+              Pelatihan &amp; K3
+            </span>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="font-extrabold text-slate-900 text-base group-hover:text-red-600 transition-colors leading-snug mb-2">
+                Simulasi Pemadaman Kebakaran &amp; Penanganan APAR
+              </h3>
+              <p class="text-xs text-slate-500 leading-relaxed mb-4">
+                Pembekalan rutin tim tanggap darurat dalam memitigasi bahaya kebakaran di area fasilitas komersial dan manufaktur.
+              </p>
+            </div>
+            <div class="pt-3 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-400">
+              <span class="flex items-center gap-1">
+                <svg class="w-3.5 h-3.5 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                Sertifikasi Disnaker &amp; K3
+              </span>
+              <span>Dokumentasi Resmi</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Item 2: Pengarahan K3 & Lingkungan Kerja -->
+        <article class="gallery-card group bg-white rounded-2xl overflow-hidden border border-slate-200/90 shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col" data-category="k3">
+          <div class="relative aspect-16/10 w-full overflow-hidden bg-slate-900 cursor-pointer" onclick="openLightbox(this)"
+               data-img="/assets/images/services/security-v2/card-training.webp"
+               data-title="Pengarahan Pelatihan K3 & Lingkungan Kerja"
+               data-category="Pelatihan & K3"
+               data-desc="Briefing keselamatan kerja, kepatuhan alat pelindung diri (APD), serta pencegahan kecelakaan di lingkungan operasional berisiko tinggi.">
+            <picture class="w-full h-full block">
+              <source srcset="/assets/images/services/security-v2/card-training.webp" type="image/webp">
+              <img src="/assets/images/services/security-v2/card-training.jpg" alt="Pengarahan Pelatihan K3 GMI" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
+            </picture>
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+              <span class="text-xs font-semibold text-white bg-red-600/90 px-3 py-1 rounded-full backdrop-blur-xs flex items-center gap-1.5">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/></svg>
+                Perbesar Foto
+              </span>
+            </div>
+            <span class="absolute top-3 left-3 bg-red-600 text-white text-[11px] font-bold px-3 py-1 rounded-full shadow-xs uppercase tracking-wider">
+              Pelatihan &amp; K3
+            </span>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="font-extrabold text-slate-900 text-base group-hover:text-red-600 transition-colors leading-snug mb-2">
+                Pengarahan K3 &amp; Standarisasi Alat Pelindung Diri
+              </h3>
+              <p class="text-xs text-slate-500 leading-relaxed mb-4">
+                Pelatihan intensif pemahaman regulasi K3 dan kesiapan penanganan korban kecelakaan (P3K) di area kerja.
+              </p>
+            </div>
+            <div class="pt-3 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-400">
+              <span class="flex items-center gap-1">
+                <svg class="w-3.5 h-3.5 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                ISO 45001:2018 Certified
+              </span>
+              <span>Dokumentasi Resmi</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Item 3: Apel Pagi Gabungan & Briefing Operasional -->
+        <article class="gallery-card group bg-white rounded-2xl overflow-hidden border border-slate-200/90 shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col" data-category="security">
+          <div class="relative aspect-16/10 w-full overflow-hidden bg-slate-900 cursor-pointer" onclick="openLightbox(this)"
+               data-img="/assets/images/services/security-v2/cta-briefing.webp"
+               data-title="Apel Pagi & Briefing Operasional Personel"
+               data-category="Operasional Satpam"
+               data-desc="Koordinasi shift harian dan evaluasi situasi keamanan terkini di hadapan pimpinan operasional wilayah demi memastikan integritas pos penjagaan.">
+            <picture class="w-full h-full block">
+              <source srcset="/assets/images/services/security-v2/cta-briefing.webp" type="image/webp">
+              <img src="/assets/images/services/security-v2/cta-briefing.jpg" alt="Apel Pagi Personel Keamanan GMI" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
+            </picture>
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+              <span class="text-xs font-semibold text-white bg-red-600/90 px-3 py-1 rounded-full backdrop-blur-xs flex items-center gap-1.5">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/></svg>
+                Perbesar Foto
+              </span>
+            </div>
+            <span class="absolute top-3 left-3 bg-[#061e43] text-white text-[11px] font-bold px-3 py-1 rounded-full shadow-xs uppercase tracking-wider">
+              Operasional Satpam
+            </span>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="font-extrabold text-slate-900 text-base group-hover:text-red-600 transition-colors leading-snug mb-2">
+                Apel Pagi Gabungan &amp; Briefing SOP Serah Terima Shift
+              </h3>
+              <p class="text-xs text-slate-500 leading-relaxed mb-4">
+                Pemeriksaan kerapian seragam, kelengkapan atribut garda pratama/madya, serta penugasan titik pengawasan perimeter.
+              </p>
+            </div>
+            <div class="pt-3 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-400">
+              <span class="flex items-center gap-1">
+                <svg class="w-3.5 h-3.5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                Rotasi 24/7 Siaga
+              </span>
+              <span>Dokumentasi Resmi</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Item 4: Formasi Pengamanan Pasukan Satpam -->
+        <article class="gallery-card group bg-white rounded-2xl overflow-hidden border border-slate-200/90 shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col" data-category="security">
+          <div class="relative aspect-16/10 w-full overflow-hidden bg-slate-900 cursor-pointer" onclick="openLightbox(this)"
+               data-img="/assets/images/services/security-v2/hero-guards.webp"
+               data-title="Formasi Pasukan Satpam Bersertifikasi Resmi"
+               data-category="Operasional Satpam"
+               data-desc="Barisan personel satpam GMI dengan kualifikasi Gada Pratama, Gada Madya, hingga Gada Utama binaan Korbinmas Baharkam Polri.">
+            <picture class="w-full h-full block">
+              <source srcset="/assets/images/services/security-v2/hero-guards.webp" type="image/webp">
+              <img src="/assets/images/services/security-v2/hero-guards.jpg" alt="Formasi Pasukan Pengamanan GMI" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
+            </picture>
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+              <span class="text-xs font-semibold text-white bg-red-600/90 px-3 py-1 rounded-full backdrop-blur-xs flex items-center gap-1.5">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/></svg>
+                Perbesar Foto
+              </span>
+            </div>
+            <span class="absolute top-3 left-3 bg-[#061e43] text-white text-[11px] font-bold px-3 py-1 rounded-full shadow-xs uppercase tracking-wider">
+              Operasional Satpam
+            </span>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="font-extrabold text-slate-900 text-base group-hover:text-red-600 transition-colors leading-snug mb-2">
+                Kesiagaan Personel Satpam Korporasi &amp; Industri
+              </h3>
+              <p class="text-xs text-slate-500 leading-relaxed mb-4">
+                Personel berdedikasi tinggi dengan integritas moral, fisik terlatih, serta keahlian bela diri dan manajemen konflik.
+              </p>
+            </div>
+            <div class="pt-3 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-400">
+              <span class="flex items-center gap-1">
+                <svg class="w-3.5 h-3.5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                Izin Operasional Mabes Polri
+              </span>
+              <span>Dokumentasi Resmi</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Item 5: Pemeriksaan Kendaraan & Kontrol Akses Tamu -->
+        <article class="gallery-card group bg-white rounded-2xl overflow-hidden border border-slate-200/90 shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col" data-category="security">
+          <div class="relative aspect-16/10 w-full overflow-hidden bg-slate-900 cursor-pointer" onclick="openLightbox(this)"
+               data-img="/assets/images/services/security-v2/sec1-professional-team.webp"
+               data-title="Pemeriksaan Kendaraan & Kontrol Akses Masuk Tamu"
+               data-category="Operasional Satpam"
+               data-desc="Penerapan SOP ketat pemeriksaan bagasi, kolong mobil (mirror inspection), dan pencatatan identitas tamu di gerbang utama mitra perbankan.">
+            <picture class="w-full h-full block">
+              <source srcset="/assets/images/services/security-v2/sec1-professional-team.webp" type="image/webp">
+              <img src="/assets/images/services/security-v2/sec1-professional-team.jpg" alt="Pemeriksaan Kendaraan Tamu GMI" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
+            </picture>
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+              <span class="text-xs font-semibold text-white bg-red-600/90 px-3 py-1 rounded-full backdrop-blur-xs flex items-center gap-1.5">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/></svg>
+                Perbesar Foto
+              </span>
+            </div>
+            <span class="absolute top-3 left-3 bg-[#061e43] text-white text-[11px] font-bold px-3 py-1 rounded-full shadow-xs uppercase tracking-wider">
+              Operasional Satpam
+            </span>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="font-extrabold text-slate-900 text-base group-hover:text-red-600 transition-colors leading-snug mb-2">
+                Pemeriksaan Kendaraan Tamu &amp; Akses Logistik Masuk
+              </h3>
+              <p class="text-xs text-slate-500 leading-relaxed mb-4">
+                Penjagaan ketat di gerbang utama kawasan perkantoran, pergudangan logistik, dan pabrik manufaktur multinasional.
+              </p>
+            </div>
+            <div class="pt-3 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-400">
+              <span class="flex items-center gap-1">
+                <svg class="w-3.5 h-3.5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+                Digital Logbook SOP
+              </span>
+              <span>Dokumentasi Resmi</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Item 6: Unit Satwa K9 & Perimeter Patrol -->
+        <article class="gallery-card group bg-white rounded-2xl overflow-hidden border border-slate-200/90 shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col" data-category="security">
+          <div class="relative aspect-16/10 w-full overflow-hidden bg-slate-900 cursor-pointer" onclick="openLightbox(this)"
+               data-img="/assets/images/services/security-v2/card-k9-unit.webp"
+               data-title="Operasional Satwa K-9 & Pelacakan Perimeter"
+               data-category="Operasional Satpam"
+               data-desc="Unit K9 terlatih dengan handler bersertifikat dalam penyisiran bahan peledak, narkotika, dan pelacakan perimeter di area berisiko tinggi.">
+            <picture class="w-full h-full block">
+              <source srcset="/assets/images/services/security-v2/card-k9-unit.webp" type="image/webp">
+              <img src="/assets/images/services/security-v2/card-k9-unit.jpg" alt="Unit Satwa K9 GMI" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
+            </picture>
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+              <span class="text-xs font-semibold text-white bg-red-600/90 px-3 py-1 rounded-full backdrop-blur-xs flex items-center gap-1.5">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/></svg>
+                Perbesar Foto
+              </span>
+            </div>
+            <span class="absolute top-3 left-3 bg-[#061e43] text-white text-[11px] font-bold px-3 py-1 rounded-full shadow-xs uppercase tracking-wider">
+              Operasional Satpam
+            </span>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="font-extrabold text-slate-900 text-base group-hover:text-red-600 transition-colors leading-snug mb-2">
+                Unit Satwa K-9 &amp; Deteksi Area Berbahaya
+              </h3>
+              <p class="text-xs text-slate-500 leading-relaxed mb-4">
+                Penyisiran perimeter gudang logistik, bandara, pelabuhan, dan venue konser berkapasitas puluhan ribu penonton.
+              </p>
+            </div>
+            <div class="pt-3 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-400">
+              <span class="flex items-center gap-1">
+                <svg class="w-3.5 h-3.5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                Certified K-9 Handler
+              </span>
+              <span>Dokumentasi Resmi</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Item 7: Pelatihan Teknis Manpower & Fasilitas -->
+        <article class="gallery-card group bg-white rounded-2xl overflow-hidden border border-slate-200/90 shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col" data-category="manpower">
+          <div class="relative aspect-16/10 w-full overflow-hidden bg-slate-900 cursor-pointer" onclick="openLightbox(this)"
+               data-img="/assets/images/services/manpower-training.webp"
+               data-title="Pelatihan Teknis Manpower & Pemeliharaan Fasilitas"
+               data-category="Manpower & Teknis"
+               data-desc="Standardisasi kompetensi personel cleaning service, teknisi mekanikal elektrikal (ME), serta staf operasional pendukung kantor modern.">
+            <picture class="w-full h-full block">
+              <source srcset="/assets/images/services/manpower-training.webp" type="image/webp">
+              <img src="/assets/images/services/manpower-training.jpg" alt="Pelatihan Teknis Manpower GMI" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
+            </picture>
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+              <span class="text-xs font-semibold text-white bg-red-600/90 px-3 py-1 rounded-full backdrop-blur-xs flex items-center gap-1.5">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/></svg>
+                Perbesar Foto
+              </span>
+            </div>
+            <span class="absolute top-3 left-3 bg-amber-600 text-white text-[11px] font-bold px-3 py-1 rounded-full shadow-xs uppercase tracking-wider">
+              Manpower &amp; Teknis
+            </span>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="font-extrabold text-slate-900 text-base group-hover:text-red-600 transition-colors leading-snug mb-2">
+                Pelatihan Teknis Manpower &amp; Operator Fasilitas
+              </h3>
+              <p class="text-xs text-slate-500 leading-relaxed mb-4">
+                Pelatihan chemical handling, sanitasi gedung berskala besar, serta perawatan utilitas gedung sesuai standar internasional.
+              </p>
+            </div>
+            <div class="pt-3 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-400">
+              <span class="flex items-center gap-1">
+                <svg class="w-3.5 h-3.5 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
+                BNSP &amp; Kemnaker
+              </span>
+              <span>Dokumentasi Resmi</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Item 8: Orientasi & Pengarahan Pelamar Kerja -->
+        <article class="gallery-card group bg-white rounded-2xl overflow-hidden border border-slate-200/90 shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col" data-category="manpower">
+          <div class="relative aspect-16/10 w-full overflow-hidden bg-slate-900 cursor-pointer" onclick="openLightbox(this)"
+               data-img="/assets/images/about/track-record-1.webp"
+               data-title="Orientasi Kerja & Pengisian Data Calon Karyawan"
+               data-category="Manpower & Teknis"
+               data-desc="Sesi orientasi rekrutmen gelombang 2026, verifikasi berkas SKCK, tes fisik, serta penandatanganan pakta integritas bebas biaya.">
+            <picture class="w-full h-full block">
+              <source srcset="/assets/images/about/track-record-1.webp" type="image/webp">
+              <img src="/assets/images/about/track-record-1.jpg" alt="Orientasi Rekrutmen Tenaga Kerja GMI" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
+            </picture>
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+              <span class="text-xs font-semibold text-white bg-red-600/90 px-3 py-1 rounded-full backdrop-blur-xs flex items-center gap-1.5">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/></svg>
+                Perbesar Foto
+              </span>
+            </div>
+            <span class="absolute top-3 left-3 bg-amber-600 text-white text-[11px] font-bold px-3 py-1 rounded-full shadow-xs uppercase tracking-wider">
+              Manpower &amp; Teknis
+            </span>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="font-extrabold text-slate-900 text-base group-hover:text-red-600 transition-colors leading-snug mb-2">
+                Orientasi &amp; Pengarahan Seleksi Calon Personel
+              </h3>
+              <p class="text-xs text-slate-500 leading-relaxed mb-4">
+                Penerimaan kandidat tenaga kerja transparan dan bebas biaya pungutan (Zero Fee Placement Policy).
+              </p>
+            </div>
+            <div class="pt-3 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-400">
+              <span class="flex items-center gap-1">
+                <svg class="w-3.5 h-3.5 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+                HR Verification
+              </span>
+              <span>Dokumentasi Resmi</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Item 9: Pengawalan VVIP & Keamanan Khusus -->
+        <article class="gallery-card group bg-white rounded-2xl overflow-hidden border border-slate-200/90 shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col" data-category="security">
+          <div class="relative aspect-16/10 w-full overflow-hidden bg-slate-900 cursor-pointer" onclick="openLightbox(this)"
+               data-img="/assets/images/services/security-v2/card-escort.webp"
+               data-title="Pengawalan VVIP & Transportasi Logistik Bernilai Tinggi"
+               data-category="Operasional Satpam"
+               data-desc="Protokol pengawalan tamu kehormatan, direksi korporasi, serta perlindungan konvoi angkutan barang berharga di seluruh rute antar-kota.">
+            <picture class="w-full h-full block">
+              <source srcset="/assets/images/services/security-v2/card-escort.webp" type="image/webp">
+              <img src="/assets/images/services/security-v2/card-escort.jpg" alt="Pengawalan Khusus VVIP GMI" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
+            </picture>
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+              <span class="text-xs font-semibold text-white bg-red-600/90 px-3 py-1 rounded-full backdrop-blur-xs flex items-center gap-1.5">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/></svg>
+                Perbesar Foto
+              </span>
+            </div>
+            <span class="absolute top-3 left-3 bg-[#061e43] text-white text-[11px] font-bold px-3 py-1 rounded-full shadow-xs uppercase tracking-wider">
+              Operasional Satpam
+            </span>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="font-extrabold text-slate-900 text-base group-hover:text-red-600 transition-colors leading-snug mb-2">
+                Pengawalan Personal VVIP &amp; Proteksi Aset Bernilai Tinggi
+              </h3>
+              <p class="text-xs text-slate-500 leading-relaxed mb-4">
+                Penyediaan close protection officer (CPO) berlisensi dengan keahlian defensive driving dan respons krisis taktis.
+              </p>
+            </div>
+            <div class="pt-3 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-400">
+              <span class="flex items-center gap-1">
+                <svg class="w-3.5 h-3.5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                Taktis &amp; Diskrit
+              </span>
+              <span>Dokumentasi Resmi</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Item 10: Tim Audit Investigasi Lapangan -->
+        <article class="gallery-card group bg-white rounded-2xl overflow-hidden border border-slate-200/90 shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col" data-category="security">
+          <div class="relative aspect-16/10 w-full overflow-hidden bg-slate-900 cursor-pointer" onclick="openLightbox(this)"
+               data-img="/assets/images/services/sec1-investigation-team.webp"
+               data-title="Briefing Tim Audit Investigasi Internal GMI"
+               data-category="Operasional Satpam"
+               data-desc="Tim investigator bersertifikasi CPI & CCPS dalam menangani fraud, penelusuran aset, audit inventaris pergudangan, dan rekonstruksi fakta hukum.">
+            <picture class="w-full h-full block">
+              <source srcset="/assets/images/services/sec1-investigation-team.webp" type="image/webp">
+              <img src="/assets/images/services/sec1-investigation-team.jpg" alt="Tim Audit Investigasi GMI" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
+            </picture>
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+              <span class="text-xs font-semibold text-white bg-red-600/90 px-3 py-1 rounded-full backdrop-blur-xs flex items-center gap-1.5">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/></svg>
+                Perbesar Foto
+              </span>
+            </div>
+            <span class="absolute top-3 left-3 bg-[#061e43] text-white text-[11px] font-bold px-3 py-1 rounded-full shadow-xs uppercase tracking-wider">
+              Operasional Satpam
+            </span>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="font-extrabold text-slate-900 text-base group-hover:text-red-600 transition-colors leading-snug mb-2">
+                Analisis Forensik &amp; Investigasi Lapangan Korporasi
+              </h3>
+              <p class="text-xs text-slate-500 leading-relaxed mb-4">
+                Penyelidikan mendalam guna membongkar kerugian bisnis tersembunyi dengan dukungan tim ahli hukum litigasi.
+              </p>
+            </div>
+            <div class="pt-3 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-400">
+              <span class="flex items-center gap-1">
+                <svg class="w-3.5 h-3.5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                CCI &amp; CCPS Standard
+              </span>
+              <span>Dokumentasi Resmi</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Item 11: Peringatan HUT RI & Apel Kebangsaan -->
+        <article class="gallery-card group bg-white rounded-2xl overflow-hidden border border-slate-200/90 shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col" data-category="corporate">
+          <div class="relative aspect-16/10 w-full overflow-hidden bg-slate-900 cursor-pointer" onclick="openLightbox(this)"
+               data-img="/assets/images/about/about-journey.webp"
+               data-title="Upacara HUT RI & Peringatan Kebangsaan Personel GMI"
+               data-category="Internal & Budaya"
+               data-desc="Peringatan Hari Ulang Tahun Kemerdekaan Republik Indonesia, penanaman jiwa nasionalisme, dan apel kehormatan bagi seluruh staf dan garda keamanan GMI.">
+            <picture class="w-full h-full block">
+              <source srcset="/assets/images/about/about-journey.webp" type="image/webp">
+              <img src="/assets/images/about/about-journey.jpg" alt="Peringatan HUT RI Personel GMI" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
+            </picture>
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+              <span class="text-xs font-semibold text-white bg-red-600/90 px-3 py-1 rounded-full backdrop-blur-xs flex items-center gap-1.5">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/></svg>
+                Perbesar Foto
+              </span>
+            </div>
+            <span class="absolute top-3 left-3 bg-emerald-600 text-white text-[11px] font-bold px-3 py-1 rounded-full shadow-xs uppercase tracking-wider">
+              Internal &amp; Budaya
+            </span>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="font-extrabold text-slate-900 text-base group-hover:text-red-600 transition-colors leading-snug mb-2">
+                Upacara Peringatan HUT RI &amp; Apel Kebangsaan
+              </h3>
+              <p class="text-xs text-slate-500 leading-relaxed mb-4">
+                Penyemangat dedikasi putra-putri bangsa dalam berkontribusi menjaga stabilitas keamanan dan pertumbuhan industri Indonesia.
+              </p>
+            </div>
+            <div class="pt-3 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-400">
+              <span class="flex items-center gap-1">
+                <svg class="w-3.5 h-3.5 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+                Solidaritas Korporasi
+              </span>
+              <span>Dokumentasi Resmi</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Item 12: Penghargaan Kinerja & Anniversary GMI -->
+        <article class="gallery-card group bg-white rounded-2xl overflow-hidden border border-slate-200/90 shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col" data-category="corporate">
+          <div class="relative aspect-16/10 w-full overflow-hidden bg-slate-900 cursor-pointer" onclick="openLightbox(this)"
+               data-img="/assets/images/about/about-hero.webp"
+               data-title="Penghargaan Kinerja Karyawan & Perayaan Anniversary GMI"
+               data-category="Internal & Budaya"
+               data-desc="Apresiasi manajemen GMI kepada personel teladan, teknisi berprestasi, dan regu satpam terbaik tahunan atas loyalitas serta dedikasi tanpa kompromi.">
+            <picture class="w-full h-full block">
+              <source srcset="/assets/images/about/about-hero.webp" type="image/webp">
+              <img src="/assets/images/about/about-hero.jpg" alt="Penghargaan Kinerja Karyawan GMI" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
+            </picture>
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+              <span class="text-xs font-semibold text-white bg-red-600/90 px-3 py-1 rounded-full backdrop-blur-xs flex items-center gap-1.5">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/></svg>
+                Perbesar Foto
+              </span>
+            </div>
+            <span class="absolute top-3 left-3 bg-emerald-600 text-white text-[11px] font-bold px-3 py-1 rounded-full shadow-xs uppercase tracking-wider">
+              Internal &amp; Budaya
+            </span>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="font-extrabold text-slate-900 text-base group-hover:text-red-600 transition-colors leading-snug mb-2">
+                Penghargaan Karyawan Teladan &amp; Anniversary GMI
+              </h3>
+              <p class="text-xs text-slate-500 leading-relaxed mb-4">
+                Pemberian piagam kehormatan, beasiswa putra-putri personel, dan kenaikan jenjang karir bagi personel operasional berintegritas tinggi.
+              </p>
+            </div>
+            <div class="pt-3 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-400">
+              <span class="flex items-center gap-1">
+                <svg class="w-3.5 h-3.5 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
+                Apresiasi Integritas
+              </span>
+              <span>Dokumentasi Resmi</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- 3. Section CTA Skyline -->
+    <section class="relative py-20 sm:py-28 overflow-hidden flex items-center min-h-[380px]">
+      <div class="absolute inset-0 z-0">
+        <picture class="w-full h-full block">
+          <source srcset="/assets/images/cta/cta-skyline.webp" type="image/webp">
+          <img src="/assets/images/cta/cta-skyline.jpg" alt="Kerjasama Operasional GMI" class="w-full h-full object-cover object-center" width="1920" height="800" loading="lazy">
+        </picture>
+        <div class="absolute inset-0 bg-gradient-to-t from-[#021838]/95 via-[#061e43]/90 to-[#061e43]/75 md:bg-gradient-to-r md:from-[#021838]/95 md:via-[#061e43]/85 md:to-transparent"></div>
+      </div>
+
+      <div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-white w-full">
+        <div class="max-w-2xl text-left">
+          <span class="text-xs font-bold uppercase tracking-widest text-red-400 block mb-3">KEMITRAAN OPERASIONAL</span>
+          <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight leading-tight mb-4">
+            Ingin Mempercayakan Pengamanan &amp; Alih Daya Kepada GMI?
+          </h2>
+          <p class="text-sm sm:text-base text-slate-200 mb-8 leading-relaxed">
+            Konsultasikan kebutuhan personel, perlindungan aset fasilitas, atau audit operasional perusahaan Anda bersama tim konsultan ahli kami.
+          </p>
+          <div class="flex flex-wrap items-center gap-4">
+            <button type="button" data-open-consultation class="btn-wiggle-hover inline-flex items-center gap-2.5 px-8 py-3.5 text-sm sm:text-base font-bold text-white bg-[#c52227] hover:bg-[#a7181d] rounded-full shadow-xl hover:shadow-2xl transition-all duration-200 cursor-pointer">
+              <span>Konsultasi Kebutuhan</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </button>
+            <a href="klien.html" class="inline-flex items-center gap-2 px-7 py-3.5 text-sm sm:text-base font-semibold text-white/90 hover:text-white bg-white/10 hover:bg-white/20 backdrop-blur-md rounded-full border border-white/20 transition-all">
+              <span>Lihat Klien Kami</span>
+              <span>&rarr;</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================== -->
+  <!-- 4. FOOTER                                                      -->
+  <!-- ============================================================== -->
+  <footer class="bg-[#022f66] text-white pt-16 pb-12 border-t border-[#043b80]">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12 pb-14 border-b border-slate-700/60">
+        
+        <!-- Col 1: Brand & Desc -->
+        <div class="space-y-4">
+          <a href="index.html" class="inline-block mb-1">
+            <picture>
+              <source srcset="/assets/images/logo/gmi-logo-footer.webp" type="image/webp">
+              <img src="/assets/images/logo/gmi-logo-footer.png" alt="Grup Mitra Indonesia Footer Logo" class="h-20 w-auto object-contain" width="280" height="80" loading="lazy">
+            </picture>
+          </a>
+          <p class="text-sm text-slate-300 leading-relaxed font-normal mb-5">
+            Solusi keamanan terpadu, penyedia tenaga kerja profesional, investigasi korporasi, dan pemulihan piutang bisnis di seluruh Indonesia.
+          </p>
+          <div class="pt-2 text-xs text-slate-300 space-y-1">
+            <p><strong>Operasional:</strong> 24 Jam Non-Stop</p>
+            <p><strong>Izin Mabes Polri:</strong> No. SI/4508/X/2021</p>
+          </div>
+        </div>
+
+        <!-- Col 2: Layanan Kami -->
+        <div>
+          <h3 class="text-sm font-bold uppercase tracking-wider text-white mb-5 pb-2 border-b border-white/15">
+            Layanan Kami
+          </h3>
+          <ul class="space-y-2.5 text-sm text-slate-300">
+            <li><a href="layanan-kami.html" class="hover:text-red-400 transition-colors">Manpower Outsourcing</a></li>
+            <li><a href="layanan-keamanan.html" class="hover:text-red-400 transition-colors">Layanan Keamanan</a></li>
+            <li><a href="investigasi.html" class="hover:text-red-400 transition-colors">Investigation Service</a></li>
+            <li><a href="audit-pemulihan-piutang.html" class="hover:text-red-400 transition-colors">Audit &amp; Pemulihan Piutang</a></li>
+            <li><a href="galeri.html" class="hover:text-red-400 transition-colors">Galeri Dokumentasi</a></li>
+            <li><a href="klien.html" class="hover:text-red-400 transition-colors">Klien Kami</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Navigasi & Karir -->
+        <div>
+          <h3 class="text-sm font-bold uppercase tracking-wider text-white mb-5 pb-2 border-b border-white/15">
+            Perusahaan
+          </h3>
+          <ul class="space-y-2.5 text-sm text-slate-300">
+            <li><a href="tentang-kami.html" class="hover:text-red-400 transition-colors">Tentang Kami</a></li>
+            <li><a href="karir.html" class="hover:text-red-400 transition-colors">Karir &amp; Rekrutmen</a></li>
+            <li><a href="/portal-klien.html" class="hover:text-red-400 transition-colors">Portal Klien Mitra</a></li>
+            <li><button type="button" data-open-consultation class="text-left hover:text-red-400 transition-colors cursor-pointer">Hubungi Kami</button></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Kontak & Kantor -->
+        <div>
+          <h3 class="text-sm font-bold uppercase tracking-wider text-white mb-5 pb-2 border-b border-white/15">
+            Kantor Pusat
+          </h3>
+          <address class="not-italic text-sm text-slate-300 space-y-3 leading-relaxed">
+            <p><strong>PT Grup Mitra Indonesia</strong><br>
+            Ruko Thematic Blok N No. 51, Gading Serpong, Curug Sangereng, Tangerang, Banten 15810</p>
+            <p class="pt-1">
+              <strong>Telepon / WA:</strong><br>
+              <a href="tel:+62811140059" class="hover:text-white transition-colors">0811 140 059</a>
+            </p>
+            <p>
+              <strong>Email Resmi:</strong><br>
+              <a href="mailto:info@groupmitraindonesia.co.id" class="hover:text-white transition-colors">info@groupmitraindonesia.co.id</a>
+            </p>
+          </address>
+        </div>
+
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
+        <p>&copy; 2026 PT Grup Mitra Indonesia. Seluruh hak cipta dilindungi.</p>
+        <div class="flex items-center gap-6">
+          <a href="#" class="hover:text-slate-200 transition-colors">Kebijakan Privasi</a>
+          <a href="#" class="hover:text-slate-200 transition-colors">Syarat &amp; Ketentuan</a>
+          <button type="button" data-open-portal="client" class="text-slate-300 hover:text-white underline underline-offset-4 cursor-pointer">
+            Portal Klien
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ============================================================== -->
+  <!-- 5. GALLERY LIGHTBOX MODAL DIALOG                               -->
+  <!-- ============================================================== -->
+  <dialog id="gallery-lightbox" aria-labelledby="lightbox-title" class="fixed inset-0 m-auto p-0 max-w-3xl w-[calc(100%-2rem)] rounded-3xl bg-white shadow-2xl border border-slate-200 backdrop:bg-slate-950/80 backdrop:backdrop-blur-md z-50 overflow-hidden">
+    <div class="flex flex-col max-h-[92vh]">
+      <!-- Header Bar -->
+      <div class="p-4 sm:p-5 bg-slate-900 text-white flex items-center justify-between shrink-0">
+        <div class="flex items-center gap-2.5">
+          <span id="lightbox-badge" class="px-2.5 py-0.5 rounded-full text-[11px] font-bold uppercase tracking-wider bg-red-600 text-white">
+            Dokumentasi
+          </span>
+          <h3 id="lightbox-title" class="text-sm sm:text-base font-bold truncate max-w-sm sm:max-w-md"></h3>
+        </div>
+        <button type="button" onclick="document.getElementById('gallery-lightbox')?.close()" class="p-1.5 rounded-full text-slate-400 hover:text-white hover:bg-slate-800 transition-colors cursor-pointer" aria-label="Tutup Preview">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+
+      <!-- Image Area -->
+      <div class="bg-black flex items-center justify-center overflow-hidden max-h-[60vh]">
+        <img id="lightbox-img" src="" alt="Dokumentasi GMI" class="w-full h-auto max-h-[60vh] object-contain">
+      </div>
+
+      <!-- Description Footer -->
+      <div class="p-5 sm:p-6 bg-white overflow-y-auto">
+        <p id="lightbox-desc" class="text-xs sm:text-sm text-slate-600 leading-relaxed"></p>
+        <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-xs text-slate-400">
+          <span>&copy; PT Grup Mitra Indonesia &bull; Hak Cipta Dilindungi</span>
+          <button type="button" onclick="document.getElementById('gallery-lightbox')?.close()" class="font-bold text-slate-700 hover:text-red-600 cursor-pointer">
+            Tutup
+          </button>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- ============================================================== -->
+  <!-- 6. CONSULTATION & PORTAL MODALS                                -->
+  <!-- ============================================================== -->
+  <dialog id="consultation-modal" aria-labelledby="consultation-title" class="fixed inset-0 m-auto p-0 max-w-lg w-[calc(100%-2rem)] rounded-3xl bg-white shadow-2xl border border-slate-200 backdrop:bg-slate-950/70 backdrop:backdrop-blur-sm z-50 overflow-hidden">
+    <div class="flex flex-col max-h-[90vh]">
+      <div class="p-6 bg-slate-50 border-b border-slate-100 flex items-center justify-between">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-wider text-red-600 block mb-0.5">Konsultasi Operasional</span>
+          <h3 id="consultation-title" class="text-xl sm:text-2xl font-extrabold text-[#061e43]">Diskusikan Kebutuhan Bisnis Anda</h3>
+        </div>
+        <button type="button" data-close-modal aria-label="Tutup Form Konsultasi" class="p-2 rounded-full text-slate-400 hover:text-slate-700 hover:bg-slate-200/60 transition-colors cursor-pointer">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+
+      <div id="consultation-form-body" class="p-6 sm:p-7 overflow-y-auto">
+        <form id="consultation-form" class="space-y-4">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label for="consult-name" class="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-1.5">Nama Lengkap *</label>
+              <input type="text" id="consult-name" name="name" required placeholder="Contoh: Budi Santoso" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-red-600 text-sm">
+            </div>
+            <div>
+              <label for="consult-company" class="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-1.5">Perusahaan / Instansi *</label>
+              <input type="text" id="consult-company" name="company" required placeholder="Contoh: PT Sumber Makmur" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-red-600 text-sm">
+            </div>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label for="consult-email" class="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-1.5">Email Bisnis *</label>
+              <input type="email" id="consult-email" name="email" required placeholder="budi@perusahaan.co.id" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-red-600 text-sm">
+            </div>
+            <div>
+              <label for="consult-phone" class="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-1.5">Nomor WhatsApp / Telp *</label>
+              <input type="tel" id="consult-phone" name="phone" required placeholder="081234567890" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-red-600 text-sm">
+            </div>
+          </div>
+          <div>
+            <label for="consultation-service-select" class="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-1.5">Layanan yang Dibutuhkan *</label>
+            <select id="consultation-service-select" name="service" required class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-red-600 text-sm bg-white">
+              <option value="" disabled selected>Pilih salah satu layanan...</option>
+              <option value="manpower">Manpower Outsourcing (Penyedia Tenaga Kerja)</option>
+              <option value="security">Security Services (Pengamanan Terintegrasi)</option>
+              <option value="investigation">Corporate Investigation (Audit &amp; Investigasi)</option>
+              <option value="litigation">Litigation Support (Dukungan Litigasi Legal)</option>
+              <option value="all">Konsultasi Terpadu Seluruh Layanan</option>
+            </select>
+          </div>
+          <div>
+            <label for="consult-notes" class="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-1.5">Rincian Kebutuhan / Lokasi / Personel</label>
+            <textarea id="consult-notes" name="notes" rows="3" placeholder="Jelaskan kebutuhan operasional perusahaan Anda..." class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-red-600 text-sm"></textarea>
+          </div>
+          <div class="pt-2">
+            <button type="submit" class="w-full py-3 px-6 rounded-full bg-[#c52227] hover:bg-[#a7181d] text-white font-bold text-sm shadow-md hover:shadow-lg transition-all flex items-center justify-center cursor-pointer">
+              Kirim Permintaan Konsultasi
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <div id="consultation-success" class="hidden p-8 sm:p-10 text-center flex-col items-center justify-center space-y-4">
+        <div class="w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto mb-2">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+        </div>
+        <h3 class="text-2xl font-bold text-[#061e43]">Permintaan Berhasil Terkirim!</h3>
+        <p class="text-sm text-slate-600 max-w-sm mx-auto leading-relaxed">
+          Terima kasih telah mempercayakan kebutuhan Anda kepada Grup Mitra Indonesia. Tim konsultan operasional kami akan segera menghubungi Anda.
+        </p>
+        <div class="pt-4">
+          <button id="consultation-success-close" type="button" class="px-6 py-2.5 rounded-full bg-[#061e43] text-white text-sm font-bold hover:bg-[#0b2f6d] transition-all cursor-pointer">
+            Selesai
+          </button>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Portal Modal -->
+  <dialog id="portal-modal" aria-labelledby="portal-modal-title" class="fixed inset-0 m-auto p-0 max-w-lg w-[calc(100%-2rem)] rounded-3xl bg-white shadow-2xl border border-slate-200 backdrop:bg-slate-950/70 backdrop:backdrop-blur-sm z-50 overflow-hidden">
+    <div class="flex flex-col max-h-[90vh]">
+      <div class="p-5 sm:p-6 bg-slate-900 text-white flex items-center justify-between shrink-0">
+        <div class="flex items-center gap-2.5">
+          <div class="w-3 h-3 rounded-full bg-emerald-400 animate-pulse"></div>
+          <div>
+            <h3 id="portal-modal-title" class="text-base font-bold text-white">GMI Portal &amp; Backend Gateway</h3>
+            <p class="text-xs text-slate-400">Database &amp; Management Architecture</p>
+          </div>
+        </div>
+        <button type="button" data-close-modal aria-label="Tutup Portal" class="p-1.5 rounded-full text-slate-400 hover:text-white hover:bg-slate-800 cursor-pointer">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+
+      <div class="p-3 bg-slate-100 border-b border-slate-200 shrink-0">
+        <div class="grid grid-cols-2 p-1 bg-slate-200/80 rounded-xl text-xs font-bold">
+          <button id="portal-tab-client-btn" type="button" onclick="switchPortalTab('client')" class="py-2 rounded-lg bg-white text-slate-900 shadow-xs transition-all cursor-pointer">
+            Portal Client
+          </button>
+          <button id="portal-tab-admin-btn" type="button" onclick="switchPortalTab('admin')" class="py-2 rounded-lg text-slate-500 hover:text-slate-900 transition-all cursor-pointer">
+            Dashboard Admin
+          </button>
+        </div>
+      </div>
+
+      <div class="p-6 overflow-y-auto">
+        <div id="portal-view-client" class="space-y-4">
+          <div class="bg-blue-50/80 border border-blue-200/70 rounded-2xl p-4 text-xs text-blue-900 leading-relaxed">
+            <strong class="font-bold">Akses Portal Klien GMI:</strong><br>
+            Portal terintegrasi database untuk mitra memantau presensi personel harian, laporan patroli keamanan (guard tour), pengajuan tiket operasional, dan invoice penagihan.
+          </div>
+          <a href="/portal-klien.html" class="w-full py-3 px-4 rounded-xl bg-[#061e43] text-white font-bold text-sm hover:bg-[#0b2f6d] transition-all flex items-center justify-center gap-2 shadow-md">
+            <span>Buka Portal Klien (Live View)</span>
+            <span>&rarr;</span>
+          </a>
+          <div class="relative flex py-1 items-center">
+            <div class="flex-grow border-t border-slate-200"></div>
+            <span class="flex-shrink mx-3 text-slate-400 text-[11px] uppercase tracking-wider font-semibold">Atau Masuk dengan Akun</span>
+            <div class="flex-grow border-t border-slate-200"></div>
+          </div>
+          <form onsubmit="event.preventDefault(); window.location.href='/portal-klien.html';" class="space-y-3.5">
+            <div>
+              <label class="block text-xs font-bold text-slate-700 mb-1">ID Klien / Email Perusahaan</label>
+              <input type="text" value="indosat@gmi.co.id" placeholder="client@perusahaan.co.id" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-blue-600 focus:outline-none">
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-slate-700 mb-1">Password</label>
+              <input type="password" value="mitra2026" placeholder="••••••••" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-blue-600 focus:outline-none">
+            </div>
+            <button type="submit" class="w-full py-2.5 rounded-xl bg-slate-900 text-white font-bold text-sm hover:bg-slate-800 transition-all cursor-pointer">
+              Masuk ke Portal Klien
+            </button>
+          </form>
+        </div>
+
+        <div id="portal-view-admin" class="hidden space-y-4">
+          <div class="bg-amber-50 border border-amber-200/80 rounded-2xl p-4 text-xs text-amber-950 leading-relaxed">
+            <strong class="font-bold">Dashboard Admin HR &amp; Rekrutmen:</strong><br>
+            Pusat kendali internal untuk manajemen database 5.000+ personel, penetapan shift &amp; penempatan di 100+ lokasi.
+          </div>
+          <a href="/karir.html?mode=admin" class="w-full py-3 px-4 rounded-xl bg-[#c52227] text-white font-bold text-sm hover:bg-[#a7181d] transition-all flex items-center justify-center gap-2 shadow-md">
+            <span>Buka Dashboard Admin HR</span>
+            <span>&rarr;</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="p-4 bg-slate-50 border-t border-slate-100 flex justify-end shrink-0">
+        <button type="button" data-close-modal class="px-5 py-2 text-xs font-semibold text-slate-600 hover:text-slate-900 transition-colors cursor-pointer">
+          Tutup
+        </button>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- ============================================================== -->
+  <!-- 7. FLOATING WHATSAPP CTA WIDGET                                -->
+  <!-- ============================================================== -->
+  <aside aria-label="Kontak Langsung WhatsApp" class="fixed bottom-5 right-5 sm:bottom-6 sm:right-6 z-40">
+    <a href="https://wa.me/62811140059?text=Halo%20GMI,%20saya%20tertarik%20dengan%20dokumentasi%20layanan%20dan%20ingin%20berkonsultasi." 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       aria-label="Hubungi kami via WhatsApp"
+       title="Hubungi kami via WhatsApp"
+       class="group relative flex items-center justify-center w-13 h-13 sm:w-14 sm:h-14 bg-[#25D366] hover:bg-[#20ba59] text-white rounded-full shadow-lg hover:shadow-2xl shadow-emerald-950/20 hover:shadow-emerald-500/35 transition-all duration-300 transform hover:-translate-y-1 hover:scale-105 active:scale-95 focus:outline-none focus:ring-4 focus:ring-emerald-400/50">
+      <svg class="w-7 h-7 fill-current transition-transform duration-300 group-hover:scale-110" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2zm.01 1.67c4.54 0 8.24 3.7 8.24 8.24 0 2.2-.86 4.28-2.42 5.84-1.56 1.56-3.64 2.42-5.83 2.42-1.44 0-2.85-.37-4.1-1.09l-.29-.17-3.12.82.83-3.04-.19-.31c-.8-1.28-1.22-2.77-1.22-4.47 0-4.54 3.7-8.24 8.25-8.24zm4.56 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.4-.13-.57.13-.17.25-.65.81-.8 1-.15.19-.3.21-.55.08-.25-.13-1.06-.39-2.02-1.25-.75-.67-1.26-1.5-1.4-1.75-.15-.25-.02-.39.11-.51.11-.11.25-.3.38-.45.13-.15.17-.25.25-.42.08-.17.04-.32-.02-.45-.06-.13-.57-1.37-.78-1.88-.2-.49-.4-.43-.57-.44h-.49c-.17 0-.44.06-.67.32-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.77 2.7 4.29 3.79.6.26 1.07.41 1.43.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18-.06-.1-.23-.17-.48-.29z"/>
+      </svg>
+      <span class="absolute top-0.5 right-0.5 flex h-3 w-3">
+        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-80"></span>
+        <span class="relative inline-flex rounded-full h-3 w-3 bg-emerald-100 border-2 border-[#25D366]"></span>
+      </span>
+    </a>
+  </aside>
+
+  <!-- Interactive Gallery Script -->
+  <script>
+    // Gallery Filtering
+    document.addEventListener('DOMContentLoaded', () => {
+      const filterBtns = document.querySelectorAll('.gallery-filter-btn');
+      const cards = document.querySelectorAll('.gallery-card');
+
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const filter = btn.getAttribute('data-filter');
+
+          filterBtns.forEach(b => {
+            b.classList.remove('bg-[#061e43]', 'text-white', 'shadow-xs');
+            b.classList.add('bg-white', 'text-slate-600', 'border', 'border-slate-200');
+          });
+          btn.classList.add('bg-[#061e43]', 'text-white', 'shadow-xs');
+          btn.classList.remove('bg-white', 'text-slate-600', 'border', 'border-slate-200');
+
+          cards.forEach(card => {
+            const cat = card.getAttribute('data-category');
+            if (filter === 'all' || cat === filter) {
+              card.classList.remove('hidden');
+            } else {
+              card.classList.add('hidden');
+            }
+          });
+        });
+      });
+    });
+
+    // Gallery Lightbox
+    window.openLightbox = function(el) {
+      const modal = document.getElementById('gallery-lightbox');
+      if (!modal) return;
+      document.getElementById('lightbox-img').src = el.getAttribute('data-img') || '';
+      document.getElementById('lightbox-title').textContent = el.getAttribute('data-title') || 'Dokumentasi GMI';
+      document.getElementById('lightbox-badge').textContent = el.getAttribute('data-category') || 'Dokumentasi';
+      document.getElementById('lightbox-desc').textContent = el.getAttribute('data-desc') || '';
+      modal.showModal();
+    };
+  </script>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
