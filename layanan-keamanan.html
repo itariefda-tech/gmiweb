@@ -29,8 +29,8 @@
         <!-- Logo -->
         <a href="index.html#beranda" class="flex items-center gap-2 shrink-0 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-600 rounded-lg">
           <picture>
-            <source srcset="/assets/images/logo/gmi-logo.webp" type="image/webp">
-            <img src="/assets/images/logo/gmi-logo.png" alt="Grup Mitra Indonesia Logo" class="h-11 sm:h-[53px] w-auto object-contain transition-transform group-hover:scale-105" width="176" height="53" loading="eager">
+            <source srcset="/assets/images/logo/Logo-GMI01.webp" type="image/webp">
+            <img src="/assets/images/logo/Logo-GMI01.png" alt="Grup Mitra Indonesia Logo" class="h-11 sm:h-[53px] w-auto object-contain transition-transform group-hover:scale-105" width="176" height="53" loading="eager">
           </picture>
         </a>
 
@@ -101,8 +101,8 @@
       <!-- Drawer Header -->
       <div class="flex items-center justify-between pb-4 border-b border-slate-100">
         <picture>
-          <source srcset="/assets/images/logo/gmi-logo.webp" type="image/webp">
-          <img src="/assets/images/logo/gmi-logo.png" alt="Grup Mitra Indonesia Logo" class="h-8 w-auto object-contain" width="120" height="34">
+          <source srcset="/assets/images/logo/Logo-GMI01.webp" type="image/webp">
+            <img src="/assets/images/logo/Logo-GMI01.png" alt="Grup Mitra Indonesia Logo" class="h-8 w-auto object-contain" width="120" height="34">
         </picture>
         <button id="drawer-close-btn" type="button" aria-label="Tutup Menu" class="p-2 rounded-full text-slate-400 hover:text-slate-600 hover:bg-slate-100">
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -171,13 +171,51 @@
     <!-- 2. HERO SECTION: LAYANAN KEAMANAN                            -->
     <!-- ============================================================ -->
     <section class="relative min-h-[580px] sm:min-h-[640px] lg:min-h-[680px] flex items-center pt-28 sm:pt-32 pb-16 sm:pb-20 overflow-hidden">
-      <!-- Background Image with Dark Navy Gradient Overlay -->
-      <div class="absolute inset-0 z-0">
-        <picture class="w-full h-full block">
-          <source srcset="/assets/images/services/security-hero-bg.webp" type="image/webp">
-          <img src="/assets/images/services/security-hero-bg.jpg" alt="Security Service PT Grup Mitra Indonesia Command Center" class="w-full h-full object-cover object-center" width="1920" height="1080" loading="eager" fetchpriority="high">
-        </picture>
-        <div class="absolute inset-0 bg-gradient-to-r from-[#041634]/98 via-[#061e43]/92 to-[#0a2757]/80"></div>
+      <!-- Background Image Slideshow (4 Slides Berjalan 1 Frekuensi) -->
+      <div class="absolute inset-0 z-0 overflow-hidden" id="hero-slider" aria-hidden="true">
+        <!-- Slide 1: Pengamanan Terpadu BUJP -->
+        <div class="hero-slide absolute inset-0 is-active" data-hero-slide="0">
+          <picture class="w-full h-full block">
+            <source srcset="/assets/images/services/security-hero-1.webp" type="image/webp">
+            <img src="/assets/images/services/security-hero-1.jpg" alt="Security Service PT Grup Mitra Indonesia - Pengamanan Terpadu" class="w-full h-full object-cover object-center" width="1280" height="720" fetchpriority="high" loading="eager">
+          </picture>
+          <div class="absolute inset-0 bg-gradient-to-r from-[#041634]/98 via-[#061e43]/92 to-[#0a2757]/80"></div>
+        </div>
+
+        <!-- Slide 2: Patroli dan Pengawasan -->
+        <div class="hero-slide absolute inset-0 is-next" data-hero-slide="1">
+          <picture class="w-full h-full block">
+            <source srcset="/assets/images/services/security-hero-2.webp" type="image/webp">
+            <img src="/assets/images/services/security-hero-2.jpg" alt="Security Service PT Grup Mitra Indonesia - Patroli dan Pengawasan" class="w-full h-full object-cover object-center" width="1280" height="720" loading="lazy">
+          </picture>
+          <div class="absolute inset-0 bg-gradient-to-r from-[#041634]/98 via-[#061e43]/92 to-[#0a2757]/80"></div>
+        </div>
+
+        <!-- Slide 3: Personel & Tim Taktis GMI -->
+        <div class="hero-slide absolute inset-0 is-next" data-hero-slide="2">
+          <picture class="w-full h-full block">
+            <source srcset="/assets/images/services/security-hero-3.webp" type="image/webp">
+            <img src="/assets/images/services/security-hero-3.jpg" alt="Security Service PT Grup Mitra Indonesia - Personel dan Tim Taktis" class="w-full h-full object-cover object-center" width="1280" height="720" loading="lazy">
+          </picture>
+          <div class="absolute inset-0 bg-gradient-to-r from-[#041634]/98 via-[#061e43]/92 to-[#0a2757]/80"></div>
+        </div>
+
+        <!-- Slide 4: Command Center & Operasional -->
+        <div class="hero-slide absolute inset-0 is-next" data-hero-slide="3">
+          <picture class="w-full h-full block">
+            <source srcset="/assets/images/services/security-hero-4.webp" type="image/webp">
+            <img src="/assets/images/services/security-hero-4.jpg" alt="Security Service PT Grup Mitra Indonesia - Command Center dan Monitoring" class="w-full h-full object-cover object-center" width="1280" height="720" loading="lazy">
+          </picture>
+          <div class="absolute inset-0 bg-gradient-to-r from-[#041634]/98 via-[#061e43]/92 to-[#0a2757]/80"></div>
+        </div>
+      </div>
+
+      <!-- Slider Pagination Indicators -->
+      <div class="absolute bottom-5 sm:bottom-6 left-1/2 -translate-x-1/2 z-20 flex items-center gap-2">
+        <button type="button" class="hero-slide-indicator w-8 h-1.5 rounded-full bg-white transition-all duration-300 pointer-events-auto" data-hero-dot="0" aria-label="Slide 1"></button>
+        <button type="button" class="hero-slide-indicator w-2.5 h-1.5 rounded-full bg-white/40 hover:bg-white/70 transition-all duration-300 pointer-events-auto" data-hero-dot="1" aria-label="Slide 2"></button>
+        <button type="button" class="hero-slide-indicator w-2.5 h-1.5 rounded-full bg-white/40 hover:bg-white/70 transition-all duration-300 pointer-events-auto" data-hero-dot="2" aria-label="Slide 3"></button>
+        <button type="button" class="hero-slide-indicator w-2.5 h-1.5 rounded-full bg-white/40 hover:bg-white/70 transition-all duration-300 pointer-events-auto" data-hero-dot="3" aria-label="Slide 4"></button>
       </div>
 
       <!-- Hero Content -->
