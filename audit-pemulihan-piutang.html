@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audit Investigasi & Solusi Pemulihan Piutang Bisnis | PT Grup Mitra Indonesia</title>
+  <meta name="description" content="Layanan terpadu Audit Investigasi Forensik & Program Pemulihan Piutang Komersial oleh PT Grup Mitra Indonesia (GMI). Optimalisasi arus kas, mitigasi risiko keuangan, dan penyelesaian piutang terstruktur sejak 2009.">
+  
+  <!-- Preconnect & Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="/src/style.css">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/assets/images/logo/gmi-logo.png">
+</head>
+<body class="bg-slate-50 text-slate-900 antialiased selection:bg-red-600 selection:text-white">
+
+  <!-- ============================================================== -->
+  <!-- 1. FLOATING NAVIGATION BAR (Desktop & Mobile)                  -->
+  <!-- ============================================================== -->
+  <header class="fixed top-0 left-0 right-0 z-50 px-4 sm:px-6 lg:px-8 pt-3 sm:pt-4 transition-all duration-300">
+    <div class="max-w-6xl mx-auto">
+      <nav class="nav-pill bg-white rounded-full py-4 sm:py-5 px-5 sm:px-8 min-h-[74px] sm:min-h-[82px] flex items-center justify-between border border-slate-100 shadow-xl shadow-slate-900/8" aria-label="Navigasi Utama">
+        
+        <!-- Logo -->
+        <a href="index.html#beranda" class="flex items-center gap-2 shrink-0 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-600 rounded-lg">
+          <picture>
+            <source srcset="/assets/images/logo/gmi-logo.webp" type="image/webp">
+            <img src="/assets/images/logo/gmi-logo.png" alt="Grup Mitra Indonesia Logo" class="h-11 sm:h-[53px] w-auto object-contain transition-transform group-hover:scale-105" width="176" height="53" loading="eager">
+          </picture>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <div class="hidden md:flex items-center gap-7 lg:gap-9 text-[15px] sm:text-base font-semibold text-slate-700">
+          <a href="index.html" class="nav-link-cool text-slate-700 font-semibold">Beranda</a>
+          <a href="tentang-kami.html" class="nav-link-cool text-slate-700 font-semibold">Tentang Kami</a>
+          
+          <!-- Dropdown Layanan Kami (Active) -->
+          <div class="relative group py-1">
+            <button type="button" class="nav-link-cool text-[#061e43] font-bold flex items-center gap-1.5 focus:outline-none cursor-pointer" aria-expanded="false" aria-haspopup="true">
+              <span>Layanan Kami</span>
+              <svg class="w-3.5 h-3.5 text-slate-400 transition-transform duration-200 group-hover:rotate-180 group-focus-within:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            
+            <!-- Dropdown Card -->
+            <div class="absolute top-full left-1/2 -translate-x-1/2 pt-2 opacity-0 translate-y-2 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto group-focus-within:opacity-100 group-focus-within:translate-y-0 group-focus-within:pointer-events-auto transition-all duration-200 z-50">
+              <div class="w-64 bg-white rounded-2xl shadow-xl shadow-slate-900/10 border border-slate-100 p-2 overflow-hidden ring-1 ring-slate-900/5">
+                <a href="layanan-kami.html" class="block px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-700 hover:text-[#c52227] hover:bg-slate-50 transition-colors">
+                  Manpower Outsourcing
+                </a>
+                <a href="layanan-keamanan.html" class="block px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-700 hover:text-[#c52227] hover:bg-slate-50 transition-colors">
+                  Layanan Keamanan
+                </a>
+                <a href="investigasi.html" class="block px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-700 hover:text-[#c52227] hover:bg-slate-50 transition-colors">
+                  Investigation Service
+                </a>
+                <a href="audit-pemulihan-piutang.html" class="block px-4 py-2.5 rounded-xl text-sm font-bold text-[#c52227] bg-red-50/70 border border-red-100 transition-colors">
+                  Audit &amp; Pemulihan Piutang
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <a href="karir.html" class="nav-link-cool text-slate-700 font-semibold">Karir</a>
+          
+          <!-- Backend Gateway Dropdown / Pill -->
+          <button type="button" data-open-portal="client" class="btn-wiggle-hover text-xs sm:text-sm font-semibold px-3.5 py-1.5 rounded-full bg-slate-100 text-slate-700 hover:bg-[#061e43] hover:text-white border border-slate-200 transition-all flex items-center gap-2 shadow-xs" title="Portal Klien & Admin Backend">
+            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+            Portal & Admin
+          </button>
+        </div>
+
+        <!-- Right Side: Hubungi Kami Button & Mobile Hamburger -->
+        <div class="flex items-center gap-3">
+          <button type="button" data-open-consultation class="btn-wiggle-hover hidden sm:inline-flex items-center justify-center px-6 sm:px-7 py-2.5 sm:py-3 text-sm sm:text-[15px] font-bold text-white bg-[#c52227] hover:bg-[#a7181d] rounded-full shadow-md hover:shadow-lg transition-all duration-200">
+            Hubungi kami
+          </button>
+
+          <!-- Mobile Hamburger Toggle -->
+          <button id="drawer-open-btn" type="button" aria-label="Buka Menu Navigasi" aria-expanded="false" aria-controls="mobile-drawer" class="md:hidden inline-flex items-center justify-center p-2.5 rounded-full text-slate-700 hover:text-red-600 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-red-600">
+            <svg class="w-6 h-6 sm:w-7 sm:h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div id="mobile-drawer" class="fixed inset-0 z-50 pointer-events-none md:hidden" aria-hidden="true">
+    <div id="drawer-backdrop" class="absolute inset-0 bg-slate-900/60 backdrop-blur-xs opacity-0 transition-opacity duration-300 pointer-events-auto"></div>
+    <div id="drawer-panel" class="absolute top-0 right-0 bottom-0 w-full max-w-xs bg-white shadow-2xl p-6 flex flex-col justify-between translate-x-full transition-transform duration-300 ease-out pointer-events-auto overflow-y-auto">
+      <div>
+        <div class="flex items-center justify-between pb-6 border-b border-slate-100">
+          <img src="/assets/images/logo/gmi-logo.png" alt="Grup Mitra Indonesia Logo" class="h-9 w-auto" width="120" height="36">
+          <button id="drawer-close-btn" type="button" aria-label="Tutup Menu Navigasi" class="p-2 rounded-full text-slate-500 hover:bg-slate-100">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+        <nav class="mt-6 flex flex-col space-y-3 font-semibold text-slate-700 text-base">
+          <a href="index.html" class="px-3 py-2 rounded-xl hover:bg-slate-50">Beranda</a>
+          <a href="tentang-kami.html" class="px-3 py-2 rounded-xl hover:bg-slate-50">Tentang Kami</a>
+          <div class="space-y-1 pl-3 border-l-2 border-red-200">
+            <span class="text-xs uppercase font-extrabold tracking-wider text-slate-400 block px-2 py-1">Layanan Kami</span>
+            <a href="layanan-kami.html" class="block px-2 py-1.5 rounded-lg text-sm text-slate-600 hover:text-red-600">Manpower Outsourcing</a>
+            <a href="layanan-keamanan.html" class="block px-2 py-1.5 rounded-lg text-sm text-slate-600 hover:text-red-600">Layanan Keamanan</a>
+            <a href="investigasi.html" class="block px-2 py-1.5 rounded-lg text-sm text-slate-600 hover:text-red-600">Investigation Service</a>
+            <a href="audit-pemulihan-piutang.html" class="block px-2 py-1.5 rounded-lg text-sm font-bold text-red-600 bg-red-50">Audit &amp; Pemulihan Piutang</a>
+          </div>
+          <a href="karir.html" class="px-3 py-2 rounded-xl hover:bg-slate-50">Karir</a>
+          <button type="button" data-open-portal="client" class="text-left px-3 py-2 rounded-xl hover:bg-slate-50 flex items-center justify-between">
+            <span>Portal Klien</span>
+            <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+          </button>
+        </nav>
+      </div>
+      <div class="pt-6 border-t border-slate-100">
+        <button type="button" data-open-consultation class="w-full py-3.5 rounded-full text-center font-bold text-white bg-[#c52227] hover:bg-[#a7181d] shadow-md">
+          Hubungi kami
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================== -->
+  <!-- MAIN CONTENT                                                   -->
+  <!-- ============================================================== -->
+  <main>
+
+    <!-- ============================================================ -->
+    <!-- 2. HERO SECTION: AUDIT INVESTIGASI & PEMULIHAN PIUTANG       -->
+    <!-- (Tinggi & Format Identik dengan Hero Layanan Keamanan)         -->
+    <!-- ============================================================ -->
+    <section class="relative min-h-[580px] sm:min-h-[640px] lg:min-h-[680px] flex items-center pt-28 sm:pt-32 pb-16 sm:pb-20 overflow-hidden">
+      <!-- Background Image with Dark Navy Gradient Overlay -->
+      <div class="absolute inset-0 z-0">
+        <picture class="w-full h-full block">
+          <source srcset="/assets/images/services/audit-hero-bg.webp" type="image/webp">
+          <img src="/assets/images/services/audit-hero-bg.jpg" alt="Audit Investigasi & Solusi Pemulihan Piutang Bisnis PT Grup Mitra Indonesia" class="w-full h-full object-cover object-center" width="1920" height="1080" loading="eager" fetchpriority="high">
+        </picture>
+        <div class="absolute inset-0 bg-gradient-to-r from-[#041634]/98 via-[#061e43]/92 to-[#0a2757]/80"></div>
+      </div>
+
+      <!-- Hero Content -->
+      <div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full text-white">
+        <div class="max-w-4xl">
+          
+          <!-- Category Pill -->
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/15 text-xs font-bold tracking-wider uppercase mb-5 text-red-200">
+            <span class="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
+            GMI Financial Risk &amp; Recovery &bull; Solusi Terpadu Korporasi
+          </div>
+
+          <!-- Main Title (Dipaksa 2 Baris) -->
+          <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-[40px] xl:text-[42px] font-black text-white leading-tight tracking-tight mb-4 drop-shadow-sm">
+            Optimalisasi Keuangan Bisnis <br class="hidden sm:inline">melalui Audit &amp; Pemulihan Piutang
+          </h1>
+
+          <!-- Subtitle (Dipaksa 2 Baris) -->
+          <p class="text-sm sm:text-base lg:text-[17px] font-medium text-blue-100 mb-5 leading-relaxed max-w-3xl">
+            Solusi terpadu audit investigasi forensik dan pemulihan piutang komersial <br class="hidden md:inline">untuk memitigasi kerugian finansial serta memastikan stabilitas arus kas perusahaan Anda.
+          </p>
+
+          <!-- Narrative Body (Dipaksa 3 Baris) -->
+          <p class="text-xs sm:text-sm lg:text-[13.5px] text-slate-300 leading-normal font-normal mb-5 sm:mb-6 max-w-3xl">
+            Melalui pendekatan satu pintu yang taat hukum, objektif, dan terukur, PT Grup Mitra Indonesia menghadirkan <br class="hidden lg:inline">pemeriksaan menyeluruh terhadap potensi penyelewengan, evaluasi risiko piutang macet, serta strategi penagihan <br class="hidden lg:inline">profesional demi melindungi integritas aset dan keberlanjutan bisnis jangka panjang.
+          </p>
+
+          <!-- Primary CTA Buttons -->
+          <div class="flex flex-wrap items-center gap-4">
+            <button type="button" data-open-consultation class="inline-flex items-center gap-3 px-8 py-3.5 sm:py-4 text-sm sm:text-base font-bold text-white bg-[#c52227] hover:bg-[#a7181d] rounded-full shadow-lg hover:shadow-xl transition-all duration-200 group">
+              <span>Konsultasi Solusi Keuangan</span>
+              <svg class="w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </button>
+            <a href="#dua-pilar-solusi" class="inline-flex items-center gap-2 px-6 py-3.5 text-sm sm:text-base font-semibold text-white/90 hover:text-white bg-white/10 hover:bg-white/20 rounded-full border border-white/20 transition-all">
+              <span>Pelajari 2 Pilar Solusi</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </a>
+          </div>
+
+          <!-- Micro Trust Marks -->
+          <div class="flex flex-wrap items-center gap-x-6 gap-y-2 text-xs text-slate-300 pt-6 border-t border-white/10 mt-6">
+            <span class="inline-flex items-center gap-2">
+              <svg class="w-4 h-4 text-emerald-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+              Pendekatan Satu Pintu Taat Hukum
+            </span>
+            <span class="inline-flex items-center gap-2">
+              <svg class="w-4 h-4 text-emerald-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+              Audit Forensik Bersertifikasi (CCI)
+            </span>
+            <span class="inline-flex items-center gap-2">
+              <svg class="w-4 h-4 text-emerald-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+              Kerahasiaan Mutlak (Strict NDA)
+            </span>
+            <span class="inline-flex items-center gap-2">
+              <svg class="w-4 h-4 text-emerald-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+              Mitigasi Risiko &amp; Arus Kas Sehat
+            </span>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- 3. SECTION: URGENSI & TANTANGAN KEUANGAN PERUSAHAAN          -->
+    <!-- ============================================================ -->
+    <section class="py-20 sm:py-24 bg-white border-b border-slate-200/80">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-red-100 text-[#c52227] text-xs font-bold tracking-wider uppercase mb-3">
+            Tantangan Nyata Finansial Korporasi
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-[#061e43] tracking-tight leading-tight mb-4">
+            Mengapa Penunggakan Piutang &amp; Risiko Fraud Merusak Stabilitas Bisnis?
+          </h2>
+          <p class="text-base text-slate-600 leading-relaxed font-normal">
+            Dalam lanskap bisnis modern, pertumbuhan omzet tidak akan berarti bila arus kas tercekik oleh piutang tak tertagih atau kebocoran dana internal yang luput dari deteksi sistem akuntansi konvensional.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          
+          <!-- Hazard Card 1 -->
+          <div class="bg-slate-50 rounded-2xl p-8 border border-slate-200/80 hover:border-red-200 hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+            <div>
+              <div class="w-14 h-14 rounded-2xl bg-red-100 text-[#c52227] flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-[#c52227] group-hover:text-white transition-all duration-300">
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              </div>
+              <h3 class="text-xl font-bold text-[#061e43] mb-3">Piutang Menumpuk &amp; Risiko Bad Debt</h3>
+              <p class="text-sm text-slate-600 leading-relaxed">
+                Penunggakan piutang jangka panjang (>90 hingga >180 hari) mengikis modal kerja, menghambat pembayaran ke vendor krusial, dan berisiko menjadi kerugian permanen akibat debitur yang pailit atau menghilang.
+              </p>
+            </div>
+            <div class="pt-6 border-t border-slate-200/80 mt-6 text-xs text-red-600 font-semibold flex items-center gap-1.5">
+              <span>Solusi: Pemulihan Piutang Terstruktur</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            </div>
+          </div>
+
+          <!-- Hazard Card 2 -->
+          <div class="bg-slate-50 rounded-2xl p-8 border border-slate-200/80 hover:border-red-200 hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+            <div>
+              <div class="w-14 h-14 rounded-2xl bg-blue-100 text-[#061e43] flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-[#061e43] group-hover:text-white transition-all duration-300">
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+              </div>
+              <h3 class="text-xl font-bold text-[#061e43] mb-3">Penyimpangan &amp; Fraud Internal</h3>
+              <p class="text-sm text-slate-600 leading-relaxed">
+                Manipulasi laporan keuangan, mark-up tagihan fiktif, kickback pengadaan, hingga penggelapan aset yang dilakukan secara sistematis kerap luput dari audit berkala reguler tanpa pendekatan audit investigasi forensik.
+              </p>
+            </div>
+            <div class="pt-6 border-t border-slate-200/80 mt-6 text-xs text-[#061e43] font-semibold flex items-center gap-1.5">
+              <span>Solusi: Audit Investigasi Forensik</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            </div>
+          </div>
+
+          <!-- Hazard Card 3 -->
+          <div class="bg-slate-50 rounded-2xl p-8 border border-slate-200/80 hover:border-red-200 hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+            <div>
+              <div class="w-14 h-14 rounded-2xl bg-amber-100 text-amber-800 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-amber-600 group-hover:text-white transition-all duration-300">
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              </div>
+              <h3 class="text-xl font-bold text-[#061e43] mb-3">Penagihan Non-Etis &amp; Konflik Hukum</h3>
+              <p class="text-sm text-slate-600 leading-relaxed">
+                Menyerahkan piutang ke pihak penagih liar tanpa kerangka hukum berpotensi merusak reputasi brand Anda, melanggar regulasi perlindungan data, atau memicu tuntutan hukum balik dari debitur.
+              </p>
+            </div>
+            <div class="pt-6 border-t border-slate-200/80 mt-6 text-xs text-amber-700 font-semibold flex items-center gap-1.5">
+              <span>Solusi: Mediasi Hukum Satu Pintu GMI</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- 4. SECTION: DUA PILAR SOLUSI UTAMA GMI (Deep Dive)           -->
+    <!-- ============================================================ -->
+    <section id="dua-pilar-solusi" class="py-20 sm:py-28 bg-slate-50">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-20">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-blue-100 text-[#061e43] text-xs font-bold tracking-wider uppercase mb-3">
+            Integrasi Dua Keahlian Unggulan
+          </div>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-[#061e43] tracking-tight leading-tight mb-5">
+            Dua Pilar Solusi Terpadu: Audit Forensik &amp; Pemulihan Piutang
+          </h2>
+          <p class="text-base text-slate-600 leading-relaxed">
+            GMI memadukan ketajaman investigasi audit untuk mengungkap akar masalah finansial dengan diplomasi mediasi penagihan piutang untuk memulihkan arus kas bisnis Anda secara optimal.
+          </p>
+        </div>
+
+        <!-- PILAR 1: SOLUSI PEMULIHAN PIUTANG -->
+        <div class="bg-white rounded-3xl border border-slate-200/90 shadow-xl overflow-hidden mb-16">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-0">
+            
+            <!-- Image Side -->
+            <div class="lg:col-span-5 relative min-h-[300px] lg:min-h-full">
+              <picture class="w-full h-full block">
+                <source srcset="/assets/images/services/pemulihan-piutang.webp" type="image/webp">
+                <img src="/assets/images/services/pemulihan-piutang.jpg" alt="Solusi Pemulihan Piutang Komersial PT Grup Mitra Indonesia" class="w-full h-full object-cover object-center" width="800" height="600" loading="lazy">
+              </picture>
+              <div class="absolute inset-0 bg-gradient-to-t from-[#061e43]/80 via-transparent to-transparent lg:hidden"></div>
+              <div class="absolute bottom-4 left-4 right-4 lg:hidden text-white">
+                <span class="px-3 py-1 rounded-full bg-red-600 text-xs font-bold uppercase tracking-wider">Pilar 01</span>
+                <h3 class="text-xl font-bold mt-1">Program Pemulihan Piutang</h3>
+              </div>
+            </div>
+
+            <!-- Content Side -->
+            <div class="lg:col-span-7 p-8 sm:p-12 flex flex-col justify-between">
+              <div>
+                <div class="hidden lg:inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-red-100 text-[#c52227] text-xs font-bold uppercase tracking-wider mb-4">
+                  Pilar Solusi 01 &bull; Commercial Debt Recovery
+                </div>
+                <h3 class="hidden lg:block text-2xl sm:text-3xl font-extrabold text-[#061e43] mb-4">
+                  Program Pemulihan Piutang Bisnis (Receivables Recovery)
+                </h3>
+                <p class="text-sm sm:text-base text-slate-600 leading-relaxed mb-6 font-normal">
+                  Program pemulihan piutang kami memberikan solusi komprehensif untuk memastikan penyelesaian status piutang yang efektif antara kreditur dan debitur. Dengan pengalaman bertahun-tahun, tim profesional kami siap membantu perusahaan Anda menghindari penunggakan piutang jangka panjang yang dapat merugikan kreditur.
+                </p>
+
+                <!-- Key Capabilities List -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+                  <div class="flex items-start gap-3 p-3.5 rounded-xl bg-slate-50 border border-slate-100">
+                    <div class="w-6 h-6 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0 mt-0.5">
+                      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                    </div>
+                    <div>
+                      <h4 class="text-xs sm:text-sm font-bold text-[#061e43]">Pendekatan Satu Pintu</h4>
+                      <p class="text-xs text-slate-500 mt-0.5">Penyederhanaan proses penanganan tanpa menyita waktu dan energi manajemen internal Anda.</p>
+                    </div>
+                  </div>
+
+                  <div class="flex items-start gap-3 p-3.5 rounded-xl bg-slate-50 border border-slate-100">
+                    <div class="w-6 h-6 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0 mt-0.5">
+                      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                    </div>
+                    <div>
+                      <h4 class="text-xs sm:text-sm font-bold text-[#061e43]">Mediasi B2B Profesional</h4>
+                      <p class="text-xs text-slate-500 mt-0.5">Negosiasi persuasif yang beretika, menjaga hubungan bisnis, dan menyepakati restrukturisasi.</p>
+                    </div>
+                  </div>
+
+                  <div class="flex items-start gap-3 p-3.5 rounded-xl bg-slate-50 border border-slate-100">
+                    <div class="w-6 h-6 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0 mt-0.5">
+                      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                    </div>
+                    <div>
+                      <h4 class="text-xs sm:text-sm font-bold text-[#061e43]">Profil &amp; Asset Tracing</h4>
+                      <p class="text-xs text-slate-500 mt-0.5">Memetakan kondisi keuangan debitur dan aset jaminan untuk memastikan kepastian penyelesaian.</p>
+                    </div>
+                  </div>
+
+                  <div class="flex items-start gap-3 p-3.5 rounded-xl bg-slate-50 border border-slate-100">
+                    <div class="w-6 h-6 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0 mt-0.5">
+                      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                    </div>
+                    <div>
+                      <h4 class="text-xs sm:text-sm font-bold text-[#061e43]">Pendampingan Somasi Legal</h4>
+                      <p class="text-xs text-slate-500 mt-0.5">Langkah litigasi dan penyusunan instrumen somasi formal bila jalur musyawarah mengalami kebuntuan.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="pt-6 border-t border-slate-100 flex flex-wrap items-center justify-between gap-4">
+                <span class="text-xs text-slate-500 font-medium">Fokus: Penyelesaian cepat, bermartabat, dan kepastian pengembalian hak kreditur.</span>
+                <button type="button" data-open-consultation class="inline-flex items-center gap-2 text-sm font-bold text-[#c52227] hover:text-[#061e43] transition-colors group">
+                  <span>Konsultasikan Status Piutang</span>
+                  <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- PILAR 2: AUDIT INVESTIGASI FORENSIK -->
+        <div class="bg-white rounded-3xl border border-slate-200/90 shadow-xl overflow-hidden">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-0">
+            
+            <!-- Content Side -->
+            <div class="lg:col-span-7 p-8 sm:p-12 flex flex-col justify-between order-2 lg:order-1">
+              <div>
+                <div class="hidden lg:inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-blue-100 text-[#061e43] text-xs font-bold uppercase tracking-wider mb-4">
+                  Pilar Solusi 02 &bull; Investigation &amp; Forensic Audit
+                </div>
+                <h3 class="hidden lg:block text-2xl sm:text-3xl font-extrabold text-[#061e43] mb-4">
+                  Audit Investigasi &amp; Pemeriksaan Akurat (Investigation Audit)
+                </h3>
+                <p class="text-sm sm:text-base text-slate-600 leading-relaxed mb-6 font-normal">
+                  Investigation Audit membawa keakuratan dan keamanan dalam setiap aspek pemeriksaan bisnis Anda. Tim ahli kami menawarkan solusi audit investigasi yang komprehensif, mencakup analisis forensik, evaluasi risiko mendalam, dan rekomendasi tindakan korektif untuk memastikan integritas tata kelola perusahaan.
+                </p>
+
+                <!-- Key Capabilities List -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+                  <div class="flex items-start gap-3 p-3.5 rounded-xl bg-slate-50 border border-slate-100">
+                    <div class="w-6 h-6 rounded-full bg-blue-100 text-[#061e43] flex items-center justify-center shrink-0 mt-0.5">
+                      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                    </div>
+                    <div>
+                      <h4 class="text-xs sm:text-sm font-bold text-[#061e43]">Deteksi Dini Kecurangan</h4>
+                      <p class="text-xs text-slate-500 mt-0.5">Identifikasi penyimpangan transaksi, data ganda, dan manipulasi pembukuan sebelum kerugian membesar.</p>
+                    </div>
+                  </div>
+
+                  <div class="flex items-start gap-3 p-3.5 rounded-xl bg-slate-50 border border-slate-100">
+                    <div class="w-6 h-6 rounded-full bg-blue-100 text-[#061e43] flex items-center justify-center shrink-0 mt-0.5">
+                      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                    </div>
+                    <div>
+                      <h4 class="text-xs sm:text-sm font-bold text-[#061e43]">Auditor Bersertifikasi CCI</h4>
+                      <p class="text-xs text-slate-500 mt-0.5">Dilakukan oleh Certified Corporate Investigator berlisensi dengan kepatuhan kode etik investigasi ketat.</p>
+                    </div>
+                  </div>
+
+                  <div class="flex items-start gap-3 p-3.5 rounded-xl bg-slate-50 border border-slate-100">
+                    <div class="w-6 h-6 rounded-full bg-blue-100 text-[#061e43] flex items-center justify-center shrink-0 mt-0.5">
+                      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                    </div>
+                    <div>
+                      <h4 class="text-xs sm:text-sm font-bold text-[#061e43]">Bukti Litigasi Sah</h4>
+                      <p class="text-xs text-slate-500 mt-0.5">Penyusunan berkas temuan audit forensik yang memenuhi syarat pembuktian hukum resmi.</p>
+                    </div>
+                  </div>
+
+                  <div class="flex items-start gap-3 p-3.5 rounded-xl bg-slate-50 border border-slate-100">
+                    <div class="w-6 h-6 rounded-full bg-blue-100 text-[#061e43] flex items-center justify-center shrink-0 mt-0.5">
+                      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                    </div>
+                    <div>
+                      <h4 class="text-xs sm:text-sm font-bold text-[#061e43]">Penguatan SOP Internal</h4>
+                      <p class="text-xs text-slate-500 mt-0.5">Rekomendasi perbaikan tata kelola dan sistem verifikasi untuk menutup celah kebocoran masa depan.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="pt-6 border-t border-slate-100 flex flex-wrap items-center justify-between gap-4">
+                <span class="text-xs text-slate-500 font-medium">Fokus: Keakuratan fakta, pencegahan fraud, dan proteksi integritas bisnis.</span>
+                <button type="button" data-open-consultation class="inline-flex items-center gap-2 text-sm font-bold text-[#061e43] hover:text-[#c52227] transition-colors group">
+                  <span>Konsultasikan Kebutuhan Audit</span>
+                  <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                </button>
+              </div>
+            </div>
+
+            <!-- Image Side -->
+            <div class="lg:col-span-5 relative min-h-[300px] lg:min-h-full order-1 lg:order-2">
+              <picture class="w-full h-full block">
+                <source srcset="/assets/images/services/investigation-audit.webp" type="image/webp">
+                <img src="/assets/images/services/investigation-audit.jpg" alt="Pemeriksaan Audit Investigasi Forensik PT Grup Mitra Indonesia" class="w-full h-full object-cover object-center" width="800" height="600" loading="lazy">
+              </picture>
+              <div class="absolute inset-0 bg-gradient-to-t from-[#061e43]/80 via-transparent to-transparent lg:hidden"></div>
+              <div class="absolute bottom-4 left-4 right-4 lg:hidden text-white">
+                <span class="px-3 py-1 rounded-full bg-[#061e43] text-xs font-bold uppercase tracking-wider">Pilar 02</span>
+                <h3 class="text-xl font-bold mt-1">Audit Investigasi</h3>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- 5. SECTION: METODOLOGI & ALUR KERJA 4 TAHAP GMI              -->
+    <!-- ============================================================ -->
+    <section class="py-20 sm:py-24 bg-white border-b border-slate-200/80">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-slate-100 text-slate-700 text-xs font-bold tracking-wider uppercase mb-3">
+            Alur Kerja Terstruktur &amp; Teruji
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-[#061e43] tracking-tight leading-tight mb-4">
+            Metodologi 4 Tahap Menuju Kepastian Finansial
+          </h2>
+          <p class="text-base text-slate-600 leading-relaxed font-normal">
+            Kami menerapkan tahapan sistematis yang menjamin objektivitas, kepatuhan hukum, dan efisiensi waktu penyelesaian.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+          <!-- Step 1 -->
+          <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 relative group hover:bg-[#061e43] hover:text-white transition-all duration-300">
+            <div class="text-4xl font-black text-slate-200 group-hover:text-white/20 mb-4 transition-colors">01</div>
+            <h3 class="text-lg font-bold text-[#061e43] group-hover:text-white mb-2 transition-colors">Forensic Screening</h3>
+            <p class="text-xs text-slate-600 group-hover:text-slate-300 leading-relaxed transition-colors">
+              Penandatanganan NDA kerahasiaan, penelaahan dokumen faktur, kontrak kerjasama, bukti transaksi, dan identifikasi indikasi awal sengketa atau penyelewengan.
+            </p>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 relative group hover:bg-[#061e43] hover:text-white transition-all duration-300">
+            <div class="text-4xl font-black text-slate-200 group-hover:text-white/20 mb-4 transition-colors">02</div>
+            <h3 class="text-lg font-bold text-[#061e43] group-hover:text-white mb-2 transition-colors">Deep Investigation</h3>
+            <p class="text-xs text-slate-600 group-hover:text-slate-300 leading-relaxed transition-colors">
+              Pemeriksaan pembukuan mendalam, analisis jejak transaksi perbankan, evaluasi profil likuiditas debitur, dan pelacakan aset operasional terkait.
+            </p>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 relative group hover:bg-[#061e43] hover:text-white transition-all duration-300">
+            <div class="text-4xl font-black text-slate-200 group-hover:text-white/20 mb-4 transition-colors">03</div>
+            <h3 class="text-lg font-bold text-[#061e43] group-hover:text-white mb-2 transition-colors">Mediation &amp; Audit Report</h3>
+            <p class="text-xs text-slate-600 group-hover:text-slate-300 leading-relaxed transition-colors">
+              Penyampaian laporan temuan audit forensik komprehensif, atau perundingan mediasi restrukturisasi jadwal pembayaran piutang dengan debitur.
+            </p>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 relative group hover:bg-[#061e43] hover:text-white transition-all duration-300">
+            <div class="text-4xl font-black text-slate-200 group-hover:text-white/20 mb-4 transition-colors">04</div>
+            <h3 class="text-lg font-bold text-[#061e43] group-hover:text-white mb-2 transition-colors">Recovery &amp; Prevention</h3>
+            <p class="text-xs text-slate-600 group-hover:text-slate-300 leading-relaxed transition-colors">
+              Realisasi pencairan dana piutang ke rekening kreditur dan formulasi rekomendasi SOP mitigasi risiko agar kebocoran serupa tidak terulang.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- 6. SECTION: FAQ (Pertanyaan yang Sering Diajukan)            -->
+    <!-- ============================================================ -->
+    <section class="py-20 sm:py-24 bg-slate-50 border-b border-slate-200/80">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center mb-14">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-slate-200 text-slate-700 text-xs font-bold uppercase tracking-wider mb-3">
+            Pertanyaan Umum (FAQ)
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-[#061e43] tracking-tight leading-tight">
+            Informasi Seputar Audit &amp; Pemulihan Piutang
+          </h2>
+        </div>
+
+        <div class="space-y-4">
+          
+          <!-- FAQ 1 -->
+          <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-xs">
+            <h3 class="text-base sm:text-lg font-bold text-[#061e43] mb-2 flex items-center gap-2">
+              <span class="w-6 h-6 rounded-full bg-red-100 text-red-600 flex items-center justify-center text-xs shrink-0 font-bold">1</span>
+              Bagaimana GMI memastikan pemulihan piutang tidak merusak nama baik perusahaan kami?
+            </h3>
+            <p class="text-sm text-slate-600 leading-relaxed pl-8">
+              GMI menerapkan standar penagihan korporat profesional berbasis pendekatan persuasif, mediasi bisnis, dan kerangka hukum legal resmi. Kami tidak menggunakan intimidasi fisik atau taktik liar. Pendekatan satu pintu kami memposisikan GMI sebagai mediator netral yang mencari solusi restrukturisasi realistis sehingga reputasi dan hubungan bisnis Anda tetap terlindungi.
+            </p>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-xs">
+            <h3 class="text-base sm:text-lg font-bold text-[#061e43] mb-2 flex items-center gap-2">
+              <span class="w-6 h-6 rounded-full bg-red-100 text-red-600 flex items-center justify-center text-xs shrink-0 font-bold">2</span>
+              Kapan sebuah perusahaan memerlukan Audit Investigasi?
+            </h3>
+            <p class="text-sm text-slate-600 leading-relaxed pl-8">
+              Audit investigasi diperlukan saat muncul kejanggalan dalam laporan keuangan, selisih persediaan fisik yang signifikan, transaksi mencurigakan dengan vendor tertentu, pengaduan whistleblower dugaan kecurangan, atau sebelum mengambil langkah hukum atas dugaan penggelapan aset oleh oknum manajemen.
+            </p>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-xs">
+            <h3 class="text-base sm:text-lg font-bold text-[#061e43] mb-2 flex items-center gap-2">
+              <span class="w-6 h-6 rounded-full bg-red-100 text-red-600 flex items-center justify-center text-xs shrink-0 font-bold">3</span>
+              Apakah bukti hasil temuan Audit Investigasi GMI dapat dijadikan bukti hukum?
+            </h3>
+            <p class="text-sm text-slate-600 leading-relaxed pl-8">
+              Ya. Tim auditor dan penyelidik GMI terdiri dari tenaga ahli bersertifikasi internasional (<em>Certified Corporate Investigator / CCI</em>) yang memahami kaidah pembuktian hukum (<em>chain of custody</em>). Laporan disusun secara kronologis, didukung dokumen valid, dan siap diserahkan kepada penasihat hukum perusahaan maupun aparat penegak hukum.
+            </p>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-xs">
+            <h3 class="text-base sm:text-lg font-bold text-[#061e43] mb-2 flex items-center gap-2">
+              <span class="w-6 h-6 rounded-full bg-red-100 text-red-600 flex items-center justify-center text-xs shrink-0 font-bold">4</span>
+              Bagaimana perlindungan kerahasiaan data keuangan klien dijamin?
+            </h3>
+            <p class="text-sm text-slate-600 leading-relaxed pl-8">
+              Kerahasiaan adalah prioritas mutlak. Seluruh proses diawali dengan penandatanganan Perjanjian Kerahasiaan (<em>Non-Disclosure Agreement / NDA</em>) yang mengikat secara hukum. Data keuangan, identitas pihak terlibat, dan rekaman audit disimpan di sistem tertutup terenkripsi dan hanya diakses oleh tim khusus yang ditugaskan.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- 7. SECTION: CTA BANNER                                       -->
+    <!-- ============================================================ -->
+    <section class="py-16 sm:py-20 bg-gradient-to-r from-[#041634] via-[#061e43] to-[#0a2757] text-white text-center relative overflow-hidden">
+      <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:16px_16px]"></div>
+      <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <span class="px-3.5 py-1 rounded-full bg-red-600/30 border border-red-500/40 text-red-300 text-xs font-bold uppercase tracking-wider inline-block mb-4">
+          Konsultasi Rahasia &bull; Lindungi Arus Kas Perusahaan
+        </span>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black mb-6 tracking-tight">
+          Apakah Perusahaan Anda Menghadapi Masalah Piutang &amp; Risiko Fraud?
+        </h2>
+        <p class="text-base sm:text-lg text-slate-300 font-normal leading-relaxed mb-8 max-w-2xl mx-auto">
+          Jangan biarkan penunggakan berlarut menggerus stabilitas bisnis Anda. Konsultasikan status piutang atau kebutuhan audit investigasi korporat bersama tim ahli GMI hari ini.
+        </p>
+        <div class="flex flex-wrap items-center justify-center gap-4">
+          <button type="button" data-open-consultation class="btn-wiggle-hover inline-flex items-center gap-3 px-8 py-4 text-base font-bold text-white bg-[#c52227] hover:bg-[#a7181d] rounded-full shadow-xl hover:shadow-2xl transition-all duration-200">
+            <span>Konsultasi Bebas Biaya Awal</span>
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+          </button>
+          <a href="https://wa.me/62811140059?text=Halo%20GMI,%20saya%20ingin%20berkonsultasi%20mengenai%20Audit%20Investigasi%20dan%20Pemulihan%20Piutang." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2.5 px-7 py-4 text-base font-semibold text-white bg-white/10 hover:bg-white/20 rounded-full border border-white/20 transition-all">
+            <svg class="w-5 h-5 fill-current text-emerald-400" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+            <span>WhatsApp Tim Ahli GMI</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================== -->
+  <!-- 8. FOOTER LENGKAP GMI                                          -->
+  <!-- ============================================================== -->
+  <footer class="bg-[#022f66] text-white pt-16 pb-12 border-t border-[#043b80]">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12 pb-14 border-b border-slate-700/60">
+        
+        <!-- Col 1: Brand & Desc -->
+        <div class="space-y-4">
+          <a href="index.html" class="inline-block mb-1">
+            <picture>
+              <source srcset="/assets/images/logo/gmi-logo-footer.svg" type="image/svg+xml">
+              <source srcset="/assets/images/logo/gmi-logo-footer.webp" type="image/webp">
+              <img src="/assets/images/logo/gmi-logo-footer.png" alt="Grup Mitra Indonesia Footer Logo" class="h-20 w-auto object-contain" width="280" height="80" loading="lazy">
+            </picture>
+          </a>
+          <p class="text-sm text-slate-300 leading-relaxed font-normal mb-5">
+            GMI adalah mitra layanan profesional yang berkomitmen menyediakan solusi terintegrasi untuk mendukung kebutuhan operasional, keamanan, konsultasi, dan investigasi perusahaan.
+          </p>
+
+          <!-- Social / Cert Mini Badges -->
+          <div class="flex items-center gap-2 text-xs text-slate-400 pt-1">
+            <span class="inline-flex items-center gap-1 bg-white/10 px-2.5 py-1 rounded-md">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> ISO 9001:2015
+            </span>
+            <span class="inline-flex items-center gap-1 bg-white/10 px-2.5 py-1 rounded-md">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> ISO 45001:2018
+            </span>
+          </div>
+
+          <div class="text-xs text-slate-400 space-y-1">
+            <p>&copy; 2026 PT Grup Mitra Indonesia.</p>
+            <p>Seluruh hak cipta dilindungi undang-undang.</p>
+          </div>
+        </div>
+
+        <!-- Col 2: Navigation Links -->
+        <div>
+          <span class="text-xs font-bold uppercase tracking-wider text-slate-400 block mb-4">Navigasi Utama</span>
+          <ul class="space-y-2.5 text-sm text-slate-300">
+            <li><a href="index.html" class="hover:text-red-400 transition-colors">Beranda</a></li>
+            <li><a href="tentang-kami.html" class="hover:text-red-400 transition-colors">Tentang Kami</a></li>
+            <li><a href="layanan-kami.html" class="hover:text-red-400 transition-colors">Manpower Outsourcing</a></li>
+            <li><a href="layanan-keamanan.html" class="hover:text-red-400 transition-colors">Layanan Keamanan</a></li>
+            <li><a href="investigasi.html" class="hover:text-red-400 transition-colors">Investigation Service</a></li>
+            <li><a href="audit-pemulihan-piutang.html" class="text-white font-bold transition-colors">Audit &amp; Pemulihan Piutang</a></li>
+            <li><a href="karir.html" class="hover:text-red-400 transition-colors">Karir &amp; Rekrutmen</a></li>
+            <li><a href="index.html#klien-kami" class="hover:text-red-400 transition-colors">Klien &amp; Mitra</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Layanan Kami -->
+        <div>
+          <span class="text-xs font-bold uppercase tracking-wider text-slate-400 block mb-4">Solusi &amp; Layanan</span>
+          <ul class="space-y-2.5 text-sm text-slate-300">
+            <li><a href="layanan-kami.html" class="text-left hover:text-red-400 transition-colors">Manpower Outsourcing</a></li>
+            <li><a href="layanan-keamanan.html" class="text-left hover:text-red-400 transition-colors">Layanan Keamanan</a></li>
+            <li><a href="investigasi.html" class="text-left hover:text-red-400 transition-colors">Investigation Service</a></li>
+            <li><a href="audit-pemulihan-piutang.html" class="text-left text-white font-bold hover:text-red-400 transition-colors">Audit &amp; Pemulihan Piutang</a></li>
+            <li><button type="button" data-service-key="cleaning" class="text-left hover:text-red-400 transition-colors">Cleaning &amp; Facility Service</button></li>
+            <li><button type="button" data-service-key="management" class="text-left hover:text-red-400 transition-colors">Manajemen Fasilitas</button></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Contact & Office -->
+        <div>
+          <span class="text-xs font-bold uppercase tracking-wider text-slate-400 block mb-4">Kantor Pusat GMI</span>
+          <address class="not-italic text-sm text-slate-300 space-y-2 leading-relaxed">
+            <p class="font-medium text-white">PT Grup Mitra Indonesia</p>
+            <p>Ruko Thematic Gading Serpong, Blok N No. 51</p>
+            <p>Jl. Boulevard Gading Serpong, Curug Sangereng, Kelapa Dua, Tangerang, Banten 15810</p>
+            <p class="pt-2 text-slate-400">
+              Tel: <a href="tel:02129000191" class="hover:text-white transition-colors">(021) 29000191</a><br>
+              Direct: <a href="tel:0811140059" class="hover:text-white transition-colors">0811-1400-59</a><br>
+              Email: <a href="mailto:bdv1@groupmitraindonesia.co.id" class="hover:text-white transition-colors">bdv1@groupmitraindonesia.co.id</a>
+            </p>
+          </address>
+
+          <!-- Social Media Profiles Under Contact -->
+          <div class="pt-5 mt-4 border-t border-slate-700/60">
+            <span class="text-[11px] font-bold uppercase tracking-wider text-slate-400 block mb-2.5">Media Sosial Resmi:</span>
+            <div class="flex items-center gap-3">
+              <!-- LinkedIn -->
+              <a href="https://www.linkedin.com/company/pt-grup-mitra-indonesia/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Group Mitra Indonesia" title="LinkedIn: PT Grup Mitra Indonesia" class="w-9 h-9 rounded-xl bg-white/10 hover:bg-[#0077b5] text-slate-300 hover:text-white border border-white/10 hover:border-[#0077b5] flex items-center justify-center transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg shadow-black/20 group">
+                <svg class="w-4 h-4 fill-current transition-transform group-hover:scale-110" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                </svg>
+              </a>
+
+              <!-- Facebook -->
+              <a href="https://www.facebook.com/groupmitraindonesia/" target="_blank" rel="noopener noreferrer" aria-label="Facebook Group Mitra Indonesia" title="Facebook: Group Mitra Indonesia" class="w-9 h-9 rounded-xl bg-white/10 hover:bg-[#1877f2] text-slate-300 hover:text-white border border-white/10 hover:border-[#1877f2] flex items-center justify-center transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg shadow-black/20 group">
+                <svg class="w-4 h-4 fill-current transition-transform group-hover:scale-110" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                </svg>
+              </a>
+
+              <!-- Instagram -->
+              <a href="https://www.instagram.com/groupmitraindonesia/" target="_blank" rel="noopener noreferrer" aria-label="Instagram Group Mitra Indonesia" title="Instagram: @groupmitraindonesia" class="w-9 h-9 rounded-xl bg-white/10 hover:bg-gradient-to-tr hover:from-[#f09433] hover:via-[#dc2743] hover:to-[#bc1888] text-slate-300 hover:text-white border border-white/10 hover:border-pink-500 flex items-center justify-center transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg shadow-black/20 group">
+                <svg class="w-4 h-4 fill-current transition-transform group-hover:scale-110" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Disclaimer / Legal Notice -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
+        <p>Izin Operasional BUJP Resmi Mabes Polri &bull; Terdaftar di Disnaker RI</p>
+        <div class="flex items-center gap-6">
+          <a href="tentang-kami.html" class="hover:text-slate-200 transition-colors">Tentang Kami</a>
+          <a href="layanan-kami.html" class="hover:text-slate-200 transition-colors">Layanan Kami</a>
+          <a href="karir.html" class="hover:text-slate-200 transition-colors">Peluang Karir</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ============================================================== -->
+  <!-- FLOATING WHATSAPP BUTTON                                       -->
+  <!-- ============================================================== -->
+  <div class="fixed bottom-6 right-6 z-40">
+    <a href="https://wa.me/62811140059?text=Halo%20GMI,%20saya%20ingin%20berkonsultasi%20mengenai%20Audit%20Investigasi%20dan%20Pemulihan%20Piutang." 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       aria-label="Konsultasi WhatsApp GMI" 
+       title="Konsultasi WhatsApp 24 Jam: 0811-1400-59" 
+       class="w-14 h-14 bg-emerald-500 hover:bg-emerald-600 text-white rounded-full flex items-center justify-center shadow-xl shadow-emerald-950/30 hover:shadow-2xl hover:scale-105 active:scale-95 transition-all duration-300 group">
+      <svg class="w-7 h-7 fill-current transition-transform group-hover:scale-110" viewBox="0 0 24 24">
+        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+      </svg>
+    </a>
+  </div>
+
+  <!-- ============================================================== -->
+  <!-- MODAL: KONSULTASI INTERAKTIF                                   -->
+  <!-- ============================================================== -->
+  <div id="consultation-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-xs opacity-0 pointer-events-none transition-opacity duration-300" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl border border-slate-100 transform scale-95 transition-transform duration-300 relative max-h-[90vh] overflow-y-auto">
+      <button type="button" data-close-consultation aria-label="Tutup Formulir" class="absolute top-5 right-5 p-2 rounded-full text-slate-400 hover:text-slate-700 hover:bg-slate-100 transition-colors">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+
+      <div class="mb-6">
+        <span class="px-3 py-1 rounded-full bg-red-100 text-red-700 text-xs font-bold uppercase tracking-wider inline-block mb-2">Konsultasi Resmi &bull; Strict NDA</span>
+        <h3 id="modal-title" class="text-xl sm:text-2xl font-bold text-[#061e43]">Konsultasi Audit &amp; Pemulihan Piutang</h3>
+        <p class="text-xs sm:text-sm text-slate-500 mt-1">Sampaikan kebutuhan atau kendala finansial perusahaan Anda. Tim ahli GMI akan menghubungi dalam 1x24 jam dengan jaminan kerahasiaan penuh.</p>
+      </div>
+
+      <form class="space-y-4" data-contact-form>
+        <div>
+          <label class="block text-xs font-bold uppercase text-slate-600 mb-1">Nama Lengkap *</label>
+          <input type="text" name="name" required placeholder="Contoh: Bpk. Hendra Wijaya" class="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-red-600 focus:ring-1 focus:ring-red-600">
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold uppercase text-slate-600 mb-1">Nama Perusahaan *</label>
+          <input type="text" name="company" required placeholder="Contoh: PT Sumber Artha Mandiri" class="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-red-600 focus:ring-1 focus:ring-red-600">
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs font-bold uppercase text-slate-600 mb-1">Nomor WhatsApp *</label>
+            <input type="tel" name="phone" required placeholder="Contoh: 081234567890" class="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-red-600 focus:ring-1 focus:ring-red-600">
+          </div>
+          <div>
+            <label class="block text-xs font-bold uppercase text-slate-600 mb-1">Email Bisnis *</label>
+            <input type="email" name="email" required placeholder="nama@perusahaan.co.id" class="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-red-600 focus:ring-1 focus:ring-red-600">
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold uppercase text-slate-600 mb-1">Kategori Layanan *</label>
+          <select name="service" class="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-red-600 focus:ring-1 focus:ring-red-600 bg-white">
+            <option value="pemulihan-piutang">Solusi Pemulihan Piutang Bisnis</option>
+            <option value="audit-investigasi">Audit Investigasi &amp; Pemeriksaan Forensik</option>
+            <option value="gabungan-keduanya" selected>Integrasi Audit Forensik &amp; Pemulihan Piutang</option>
+            <option value="konsultasi-lainnya">Konsultasi Manajemen Risiko Keuangan</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold uppercase text-slate-600 mb-1">Ringkasan Masalah / Nilai Piutang (Opsional)</label>
+          <textarea name="message" rows="3" placeholder="Jelaskan secara singkat jenis piutang, estimasi lama tunggakan, atau dugaan fraud yang perlu diinvestigasi..." class="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-red-600 focus:ring-1 focus:ring-red-600"></textarea>
+        </div>
+
+        <div class="pt-2">
+          <button type="submit" class="w-full py-3.5 rounded-full font-bold text-white bg-[#c52227] hover:bg-[#a7181d] shadow-lg transition-colors">
+            Kirim Permohonan Konsultasi
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
