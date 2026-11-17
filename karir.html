@@ -26,7 +26,7 @@
         <a href="index.html#beranda" class="flex items-center gap-2 shrink-0 group">
           <picture>
             <source srcset="/assets/images/logo/gmi-logo.webp" type="image/webp">
-            <img src="/assets/images/logo/gmi-logo.png" alt="Grup Mitra Indonesia Logo" class="h-10 sm:h-12 w-auto object-contain transition-transform group-hover:scale-105" width="160" height="48">
+            <img src="/assets/images/logo/gmi-logo.png" alt="Grup Mitra Indonesia Logo" class="h-11 sm:h-[53px] w-auto object-contain transition-transform group-hover:scale-105" width="176" height="53">
           </picture>
         </a>
 
@@ -268,23 +268,29 @@
       </section>
 
       <!-- 3. Multi-Step Application Form -->
-      <section id="apply-form-section" class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mb-20 transition-all duration-300">
+      <section id="apply-form-section" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mb-20 transition-all duration-300">
         <div class="bg-white rounded-3xl border border-slate-200 shadow-xl overflow-hidden">
           
           <!-- Header Banner Form -->
-          <div class="bg-gradient-to-r from-[#061e43] to-[#0c2f6d] text-white p-6 sm:p-8 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <div class="bg-gradient-to-r from-[#061e43] via-[#0a2554] to-[#0c2f6d] text-white p-6 sm:p-8 lg:p-10 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
             <div>
-              <span class="text-xs font-bold uppercase tracking-wider text-red-400">FORMULIR KANDIDAT OPERASIONAL</span>
-              <h2 class="text-2xl sm:text-3xl font-extrabold mt-1">Pengajuan Berkas Lamaran</h2>
-              <p class="text-xs sm:text-sm text-slate-300 mt-1">Silakan lengkapi data diri Anda secara bertahap dan akurat.</p>
+              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-red-600/20 text-red-300 border border-red-500/30 mb-2">
+                <span class="w-2 h-2 rounded-full bg-red-400 animate-pulse"></span>
+                FORMULIR KANDIDAT OPERASIONAL
+              </div>
+              <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight">Pengajuan Berkas Lamaran Resmi</h2>
+              <p class="text-xs sm:text-sm text-slate-300 mt-1 max-w-2xl leading-relaxed">
+                Lengkapi seluruh formulir secara bertahap mulai dari data diri kependudukan, kualifikasi, pengalaman kerja, kesiapan dinas, hingga berkas persyaratan.
+              </p>
             </div>
-            <div class="text-xs text-slate-300 bg-white/10 px-3 py-1.5 rounded-xl border border-white/10 self-start sm:self-auto">
-              <span class="text-red-400 font-bold">*</span> Wajib diisi
+            <div class="text-xs text-slate-300 bg-white/10 px-4 py-2.5 rounded-2xl border border-white/10 self-start sm:self-auto shrink-0 flex items-center gap-2">
+              <span class="text-red-400 font-extrabold text-base">*</span>
+              <span>Wajib diisi lengkap</span>
             </div>
           </div>
 
-          <!-- Step Tabs Navigation -->
-          <div class="flex overflow-x-auto border-b border-slate-200 px-4 sm:px-6 py-2 bg-slate-50/70 gap-2 scrollbar-none">
+          <!-- Step Tabs Navigation (8 Bagian Sesuai HRIS) -->
+          <div class="flex overflow-x-auto border-b border-slate-200 px-4 sm:px-6 py-2.5 bg-slate-50/80 gap-2 scrollbar-none">
             <button type="button" data-step-target="0" class="step-tab-btn flex items-center gap-2 py-2 px-3 text-xs font-bold transition-all shrink-0">
               <span class="step-circle w-6 h-6 rounded-full bg-[#061e43] text-white flex items-center justify-center text-xs font-bold">1</span>
               <span>Data Diri</span>
@@ -303,31 +309,50 @@
             </button>
             <button type="button" data-step-target="4" class="step-tab-btn flex items-center gap-2 py-2 px-3 text-xs font-bold transition-all shrink-0 text-slate-400">
               <span class="step-circle w-6 h-6 rounded-full bg-slate-200 text-slate-600 flex items-center justify-center text-xs font-bold">5</span>
-              <span>Berkas / Dokumen</span>
+              <span>Keluarga</span>
+            </button>
+            <button type="button" data-step-target="5" class="step-tab-btn flex items-center gap-2 py-2 px-3 text-xs font-bold transition-all shrink-0 text-slate-400">
+              <span class="step-circle w-6 h-6 rounded-full bg-slate-200 text-slate-600 flex items-center justify-center text-xs font-bold">6</span>
+              <span>Kesiapan Fisik</span>
+            </button>
+            <button type="button" data-step-target="6" class="step-tab-btn flex items-center gap-2 py-2 px-3 text-xs font-bold transition-all shrink-0 text-slate-400">
+              <span class="step-circle w-6 h-6 rounded-full bg-slate-200 text-slate-600 flex items-center justify-center text-xs font-bold">7</span>
+              <span>Info Lainnya</span>
+            </button>
+            <button type="button" data-step-target="7" class="step-tab-btn flex items-center gap-2 py-2 px-3 text-xs font-bold transition-all shrink-0 text-slate-400">
+              <span class="step-circle w-6 h-6 rounded-full bg-slate-200 text-slate-600 flex items-center justify-center text-xs font-bold">8</span>
+              <span>Dokumen &amp; Berkas</span>
             </button>
           </div>
 
           <!-- Progress Bar Line -->
-          <div class="h-1 w-full bg-slate-100 overflow-hidden">
-            <div id="step-progress-bar" class="h-full bg-gradient-to-r from-[#c52227] to-[#e63946] transition-all duration-300" style="width: 20%;"></div>
+          <div class="h-1.5 w-full bg-slate-100 overflow-hidden">
+            <div id="step-progress-bar" class="h-full bg-gradient-to-r from-[#c52227] to-[#e63946] transition-all duration-300" style="width: 12.5%;"></div>
           </div>
 
           <!-- Form Body -->
-          <div id="apply-form-body" class="p-6 sm:p-10">
+          <div id="apply-form-body" class="p-6 sm:p-10 lg:p-12">
             <form id="gmi-application-form" novalidate>
               
-              <!-- STEP 1: DATA DIRI & POSISI -->
-              <div class="form-step-pane space-y-6" data-step-index="0">
-                <div class="border-b border-slate-100 pb-3">
-                  <h3 class="text-lg font-bold text-[#061e43]">Langkah 1: Posisi &amp; Identitas Diri</h3>
-                  <p class="text-xs text-slate-500">Pilih jabatan yang diminati dan lengkapi data kependudukan resmi Anda.</p>
+              <!-- ========================================================== -->
+              <!-- STEP 1: DATA DIRI & POSISI PENEMPATAN                      -->
+              <!-- ========================================================== -->
+              <div class="form-step-pane space-y-8" data-step-index="0">
+                <div class="border-b border-slate-100 pb-4">
+                  <div class="flex items-center gap-2 mb-1">
+                    <span class="px-2.5 py-0.5 rounded-md text-[11px] font-extrabold uppercase bg-blue-50 text-[#061e43] border border-blue-200">Bagian 01</span>
+                    <h3 class="text-xl font-bold text-[#061e43]">Posisi &amp; Identitas Data Diri</h3>
+                  </div>
+                  <p class="text-xs text-slate-500">Pilih jabatan penugasan, area penempatan yang diminati, dan data kependudukan resmi Anda sesuai KTP &amp; KK.</p>
                 </div>
 
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <!-- DROPDOWN JABATAN OUTSOURCE LENGKAP -->
+                <!-- Posisi & Penempatan (Row 1) -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">Posisi Jabatan yang Dilamar *</label>
-                    <select id="form-position-select" name="position" required class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 font-semibold text-slate-800 bg-white text-sm focus:ring-2 focus:ring-red-600 focus:outline-none">
+                    <label class="block text-left text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+                      Posisi Jabatan yang Dilamar <span class="text-red-500 font-bold">*</span>
+                    </label>
+                    <select id="form-position-select" name="position" required class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 font-semibold text-slate-800 bg-white text-sm focus:ring-2 focus:ring-red-600 focus:outline-none transition-colors">
                       <optgroup label="Bidang Keamanan (Security Operations)">
                         <option value="Security Operations (Satpam / Anggota)" selected>Security Operations (Satpam / Anggota)</option>
                         <option value="Komandan Regu (Danru Security)">Komandan Regu (Danru Security)</option>
@@ -359,251 +384,1149 @@
                     </select>
                   </div>
                   <div>
-                    <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">Pilihan Area Penempatan *</label>
-                    <select name="preferred_location" required class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm bg-white focus:ring-2 focus:ring-red-600 focus:outline-none">
-                      <option value="">Pilih Kota / Area...</option>
+                    <label class="block text-left text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+                      Pilihan Area Penempatan Kerja <span class="text-red-500 font-bold">*</span>
+                    </label>
+                    <select name="preferred_location" required class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm bg-white focus:ring-2 focus:ring-red-600 focus:outline-none transition-colors">
+                      <option value="">Pilih Area / Kota Penempatan...</option>
                       <option>Tangerang &amp; Serpong (Banten)</option>
-                      <option>DKI Jakarta (Pusat / Barat / Selatan / Timur)</option>
+                      <option>DKI Jakarta (Pusat / Barat / Selatan / Timur / Utara)</option>
                       <option>Bekasi &amp; Cikarang (Jawa Barat)</option>
                       <option>Karawang &amp; Cikampek</option>
-                      <option>Surabaya &amp; Sekitarnya</option>
+                      <option>Surabaya &amp; Sekitarnya (Jawa Timur)</option>
+                      <option>Bersedia Ditempatkan di Seluruh Unit Operasional GMI</option>
                     </select>
                   </div>
                 </div>
 
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <!-- Identitas Personal (Row 2) -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                   <div>
-                    <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">Nama Lengkap (Sesuai KTP) *</label>
-                    <input type="text" name="full_name" required placeholder="Contoh: Muhammad Rizky" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-red-600 focus:outline-none">
+                    <label class="block text-left text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+                      Nama Lengkap (Sesuai KTP) <span class="text-red-500 font-bold">*</span>
+                    </label>
+                    <input type="text" name="full_name" required maxlength="150" autocomplete="name" placeholder="Contoh: Muhammad Rizky Pratama" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-red-600 focus:outline-none bg-white transition-colors">
                   </div>
                   <div>
-                    <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">Nomor Induk Kependudukan (NIK 16 Digit) *</label>
-                    <input type="text" name="nik" required pattern="[0-9]{16}" minlength="16" maxlength="16" placeholder="327xxxxxxxxxxxxx" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-red-600 focus:outline-none">
-                  </div>
-                </div>
-
-                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                  <div>
-                    <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">Tempat Lahir *</label>
-                    <input type="text" name="birth_place" required placeholder="Kota kelahiran" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-red-600 focus:outline-none">
+                    <label class="block text-left text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+                      Nama Panggilan
+                    </label>
+                    <input type="text" name="nickname" maxlength="80" placeholder="Contoh: Rizky" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-red-600 focus:outline-none bg-white transition-colors">
                   </div>
                   <div>
-                    <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">Tanggal Lahir *</label>
-                    <input type="date" name="birth_date" required class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm bg-white focus:ring-2 focus:ring-red-600 focus:outline-none">
-                  </div>
-                  <div>
-                    <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">Jenis Kelamin *</label>
-                    <select name="gender" required class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm bg-white focus:ring-2 focus:ring-red-600 focus:outline-none">
-                      <option value="">Pilih</option>
+                    <label class="block text-left text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+                      Jenis Kelamin <span class="text-red-500 font-bold">*</span>
+                    </label>
+                    <select name="gender" required class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm bg-white focus:ring-2 focus:ring-red-600 focus:outline-none transition-colors">
+                      <option value="">Pilih Jenis Kelamin</option>
                       <option>Laki-laki</option>
                       <option>Perempuan</option>
                     </select>
                   </div>
                 </div>
 
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <!-- Kelahiran & Agama (Row 3) -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                   <div>
-                    <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">Nomor WhatsApp Aktif *</label>
-                    <input type="tel" name="whatsapp" required placeholder="08xxxxxxxxxx" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-red-600 focus:outline-none">
+                    <label class="block text-left text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+                      Tempat Lahir <span class="text-red-500 font-bold">*</span>
+                    </label>
+                    <input type="text" name="birth_place" required maxlength="100" placeholder="Kota / Kabupaten Kelahiran" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-red-600 focus:outline-none bg-white transition-colors">
                   </div>
                   <div>
-                    <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">Alamat Email Aktif *</label>
-                    <input type="email" name="email" required placeholder="nama@email.com" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-red-600 focus:outline-none">
+                    <label class="block text-left text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+                      Tanggal Lahir <span class="text-red-500 font-bold">*</span>
+                    </label>
+                    <input type="date" name="birth_date" required class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm bg-white focus:ring-2 focus:ring-red-600 focus:outline-none transition-colors">
+                  </div>
+                  <div>
+                    <label class="block text-left text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+                      Agama
+                    </label>
+                    <select name="religion" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm bg-white focus:ring-2 focus:ring-red-600 focus:outline-none transition-colors">
+                      <option value="">Pilih Agama</option>
+                      <option>Islam</option>
+                      <option>Kristen</option>
+                      <option>Katolik</option>
+                      <option>Hindu</option>
+                      <option>Buddha</option>
+                      <option>Konghucu</option>
+                      <option>Lainnya</option>
+                    </select>
                   </div>
                 </div>
 
-                <div>
-                  <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">Alamat Lengkap Domisili Saat Ini *</label>
-                  <textarea name="address" required rows="2" placeholder="Nama jalan, RT/RW, Kelurahan, Kecamatan, Kota" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-red-600 focus:outline-none"></textarea>
+                <!-- Kependudukan NIK & KK (Row 4) -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                  <div>
+                    <label class="block text-left text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+                      Kewarganegaraan
+                    </label>
+                    <input type="text" name="nationality" value="Indonesia" maxlength="80" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-red-600 focus:outline-none bg-white transition-colors">
+                  </div>
+                  <div>
+                    <label class="block text-left text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+                      Nomor KTP / NIK (16 Digit) <span class="text-red-500 font-bold">*</span>
+                    </label>
+                    <input type="text" name="nik" required inputmode="numeric" pattern="[0-9]{16}" minlength="16" maxlength="16" placeholder="3271xxxxxxxxxxxx" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-red-600 focus:outline-none bg-white transition-colors font-mono">
+                  </div>
+                  <div>
+                    <label class="block text-left text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+                      Nomor Kartu Keluarga (KK)
+                    </label>
+                    <input type="text" name="family_card_number" inputmode="numeric" pattern="[0-9]{16}" maxlength="16" placeholder="3271xxxxxxxxxxxx (16 digit)" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-red-600 focus:outline-none bg-white transition-colors font-mono">
+                  </div>
+                </div>
+
+                <!-- Kontak & Pernikahan (Row 5) -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                  <div>
+                    <label class="block text-left text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+                      Status Pernikahan <span class="text-red-500 font-bold">*</span>
+                    </label>
+                    <select name="marital_status" required class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm bg-white focus:ring-2 focus:ring-red-600 focus:outline-none transition-colors">
+                      <option value="">Pilih Status</option>
+                      <option>Belum Menikah</option>
+                      <option>Menikah</option>
+                      <option>Cerai Hidup</option>
+                      <option>Cerai Mati</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label class="block text-left text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+                      Email Aktif <span class="text-red-500 font-bold">*</span>
+                    </label>
+                    <input type="email" name="email" required autocomplete="email" placeholder="nama@email.com" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-red-600 focus:outline-none bg-white transition-colors">
+                  </div>
+                  <div>
+                    <label class="block text-left text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+                      Nomor Telepon / HP <span class="text-red-500 font-bold">*</span>
+                    </label>
+                    <input type="tel" name="phone" required autocomplete="tel" placeholder="08xxxxxxxxxx" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-red-600 focus:outline-none bg-white transition-colors">
+                  </div>
+                </div>
+
+                <!-- WhatsApp & Wilayah Administratif (Row 6) -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                  <div>
+                    <label class="block text-left text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+                      Nomor WhatsApp Aktif <span class="text-red-500 font-bold">*</span>
+                    </label>
+                    <input type="tel" name="whatsapp" required placeholder="08xxxxxxxxxx (untuk undangan wawancara)" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-red-600 focus:outline-none bg-white transition-colors">
+                  </div>
+                  <div>
+                    <label class="block text-left text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+                      Provinsi Sesuai KTP <span class="text-red-500 font-bold">*</span>
+                    </label>
+                    <input type="text" name="province" required maxlength="100" placeholder="Contoh: Banten / DKI Jakarta" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-red-600 focus:outline-none bg-white transition-colors">
+                  </div>
+                  <div>
+                    <label class="block text-left text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+                      Kabupaten / Kota Sesuai KTP <span class="text-red-500 font-bold">*</span>
+                    </label>
+                    <input type="text" name="city" required maxlength="100" placeholder="Contoh: Tangerang / Jakarta Barat" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-red-600 focus:outline-none bg-white transition-colors">
+                  </div>
+                </div>
+
+                <!-- Kecamatan, Kelurahan & Kode Pos (Row 7) -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                  <div>
+                    <label class="block text-left text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+                      Kecamatan
+                    </label>
+                    <input type="text" name="district" maxlength="100" placeholder="Nama Kecamatan" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-red-600 focus:outline-none bg-white transition-colors">
+                  </div>
+                  <div>
+                    <label class="block text-left text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+                      Kelurahan / Desa
+                    </label>
+                    <input type="text" name="village" maxlength="100" placeholder="Nama Kelurahan / Desa" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-red-600 focus:outline-none bg-white transition-colors">
+                  </div>
+                  <div>
+                    <label class="block text-left text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+                      Kode Pos
+                    </label>
+                    <input type="text" name="postal_code" inputmode="numeric" maxlength="10" placeholder="Contoh: 15810" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-red-600 focus:outline-none bg-white transition-colors">
+                  </div>
+                </div>
+
+                <!-- Alamat KTP & Domisili (Row 8) -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <label class="block text-left text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+                      Alamat Lengkap Sesuai KTP <span class="text-red-500 font-bold">*</span>
+                    </label>
+                    <textarea name="address_id" required rows="3" maxlength="500" placeholder="Jalan, RT/RW, No. Rumah, Blok, Kelurahan, Kecamatan" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-red-600 focus:outline-none bg-white transition-colors resize-y"></textarea>
+                  </div>
+                  <div>
+                    <label class="block text-left text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+                      Alamat Domisili Saat Ini
+                    </label>
+                    <textarea name="domicile_address" rows="3" maxlength="500" placeholder="Kosongkan jika domisili saat ini sama dengan alamat KTP" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-red-600 focus:outline-none bg-white transition-colors resize-y"></textarea>
+                  </div>
                 </div>
               </div>
 
-              <!-- STEP 2: PENDIDIKAN & PELATIHAN -->
-              <div class="form-step-pane hidden space-y-6" data-step-index="1">
-                <div class="border-b border-slate-100 pb-3">
-                  <h3 class="text-lg font-bold text-[#061e43]">Langkah 2: Riwayat Pendidikan &amp; Pelatihan</h3>
-                  <p class="text-xs text-slate-500">Pendidikan formal terakhir dan sertifikasi keahlian yang dimiliki.</p>
+              <!-- ========================================================== -->
+              <!-- STEP 2: PENDIDIKAN & PELATIHAN                             -->
+              <!-- ========================================================== -->
+              <div class="form-step-pane hidden space-y-8" data-step-index="1">
+                <div class="border-b border-slate-100 pb-4">
+                  <div class="flex items-center gap-2 mb-1">
+                    <span class="px-2.5 py-0.5 rounded-md text-[11px] font-extrabold uppercase bg-blue-50 text-[#061e43] border border-blue-200">Bagian 02</span>
+                    <h3 class="text-xl font-bold text-[#061e43]">Riwayat Pendidikan &amp; Pelatihan</h3>
+                  </div>
+                  <p class="text-xs text-slate-500">Pendidikan formal terakhir yang diselesaikan serta sertifikasi kursus keahlian teknis yang pernah Anda ikuti.</p>
                 </div>
 
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                   <div>
-                    <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">Pendidikan Terakhir *</label>
-                    <select name="last_education" required class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm bg-white">
-                      <option value="">Pilih jenjang...</option>
+                    <label class="block text-left text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+                      Pendidikan Terakhir <span class="text-red-500 font-bold">*</span>
+                    </label>
+                    <select name="last_education" required class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm bg-white focus:ring-2 focus:ring-red-600 focus:outline-none transition-colors">
+                      <option value="">Pilih Jenjang Terakhir...</option>
+                      <option>SD / Sederajat</option>
+                      <option>SMP / Sederajat</option>
                       <option>SMA / SMK / Sederajat</option>
+                      <option>Diploma 1 (D1)</option>
+                      <option>Diploma 2 (D2)</option>
                       <option>Diploma 3 (D3)</option>
-                      <option>Sarjana (S1 / D4)</option>
-                      <option>SMP (Khusus helper lapangan)</option>
+                      <option>Diploma 4 / Sarjana S1</option>
+                      <option>Magister S2</option>
                     </select>
                   </div>
                   <div>
-                    <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">Nama Sekolah / Universitas *</label>
-                    <input type="text" name="institution" required placeholder="Contoh: SMK Negeri 2 Tangerang" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm">
+                    <label class="block text-left text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+                      Nama Sekolah / Universitas <span class="text-red-500 font-bold">*</span>
+                    </label>
+                    <input type="text" name="education_institution" required maxlength="150" placeholder="Contoh: SMKN 2 Tangerang / Universitas Trisakti" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-red-600 focus:outline-none bg-white transition-colors">
+                  </div>
+                  <div>
+                    <label class="block text-left text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+                      Jurusan / Program Studi
+                    </label>
+                    <input type="text" name="education_major" maxlength="120" placeholder="Contoh: Teknik Mesin / IPS / Manajemen" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-red-600 focus:outline-none bg-white transition-colors">
                   </div>
                 </div>
 
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                   <div>
-                    <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">Jurusan / Program Studi</label>
-                    <input type="text" name="major" placeholder="Contoh: Teknik Mesin / Otomotif / Listrik / IPS" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm">
+                    <label class="block text-left text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+                      Kota Pendidikan
+                    </label>
+                    <input type="text" name="education_city" maxlength="100" placeholder="Kota lokasi sekolah/kampus" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-red-600 focus:outline-none bg-white transition-colors">
                   </div>
                   <div>
-                    <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">Tahun Kelulusan *</label>
-                    <input type="number" name="grad_year" required min="1990" max="2026" placeholder="2022" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm">
+                    <label class="block text-left text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+                      Tahun Kelulusan <span class="text-red-500 font-bold">*</span>
+                    </label>
+                    <input type="number" name="graduation_year" required inputmode="numeric" min="1980" max="2026" placeholder="Contoh: 2022" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-red-600 focus:outline-none bg-white transition-colors">
+                  </div>
+                  <div>
+                    <label class="block text-left text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+                      Nilai Akhir / IPK Rata-Rata
+                    </label>
+                    <input type="text" name="final_score" maxlength="20" placeholder="Contoh: 85.50 atau 3.45" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-red-600 focus:outline-none bg-white transition-colors">
                   </div>
                 </div>
 
                 <div>
-                  <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">Pelatihan / Kursus Khusus Lainnya</label>
-                  <textarea name="trainings" rows="3" placeholder="Sebutkan pelatihan yang pernah diikuti (contoh: Pelatihan K3 Umum, Kursus Bahasa Inggris Dasar, Sertifikasi Operator Komputer)..." class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm"></textarea>
+                  <label class="block text-left text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+                    Pelatihan, Kursus, atau Sertifikasi Lain yang Pernah Diikuti
+                  </label>
+                  <textarea name="other_training" rows="3" maxlength="1000" placeholder="Sebutkan nama pelatihan keahlian, lembaga penyelenggara, dan tahun keikutsertaan (contoh: Diklat K3 Dasar Kemnaker 2023, Kursus Komputer Microsoft Office 2024, Pelatihan Damkar Dasar)..." class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-red-600 focus:outline-none bg-white transition-colors resize-y"></textarea>
                 </div>
               </div>
 
-              <!-- STEP 3: PENGALAMAN KERJA -->
-              <div class="form-step-pane hidden space-y-6" data-step-index="2">
-                <div class="border-b border-slate-100 pb-3">
-                  <h3 class="text-lg font-bold text-[#061e43]">Langkah 3: Pengalaman Kerja Terakhir</h3>
-                  <p class="text-xs text-slate-500">Jika fresh graduate / belum berpengalaman kerja, Anda dapat mencantumkan pengalaman magang atau organisasi.</p>
+              <!-- ========================================================== -->
+              <!-- STEP 3: PENGALAMAN KERJA                                   -->
+              <!-- ========================================================== -->
+              <div class="form-step-pane hidden space-y-8" data-step-index="2">
+                <div class="border-b border-slate-100 pb-4">
+                  <div class="flex items-center gap-2 mb-1">
+                    <span class="px-2.5 py-0.5 rounded-md text-[11px] font-extrabold uppercase bg-blue-50 text-[#061e43] border border-blue-200">Bagian 03</span>
+                    <h3 class="text-xl font-bold text-[#061e43]">Riwayat Pengalaman Kerja</h3>
+                  </div>
+                  <p class="text-xs text-slate-500">Informasi riwayat pekerjaan terdahulu. Bagi pelamar lulusan baru (fresh graduate), silakan cantumkan pengalaman magang/PKL atau kepanitiaan/organisasi.</p>
                 </div>
 
-                <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-4">
-                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <!-- Sub-Card: Pengalaman Terakhir -->
+                <div class="p-6 rounded-2xl bg-slate-50/80 border border-slate-200/90 space-y-6">
+                  <div class="flex items-center justify-between pb-3 border-b border-slate-200">
+                    <div class="flex items-center gap-2">
+                      <span class="w-2.5 h-2.5 rounded-full bg-[#061e43]"></span>
+                      <h4 class="text-sm font-bold text-[#061e43] uppercase tracking-wider">Pengalaman Kerja Terakhir</h4>
+                    </div>
+                    <span class="text-[11px] font-semibold text-slate-500 bg-white px-2.5 py-1 rounded-lg border border-slate-200">Riwayat Terakhir</span>
+                  </div>
+
+                  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                     <div>
-                      <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">Perusahaan Terakhir</label>
-                      <input type="text" name="exp_company" placeholder="Nama PT / Instansi tempat bekerja" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm bg-white">
+                      <label class="block text-left text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+                        Nama Perusahaan Terakhir
+                      </label>
+                      <input type="text" name="experience_1_company" maxlength="150" placeholder="Nama PT / Instansi" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm bg-white focus:ring-2 focus:ring-red-600 focus:outline-none transition-colors">
                     </div>
                     <div>
-                      <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">Jabatan / Posisi</label>
-                      <input type="text" name="exp_position" placeholder="Contoh: Security Staff / Warehouse Operator / Mekanik" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm bg-white">
+                      <label class="block text-left text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+                        Jabatan / Posisi Kerja
+                      </label>
+                      <input type="text" name="experience_1_position" maxlength="120" placeholder="Contoh: Security Staff / Mekanik ME" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm bg-white focus:ring-2 focus:ring-red-600 focus:outline-none transition-colors">
+                    </div>
+                    <div>
+                      <label class="block text-left text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+                        Lokasi / Kota Penempatan
+                      </label>
+                      <input type="text" name="experience_1_location" maxlength="120" placeholder="Contoh: Kawasan GIIC Cikarang" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm bg-white focus:ring-2 focus:ring-red-600 focus:outline-none transition-colors">
                     </div>
                   </div>
 
-                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                     <div>
-                      <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">Lama Bekerja</label>
-                      <input type="text" name="exp_duration" placeholder="Contoh: 2 Tahun (2022 - 2024)" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm bg-white">
+                      <label class="block text-left text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+                        Bulan &amp; Tahun Mulai Bekerja
+                      </label>
+                      <input type="month" name="experience_1_start" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm bg-white focus:ring-2 focus:ring-red-600 focus:outline-none transition-colors">
                     </div>
                     <div>
-                      <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">Alasan Selesai Bekerja</label>
-                      <input type="text" name="exp_reason" placeholder="Contoh: Kontrak kerja berakhir" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm bg-white">
+                      <label class="block text-left text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+                        Bulan &amp; Tahun Selesai Bekerja
+                      </label>
+                      <input type="month" name="experience_1_end" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm bg-white focus:ring-2 focus:ring-red-600 focus:outline-none transition-colors">
+                    </div>
+                    <div>
+                      <label class="block text-left text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+                        Gaji / Upah Terakhir (Rp)
+                      </label>
+                      <input type="text" name="experience_1_salary" maxlength="20" placeholder="Contoh: Rp 4.800.000" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm bg-white focus:ring-2 focus:ring-red-600 focus:outline-none transition-colors font-mono">
+                    </div>
+                  </div>
+
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                      <label class="block text-left text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+                        Uraian Tanggung Jawab &amp; Tugas Utama
+                      </label>
+                      <textarea name="experience_1_responsibilities" rows="2" maxlength="1000" placeholder="Ringkasan tugas operasional harian yang Anda jalankan..." class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm bg-white focus:ring-2 focus:ring-red-600 focus:outline-none transition-colors resize-y"></textarea>
+                    </div>
+                    <div>
+                      <label class="block text-left text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+                        Alasan Berhenti / Selesai Kontrak
+                      </label>
+                      <textarea name="experience_1_exit_reason" rows="2" maxlength="300" placeholder="Contoh: Kontrak proyek berakhir / efisiensi penugasan" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm bg-white focus:ring-2 focus:ring-red-600 focus:outline-none transition-colors resize-y"></textarea>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Sub-Card: Pengalaman Sebelumnya (Opsional) -->
+                <div class="p-6 rounded-2xl bg-slate-50/80 border border-slate-200/90 space-y-6">
+                  <div class="flex items-center justify-between pb-3 border-b border-slate-200">
+                    <div class="flex items-center gap-2">
+                      <span class="w-2.5 h-2.5 rounded-full bg-slate-400"></span>
+                      <h4 class="text-sm font-bold text-slate-700 uppercase tracking-wider">Pengalaman Kerja Sebelumnya <span class="text-slate-400 font-normal lowercase">(opsional)</span></h4>
+                    </div>
+                    <span class="text-[11px] font-semibold text-slate-400 bg-white px-2.5 py-1 rounded-lg border border-slate-200">Riwayat Tambahan</span>
+                  </div>
+
+                  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div>
+                      <label class="block text-left text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+                        Nama Perusahaan Sebelumnya
+                      </label>
+                      <input type="text" name="experience_2_company" maxlength="150" placeholder="PT / Perusahaan sebelumnya" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm bg-white focus:ring-2 focus:ring-red-600 focus:outline-none transition-colors">
+                    </div>
+                    <div>
+                      <label class="block text-left text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+                        Jabatan / Posisi
+                      </label>
+                      <input type="text" name="experience_2_position" maxlength="120" placeholder="Contoh: Operator Gudang / Helper" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm bg-white focus:ring-2 focus:ring-red-600 focus:outline-none transition-colors">
+                    </div>
+                    <div>
+                      <label class="block text-left text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+                        Periode Bekerja
+                      </label>
+                      <input type="text" name="experience_2_period" maxlength="80" placeholder="Contoh: 2021 - 2023" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm bg-white focus:ring-2 focus:ring-red-600 focus:outline-none transition-colors">
                     </div>
                   </div>
 
                   <div>
-                    <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">Uraian Tugas Utama</label>
-                    <textarea name="exp_duties" rows="2" placeholder="Jelaskan ringkas tanggung jawab operasional harian Anda..." class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm bg-white"></textarea>
+                    <label class="block text-left text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+                      Ringkasan Tugas &amp; Alasan Berhenti
+                    </label>
+                    <textarea name="experience_2_summary" rows="2" maxlength="1000" placeholder="Ringkasan tugas utama dan alasan resign sebelumnya..." class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm bg-white focus:ring-2 focus:ring-red-600 focus:outline-none transition-colors resize-y"></textarea>
                   </div>
                 </div>
               </div>
 
-              <!-- STEP 4: KOMPETENSI KHUSUS -->
-              <div class="form-step-pane hidden space-y-6" data-step-index="3">
-                <div class="border-b border-slate-100 pb-3">
-                  <h3 class="text-lg font-bold text-[#061e43]">Langkah 4: Sertifikasi &amp; Kompetensi Teknis</h3>
-                  <p class="text-xs text-slate-500">Khusus pelamar bidang Security, Teknisi, Mekanik, dan Operasional.</p>
+              <!-- ========================================================== -->
+              <!-- STEP 4: KOMPETENSI SECURITY & KEAHLIAN                     -->
+              <!-- ========================================================== -->
+              <div class="form-step-pane hidden space-y-8" data-step-index="3">
+                <div class="border-b border-slate-100 pb-4">
+                  <div class="flex items-center gap-2 mb-1">
+                    <span class="px-2.5 py-0.5 rounded-md text-[11px] font-extrabold uppercase bg-blue-50 text-[#061e43] border border-blue-200">Bagian 04</span>
+                    <h3 class="text-xl font-bold text-[#061e43]">Kompetensi Security &amp; Keahlian Teknis</h3>
+                  </div>
+                  <p class="text-xs text-slate-500">Legalitas sertifikasi kepolisian, nomor registrasi KTA, SKCK, lisensi mengemudi, serta kualifikasi khusus pelamar operasional.</p>
                 </div>
 
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                   <div>
-                    <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">Tingkat Sertifikasi Security Polri</label>
-                    <select name="security_cert" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm bg-white">
-                      <option value="none">Belum Memiliki (Siap Ikut Diklat GMI)</option>
-                      <option value="gada_pratama">Gada Pratama (Polri)</option>
-                      <option value="gada_madya">Gada Madya (Polri)</option>
-                      <option value="gada_utama">Gada Utama</option>
+                    <label class="block text-left text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+                      Sertifikat Security Polri <span class="text-red-500 font-bold">*</span>
+                    </label>
+                    <select name="security_certificate_level" required class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm bg-white focus:ring-2 focus:ring-red-600 focus:outline-none transition-colors">
+                      <option value="">Pilih Jenjang Sertifikat...</option>
+                      <option value="BELUM_ADA">Belum Memiliki (Siap Mengikuti Diklat GMI)</option>
+                      <option value="GADA_PRATAMA">Gada Pratama (Polri)</option>
+                      <option value="GADA_MADYA">Gada Madya (Polri)</option>
+                      <option value="GADA_UTAMA">Gada Utama (Polri)</option>
                     </select>
                   </div>
                   <div>
-                    <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">Nomor KTA Satpam (Jika ada)</label>
-                    <input type="text" name="kta_number" placeholder="Nomor registrasi KTA aktif" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm">
+                    <label class="block text-left text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+                      Nomor Sertifikat / Ijazah Security
+                    </label>
+                    <input type="text" name="security_certificate_number" maxlength="100" placeholder="Nomor registrasi sertifikat" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm bg-white focus:ring-2 focus:ring-red-600 focus:outline-none transition-colors">
+                  </div>
+                  <div>
+                    <label class="block text-left text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+                      Lembaga Penyelenggara Pelatihan
+                    </label>
+                    <input type="text" name="security_training_provider" maxlength="150" placeholder="Contoh: Pusdiklat BUJP / Polda Metro Jaya" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm bg-white focus:ring-2 focus:ring-red-600 focus:outline-none transition-colors">
                   </div>
                 </div>
 
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                   <div>
-                    <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">Kepemilikan SIM (Surat Izin Mengemudi)</label>
-                    <select name="sim_type" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm bg-white">
-                      <option value="none">Tidak ada</option>
-                      <option value="sim_c">SIM C (Motor)</option>
-                      <option value="sim_a">SIM A (Mobil)</option>
-                      <option value="sim_b1">SIM B1 / B2 (Truk/Bus)</option>
-                      <option value="sim_ac">SIM A &amp; SIM C</option>
+                    <label class="block text-left text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+                      Total Pengalaman Security (Tahun) <span class="text-red-500 font-bold">*</span>
+                    </label>
+                    <input type="number" name="security_experience_years" min="0" max="40" step="0.5" value="0" required class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm bg-white focus:ring-2 focus:ring-red-600 focus:outline-none transition-colors">
+                  </div>
+                  <div>
+                    <label class="block text-left text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+                      Nomor KTA Satpam Aktif
+                    </label>
+                    <input type="text" name="kta_number" maxlength="100" placeholder="Nomor registrasi KTA Satpam (jika ada)" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm bg-white focus:ring-2 focus:ring-red-600 focus:outline-none transition-colors">
+                  </div>
+                  <div>
+                    <label class="block text-left text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+                      Masa Berlaku KTA Satpam
+                    </label>
+                    <input type="date" name="kta_valid_until" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm bg-white focus:ring-2 focus:ring-red-600 focus:outline-none transition-colors">
+                  </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                  <div>
+                    <label class="block text-left text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+                      Nomor SKCK Kepolisian
+                    </label>
+                    <input type="text" name="skck_number" maxlength="100" placeholder="Nomor registrasi SKCK aktif" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm bg-white focus:ring-2 focus:ring-red-600 focus:outline-none transition-colors">
+                  </div>
+                  <div>
+                    <label class="block text-left text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+                      Masa Berlaku SKCK
+                    </label>
+                    <input type="date" name="skck_valid_until" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm bg-white focus:ring-2 focus:ring-red-600 focus:outline-none transition-colors">
+                  </div>
+                  <div>
+                    <label class="block text-left text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+                      Keahlian Bela Diri
+                    </label>
+                    <input type="text" name="martial_art" maxlength="150" placeholder="Pencak Silat, Karate, Taekwondo, Boxer, dll." class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm bg-white focus:ring-2 focus:ring-red-600 focus:outline-none transition-colors">
+                  </div>
+                </div>
+
+                <!-- Lisensi SIM -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                  <div>
+                    <label class="block text-left text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+                      Kepemilikan SIM A (Mobil)
+                    </label>
+                    <input type="text" name="driving_license_a" maxlength="80" placeholder="Nomor SIM A (kosongkan jika tidak ada)" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm bg-white focus:ring-2 focus:ring-red-600 focus:outline-none transition-colors">
+                  </div>
+                  <div>
+                    <label class="block text-left text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+                      Kepemilikan SIM B1 / B2 (Truk/Bus)
+                    </label>
+                    <input type="text" name="driving_license_b" maxlength="80" placeholder="Nomor SIM B1 / B2 jika ada" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm bg-white focus:ring-2 focus:ring-red-600 focus:outline-none transition-colors">
+                  </div>
+                  <div>
+                    <label class="block text-left text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+                      Kepemilikan SIM C (Motor)
+                    </label>
+                    <input type="text" name="driving_license_c" maxlength="80" placeholder="Nomor SIM C aktif" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm bg-white focus:ring-2 focus:ring-red-600 focus:outline-none transition-colors">
+                  </div>
+                </div>
+
+                <!-- Keterampilan Lain -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                  <div>
+                    <label class="block text-left text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+                      Penguasaan Bahasa Asing
+                    </label>
+                    <input type="text" name="foreign_languages" maxlength="250" placeholder="Bahasa Inggris, Mandarin, dsb." class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm bg-white focus:ring-2 focus:ring-red-600 focus:outline-none transition-colors">
+                  </div>
+                  <div>
+                    <label class="block text-left text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+                      Kemampuan Komputer / IT
+                    </label>
+                    <input type="text" name="computer_skills" maxlength="250" placeholder="MS Word, Excel, Email, CCTV Monitoring" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm bg-white focus:ring-2 focus:ring-red-600 focus:outline-none transition-colors">
+                  </div>
+                  <div>
+                    <label class="block text-left text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+                      Keahlian Teknis / Sertifikasi Khusus Lain
+                    </label>
+                    <input type="text" name="other_skills" maxlength="300" placeholder="SIO Forklift, K3 Listrik, Damkar, First Aid / P3K" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm bg-white focus:ring-2 focus:ring-red-600 focus:outline-none transition-colors">
+                  </div>
+                </div>
+              </div>
+
+              <!-- ========================================================== -->
+              <!-- STEP 5: DATA KELUARGA & KONTAK DARURAT                     -->
+              <!-- ========================================================== -->
+              <div class="form-step-pane hidden space-y-8" data-step-index="4">
+                <div class="border-b border-slate-100 pb-4">
+                  <div class="flex items-center gap-2 mb-1">
+                    <span class="px-2.5 py-0.5 rounded-md text-[11px] font-extrabold uppercase bg-blue-50 text-[#061e43] border border-blue-200">Bagian 05</span>
+                    <h3 class="text-xl font-bold text-[#061e43]">Susunan Keluarga &amp; Kontak Darurat</h3>
+                  </div>
+                  <p class="text-xs text-slate-500">Data keluarga inti serta nomor darurat yang wajib dapat dihubungi saat situasi genting di tempat kerja.</p>
+                </div>
+
+                <!-- Sub-Card: Data Keluarga Inti -->
+                <div class="p-6 rounded-2xl bg-slate-50/80 border border-slate-200/90 space-y-6">
+                  <div class="flex items-center justify-between pb-3 border-b border-slate-200">
+                    <div class="flex items-center gap-2">
+                      <span class="w-2.5 h-2.5 rounded-full bg-[#061e43]"></span>
+                      <h4 class="text-sm font-bold text-[#061e43] uppercase tracking-wider">Data Keluarga Inti</h4>
+                    </div>
+                    <span class="text-[11px] font-semibold text-slate-500 bg-white px-2.5 py-1 rounded-lg border border-slate-200">Keluarga</span>
+                  </div>
+
+                  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div>
+                      <label class="block text-left text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+                        Nama Ayah Kandung
+                      </label>
+                      <input type="text" name="father_name" maxlength="150" placeholder="Nama lengkap ayah" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm bg-white focus:ring-2 focus:ring-red-600 focus:outline-none transition-colors">
+                    </div>
+                    <div>
+                      <label class="block text-left text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+                        Pekerjaan Ayah
+                      </label>
+                      <input type="text" name="father_occupation" maxlength="120" placeholder="Pekerjaan / profesi ayah" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm bg-white focus:ring-2 focus:ring-red-600 focus:outline-none transition-colors">
+                    </div>
+                    <div>
+                      <label class="block text-left text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+                        Nomor Telepon Ayah
+                      </label>
+                      <input type="tel" name="father_phone" maxlength="25" placeholder="08xxxxxxxxxx" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm bg-white focus:ring-2 focus:ring-red-600 focus:outline-none transition-colors">
+                    </div>
+                  </div>
+
+                  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div>
+                      <label class="block text-left text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+                        Nama Ibu Kandung
+                      </label>
+                      <input type="text" name="mother_name" maxlength="150" placeholder="Nama lengkap ibu" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm bg-white focus:ring-2 focus:ring-red-600 focus:outline-none transition-colors">
+                    </div>
+                    <div>
+                      <label class="block text-left text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+                        Pekerjaan Ibu
+                      </label>
+                      <input type="text" name="mother_occupation" maxlength="120" placeholder="Pekerjaan / profesi ibu" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm bg-white focus:ring-2 focus:ring-red-600 focus:outline-none transition-colors">
+                    </div>
+                    <div>
+                      <label class="block text-left text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+                        Nomor Telepon Ibu
+                      </label>
+                      <input type="tel" name="mother_phone" maxlength="25" placeholder="08xxxxxxxxxx" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm bg-white focus:ring-2 focus:ring-red-600 focus:outline-none transition-colors">
+                    </div>
+                  </div>
+
+                  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div>
+                      <label class="block text-left text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+                        Nama Pasangan (Suami / Istri)
+                      </label>
+                      <input type="text" name="spouse_name" maxlength="150" placeholder="Kosongkan bila belum menikah" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm bg-white focus:ring-2 focus:ring-red-600 focus:outline-none transition-colors">
+                    </div>
+                    <div>
+                      <label class="block text-left text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+                        Pekerjaan Pasangan
+                      </label>
+                      <input type="text" name="spouse_occupation" maxlength="120" placeholder="Pekerjaan suami / istri" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm bg-white focus:ring-2 focus:ring-red-600 focus:outline-none transition-colors">
+                    </div>
+                    <div>
+                      <label class="block text-left text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+                        Jumlah Tanggungan Anak
+                      </label>
+                      <input type="number" name="children_count" min="0" max="20" value="0" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm bg-white focus:ring-2 focus:ring-red-600 focus:outline-none transition-colors">
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Sub-Card: Kontak Darurat (Wajib) -->
+                <div class="p-6 rounded-2xl bg-amber-50/70 border border-amber-200/90 space-y-6">
+                  <div class="flex items-center justify-between pb-3 border-b border-amber-200">
+                    <div class="flex items-center gap-2">
+                      <span class="w-2.5 h-2.5 rounded-full bg-amber-600"></span>
+                      <h4 class="text-sm font-bold text-amber-950 uppercase tracking-wider">Kontak Keadaan Darurat (Emergency Contact)</h4>
+                    </div>
+                    <span class="text-[11px] font-bold text-red-600 bg-white px-2.5 py-1 rounded-lg border border-amber-300">Wajib Diisi Lengkap</span>
+                  </div>
+                  <p class="text-xs text-amber-900/80 -mt-2">Orang terdekat yang dapat dihubungi oleh perusahaan saat kondisi darurat atau membutuhkan konfirmasi segera.</p>
+
+                  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div>
+                      <label class="block text-left text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+                        Nama Kontak Darurat <span class="text-red-500 font-bold">*</span>
+                      </label>
+                      <input type="text" name="emergency_name" required maxlength="150" placeholder="Nama lengkap kerabat" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm bg-white focus:ring-2 focus:ring-red-600 focus:outline-none transition-colors">
+                    </div>
+                    <div>
+                      <label class="block text-left text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+                        Hubungan Kekerabatan <span class="text-red-500 font-bold">*</span>
+                      </label>
+                      <input type="text" name="emergency_relationship" required maxlength="80" placeholder="Contoh: Orang Tua / Istri / Kakak" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm bg-white focus:ring-2 focus:ring-red-600 focus:outline-none transition-colors">
+                    </div>
+                    <div>
+                      <label class="block text-left text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+                        Nomor Telepon Darurat <span class="text-red-500 font-bold">*</span>
+                      </label>
+                      <input type="tel" name="emergency_phone" required maxlength="25" placeholder="08xxxxxxxxxx (aktif 24 jam)" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm bg-white focus:ring-2 focus:ring-red-600 focus:outline-none transition-colors">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ========================================================== -->
+              <!-- STEP 6: KESIAPAN FISIK & KERJA OPERASIONAL                 -->
+              <!-- ========================================================== -->
+              <div class="form-step-pane hidden space-y-8" data-step-index="5">
+                <div class="border-b border-slate-100 pb-4">
+                  <div class="flex items-center gap-2 mb-1">
+                    <span class="px-2.5 py-0.5 rounded-md text-[11px] font-extrabold uppercase bg-blue-50 text-[#061e43] border border-blue-200">Bagian 06</span>
+                    <h3 class="text-xl font-bold text-[#061e43]">Kesiapan Fisik, Ukuran Perlengkapan &amp; Shift</h3>
+                  </div>
+                  <p class="text-xs text-slate-500">Kondisi fisik antropometri, catatan kesehatan, ukuran pakaian seragam dinas, dan kesiapan jadwal penugasan operasional.</p>
+                </div>
+
+                <!-- Antropometri & Medis -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                  <div>
+                    <label class="block text-left text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+                      Tinggi Badan (cm) <span class="text-red-500 font-bold">*</span>
+                    </label>
+                    <input type="number" name="height_cm" required min="100" max="230" placeholder="Contoh: 172" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm bg-white focus:ring-2 focus:ring-red-600 focus:outline-none transition-colors">
+                  </div>
+                  <div>
+                    <label class="block text-left text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+                      Berat Badan (kg) <span class="text-red-500 font-bold">*</span>
+                    </label>
+                    <input type="number" name="weight_kg" required min="30" max="250" placeholder="Contoh: 68" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm bg-white focus:ring-2 focus:ring-red-600 focus:outline-none transition-colors">
+                  </div>
+                  <div>
+                    <label class="block text-left text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+                      Golongan Darah
+                    </label>
+                    <select name="blood_type" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm bg-white focus:ring-2 focus:ring-red-600 focus:outline-none transition-colors">
+                      <option value="">Pilih Golongan Darah</option>
+                      <option>A</option>
+                      <option>B</option>
+                      <option>AB</option>
+                      <option>O</option>
+                      <option>Tidak tahu</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                  <div>
+                    <label class="block text-left text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+                      Kondisi Penglihatan
+                    </label>
+                    <select name="vision_condition" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm bg-white focus:ring-2 focus:ring-red-600 focus:outline-none transition-colors">
+                      <option value="">Pilih Kondisi Mata</option>
+                      <option>Normal</option>
+                      <option>Kacamata</option>
+                      <option>Lensa kontak</option>
+                      <option>Buta warna parsial</option>
+                      <option>Buta warna total</option>
                     </select>
                   </div>
                   <div>
-                    <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">Keahlian Khusus / Sertifikasi Teknis</label>
-                    <input type="text" name="martial_arts" placeholder="SIO Forklift / K3 Listrik / Bela Diri / Damkar / Brevet" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm">
+                    <label class="block text-left text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+                      Tanggal Medical Check-Up (MCU) Terakhir
+                    </label>
+                    <input type="date" name="health_check_date" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm bg-white focus:ring-2 focus:ring-red-600 focus:outline-none transition-colors">
+                  </div>
+                  <div>
+                    <label class="block text-left text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+                      Jenis Kendaraan yang Dikuasai
+                    </label>
+                    <input type="text" name="vehicle_skills" maxlength="150" placeholder="Motor Manual/Matic, Mobil, Truk" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm bg-white focus:ring-2 focus:ring-red-600 focus:outline-none transition-colors">
                   </div>
                 </div>
 
                 <div>
-                  <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">Keahlian Tambahan / K3</label>
-                  <input type="text" name="extra_skills" placeholder="Contoh: Sertifikat K3 Listrik, First Aid (P3K), Basic Fire Fighting, Brevet Pajak" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm">
+                  <label class="block text-left text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+                    Catatan Kondisi Kesehatan, Alergi, atau Kebutuhan Khusus
+                  </label>
+                  <textarea name="health_notes" rows="2" maxlength="800" placeholder="Tuliskan jika memiliki riwayat penyakit tertentu, patah tulang, riwayat operasi, asma, alergi obat/makanan (kosongkan jika tidak ada)..." class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm bg-white focus:ring-2 focus:ring-red-600 focus:outline-none transition-colors resize-y"></textarea>
+                </div>
+
+                <!-- Kesiapan Kerja -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                  <div>
+                    <label class="block text-left text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+                      Tanggal Siap Mulai Bekerja <span class="text-red-500 font-bold">*</span>
+                    </label>
+                    <input type="date" name="available_start_date" required class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm bg-white focus:ring-2 focus:ring-red-600 focus:outline-none transition-colors">
+                  </div>
+                  <div>
+                    <label class="block text-left text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+                      Ekspektasi Gaji Bersih / Bulan
+                    </label>
+                    <input type="text" name="salary_expectation" maxlength="20" placeholder="Contoh: Rp 4.500.000" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm bg-white focus:ring-2 focus:ring-red-600 focus:outline-none transition-colors font-mono">
+                  </div>
+                  <div>
+                    <label class="block text-left text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+                      Status Hubungan Kerja yang Diminati
+                    </label>
+                    <select name="employment_preference" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm bg-white focus:ring-2 focus:ring-red-600 focus:outline-none transition-colors">
+                      <option value="">Pilih Preferensi</option>
+                      <option>Kontrak (PKWT)</option>
+                      <option>Karyawan Tetap</option>
+                      <option>Harian / Pengganti (Casual)</option>
+                      <option>Bersedia Semua Sistem</option>
+                    </select>
+                  </div>
+                </div>
+
+                <!-- Kesiapan Shift & Penempatan Checkcards -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <label class="flex items-start gap-3 p-4 rounded-2xl bg-white border-2 border-slate-200 hover:border-[#061e43] transition-colors cursor-pointer">
+                    <input type="checkbox" name="ready_for_shift" required class="mt-1 w-4 h-4 rounded text-[#061e43] border-slate-300 focus:ring-red-600">
+                    <div>
+                      <b class="text-xs font-bold text-slate-900 block">Bersedia Bekerja Sistem Shift (24/7) *</b>
+                      <span class="text-[11px] text-slate-500 leading-normal block mt-0.5">Termasuk jadwal giliran malam, akhir pekan, dan hari libur nasional sesuai roster operasional.</span>
+                    </div>
+                  </label>
+                  <label class="flex items-start gap-3 p-4 rounded-2xl bg-white border-2 border-slate-200 hover:border-[#061e43] transition-colors cursor-pointer">
+                    <input type="checkbox" name="ready_for_placement" required class="mt-1 w-4 h-4 rounded text-[#061e43] border-slate-300 focus:ring-red-600">
+                    <div>
+                      <b class="text-xs font-bold text-slate-900 block">Bersedia Ditempatkan Sesuai Kesepakatan *</b>
+                      <span class="text-[11px] text-slate-500 leading-normal block mt-0.5">Siap ditempatkan di unit / lokasi proyek mitra GMI sesuai kesepakatan penugasan.</span>
+                    </div>
+                  </label>
+                </div>
+
+                <!-- Sub-Card: Ukuran Seragam & Sepatu -->
+                <div class="p-6 rounded-2xl bg-slate-50/80 border border-slate-200/90 space-y-6">
+                  <div class="flex items-center justify-between pb-3 border-b border-slate-200">
+                    <div class="flex items-center gap-2">
+                      <span class="w-2.5 h-2.5 rounded-full bg-[#061e43]"></span>
+                      <h4 class="text-sm font-bold text-[#061e43] uppercase tracking-wider">Estimasi Ukuran Seragam &amp; Sepatu Dinas</h4>
+                    </div>
+                    <span class="text-[11px] font-semibold text-slate-500 bg-white px-2.5 py-1 rounded-lg border border-slate-200">Perlengkapan Kerja</span>
+                  </div>
+                  <p class="text-xs text-slate-500 -mt-2">Digunakan untuk estimasi kesiapan logistik seragam dan sepatu dinas saat diterima bertugas.</p>
+
+                  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div>
+                      <label class="block text-left text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+                        Ukuran Baju / Kemeja <span class="text-red-500 font-bold">*</span>
+                      </label>
+                      <select name="shirt_size" required class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm bg-white focus:ring-2 focus:ring-red-600 focus:outline-none transition-colors">
+                        <option value="">Pilih Ukuran Baju</option>
+                        <option>S</option>
+                        <option>M</option>
+                        <option>L</option>
+                        <option>XL</option>
+                        <option>XXL</option>
+                        <option>3L</option>
+                        <option>4L</option>
+                        <option>5L</option>
+                        <option>6L</option>
+                      </select>
+                    </div>
+                    <div>
+                      <label class="block text-left text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+                        Ukuran Celana Dinas <span class="text-red-500 font-bold">*</span>
+                      </label>
+                      <select name="pants_size" required class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm bg-white focus:ring-2 focus:ring-red-600 focus:outline-none transition-colors">
+                        <option value="">Pilih Ukuran Celana</option>
+                        <option>S (Ukuran 28 - 29)</option>
+                        <option>M (Ukuran 30 - 31)</option>
+                        <option>L (Ukuran 32 - 33)</option>
+                        <option>XL (Ukuran 34 - 35)</option>
+                        <option>XXL (Ukuran 36 - 38)</option>
+                        <option>3L (Ukuran 40)</option>
+                        <option>4L (Ukuran 42)</option>
+                        <option>5L (Ukuran 44)</option>
+                      </select>
+                    </div>
+                    <div>
+                      <label class="block text-left text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+                        Ukuran Sepatu PDL / Dinas <span class="text-red-500 font-bold">*</span>
+                      </label>
+                      <select name="shoe_size" required class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm bg-white focus:ring-2 focus:ring-red-600 focus:outline-none transition-colors">
+                        <option value="">Pilih Ukuran Sepatu</option>
+                        <option>37</option>
+                        <option>38</option>
+                        <option>39</option>
+                        <option>40</option>
+                        <option>41</option>
+                        <option>42</option>
+                        <option>43</option>
+                        <option>44</option>
+                        <option>45</option>
+                        <option>46</option>
+                      </select>
+                    </div>
+                  </div>
                 </div>
               </div>
 
-              <!-- STEP 5: DOKUMEN & UPLOAD -->
-              <div class="form-step-pane hidden space-y-6" data-step-index="4">
-                <div class="border-b border-slate-100 pb-3">
-                  <h3 class="text-lg font-bold text-[#061e43]">Langkah 5: Upload Berkas Dokumen</h3>
-                  <p class="text-xs text-slate-500">Format yang diterima: JPG, PNG, atau PDF (Maks. 5MB per file).</p>
+              <!-- ========================================================== -->
+              <!-- STEP 7: INFORMASI LAINNYA, PAJAK & REFERENSI               -->
+              <!-- ========================================================== -->
+              <div class="form-step-pane hidden space-y-8" data-step-index="6">
+                <div class="border-b border-slate-100 pb-4">
+                  <div class="flex items-center gap-2 mb-1">
+                    <span class="px-2.5 py-0.5 rounded-md text-[11px] font-extrabold uppercase bg-blue-50 text-[#061e43] border border-blue-200">Bagian 07</span>
+                    <h3 class="text-xl font-bold text-[#061e43]">Informasi Legalitas, Referensi &amp; Sosial</h3>
+                  </div>
+                  <p class="text-xs text-slate-500">Administrasi pajak ketenagakerjaan, data pemberi referensi kerja, dan akun media sosial untuk background profiling.</p>
                 </div>
 
-                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <!-- Legalitas & Jaminan Sosial -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                  <div>
+                    <label class="block text-left text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+                      Nomor Pokok Wajib Pajak (NPWP)
+                    </label>
+                    <input type="text" name="npwp_number" maxlength="30" placeholder="15 / 16 digit NPWP" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm bg-white focus:ring-2 focus:ring-red-600 focus:outline-none transition-colors font-mono">
+                  </div>
+                  <div>
+                    <label class="block text-left text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+                      Nomor BPJS Kesehatan
+                    </label>
+                    <input type="text" name="bpjs_health_number" maxlength="30" placeholder="13 digit kartu BPJS Kesehatan" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm bg-white focus:ring-2 focus:ring-red-600 focus:outline-none transition-colors font-mono">
+                  </div>
+                  <div>
+                    <label class="block text-left text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+                      Nomor BPJS Ketenagakerjaan
+                    </label>
+                    <input type="text" name="bpjs_employment_number" maxlength="30" placeholder="Nomor KPJ Ketenagakerjaan" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm bg-white focus:ring-2 focus:ring-red-600 focus:outline-none transition-colors font-mono">
+                  </div>
+                </div>
+
+                <!-- Sub-Card: Referensi Kerja / Kenalan -->
+                <div class="p-6 rounded-2xl bg-slate-50/80 border border-slate-200/90 space-y-6">
+                  <div class="flex items-center justify-between pb-3 border-b border-slate-200">
+                    <div class="flex items-center gap-2">
+                      <span class="w-2.5 h-2.5 rounded-full bg-[#061e43]"></span>
+                      <h4 class="text-sm font-bold text-[#061e43] uppercase tracking-wider">Referensi Kerja / Rekomendasi Profesional</h4>
+                    </div>
+                    <span class="text-[11px] font-semibold text-slate-500 bg-white px-2.5 py-1 rounded-lg border border-slate-200">Verifikasi</span>
+                  </div>
+
+                  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div>
+                      <label class="block text-left text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+                        Nama Pemberi Referensi
+                      </label>
+                      <input type="text" name="reference_name" maxlength="150" placeholder="Nama atasan / rekan terdahulu" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm bg-white focus:ring-2 focus:ring-red-600 focus:outline-none transition-colors">
+                    </div>
+                    <div>
+                      <label class="block text-left text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+                        Hubungan &amp; Instansi Referensi
+                      </label>
+                      <input type="text" name="reference_relationship" maxlength="100" placeholder="Contoh: Mantan Chief Security di PT ABC" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm bg-white focus:ring-2 focus:ring-red-600 focus:outline-none transition-colors">
+                    </div>
+                    <div>
+                      <label class="block text-left text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+                        Nomor Telepon Referensi
+                      </label>
+                      <input type="tel" name="reference_phone" maxlength="25" placeholder="08xxxxxxxxxx" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm bg-white focus:ring-2 focus:ring-red-600 focus:outline-none transition-colors">
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Sub-Card: Media Sosial -->
+                <div class="p-6 rounded-2xl bg-slate-50/80 border border-slate-200/90 space-y-6">
+                  <div class="flex items-center justify-between pb-3 border-b border-slate-200">
+                    <div class="flex items-center gap-2">
+                      <span class="w-2.5 h-2.5 rounded-full bg-slate-500"></span>
+                      <h4 class="text-sm font-bold text-[#061e43] uppercase tracking-wider">Jejak Akun Media Sosial Pelamar</h4>
+                    </div>
+                    <span class="text-[11px] font-semibold text-slate-400 bg-white px-2.5 py-1 rounded-lg border border-slate-200">Background Check</span>
+                  </div>
+
+                  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div>
+                      <label class="block text-left text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+                        Facebook
+                      </label>
+                      <input type="text" name="facebook" maxlength="200" placeholder="Nama akun / URL profil Facebook" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm bg-white focus:ring-2 focus:ring-red-600 focus:outline-none transition-colors">
+                    </div>
+                    <div>
+                      <label class="block text-left text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+                        Instagram
+                      </label>
+                      <input type="text" name="instagram" maxlength="200" placeholder="@username Instagram" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm bg-white focus:ring-2 focus:ring-red-600 focus:outline-none transition-colors">
+                    </div>
+                    <div>
+                      <label class="block text-left text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+                        TikTok
+                      </label>
+                      <input type="text" name="tiktok" maxlength="200" placeholder="@username TikTok" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm bg-white focus:ring-2 focus:ring-red-600 focus:outline-none transition-colors">
+                    </div>
+                  </div>
+
+                  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div>
+                      <label class="block text-left text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+                        YouTube
+                      </label>
+                      <input type="text" name="youtube" maxlength="200" placeholder="Nama channel / URL YouTube" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm bg-white focus:ring-2 focus:ring-red-600 focus:outline-none transition-colors">
+                    </div>
+                    <div>
+                      <label class="block text-left text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+                        X / Twitter
+                      </label>
+                      <input type="text" name="twitter" maxlength="200" placeholder="@username akun X" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm bg-white focus:ring-2 focus:ring-red-600 focus:outline-none transition-colors">
+                    </div>
+                    <div>
+                      <label class="block text-left text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+                        Media Sosial Lainnya / LinkedIn
+                      </label>
+                      <input type="text" name="other_social" maxlength="200" placeholder="Tautan profil medsos lain" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm bg-white focus:ring-2 focus:ring-red-600 focus:outline-none transition-colors">
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Sumber Lowongan & Catatan Tambahan -->
+                <div class="space-y-6">
+                  <div>
+                    <label class="block text-left text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+                      Sumber Informasi Lowongan Pekerjaan
+                    </label>
+                    <select name="vacancy_source" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm bg-white focus:ring-2 focus:ring-red-600 focus:outline-none transition-colors">
+                      <option value="">Pilih Sumber Informasi...</option>
+                      <option>Website Resmi PT Grup Mitra Indonesia (grupmitraindonesia.co.id)</option>
+                      <option>Media Sosial Resmi GMI (Instagram / Facebook / LinkedIn)</option>
+                      <option>Referensi Karyawan / Teman / Keluarga</option>
+                      <option>Job Portal (Jobstreet / Glints / Indeed / Karir.com)</option>
+                      <option>Bursa Kerja Khusus (BKK) / Disnaker</option>
+                      <option>Brosur / Spanduk Lapangan GMI</option>
+                      <option>Lainnya</option>
+                    </select>
+                  </div>
+
+                  <div>
+                    <label class="block text-left text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+                      Catatan Tambahan, Prestasi &amp; Pengalaman Organisasi
+                    </label>
+                    <textarea name="additional_notes" rows="3" maxlength="1200" placeholder="Tuliskan jika memiliki prestasi khusus, keaktifan organisasi, atau catatan lain yang relevan bagi tim HRD GMI..." class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm bg-white focus:ring-2 focus:ring-red-600 focus:outline-none transition-colors resize-y"></textarea>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ========================================================== -->
+              <!-- STEP 8: UPLOAD DOKUMEN & LEMBAR PERNYATAAN                 -->
+              <!-- ========================================================== -->
+              <div class="form-step-pane hidden space-y-8" data-step-index="7">
+                <div class="border-b border-slate-100 pb-4">
+                  <div class="flex items-center gap-2 mb-1">
+                    <span class="px-2.5 py-0.5 rounded-md text-[11px] font-extrabold uppercase bg-red-100 text-red-700 border border-red-200">Bagian 08</span>
+                    <h3 class="text-xl font-bold text-[#061e43]">Upload Berkas Dokumen &amp; Pernyataan Resmi</h3>
+                  </div>
+                  <p class="text-xs text-slate-500">Format yang didukung: PDF, JPG, PNG, atau WebP. Maksimal ukuran file 5 MB per berkas. Pastikan dokumen terbaca dengan jelas.</p>
+                </div>
+
+                <!-- 9 Upload Cards Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
                   
-                  <!-- File 1: KTP -->
-                  <div class="upload-drop-zone p-4 rounded-2xl border-2 border-dashed border-slate-200 hover:border-[#061e43] bg-slate-50/60 hover:bg-slate-50 text-center transition-all cursor-pointer relative">
-                    <input type="file" name="file_ktp" class="absolute inset-0 opacity-0 cursor-pointer">
-                    <div class="w-10 h-10 rounded-xl bg-blue-100 text-[#061e43] flex items-center justify-center mx-auto mb-2">
-                      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2h-5m-4 0V5a2 2 0 114 0v1m-4 0a2 2 0 104 0m-5 8a2 2 0 100-4 2 2 0 000 4zm0 0c1.306 0 2.417.835 2.83 2M9 14a3.001 3.001 0 00-2.83 2M15 11h3m-3 4h2"/></svg>
+                  <!-- File 1: Pas Foto (Required) -->
+                  <div class="upload-drop-zone p-4 rounded-2xl border-2 border-dashed border-slate-300 hover:border-[#061e43] bg-slate-50/70 hover:bg-slate-50 transition-all cursor-pointer relative group flex flex-col justify-between">
+                    <input type="file" name="profile_photo" accept="image/jpeg,image/png,image/webp" required class="absolute inset-0 opacity-0 cursor-pointer z-10">
+                    <div class="flex items-center justify-between mb-3">
+                      <div class="w-10 h-10 rounded-xl bg-purple-100 text-purple-800 flex items-center justify-center">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                      </div>
+                      <span class="text-[10px] font-extrabold uppercase tracking-wider text-red-600 bg-red-50 px-2 py-0.5 rounded-md border border-red-200">Wajib *</span>
                     </div>
-                    <span class="block text-xs font-bold text-slate-800">Scan KTP Asli *</span>
-                    <span class="file-name-label block text-[11px] text-slate-400 mt-1 truncate">Pilih file gambar/PDF</span>
+                    <div class="text-left">
+                      <span class="block text-xs font-bold text-slate-800 text-left">Pas Foto Berwarna Terbaru</span>
+                      <span class="file-name-label block text-[11px] text-slate-400 mt-1 truncate text-left">Pilih file gambar (3x4 / 4x6)</span>
+                    </div>
                   </div>
 
-                  <!-- File 2: CV / Resume -->
-                  <div class="upload-drop-zone p-4 rounded-2xl border-2 border-dashed border-slate-200 hover:border-[#061e43] bg-slate-50/60 hover:bg-slate-50 text-center transition-all cursor-pointer relative">
-                    <input type="file" name="file_cv" class="absolute inset-0 opacity-0 cursor-pointer">
-                    <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center mx-auto mb-2">
-                      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                  <!-- File 2: CV (Required) -->
+                  <div class="upload-drop-zone p-4 rounded-2xl border-2 border-dashed border-slate-300 hover:border-[#061e43] bg-slate-50/70 hover:bg-slate-50 transition-all cursor-pointer relative group flex flex-col justify-between">
+                    <input type="file" name="cv" accept=".pdf,.doc,.docx,image/jpeg,image/png,image/webp" required class="absolute inset-0 opacity-0 cursor-pointer z-10">
+                    <div class="flex items-center justify-between mb-3">
+                      <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                      </div>
+                      <span class="text-[10px] font-extrabold uppercase tracking-wider text-red-600 bg-red-50 px-2 py-0.5 rounded-md border border-red-200">Wajib *</span>
                     </div>
-                    <span class="block text-xs font-bold text-slate-800">Curriculum Vitae (CV) *</span>
-                    <span class="file-name-label block text-[11px] text-slate-400 mt-1 truncate">Pilih file PDF/Word</span>
+                    <div class="text-left">
+                      <span class="block text-xs font-bold text-slate-800 text-left">Curriculum Vitae (CV)</span>
+                      <span class="file-name-label block text-[11px] text-slate-400 mt-1 truncate text-left">Pilih file PDF atau Word</span>
+                    </div>
                   </div>
 
-                  <!-- File 3: Pas Foto -->
-                  <div class="upload-drop-zone p-4 rounded-2xl border-2 border-dashed border-slate-200 hover:border-[#061e43] bg-slate-50/60 hover:bg-slate-50 text-center transition-all cursor-pointer relative">
-                    <input type="file" name="file_photo" class="absolute inset-0 opacity-0 cursor-pointer">
-                    <div class="w-10 h-10 rounded-xl bg-purple-100 text-purple-800 flex items-center justify-center mx-auto mb-2">
-                      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                  <!-- File 3: KTP (Required) -->
+                  <div class="upload-drop-zone p-4 rounded-2xl border-2 border-dashed border-slate-300 hover:border-[#061e43] bg-slate-50/70 hover:bg-slate-50 transition-all cursor-pointer relative group flex flex-col justify-between">
+                    <input type="file" name="ktp" accept=".pdf,image/jpeg,image/png,image/webp" required class="absolute inset-0 opacity-0 cursor-pointer z-10">
+                    <div class="flex items-center justify-between mb-3">
+                      <div class="w-10 h-10 rounded-xl bg-blue-100 text-[#061e43] flex items-center justify-center">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2h-5m-4 0V5a2 2 0 114 0v1m-4 0a2 2 0 104 0m-5 8a2 2 0 100-4 2 2 0 000 4zm0 0c1.306 0 2.417.835 2.83 2M9 14a3.001 3.001 0 00-2.83 2M15 11h3m-3 4h2"/></svg>
+                      </div>
+                      <span class="text-[10px] font-extrabold uppercase tracking-wider text-red-600 bg-red-50 px-2 py-0.5 rounded-md border border-red-200">Wajib *</span>
                     </div>
-                    <span class="block text-xs font-bold text-slate-800">Pas Foto Terbaru</span>
-                    <span class="file-name-label block text-[11px] text-slate-400 mt-1 truncate">Pilih file foto 3x4 / 4x6</span>
+                    <div class="text-left">
+                      <span class="block text-xs font-bold text-slate-800 text-left">Scan e-KTP Asli</span>
+                      <span class="file-name-label block text-[11px] text-slate-400 mt-1 truncate text-left">Pilih file gambar atau PDF</span>
+                    </div>
+                  </div>
+
+                  <!-- File 4: Kartu Keluarga -->
+                  <div class="upload-drop-zone p-4 rounded-2xl border-2 border-dashed border-slate-300 hover:border-[#061e43] bg-slate-50/70 hover:bg-slate-50 transition-all cursor-pointer relative group flex flex-col justify-between">
+                    <input type="file" name="family_card" accept=".pdf,image/jpeg,image/png,image/webp" class="absolute inset-0 opacity-0 cursor-pointer z-10">
+                    <div class="flex items-center justify-between mb-3">
+                      <div class="w-10 h-10 rounded-xl bg-slate-100 text-slate-700 flex items-center justify-center">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+                      </div>
+                      <span class="text-[10px] font-semibold text-slate-500 bg-slate-100 px-2 py-0.5 rounded-md">Opsional</span>
+                    </div>
+                    <div class="text-left">
+                      <span class="block text-xs font-bold text-slate-800 text-left">Kartu Keluarga (KK)</span>
+                      <span class="file-name-label block text-[11px] text-slate-400 mt-1 truncate text-left">Pilih file PDF atau gambar</span>
+                    </div>
+                  </div>
+
+                  <!-- File 5: Ijazah Terakhir -->
+                  <div class="upload-drop-zone p-4 rounded-2xl border-2 border-dashed border-slate-300 hover:border-[#061e43] bg-slate-50/70 hover:bg-slate-50 transition-all cursor-pointer relative group flex flex-col justify-between">
+                    <input type="file" name="diploma" accept=".pdf,image/jpeg,image/png,image/webp" class="absolute inset-0 opacity-0 cursor-pointer z-10">
+                    <div class="flex items-center justify-between mb-3">
+                      <div class="w-10 h-10 rounded-xl bg-amber-100 text-amber-800 flex items-center justify-center">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"/></svg>
+                      </div>
+                      <span class="text-[10px] font-semibold text-slate-500 bg-slate-100 px-2 py-0.5 rounded-md">Lampiran</span>
+                    </div>
+                    <div class="text-left">
+                      <span class="block text-xs font-bold text-slate-800 text-left">Ijazah Pendidikan Terakhir</span>
+                      <span class="file-name-label block text-[11px] text-slate-400 mt-1 truncate text-left">Pilih file PDF atau gambar</span>
+                    </div>
+                  </div>
+
+                  <!-- File 6: SKCK Aktif -->
+                  <div class="upload-drop-zone p-4 rounded-2xl border-2 border-dashed border-slate-300 hover:border-[#061e43] bg-slate-50/70 hover:bg-slate-50 transition-all cursor-pointer relative group flex flex-col justify-between">
+                    <input type="file" name="skck" accept=".pdf,image/jpeg,image/png,image/webp" class="absolute inset-0 opacity-0 cursor-pointer z-10">
+                    <div class="flex items-center justify-between mb-3">
+                      <div class="w-10 h-10 rounded-xl bg-rose-100 text-rose-800 flex items-center justify-center">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                      </div>
+                      <span class="text-[10px] font-semibold text-slate-500 bg-slate-100 px-2 py-0.5 rounded-md">Lampiran</span>
+                    </div>
+                    <div class="text-left">
+                      <span class="block text-xs font-bold text-slate-800 text-left">SKCK Kepolisian Aktif</span>
+                      <span class="file-name-label block text-[11px] text-slate-400 mt-1 truncate text-left">Pilih file PDF atau scan foto</span>
+                    </div>
+                  </div>
+
+                  <!-- File 7: KTA Satpam -->
+                  <div class="upload-drop-zone p-4 rounded-2xl border-2 border-dashed border-slate-300 hover:border-[#061e43] bg-slate-50/70 hover:bg-slate-50 transition-all cursor-pointer relative group flex flex-col justify-between">
+                    <input type="file" name="kta" accept=".pdf,image/jpeg,image/png,image/webp" class="absolute inset-0 opacity-0 cursor-pointer z-10">
+                    <div class="flex items-center justify-between mb-3">
+                      <div class="w-10 h-10 rounded-xl bg-blue-100 text-[#061e43] flex items-center justify-center">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z"/></svg>
+                      </div>
+                      <span class="text-[10px] font-semibold text-slate-500 bg-slate-100 px-2 py-0.5 rounded-md">Khusus Satpam</span>
+                    </div>
+                    <div class="text-left">
+                      <span class="block text-xs font-bold text-slate-800 text-left">KTA Satpam (Jika Ada)</span>
+                      <span class="file-name-label block text-[11px] text-slate-400 mt-1 truncate text-left">Pilih file PDF atau foto KTA</span>
+                    </div>
+                  </div>
+
+                  <!-- File 8: Sertifikat Diklat / Kompetensi -->
+                  <div class="upload-drop-zone p-4 rounded-2xl border-2 border-dashed border-slate-300 hover:border-[#061e43] bg-slate-50/70 hover:bg-slate-50 transition-all cursor-pointer relative group flex flex-col justify-between">
+                    <input type="file" name="security_certificate" accept=".pdf,image/jpeg,image/png,image/webp" class="absolute inset-0 opacity-0 cursor-pointer z-10">
+                    <div class="flex items-center justify-between mb-3">
+                      <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
+                      </div>
+                      <span class="text-[10px] font-semibold text-slate-500 bg-slate-100 px-2 py-0.5 rounded-md">Kompetensi</span>
+                    </div>
+                    <div class="text-left">
+                      <span class="block text-xs font-bold text-slate-800 text-left">Sertifikat Diklat / SIO / K3</span>
+                      <span class="file-name-label block text-[11px] text-slate-400 mt-1 truncate text-left">Pilih file PDF atau sertifikat</span>
+                    </div>
+                  </div>
+
+                  <!-- File 9: SIM -->
+                  <div class="upload-drop-zone p-4 rounded-2xl border-2 border-dashed border-slate-300 hover:border-[#061e43] bg-slate-50/70 hover:bg-slate-50 transition-all cursor-pointer relative group flex flex-col justify-between">
+                    <input type="file" name="driving_license" accept=".pdf,image/jpeg,image/png,image/webp" class="absolute inset-0 opacity-0 cursor-pointer z-10">
+                    <div class="flex items-center justify-between mb-3">
+                      <div class="w-10 h-10 rounded-xl bg-teal-100 text-teal-800 flex items-center justify-center">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                      </div>
+                      <span class="text-[10px] font-semibold text-slate-500 bg-slate-100 px-2 py-0.5 rounded-md">SIM Kendaraan</span>
+                    </div>
+                    <div class="text-left">
+                      <span class="block text-xs font-bold text-slate-800 text-left">SIM (Surat Izin Mengemudi)</span>
+                      <span class="file-name-label block text-[11px] text-slate-400 mt-1 truncate text-left">Pilih file foto SIM A / B / C</span>
+                    </div>
                   </div>
 
                 </div>
 
-                <div class="p-4 rounded-2xl bg-amber-50 border border-amber-200/80">
-                  <label class="flex items-start gap-3 text-xs text-amber-950 cursor-pointer">
-                    <input type="checkbox" required class="mt-0.5 rounded text-[#061e43] w-4 h-4">
-                    <span>
-                      Saya menyatakan bahwa seluruh data dan dokumen yang saya berikan adalah benar dan valid. Saya bersedia mengikuti seluruh tahapan seleksi dan verifikasi yang ditentukan oleh PT Grup Mitra Indonesia.
+                <!-- Lembar Pernyataan & Persetujuan -->
+                <div class="space-y-4 pt-2">
+                  <label class="flex items-start gap-3 p-4 rounded-2xl bg-amber-50/80 border border-amber-200 cursor-pointer transition-colors hover:bg-amber-50">
+                    <input type="checkbox" name="data_accuracy" required class="mt-1 w-4 h-4 rounded text-[#061e43] border-amber-400 focus:ring-red-600 shrink-0">
+                    <span class="text-xs text-amber-950 leading-relaxed">
+                      <b class="text-amber-900 font-bold block mb-0.5 text-left">Pernyataan Kebenaran Data *</b>
+                      Saya menyatakan dengan sesungguhnya bahwa seluruh data, informasi, dan dokumen yang saya sampaikan dalam formulir ini adalah benar, lengkap, dan sah. Apabila di kemudian hari ditemukan ketidakbenaran atau pemalsuan data, saya bersedia menerima sanksi pembatalan proses seleksi maupun pemutusan hubungan kerja.
+                    </span>
+                  </label>
+
+                  <label class="flex items-start gap-3 p-4 rounded-2xl bg-slate-50 border border-slate-200 cursor-pointer transition-colors hover:bg-slate-100/70">
+                    <input type="checkbox" name="privacy_consent" required class="mt-1 w-4 h-4 rounded text-[#061e43] border-slate-400 focus:ring-red-600 shrink-0">
+                    <span class="text-xs text-slate-800 leading-relaxed">
+                      <b class="text-slate-900 font-bold block mb-0.5 text-left">Persetujuan Pemrosesan Data &amp; Verifikasi *</b>
+                      Saya menyetujui pemrosesan data pribadi dan dokumen untuk keperluan proses rekrutmen, background check, verifikasi berkas, komunikasi seleksi melalui WhatsApp/Email, serta penyimpanan sesuai kebijakan retensi data PT Grup Mitra Indonesia.
                     </span>
                   </label>
                 </div>
               </div>
 
               <!-- Form Action Buttons -->
-              <div class="pt-8 mt-6 border-t border-slate-100 flex items-center justify-between">
-                <button id="form-prev-btn" type="button" class="px-5 py-2.5 rounded-full border border-slate-300 text-xs sm:text-sm font-semibold text-slate-700 hover:bg-slate-100 transition-all">
-                  &larr; Kembali
+              <div class="pt-8 mt-8 border-t border-slate-100 flex items-center justify-between gap-4">
+                <button id="form-prev-btn" type="button" class="px-5 py-2.5 rounded-full border border-slate-300 text-xs sm:text-sm font-semibold text-slate-700 hover:bg-slate-100 transition-all flex items-center gap-1.5">
+                  &larr; <span>Kembali</span>
                 </button>
+                <div id="form-step-counter" class="text-xs font-bold text-slate-500 uppercase tracking-wider text-center">
+                  Bagian 1 dari 8
+                </div>
                 <div class="flex items-center gap-3">
-                  <button id="form-next-btn" type="button" class="px-6 py-2.5 rounded-full bg-[#061e43] hover:bg-[#0a2554] text-white text-xs sm:text-sm font-bold shadow-md transition-all">
-                    Lanjut &rarr;
+                  <button id="form-next-btn" type="button" class="px-6 py-2.5 rounded-full bg-[#061e43] hover:bg-[#0a2554] text-white text-xs sm:text-sm font-bold shadow-md transition-all flex items-center gap-1.5">
+                    <span>Lanjut</span> &rarr;
                   </button>
-                  <button id="form-submit-btn" type="submit" class="hidden px-7 py-2.5 rounded-full bg-[#c52227] hover:bg-[#a7181d] text-white text-xs sm:text-sm font-bold shadow-lg transition-all">
-                    Kirim Berkas Lamaran Sekarang
+                  <button id="form-submit-btn" type="submit" class="hidden px-7 py-2.5 rounded-full bg-[#c52227] hover:bg-[#a7181d] text-white text-xs sm:text-sm font-bold shadow-lg transition-all flex items-center gap-2">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                    <span>Kirim Berkas Lamaran</span>
                   </button>
                 </div>
               </div>
