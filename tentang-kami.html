@@ -111,14 +111,14 @@
             </div>
           </div>
 
-          <a href="contact-us.html" class="nav-link-cool text-slate-700 font-semibold">Hubungi Kami</a>
+          <a href="#" class="nav-link-cool text-slate-700 font-semibold" title="Blog GMI (Segera Hadir)">Blog</a>
         </div>
 
         <!-- Right Side: Hubungi Kami Button & Mobile Hamburger -->
         <div class="flex items-center gap-3">
-          <button type="button" data-open-consultation class="btn-wiggle-hover hidden sm:inline-flex items-center justify-center px-6 sm:px-7 py-2.5 sm:py-3 text-sm sm:text-[15px] font-bold text-white bg-[#c52227] hover:bg-[#a7181d] rounded-full shadow-md hover:shadow-lg transition-all duration-200">
+          <a href="contact-us.html" class="btn-wiggle-hover hidden sm:inline-flex items-center justify-center px-6 sm:px-7 py-2.5 sm:py-3 text-sm sm:text-[15px] font-bold text-white bg-[#c52227] hover:bg-[#a7181d] rounded-full shadow-md hover:shadow-lg transition-all duration-200">
             Hubungi kami
-          </button>
+          </a>
 
           <!-- Mobile Hamburger Toggle -->
           <button id="drawer-open-btn" type="button" aria-label="Buka Menu Navigasi" aria-expanded="false" aria-controls="mobile-drawer" class="md:hidden inline-flex items-center justify-center p-2.5 rounded-full text-slate-700 hover:text-red-600 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-red-600">
@@ -227,9 +227,9 @@
           <span class="text-xs text-slate-400">Admin &rarr;</span>
         </button>
 
-        <button type="button" data-open-consultation class="w-full mt-2 py-3 px-4 text-center font-bold text-white bg-[#c52227] hover:bg-[#a7181d] rounded-xl shadow-md transition-all">
+        <a href="contact-us.html" class="w-full mt-2 py-3 px-4 text-center font-bold text-white bg-[#c52227] hover:bg-[#a7181d] rounded-xl shadow-md transition-all block">
           Hubungi Kami
-        </button>
+        </a>
       </div>
     </div>
   </dialog>
@@ -591,8 +591,7 @@
           <div class="card-hover bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm flex flex-col">
             <div class="relative h-56 sm:h-60 overflow-hidden bg-slate-100">
               <picture class="w-full h-full block">
-                <source srcset="/assets/images/about/track-record-1.webp" type="image/webp">
-                <img src="/assets/images/about/track-record-1.webp" alt="Layanan Kami dalam Lingkungan Perkantoran" class="w-full h-full object-cover object-center transform hover:scale-105 transition-transform duration-500" loading="lazy" width="431" height="325">
+                <img src="/assets/images/about/track-record-1.jpg" alt="Layanan Kami dalam Lingkungan Perkantoran" class="w-full h-full object-cover object-center transform hover:scale-105 transition-transform duration-500" loading="lazy" width="431" height="325">
               </picture>
               <div class="absolute top-4 left-4">
                 <span class="px-3 py-1 rounded-full text-[11px] font-bold bg-[#061e43]/90 text-white backdrop-blur-xs">
@@ -647,8 +646,7 @@
           <div class="card-hover bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm flex flex-col">
             <div class="relative h-56 sm:h-60 overflow-hidden bg-slate-100">
               <picture class="w-full h-full block">
-                <source srcset="/assets/images/about/track-record-3.webp" type="image/webp">
-                <img src="/assets/images/about/track-record-3.webp" alt="Layanan Kami dalam Area Publik dan Residensial" class="w-full h-full object-cover object-center transform hover:scale-105 transition-transform duration-500" loading="lazy" width="434" height="325">
+                <img src="/assets/images/about/track-record-3.jpg" alt="Layanan Kami dalam Area Publik dan Residensial" class="w-full h-full object-cover object-center transform hover:scale-105 transition-transform duration-500" loading="lazy" width="434" height="325">
               </picture>
               <div class="absolute top-4 left-4">
                 <span class="px-3 py-1 rounded-full text-[11px] font-bold bg-[#061e43]/90 text-white backdrop-blur-xs">
@@ -852,65 +850,7 @@
     </a>
   </aside>
 
-  <!-- ============================================================== -->
-  <!-- 9. CONSULTATION MODAL (Dialog per Modern Web Guidance)          -->
-  <!-- ============================================================== -->
-  <dialog id="consultation-modal" aria-labelledby="consultation-modal-title" class="fixed inset-0 m-auto p-0 max-w-lg w-[calc(100%-2rem)] rounded-3xl bg-white shadow-2xl border border-slate-200 backdrop:bg-slate-950/70 backdrop:backdrop-blur-sm z-50 overflow-hidden">
-    <div class="p-6 sm:p-8 flex flex-col max-h-[90vh]">
-      <div class="flex items-center justify-between pb-4 border-b border-slate-100">
-        <div>
-          <span class="text-xs font-bold uppercase tracking-wider text-red-600">Konsultasi Kebutuhan</span>
-          <h3 id="consultation-modal-title" class="text-xl sm:text-2xl font-extrabold text-[#061e43]">Hubungi Tim Ahli GMI</h3>
-        </div>
-        <button type="button" data-close-modal aria-label="Tutup Formulir" class="p-2 rounded-full text-slate-400 hover:text-slate-700 hover:bg-slate-100 transition-colors">
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-          </svg>
-        </button>
-      </div>
 
-      <form id="consultation-form" class="mt-6 space-y-4 overflow-y-auto pr-1">
-        <div>
-          <label for="contact-name" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">Nama Lengkap *</label>
-          <input type="text" id="contact-name" name="name" required placeholder="Nama Anda" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-[#061e43] focus:outline-none">
-        </div>
-        <div>
-          <label for="contact-company" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">Nama Perusahaan / Organisasi *</label>
-          <input type="text" id="contact-company" name="company" required placeholder="PT / Instansi Anda" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-[#061e43] focus:outline-none">
-        </div>
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <div>
-            <label for="contact-email" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">Email Bisnis *</label>
-            <input type="email" id="contact-email" name="email" required placeholder="nama@perusahaan.com" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-[#061e43] focus:outline-none">
-          </div>
-          <div>
-            <label for="contact-phone" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">Nomor WhatsApp / Telp *</label>
-            <input type="tel" id="contact-phone" name="phone" required placeholder="08xxxxxxxxxx" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-[#061e43] focus:outline-none">
-          </div>
-        </div>
-        <div>
-          <label for="contact-service" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">Layanan yang Dibutuhkan</label>
-          <select id="contact-service" name="service" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm bg-white focus:ring-2 focus:ring-[#061e43] focus:outline-none font-medium">
-            <option value="manpower">Manpower Outsourcing</option>
-            <option value="security">Security Services</option>
-            <option value="investigation">Corporate Investigation</option>
-            <option value="litigation">Litigation Support</option>
-            <option value="company-profile">Permintaan Dokumen Company Profile Lengkap</option>
-          </select>
-        </div>
-        <div>
-          <label for="contact-message" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">Deskripsi Singkat Kebutuhan</label>
-          <textarea id="contact-message" name="message" rows="3" placeholder="Sampaikan estimasi lokasi, jumlah personel, atau durasi layanan..." class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-[#061e43] focus:outline-none"></textarea>
-        </div>
-
-        <div class="pt-2">
-          <button type="submit" class="w-full py-3 px-6 rounded-xl font-bold text-white bg-[#c52227] hover:bg-[#a7181d] shadow-md transition-all">
-            Kirimkan Permintaan Konsultasi &rarr;
-          </button>
-        </div>
-      </form>
-    </div>
-  </dialog>
 
   <!-- ============================================================== -->
   <!-- 10. BACKEND GATEWAY: PORTAL CLIENT & DASHBOARD ADMIN           -->

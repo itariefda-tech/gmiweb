@@ -328,7 +328,7 @@ function initModals() {
       if (ctaBtn) {
         ctaBtn.onclick = () => {
           serviceModal.close();
-          openConsultation(data.title);
+          window.location.href = '/contact-us.html';
         };
       }
 
@@ -336,27 +336,15 @@ function initModals() {
     });
   });
 
-  // Open consultation modal
+  // Open consultation / contact page
   window.openConsultation = function(preselectedService = '') {
-    if (!consultationModal) return;
-    if (preselectedService) {
-      const select = document.getElementById('consultation-service-select');
-      if (select) {
-        for (let i = 0; i < select.options.length; i++) {
-          if (select.options[i].text.includes(preselectedService) || select.options[i].value.includes(preselectedService.toLowerCase())) {
-            select.selectedIndex = i;
-            break;
-          }
-        }
-      }
-    }
-    consultationModal.showModal();
+    window.location.href = '/contact-us.html';
   };
 
   document.querySelectorAll('[data-open-consultation]').forEach(btn => {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
-      openConsultation();
+      window.location.href = '/contact-us.html';
     });
   });
 
