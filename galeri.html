@@ -273,30 +273,27 @@
     <section id="koleksi-galeri" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mb-20 scroll-mt-28">
       
       <!-- Section Title & Filter Tabs -->
-      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10 pb-6 border-b border-slate-200">
+      <div class="mb-10 pb-6 border-b border-slate-200 space-y-4">
         <div>
           <span class="text-xs font-bold uppercase tracking-widest text-[#c52227] block mb-1">PORTOFOLIO KEGIATAN</span>
-          <h2 class="text-2xl sm:text-3xl font-extrabold text-[#061e43]">Aktivitas &amp; Pembinaan Terstandarisasi</h2>
-          <p class="text-xs sm:text-sm text-slate-500 mt-1 max-w-xl">
-            Seluruh aktivitas dijalankan mengacu pada standardisasi manajemen mutu ISO 9001:2015 dan K3 ISO 45001:2018.
-          </p>
+          <h2 class="text-lg sm:text-2xl md:text-3xl font-extrabold text-[#061e43] whitespace-nowrap tracking-tight">Aktivitas &amp; Pembinaan Terstandarisasi</h2>
         </div>
 
-        <!-- Filter Buttons (Interactive via Vanilla JS) -->
-        <div class="flex flex-wrap items-center gap-2" id="gallery-filters" role="tablist">
-          <button type="button" data-filter="all" class="gallery-filter-btn px-4 py-2 rounded-full text-xs sm:text-sm font-bold bg-[#061e43] text-white shadow-xs transition-all cursor-pointer">
+        <!-- Filter Buttons (Interactive via Vanilla JS, positioned below title, forced to 1 single row) -->
+        <div class="flex flex-nowrap items-center gap-2 overflow-x-auto no-scrollbar scrollbar-none py-1 w-full" id="gallery-filters" role="tablist">
+          <button type="button" data-filter="all" class="gallery-filter-btn shrink-0 whitespace-nowrap px-4 py-2 rounded-full text-xs sm:text-sm font-bold bg-[#061e43] text-white shadow-xs transition-all cursor-pointer">
             Semua
           </button>
-          <button type="button" data-filter="k3" class="gallery-filter-btn px-4 py-2 rounded-full text-xs sm:text-sm font-semibold bg-white text-slate-600 hover:bg-slate-100 border border-slate-200 transition-all cursor-pointer">
+          <button type="button" data-filter="k3" class="gallery-filter-btn shrink-0 whitespace-nowrap px-4 py-2 rounded-full text-xs sm:text-sm font-semibold bg-white text-slate-600 hover:bg-slate-100 border border-slate-200 transition-all cursor-pointer">
             Pelatihan &amp; K3
           </button>
-          <button type="button" data-filter="security" class="gallery-filter-btn px-4 py-2 rounded-full text-xs sm:text-sm font-semibold bg-white text-slate-600 hover:bg-slate-100 border border-slate-200 transition-all cursor-pointer">
+          <button type="button" data-filter="security" class="gallery-filter-btn shrink-0 whitespace-nowrap px-4 py-2 rounded-full text-xs sm:text-sm font-semibold bg-white text-slate-600 hover:bg-slate-100 border border-slate-200 transition-all cursor-pointer">
             Operasional Satpam
           </button>
-          <button type="button" data-filter="manpower" class="gallery-filter-btn px-4 py-2 rounded-full text-xs sm:text-sm font-semibold bg-white text-slate-600 hover:bg-slate-100 border border-slate-200 transition-all cursor-pointer">
+          <button type="button" data-filter="manpower" class="gallery-filter-btn shrink-0 whitespace-nowrap px-4 py-2 rounded-full text-xs sm:text-sm font-semibold bg-white text-slate-600 hover:bg-slate-100 border border-slate-200 transition-all cursor-pointer">
             Manpower &amp; Teknis
           </button>
-          <button type="button" data-filter="corporate" class="gallery-filter-btn px-4 py-2 rounded-full text-xs sm:text-sm font-semibold bg-white text-slate-600 hover:bg-slate-100 border border-slate-200 transition-all cursor-pointer">
+          <button type="button" data-filter="corporate" class="gallery-filter-btn shrink-0 whitespace-nowrap px-4 py-2 rounded-full text-xs sm:text-sm font-semibold bg-white text-slate-600 hover:bg-slate-100 border border-slate-200 transition-all cursor-pointer">
             Internal &amp; Budaya
           </button>
         </div>
