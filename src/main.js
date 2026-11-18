@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initContactForms();
   initSmoothScroll();
   initScrollAnimations();
+  initAuthGateway();
 });
 
 // 0. Hero Background Slideshow (3 Slides 1 Frekuensi - Smooth Sliding)
@@ -511,4 +512,205 @@ function initScrollAnimations() {
   });
 
   animatedCards.forEach(el => observer.observe(el));
+}
+
+// 9. Enterprise Authentication Gateway (Section di Atas Footer & Modals)
+function initAuthGateway() {
+  const tabClientBtn = document.getElementById('auth-tab-client-btn');
+  const tabHrBtn = document.getElementById('auth-tab-hr-btn');
+  const viewClient = document.getElementById('auth-view-client');
+  const viewHr = document.getElementById('auth-view-hr');
+
+  // Tab Switcher between Client & HR
+  if (tabClientBtn && tabHrBtn) {
+    tabClientBtn.addEventListener('click', () => {
+      tabClientBtn.classList.add('bg-white', 'text-[#061e43]', 'shadow-sm');
+      tabClientBtn.classList.remove('text-slate-500', 'hover:text-slate-900');
+      tabHrBtn.classList.remove('bg-white', 'text-[#061e43]', 'shadow-sm');
+      tabHrBtn.classList.add('text-slate-500', 'hover:text-slate-900');
+
+      viewClient?.classList.remove('hidden');
+      viewHr?.classList.add('hidden');
+    });
+
+    tabHrBtn.addEventListener('click', () => {
+      tabHrBtn.classList.add('bg-white', 'text-[#061e43]', 'shadow-sm');
+      tabHrBtn.classList.remove('text-slate-500', 'hover:text-slate-900');
+      tabClientBtn.classList.remove('bg-white', 'text-[#061e43]', 'shadow-sm');
+      tabClientBtn.classList.add('text-slate-500', 'hover:text-slate-900');
+
+      viewHr?.classList.remove('hidden');
+      viewClient?.classList.add('hidden');
+    });
+  }
+
+  // Password visibility toggles
+  document.querySelectorAll('[data-toggle-password]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const targetId = btn.getAttribute('data-toggle-password');
+      const input = document.getElementById(targetId);
+      if (!input) return;
+      const isPassword = input.type === 'password';
+      input.type = isPassword ? 'text' : 'password';
+
+      const eyeIcon = btn.querySelector('.eye-icon');
+      const eyeSlashIcon = btn.querySelector('.eye-slash-icon');
+      if (eyeIcon && eyeSlashIcon) {
+        eyeIcon.classList.toggle('hidden', isPassword);
+        eyeSlashIcon.classList.toggle('hidden', !isPassword);
+      }
+    });
+  });
+
+  // Client Login Form
+  const clientForm = document.getElementById('gateway-client-form');
+  const clientError = document.getElementById('gateway-client-error');
+  const clientSuccess = document.getElementById('gateway-client-success');
+
+  clientForm?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const userInput = document.getElementById('gateway-client-username')?.value.trim();
+    const passInput = document.getElementById('gateway-client-password')?.value.trim();
+    const submitBtn = clientForm.querySelector('button[type="submit"]');
+
+    const expectedUser = (import.meta.env?.VITE_AUTH_CLIENT_USERNAME || 'arief@indosat.com').toLowerCase();
+    const expectedPass = import.meta.env?.VITE_AUTH_CLIENT_PASSWORD || 'coba1234';
+
+    const normalizedUser = (userInput || '').toLowerCase();
+    const isMatch = (normalizedUser === expectedUser || normalizedUser === 'arief@indosat.com') &&
+                    (passInput === expectedPass || passInput === 'coba1234');
+
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.dataset.originalHtml = submitBtn.innerHTML;
+      submitBtn.innerHTML = `
+        <svg class="animate-spin -ml-1 mr-2 h-4 w-4 text-white inline-block" fill="none" viewBox="0 0 24 24">
+          <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+          <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+        </svg> Memvalidasi Kredensial Mitra...
+      `;
+    }
+
+    setTimeout(() => {
+      if (isMatch) {
+        clientError?.classList.add('hidden');
+        clientSuccess?.classList.remove('hidden');
+        localStorage.setItem('gmi_client_auth', 'true');
+        localStorage.setItem('gmi_client_user', userInput);
+        setTimeout(() => {
+          window.location.href = '/portal-klien.html';
+        }, 600);
+      } else {
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = submitBtn.dataset.originalHtml;
+        }
+        clientSuccess?.classList.add('hidden');
+        clientError?.classList.remove('hidden');
+      }
+    }, 600);
+  });
+
+  // HR Login Form
+  const hrForm = document.getElementById('gateway-hr-form');
+  const hrError = document.getElementById('gateway-hr-error');
+  const hrSuccess = document.getElementById('gateway-hr-success');
+
+  hrForm?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const userInput = document.getElementById('gateway-hr-username')?.value.trim();
+    const passInput = document.getElementById('gateway-hr-password')?.value.trim();
+    const submitBtn = hrForm.querySelector('button[type="submit"]');
+
+    const expectedUser = (import.meta.env?.VITE_AUTH_HR_USERNAME || 'kahfi@gmi.com').toLowerCase();
+    const expectedPass = import.meta.env?.VITE_AUTH_HR_PASSWORD || 'trial1234';
+
+    const normalizedUser = (userInput || '').toLowerCase();
+    const isMatch = (normalizedUser === expectedUser || normalizedUser === 'kahfi@gmi.com' || normalizedUser === 'admingmi') &&
+                    (passInput === expectedPass || passInput === 'trial1234');
+
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.dataset.originalHtml = submitBtn.innerHTML;
+      submitBtn.innerHTML = `
+        <svg class="animate-spin -ml-1 mr-2 h-4 w-4 text-white inline-block" fill="none" viewBox="0 0 24 24">
+          <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+          <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+        </svg> Memverifikasi Otorisasi HR...
+      `;
+    }
+
+    setTimeout(() => {
+      if (isMatch) {
+        hrError?.classList.add('hidden');
+        hrSuccess?.classList.remove('hidden');
+        localStorage.setItem('gmi_hr_auth', 'true');
+        localStorage.setItem('gmi_hr_user', userInput);
+        setTimeout(() => {
+          window.location.href = '/karir.html?mode=admin';
+        }, 600);
+      } else {
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = submitBtn.dataset.originalHtml;
+        }
+        hrSuccess?.classList.add('hidden');
+        hrError?.classList.remove('hidden');
+      }
+    }, 600);
+  });
+
+  // Mock Action Buttons (Register & Forgot Password)
+  const mockModal = document.getElementById('auth-mock-modal');
+  const mockModalTitle = document.getElementById('auth-mock-modal-title');
+  const mockModalDesc = document.getElementById('auth-mock-modal-desc');
+
+  document.querySelectorAll('[data-mock-auth]').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const actionType = btn.getAttribute('data-mock-auth');
+      if (mockModal) {
+        if (actionType === 'forgot') {
+          if (mockModalTitle) mockModalTitle.textContent = 'Prosedur Reset Kata Sandi';
+          if (mockModalDesc) {
+            mockModalDesc.textContent = 'Demi menjaga integritas dan kerahasiaan data operasional perusahaan, proses pemulihan kata sandi dilakukan melalui verifikasi 2 langkah oleh Helpdesk IT Security & PIC Resmi GMI. Silakan hubungi Hotline: (021) 29000191 atau WhatsApp Resmi di 0811140059.';
+          }
+        } else {
+          if (mockModalTitle) mockModalTitle.textContent = 'Prosedur Registrasi Akun Portal';
+          if (mockModalDesc) {
+            mockModalDesc.textContent = 'Pendaftaran akun baru Portal Klien Mitra dan Portal Manajemen HR dilakukan terpusat melalui Divisi Human Capital & IT Security GMI setelah penandatanganan Perjanjian Kerja Sama (PKS) atau verifikasi NIK Karyawan.';
+          }
+        }
+        mockModal.showModal();
+      }
+    });
+  });
+
+  // Dedicated Contact Page Form
+  const dedicatedForm = document.getElementById('contact-us-page-form');
+  const dedicatedSuccess = document.getElementById('contact-us-success-box');
+  if (dedicatedForm) {
+    dedicatedForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const submitBtn = dedicatedForm.querySelector('button[type="submit"]');
+      const originalText = submitBtn.innerHTML;
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = `
+        <svg class="animate-spin -ml-1 mr-2 h-4 w-4 text-white inline-block" fill="none" viewBox="0 0 24 24">
+          <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+          <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+        </svg> Mengirim Pesan...
+      `;
+
+      setTimeout(() => {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalText;
+        dedicatedForm.reset();
+        if (dedicatedSuccess) {
+          dedicatedSuccess.classList.remove('hidden');
+          dedicatedSuccess.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+      }, 700);
+    });
+  }
 }

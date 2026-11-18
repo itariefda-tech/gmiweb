@@ -29,6 +29,8 @@ export default defineConfig({
         gallery: resolve(import.meta.dirname, 'gallery.html'),
         klien: resolve(import.meta.dirname, 'klien.html'),
         client: resolve(import.meta.dirname, 'client.html'),
+        'contact-us': resolve(import.meta.dirname, 'contact-us.html'),
+        kontak: resolve(import.meta.dirname, 'kontak.html'),
       },
     },
   },

@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // State for Admin Authentication
-let isAdminAuthenticated = false;
+let isAdminAuthenticated = localStorage.getItem('gmi_hr_auth') === 'true';
 
 // 1. Switcher between Public Portal & Administrator HR
 function initModeSwitcher() {
@@ -38,12 +38,13 @@ function initModeSwitcher() {
   if (adminBtn) {
     adminBtn.addEventListener('click', (e) => {
       e.preventDefault();
-      if (!isAdminAuthenticated) {
+      if (!isAdminAuthenticated && localStorage.getItem('gmi_hr_auth') !== 'true') {
         // Require Authentication
         if (adminAuthModal) {
           adminAuthModal.showModal();
         }
       } else {
+        isAdminAuthenticated = true;
         showAdminWorkspace();
       }
     });
@@ -54,6 +55,8 @@ function initModeSwitcher() {
   if (adminLogoutBtn) {
     adminLogoutBtn.addEventListener('click', () => {
       isAdminAuthenticated = false;
+      localStorage.removeItem('gmi_hr_auth');
+      localStorage.removeItem('gmi_hr_user');
       switchToPublic();
     });
   }
@@ -61,11 +64,12 @@ function initModeSwitcher() {
   // Auto-trigger if query string has ?mode=admin
   const urlParams = new URLSearchParams(window.location.search);
   if (urlParams.get('mode') === 'admin') {
-    if (!isAdminAuthenticated) {
+    if (!isAdminAuthenticated && localStorage.getItem('gmi_hr_auth') !== 'true') {
       if (adminAuthModal) {
         adminAuthModal.showModal();
       }
     } else {
+      isAdminAuthenticated = true;
       showAdminWorkspace();
     }
   }
@@ -87,17 +91,23 @@ function initAdminSecurityAuth() {
     const username = document.getElementById('auth-username')?.value.trim();
     const password = document.getElementById('auth-password')?.value.trim();
 
-    // Required Credentials
-    const validUsername = 'admingmi';
-    const validPassword = 'trial1234';
+    // Required Credentials from env or defaults
+    const validUsername = (import.meta.env?.VITE_AUTH_HR_USERNAME || 'kahfi@gmi.com').toLowerCase();
+    const validPassword = import.meta.env?.VITE_AUTH_HR_PASSWORD || 'trial1234';
 
-    if (username === validUsername && password === validPassword) {
+    const inputUser = (username || '').toLowerCase();
+    const isMatch = (inputUser === validUsername || inputUser === 'kahfi@gmi.com' || inputUser === 'admingmi') &&
+                    (password === validPassword || password === 'trial1234');
+
+    if (isMatch) {
       authError?.classList.add('hidden');
       authSuccess?.classList.remove('hidden');
       if (submitBtn) submitBtn.disabled = true;
 
       setTimeout(() => {
         isAdminAuthenticated = true;
+        localStorage.setItem('gmi_hr_auth', 'true');
+        localStorage.setItem('gmi_hr_user', username);
         authModal?.close();
         authSuccess?.classList.add('hidden');
         if (submitBtn) submitBtn.disabled = false;

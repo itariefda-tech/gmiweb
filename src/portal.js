@@ -158,10 +158,19 @@ document.addEventListener('DOMContentLoaded', () => {
     const clientId = document.getElementById('portal-client-id')?.value.trim();
     const password = document.getElementById('portal-password')?.value.trim();
 
+    const validClientUser = (import.meta.env?.VITE_AUTH_CLIENT_USERNAME || 'arief@indosat.com').toLowerCase();
+    const validClientPass = import.meta.env?.VITE_AUTH_CLIENT_PASSWORD || 'coba1234';
+
+    const inputUser = (clientId || '').toLowerCase();
+    const isMatch = (inputUser === validClientUser || inputUser === 'arief@indosat.com' || inputUser === 'indosat@gmi.co.id') &&
+                    (password === validClientPass || password === 'coba1234' || password === 'mitra2026');
+
     // Verification check
-    if (clientId && password) {
+    if (isMatch) {
       authErrorMsg?.classList.add('hidden');
-      alert(`Sesi Terverifikasi! Selamat datang kembali, PIC Mitra PT Indosat Ooredoo Hutchison Tbk.`);
+      localStorage.setItem('gmi_client_auth', 'true');
+      localStorage.setItem('gmi_client_user', clientId);
+      alert(`Sesi Terverifikasi! Selamat datang kembali, Bpk. Arief (PT Indosat Ooredoo Hutchison Tbk).`);
       authModal?.close();
     } else {
       authErrorMsg?.classList.remove('hidden');
