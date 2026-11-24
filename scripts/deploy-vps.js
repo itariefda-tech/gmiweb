@@ -1,8 +1,9 @@
 import { execSync } from 'child_process';
 import fs from 'fs';
 
-console.log('📦 1. Building production files (npm run build)...');
-execSync('npm run build', { stdio: 'inherit' });
+console.log('📦 1. Building production files...');
+const buildCmd = process.platform === 'win32' ? 'npm.cmd run build' : 'npm run build';
+execSync(buildCmd, { stdio: 'inherit' });
 
 console.log('🗜️  2. Creating archive dist.tar.gz...');
 execSync('tar -czf dist.tar.gz -C dist .', { stdio: 'inherit' });
