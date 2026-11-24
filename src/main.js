@@ -9,6 +9,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initSmoothScroll();
   initScrollAnimations();
   initAuthGateway();
+  initIndonesiaMap();
+  initBlogFeatures();
 });
 
 // 0. Hero Background Slideshow (3 Slides 1 Frekuensi - Smooth Sliding)
@@ -699,6 +701,180 @@ function initAuthGateway() {
           dedicatedSuccess.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
         }
       }, 700);
+    });
+  }
+}
+
+// 12. Interactive Indonesia Map (35+ Blinking Points & Dynamic Tooltips)
+function initIndonesiaMap() {
+  const container = document.getElementById('jangkauan-nasional');
+  if (!container) return;
+
+  const tooltip = container.querySelector('#map-tooltip');
+  const cityEl = container.querySelector('#tooltip-city');
+  const provEl = container.querySelector('#tooltip-province');
+  const typeEl = container.querySelector('#tooltip-type');
+  const mapWrapper = container.querySelector('.relative.bg-white');
+  const markers = container.querySelectorAll('.map-marker-group');
+  const filterBtns = container.querySelectorAll('.map-filter-btn');
+
+  function updateTooltipPosition(marker) {
+    if (!tooltip || !mapWrapper) return;
+    const city = marker.getAttribute('data-city');
+    const prov = marker.getAttribute('data-province');
+    const type = marker.getAttribute('data-type');
+    if (cityEl) cityEl.textContent = city;
+    if (provEl) provEl.textContent = prov;
+    if (typeEl) typeEl.textContent = type;
+
+    tooltip.style.opacity = '1';
+    const rect = marker.getBoundingClientRect();
+    const parentRect = mapWrapper.getBoundingClientRect();
+    const top = Math.max(10, rect.top - parentRect.top - 85);
+    const left = Math.min(Math.max(10, rect.left - parentRect.left - 90), parentRect.width - 240);
+    tooltip.style.top = top + 'px';
+    tooltip.style.left = left + 'px';
+  }
+
+  markers.forEach(marker => {
+    marker.addEventListener('mouseenter', () => updateTooltipPosition(marker));
+    marker.addEventListener('mouseleave', () => {
+      if (tooltip) tooltip.style.opacity = '0';
+    });
+    marker.addEventListener('click', () => updateTooltipPosition(marker));
+  });
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const filter = btn.getAttribute('data-filter');
+      filterBtns.forEach(b => {
+        b.classList.remove('bg-[#061e43]', 'text-white');
+        b.classList.add('bg-slate-100', 'text-slate-700');
+      });
+      btn.classList.add('bg-[#061e43]', 'text-white');
+      btn.classList.remove('bg-slate-100', 'text-slate-700');
+
+      markers.forEach(m => {
+        const region = m.getAttribute('data-region');
+        if (filter === 'all' || region === filter) {
+          m.style.display = '';
+        } else {
+          m.style.display = 'none';
+        }
+      });
+    });
+  });
+}
+
+// 13. Blog Features (Search, Category Filter, and Full Article Modal)
+function initBlogFeatures() {
+  const searchInput = document.getElementById('blog-search-input');
+  const clearBtn = document.getElementById('blog-search-clear');
+  const filterBtns = document.querySelectorAll('.blog-filter-btn');
+  const articleCards = document.querySelectorAll('.blog-article-card');
+  const emptyState = document.getElementById('blog-empty-state');
+  const articleModal = document.getElementById('blog-article-modal');
+  const modalCloseBtn = document.getElementById('modal-close-btn');
+
+  if (!articleCards.length) return;
+
+  let currentCategory = 'all';
+  let searchQuery = '';
+
+  function filterArticles() {
+    let visibleCount = 0;
+    articleCards.forEach(card => {
+      const category = card.getAttribute('data-category');
+      const title = card.querySelector('.article-title')?.textContent.toLowerCase() || '';
+      const excerpt = card.querySelector('.article-excerpt')?.textContent.toLowerCase() || '';
+      const tags = card.getAttribute('data-tags')?.toLowerCase() || '';
+
+      const matchCategory = currentCategory === 'all' || category === currentCategory;
+      const matchSearch = !searchQuery || title.includes(searchQuery) || excerpt.includes(searchQuery) || tags.includes(searchQuery);
+
+      if (matchCategory && matchSearch) {
+        card.style.display = '';
+        visibleCount++;
+      } else {
+        card.style.display = 'none';
+      }
+    });
+
+    if (emptyState) {
+      if (visibleCount === 0) {
+        emptyState.classList.remove('hidden');
+      } else {
+        emptyState.classList.add('hidden');
+      }
+    }
+  }
+
+  if (searchInput) {
+    searchInput.addEventListener('input', (e) => {
+      searchQuery = e.target.value.trim().toLowerCase();
+      if (clearBtn) {
+        clearBtn.classList.toggle('hidden', searchQuery.length === 0);
+      }
+      filterArticles();
+    });
+  }
+
+  if (clearBtn) {
+    clearBtn.addEventListener('click', () => {
+      if (searchInput) searchInput.value = '';
+      searchQuery = '';
+      clearBtn.classList.add('hidden');
+      filterArticles();
+    });
+  }
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      currentCategory = btn.getAttribute('data-category');
+      filterBtns.forEach(b => {
+        b.classList.remove('bg-[#c52227]', 'text-white', 'shadow-md');
+        b.classList.add('bg-slate-100', 'text-slate-700', 'hover:bg-slate-200');
+      });
+      btn.classList.add('bg-[#c52227]', 'text-white', 'shadow-md');
+      btn.classList.remove('bg-slate-100', 'text-slate-700', 'hover:bg-slate-200');
+      filterArticles();
+    });
+  });
+
+  // Modal Article Reader
+  document.querySelectorAll('[data-open-article]').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const articleId = btn.getAttribute('data-open-article');
+      const contentEl = document.getElementById(articleId);
+      if (articleModal && contentEl) {
+        const modalBody = document.getElementById('modal-article-body');
+        if (modalBody) {
+          modalBody.innerHTML = contentEl.innerHTML;
+        }
+        articleModal.showModal();
+        document.body.style.overflow = 'hidden';
+      }
+    });
+  });
+
+  if (modalCloseBtn && articleModal) {
+    modalCloseBtn.addEventListener('click', () => {
+      articleModal.close();
+      document.body.style.overflow = '';
+    });
+
+    articleModal.addEventListener('click', (e) => {
+      const dialogDimensions = articleModal.getBoundingClientRect();
+      if (
+        e.clientX < dialogDimensions.left ||
+        e.clientX > dialogDimensions.right ||
+        e.clientY < dialogDimensions.top ||
+        e.clientY > dialogDimensions.bottom
+      ) {
+        articleModal.close();
+        document.body.style.overflow = '';
+      }
     });
   }
 }

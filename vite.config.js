@@ -31,6 +31,7 @@ export default defineConfig({
         client: resolve(import.meta.dirname, 'client.html'),
         'contact-us': resolve(import.meta.dirname, 'contact-us.html'),
         kontak: resolve(import.meta.dirname, 'kontak.html'),
+        blog: resolve(import.meta.dirname, 'blog.html'),
       },
     },
   },
