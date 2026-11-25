@@ -715,7 +715,7 @@ function initIndonesiaMap() {
   const cityEl = container.querySelector('#tooltip-city');
   const provEl = container.querySelector('#tooltip-province');
   const typeEl = container.querySelector('#tooltip-type');
-  const mapWrapper = container.querySelector('.relative.bg-white');
+  const mapWrapper = container.querySelector('[data-map-wrapper]') || container.querySelector('.map-wrapper') || container.querySelector('.relative.bg-white');
   const markers = container.querySelectorAll('.map-marker-group');
   const filterBtns = container.querySelectorAll('.map-filter-btn');
 
@@ -745,15 +745,27 @@ function initIndonesiaMap() {
     marker.addEventListener('click', () => updateTooltipPosition(marker));
   });
 
+  const isDark = container.hasAttribute('data-theme-dark') || container.classList.contains('theme-dark') || container.classList.contains('bg-[#050c18]') || container.classList.contains('bg-[#060d1a]');
+
   filterBtns.forEach(btn => {
     btn.addEventListener('click', () => {
       const filter = btn.getAttribute('data-filter');
       filterBtns.forEach(b => {
-        b.classList.remove('bg-[#061e43]', 'text-white');
-        b.classList.add('bg-slate-100', 'text-slate-700');
+        if (isDark) {
+          b.classList.remove('bg-gradient-to-r', 'from-red-600', 'to-rose-600', 'bg-red-600', 'text-white', 'shadow-lg', 'shadow-red-600/30', 'border-red-500/80', 'font-bold');
+          b.classList.add('bg-slate-800/80', 'text-slate-300', 'border-slate-700/60', 'font-semibold');
+        } else {
+          b.classList.remove('bg-[#061e43]', 'text-white');
+          b.classList.add('bg-slate-100', 'text-slate-700');
+        }
       });
-      btn.classList.add('bg-[#061e43]', 'text-white');
-      btn.classList.remove('bg-slate-100', 'text-slate-700');
+      if (isDark) {
+        btn.classList.add('bg-gradient-to-r', 'from-red-600', 'to-rose-600', 'text-white', 'shadow-lg', 'shadow-red-600/30', 'border-red-500/80', 'font-bold');
+        btn.classList.remove('bg-slate-800/80', 'text-slate-300', 'border-slate-700/60', 'font-semibold');
+      } else {
+        btn.classList.add('bg-[#061e43]', 'text-white');
+        btn.classList.remove('bg-slate-100', 'text-slate-700');
+      }
 
       markers.forEach(m => {
         const region = m.getAttribute('data-region');
