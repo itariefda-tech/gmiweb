@@ -176,6 +176,7 @@ async function deploy() {
 
     for (const target of extractTargets) {
       console.log(`   ⚙️  Mengekstrak ke: ${target}`);
+      const normalizedTarget = target.startsWith('/') ? target : `/${target}`;
       const extractBody = Buffer.from(
         new URLSearchParams({
           cpanel_jsonapi_module: 'Fileman',
@@ -183,7 +184,7 @@ async function deploy() {
           cpanel_jsonapi_version: '2',
           op: 'extract',
           sourcefiles: `${remoteDir}/dist.tar.gz`,
-          destfiles: target,
+          destfiles: normalizedTarget,
           doubledecode: '1',
         }).toString()
       );
