@@ -753,7 +753,7 @@ function initIndonesiaMap() {
       filterBtns.forEach(b => {
         if (isDark) {
           b.classList.remove('bg-gradient-to-r', 'from-red-600', 'to-rose-600', 'bg-red-600', 'text-white', 'shadow-lg', 'shadow-red-600/30', 'border-red-500/80', 'font-bold');
-          b.classList.add('bg-slate-800/80', 'text-slate-300', 'border-slate-700/60', 'font-semibold');
+          b.classList.add('bg-[#0f336b]/80', 'text-blue-100', 'border-blue-500/40', 'font-semibold');
         } else {
           b.classList.remove('bg-[#061e43]', 'text-white');
           b.classList.add('bg-slate-100', 'text-slate-700');
@@ -761,7 +761,7 @@ function initIndonesiaMap() {
       });
       if (isDark) {
         btn.classList.add('bg-gradient-to-r', 'from-red-600', 'to-rose-600', 'text-white', 'shadow-lg', 'shadow-red-600/30', 'border-red-500/80', 'font-bold');
-        btn.classList.remove('bg-slate-800/80', 'text-slate-300', 'border-slate-700/60', 'font-semibold');
+        btn.classList.remove('bg-[#0f336b]/80', 'text-blue-100', 'border-blue-500/40', 'font-semibold');
       } else {
         btn.classList.add('bg-[#061e43]', 'text-white');
         btn.classList.remove('bg-slate-100', 'text-slate-700');
