@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initAuthGateway();
   initIndonesiaMap();
   initBlogFeatures();
+  initVideoOnScroll();
 });
 
 // 0. Hero Background Slideshow (3 Slides 1 Frekuensi - Smooth Sliding)
@@ -877,4 +878,35 @@ function initBlogFeatures() {
       }
     });
   }
+}
+
+// 14. Video Autoplay on Viewport Scroll Intersection
+function initVideoOnScroll() {
+  const videoSection = document.getElementById('video-profil-gmi');
+  const iframe = document.getElementById('gmi-corporate-video');
+  const statusBadge = document.getElementById('video-status-badge');
+  if (!videoSection || !iframe) return;
+
+  let hasTriggered = false;
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && !hasTriggered) {
+        hasTriggered = true;
+        const targetSrc = iframe.getAttribute('data-src');
+        if (targetSrc) {
+          iframe.src = targetSrc;
+        }
+        if (statusBadge) {
+          statusBadge.innerHTML = '<span class="w-2 h-2 rounded-full bg-red-500 animate-ping"></span> Sedang Diputar (Autoplay Aktif)';
+        }
+        observer.disconnect();
+      }
+    });
+  }, {
+    rootMargin: '0px',
+    threshold: 0.35 // Triggers when 35% of the video section enters viewport
+  });
+
+  observer.observe(videoSection);
 }

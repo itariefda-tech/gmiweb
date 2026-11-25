@@ -67,6 +67,78 @@
   transform: translateY(-1px);
 }
 
+/* Subtle Slow Shimmer Decor for Hubungi Kami / Kontak Kami Buttons */
+.btn-shimmer-subtle {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.btn-shimmer-subtle::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -130%;
+  width: 55%;
+  height: 200%;
+  background: linear-gradient(
+    115deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0) 25%,
+    rgba(255, 255, 255, 0.20) 50%,
+    rgba(255, 255, 255, 0) 75%,
+    transparent 100%
+  );
+  transform: rotate(22deg);
+  animation: shimmer-slow-sweep 7.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  pointer-events: none;
+  z-index: 2;
+}
+
+@keyframes shimmer-slow-sweep {
+  0% {
+    left: -130%;
+  }
+  20% {
+    left: 230%;
+  }
+  100% {
+    left: 230%;
+  }
+}
+
+/* Static Blinking Map Dots (Menyala bergantian tiap titik di posisi statis) */
+@keyframes map-dot-glow {
+  0%, 100% {
+    opacity: 0.22;
+    fill: #b91c1c;
+    filter: drop-shadow(0 0 0px transparent);
+  }
+  50% {
+    opacity: 1;
+    fill: #ef4444;
+    filter: drop-shadow(0 0 4.5px rgba(239, 68, 68, 0.95));
+  }
+}
+
+@keyframes map-core-glow {
+  0%, 100% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.map-blinking-dot {
+  animation: map-dot-glow 2.8s ease-in-out infinite;
+  transform-origin: center;
+}
+
+.map-blinking-core {
+  animation: map-core-glow 2.8s ease-in-out infinite;
+}
+
 /* Gradient Hero Overlay */
 .hero-gradient {
   background: linear-gradient(
